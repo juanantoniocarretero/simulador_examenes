@@ -1,0 +1,2424 @@
+[
+    {
+        "q": "¿Qué tipo de sistema de archivos crea mkfs cuando se ejecuta solo con el nombre del dispositivo de bloque y sin parámetros adicionales?",
+        "type": "radio",
+        "options": [
+            "XFS",
+            "VFAT",
+            "ext2",
+            "ext3",
+            "ext4"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué valor de umask garantiza que los nuevos directorios puedan ser leídos, escritos y listados por su usuario propietario, leídos y listados por su grupo propietario y que no sean accesibles en absoluto para todos los demás?",
+        "type": "radio",
+        "options": [
+            "0750",
+            "0027",
+            "0036",
+            "7640",
+            "0029"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos cambia el número de días antes de que el sistema de archivos ext3 en /dev/sda1 tenga que ejecutar una comprobación completa del sistema de archivos durante el arranque?",
+        "type": "radio",
+        "options": [
+            "tune2fs-d 200 /dev/sda1",
+            "tune2fs-i 200 /dev/sda1",
+            "tune2fs-c 200 /dev/sda1",
+            "tune2fs-n 200 /dev/sda1",
+            "tune2fs-días 200 /dev/sda1"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál es el porcentaje predeterminado de espacio reservado para el usuario root en los nuevos sistemas de archivos ext4?",
+        "type": "radio",
+        "options": [
+            "10%",
+            "3%",
+            "15%",
+            "0%",
+            "5%"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "¿Cuál de las siguientes afirmaciones es verdadera cuando un sistema de archivos, que no está listado en /etc/fstab ni es conocido por el sistema, se monta manualmente?",
+        "type": "radio",
+        "options": [
+            "systemd ignora cualquier montaje manual que no se realice mediante el comando systemctl mount",
+            "El comando systemctl mountsync se puede utilizar para crear una unidad de montaje basada en la unidad de montaje existente.",
+            "systemd genera automáticamente una unidad de montaje y monitorea el punto de montaje sin cambiarlo",
+            "A menos que se cree una unidad de montaje systemd, systemd desmonta el sistema de archivos después de un breve período de tiempo.",
+            "Se debe usar E. systemctl unmount para eliminar el montaje porque el sistema abre un descriptor de archivo en el punto de montaje"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué programa actualiza la base de datos que utiliza el comando locate?",
+        "type": "text",
+        "correct": "updatedb"
+    },
+    {
+        "q": "¿Qué hace el comando mount --bind?",
+        "type": "radio",
+        "options": [
+            "Hace que el contenido de un directorio esté disponible en otro directorio.",
+            "Monta todos los sistemas de archivos disponibles en el directorio actual.",
+            "Monta todos los sistemas de archivos montables por el usuario en el directorio de inicio del usuario.",
+            "Monta todos los sistemas de archivos enumerados en /etc/fstab que tienen la opción userbind establecida",
+            "Monta permanentemente un archivo normal en un directorio."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Cómo se crearía un nuevo archivo llamado c.txt con el mismo número de inodo que a.txt (inodo 525385)?",
+        "type": "radio",
+        "options": [
+            "ln-h a.txt c.txt",
+            "ln c.txt a.txt",
+            "ln a.txt c.txt",
+            "ln -f c.txt a.txt",
+            "ln 525385 c.txt"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué comando garantiza que los archivos nuevos creados dentro del directorio sales sean propiedad del grupo sales? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "chmod g+s sales",
+            "setpol -R newgroup sales sales",
+            "chgrp -p sales sales",
+            "chown -persistent *.sales sales",
+            "chmod 2775 sales"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "Para mostrar todos los sistemas de archivos montados actualmente, ¿cuál de los siguientes comandos se podría usar? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "cat /proc/self/mounts",
+            "free",
+            "lsmounts",
+            "mount",
+            "cat /proc/filesystems"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "¿Qué comando muestra el uso actual del espacio en disco para todos los sistemas de archivos montados?",
+        "type": "text",
+        "correct": "df"
+    },
+    {
+        "q": "¿Qué comando chown cambia la propiedad a 'dave' y el grupo a 'staff' en un archivo llamado data.txt?",
+        "type": "radio",
+        "options": [
+            "chown dave/staff data.txt",
+            "chown -u dave -g staff data.txt",
+            "chown --user dave --group staff data.txt",
+            "chown dave+staff data.txt",
+            "chown dave:staff data.txt"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "Al considerar el uso de enlaces físicos (hard links), ¿cuáles son razones válidas para no usarlos?",
+        "type": "radio",
+        "options": [
+            "Los enlaces duros no están disponibles en todos los sistemas Linux porque los sistemas de archivos tradicionales no los admiten.",
+            "Cada enlace físico tiene propiedad y permisos individuales que pueden provocar la divulgación no intencionada del contenido.",
+            "Los enlaces duros son específicos de un sistema de archivos y no pueden apuntar a archivos en otro sistema de archivos.",
+            "Para que otros usuarios además de root puedan crear enlaces físicos, se debe configurar suln.",
+            "Cuando se modifica un archivo vinculado, se crea una copia del archivo y consume espacio adicional."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "De acuerdo con la FHS, ¿en cuál de los directorios se encuentran las páginas de manual?",
+        "type": "radio",
+        "options": [
+            "/opt/man/",
+            "/usr/doc/",
+            "/usr/share/man/",
+            "/var/pkg/man",
+            "/var/man/"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué archivo del sistema de archivos /proc enumera los parámetros pasados del gestor de arranque al kernel?",
+        "type": "text",
+        "correct": "cmdline"
+    },
+    {
+        "q": "¿Cuál es el número de identificación del proceso init en un sistema basado en init System V?",
+        "type": "radio",
+        "options": [
+            "-1",
+            "0",
+            "1",
+            "Es diferente con cada reinicio.",
+            "Se establece en el nivel de ejecución actual."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué demonio maneja los eventos de administración de energía en un sistema Linux?",
+        "type": "radio",
+        "options": [
+            "acpid",
+            "battery",
+            "powertop",
+            "psd",
+            "inetd"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Cuáles de las siguientes afirmaciones son verdaderas sobre la secuencia de arranque de una PC que utiliza una BIOS? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "Algunas partes del proceso de arranque se pueden configurar desde la BIOS.",
+            "Linux no requiere la asistencia del BIOS para iniciar una computadora.",
+            "El proceso de arranque del BIOS se inicia solo si el almacenamiento secundario funciona.",
+            "El BIOS inicia el proceso de arranque después de encender la computadora.",
+            "El BIOS se inicia cargando los controladores desde el almacenamiento secundario."
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "¿Qué es cierto con respecto al firmware UEFI? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "Puede leer e interpretar tablas de particiones.",
+            "Puede usar y leer ciertos sistemas de archivos.",
+            "Almacena toda su configuración en la partición /boot/",
+            "Se almacena en un área especial dentro de los metadatos GPT",
+            "Se carga desde una posición de disco de arranque fija"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "¿Qué acción garantiza que un módulo de kernel defectuoso no se cargue automáticamente al iniciar el sistema?",
+        "type": "radio",
+        "options": [
+            "Usar lsmod --remove-autoclean",
+            "Usar modinfo -k seguido del nombre del módulo",
+            "Usar modprobe -r seguido del nombre del módulo",
+            "Agregar una línea de lista negra al archivo /etc/modprobe.d/blacklist.conf",
+            "Eliminar el directorio del módulo del kernel y volver a compilar"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Cuándo se restablece el contenido del búfer de anillo del núcleo (kernel ring buffer)? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "Cuando se restablece explícitamente usando dmesg --clear",
+            "Cuando se lee el buffer usando dmesg sin parámetros",
+            "Cuando haya transcurrido un tiempo de 15 minutos por defecto",
+            "Cuando el núcleo carga un módulo previamente descargado",
+            "Cuando el sistema se apaga o se reinicia"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "¿Cuál es el primer programa que el kernel de Linux inicia en el momento del arranque cuando se utiliza System V init?",
+        "type": "radio",
+        "options": [
+            "/lib/init.so",
+            "/proc/sys/kernel/init",
+            "/etc/rc.d/rcinit",
+            "/sbin/init",
+            "/boot/init"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Qué comando busca paquetes Debian que posean el archivo /etc/debian_version?",
+        "type": "radio",
+        "options": [
+            "apt-get search /etc/debian_version",
+            "apt -r /etc/debian_version",
+            "find /etc/debian_version -dpkg",
+            "dpkg -S /etc/debian_version",
+            "apt-file /etc/debian_version"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Qué contiene la partición del sistema EFI?",
+        "type": "radio",
+        "options": [
+            "El sistema de archivos raíz de Linux",
+            "El gestor de arranque de primera etapa",
+            "El archivo de espacio de intercambio predeterminado",
+            "Los binarios del shell predeterminado",
+            "Los directorios personales del usuario"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál de los siguientes directorios en un sistema Linux de 64 bits suele contener bibliotecas compartidas? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "~/.lib64/",
+            "/usr/lib64/",
+            "/var/lib64/",
+            "/lib64/",
+            "/opt/lib64/"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "¿Cuáles de los siguientes archivos existen en una instalación estándar de GRUB 2? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "/boot/grub/stages/stage0",
+            "/boot/grub/i386-pc/lvm.mod",
+            "/boot/grub/fstab",
+            "/boot/grub/grub.cfg",
+            "/boot/grub/linux/vmlinuz"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos instala todos los paquetes cuyo nombre termina con la cadena 'foo'?",
+        "type": "radio",
+        "options": [
+            "zypper get '*foo'",
+            "zypper update 'foo?'",
+            "zypper force 'foo*'",
+            "zypper install '*foo'",
+            "zypper add '.*foo'"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Cuál de las siguientes propiedades debería cambiarse cuando se clona una máquina virtual? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "El esquema de partición",
+            "El sistema de archivos",
+            "El ID de la máquina D-Bus",
+            "Los permisos de /root/",
+            "Las claves del host SSH"
+        ],
+        "correct": [
+            2,
+            4
+        ]
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos instala GRUB 2 en el MBR del tercer disco duro?",
+        "type": "radio",
+        "options": [
+            "grub2-install /dev/sdc",
+            "grub-mkrescue /dev/sdc",
+            "grub-mbrinstall /dev/sdc",
+            "grub-setup /dev/sdc",
+            "grub-install /dev/sdc"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "¿Cuál de los siguientes tipos de particiones se utiliza para los espacios de intercambio (swap) de Linux?",
+        "type": "radio",
+        "options": [
+            "7",
+            "82",
+            "83",
+            "8e",
+            "fd"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué es cierto con respecto a la configuración de yum? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "Los cambios se activan tras ejecutar yum confupdate",
+            "Los cambios se activan tras reiniciar el servicio yumd",
+            "La configuración de los repositorios se puede dividir en varios archivos",
+            "Las configuraciones pueden incluir variables como $basearch o $releasever",
+            "Si /etc/yum.repos.d/ tiene archivos, se ignora /etc/yum.conf"
+        ],
+        "correct": [
+            2,
+            3
+        ]
+    },
+    {
+        "q": "¿Qué comando desinstala un paquete pero conserva sus archivos de configuración?",
+        "type": "radio",
+        "options": [
+            "dpkg -s paquete",
+            "dpkg -L paquete",
+            "dpkg -P paquete",
+            "dpkg -v paquete",
+            "dpkg -r paquete"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos enumera las dependencias del archivo del paquete RPM foo.rpm?",
+        "type": "radio",
+        "options": [
+            "rpm -qpR foo.rpm",
+            "rpm -dep foo",
+            "rpm -ld foo.rpm",
+            "rpm -R foo.rpm",
+            "rpm -pD foo"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Cuál es el valor máximo de amabilidad (niceness) que un usuario normal puede asignar a un proceso?",
+        "type": "radio",
+        "options": [
+            "9",
+            "15",
+            "19",
+            "49",
+            "99"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué comando lista archivos en /tmp/ propiedad de root? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "find /tmp -user root -print",
+            "find -path /tmp -uid root",
+            "find /tmp -uid root -print",
+            "find /tmp -user root",
+            "find -path /tmp -user root -print"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos se puede usar para determinar cuánto tiempo ha estado funcionando el sistema? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "uptime",
+            "up",
+            "time-up",
+            "uname -u",
+            "top"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "¿Qué es cierto con respecto al comando 'ls > files' si el archivo 'files' no existe?",
+        "type": "radio",
+        "options": [
+            "La salida de ls se imprime en la terminal.",
+            "Se crea el archivo 'files' y contiene la salida de ls.",
+            "Se muestra un mensaje de error y ls no se ejecuta.",
+            "El comando files se ejecuta y recibe la salida de ls.",
+            "Cualquier salida de ls se descarta."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál de los siguientes archivos, ubicados en el directorio de inicio de un usuario, contiene el historial de Bash?",
+        "type": "radio",
+        "options": [
+            ".bashrc_history",
+            ".bash_histfile",
+            ".history",
+            ".bash_history",
+            ".history_bash"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Qué comando se utiliza para mostrar las opciones de montaje de un sistema de archivos montado actualmente?",
+        "type": "radio",
+        "options": [
+            "cat /proc/self/mounts",
+            "free",
+            "lsmounts",
+            "mount",
+            "cat /proc/filesystems"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Cuál es el nivel 'nice' predeterminado cuando se inicia un proceso sin especificarlo?",
+        "type": "radio",
+        "options": [
+            "-20",
+            "0",
+            "10",
+            "19",
+            "20"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué comando se utiliza para cambiar la prioridad de un proceso que ya se está ejecutando?",
+        "type": "text",
+        "correct": "renice"
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos buscará en el archivo 'file.txt' las líneas que contienen la palabra 'error', ignorando mayúsculas y minúsculas?",
+        "type": "radio",
+        "options": [
+            "grep -v error file.txt",
+            "grep -i error file.txt",
+            "grep -e error file.txt",
+            "grep -n error file.txt",
+            "grep -l error file.txt"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué comando se utiliza para crear un enlace simbólico llamado 'enlace' que apunte al archivo 'archivo'?",
+        "type": "radio",
+        "options": [
+            "ln archivo enlace",
+            "ln -s archivo enlace",
+            "ln -sl archivo enlace",
+            "ln -h archivo enlace",
+            "link archivo enlace"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál es el ID de grupo (GID) predeterminado para el usuario root en la mayoría de las distribuciones de Linux?",
+        "type": "text",
+        "correct": "0"
+    },
+    {
+        "q": "¿Qué opción del comando 'kill' envía la señal SIGKILL?",
+        "type": "radio",
+        "options": [
+            "-1",
+            "-9",
+            "-15",
+            "-STOP",
+            "-TERM"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué comando se usa para ver las últimas 10 líneas de un archivo?",
+        "type": "text",
+        "correct": "tail"
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos se utiliza para extraer el contenido de un archivo tar comprimido con gzip (archivo.tar.gz)?",
+        "type": "radio",
+        "options": [
+            "tar -xvf archivo.tar.gz",
+            "tar -zxvf archivo.tar.gz",
+            "tar -jxvf archivo.tar.gz",
+            "tar -cvf archivo.tar.gz",
+            "tar -zcvf archivo.tar.gz"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué archivo contiene la información de las cuentas de usuario, excluyendo las contraseñas?",
+        "type": "text",
+        "correct": "/etc/passwd"
+    },
+    {
+        "q": "¿Qué comando se utiliza para cambiar los permisos de un archivo?",
+        "type": "text",
+        "correct": "chmod"
+    },
+    {
+        "q": "¿Qué comando muestra el nombre del directorio actual?",
+        "type": "text",
+        "correct": "pwd"
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos muestra el espacio libre en memoria (RAM)?",
+        "type": "radio",
+        "options": [
+            "df",
+            "du",
+            "free",
+            "mem",
+            "top"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué comando se utiliza para buscar archivos en una jerarquía de directorios?",
+        "type": "text",
+        "correct": "find"
+    },
+    {
+        "q": "¿Cuál es la función del comando 'cat'?",
+        "type": "radio",
+        "options": [
+            "Copiar archivos.",
+            "Borrar archivos.",
+            "Concatenar y mostrar el contenido de archivos.",
+            "Cambiar el nombre de archivos.",
+            "Listar archivos en un directorio."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué comando se usa para leer la entrada estándar y escribirla tanto en la salida estándar como en archivos?",
+        "type": "text",
+        "correct": "tee"
+    },
+    {
+        "q": "¿Cuál es el nivel 'nice' predeterminado cuando se inicia un proceso usando el comando 'nice'?",
+        "type": "radio",
+        "options": [
+            "-10",
+            "0",
+            "10",
+            "15",
+            "20"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Un usuario creó accidentalmente el subdirectorio '\\dir'. ¿Cuál de los siguientes comandos eliminará ese directorio?",
+        "type": "radio",
+        "options": [
+            "rmdir ~/\\\\dir",
+            "rmdir \"~/\\dir\"",
+            "rmdir ~/\\dir",
+            "rmdir '~/\\dir'",
+            "rmdir \"~/\\\\dir\""
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Qué comando envía una cadena de texto a un archivo o a la terminal?",
+        "type": "text",
+        "correct": "echo"
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos puede realizar búsquedas en el contenido de archivos utilizando expresiones regulares?",
+        "type": "radio",
+        "options": [
+            "find",
+            "locate",
+            "grep",
+            "reggrep",
+            "pgrep"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "En una estructura de directorio anidada, ¿qué opción del comando 'find' se usaría para restringir la búsqueda a una cantidad particular de subdirectorios?",
+        "type": "radio",
+        "options": [
+            "-maxdepth",
+            "-dirmax",
+            "-maxlevels",
+            "-s",
+            "-n"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos determina el formato de un archivo mediante una base de datos de 'números mágicos'?",
+        "type": "radio",
+        "options": [
+            "type",
+            "file",
+            "magic",
+            "pmagic",
+            "hash"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué comando se utiliza para mostrar el historial de comandos ejecutados por el usuario actual?",
+        "type": "text",
+        "correct": "history"
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos permite ver el contenido de un archivo de texto de forma paginada hacia adelante y hacia atrás?",
+        "type": "radio",
+        "options": [
+            "cat",
+            "head",
+            "tail",
+            "less",
+            "print"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "¿Qué opción del comando 'grep' muestra el número de línea donde se encontró la coincidencia?",
+        "type": "radio",
+        "options": [
+            "-l",
+            "-n",
+            "-c",
+            "-v",
+            "-i"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos se utiliza para cambiar el propietario de un archivo?",
+        "type": "text",
+        "correct": "chown"
+    },
+    {
+        "q": "¿Qué comando se usa para contar el número de líneas, palabras y bytes de un archivo?",
+        "type": "radio",
+        "options": [
+            "count",
+            "wcount",
+            "wc",
+            "lc",
+            "num"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Qué comando se utiliza para localizar archivos binarios, fuentes y páginas de manual de un comando específico?",
+        "type": "radio",
+        "options": [
+            "whereis",
+            "which",
+            "locate",
+            "find",
+            "whatis"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "¿Cuál es el propósito del comando 'sort'?",
+        "type": "radio",
+        "options": [
+            "Eliminar archivos duplicados.",
+            "Ordenar las líneas de archivos de texto.",
+            "Cambiar permisos de archivos.",
+            "Buscar texto dentro de archivos.",
+            "Comparar dos archivos bit a bit."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué comando se utiliza para convertir pestañas (tabs) en espacios en un archivo?",
+        "type": "radio",
+        "options": [
+            "convert",
+            "expand",
+            "unexpand",
+            "tab2space",
+            "sed"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Al utilizar el comando 'cp', ¿qué opción se requiere para copiar un directorio de forma recursiva?",
+        "type": "radio",
+        "options": [
+            "-v",
+            "-f",
+            "-r",
+            "-d",
+            "-s"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Cuál de los siguientes comandos se utiliza para crear un archivo vacío o actualizar la marca de tiempo de uno existente?",
+        "type": "text",
+        "correct": "touch"
+    },
+    {
+        "q": "¿Qué comando de 'sed' se utiliza para reemplazar todas las apariciones de 'manzana' por 'pera' en una línea?",
+        "type": "radio",
+        "options": [
+            "s/manzana/pera/",
+            "s/manzana/pera/g",
+            "r/manzana/pera/",
+            "sub/manzana/pera/",
+            "c/manzana/pera/"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "¿Qué información se puede encontrar en el archivo /proc/cpuinfo?",
+        "type": "radio",
+        "options": [
+            "El uso actual de la CPU por proceso.",
+            "La temperatura de la placa base.",
+            "Detalles técnicos del procesador, como el modelo y la velocidad.",
+            "El historial de procesos finalizados.",
+            "La configuración del gestor de arranque."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "¿Cuál de las siguientes opciones identifica correctamente una partición de intercambio (swap) en /etc/fstab? (Elija tres).",
+        "type": "checkbox",
+        "options": [
+            "UUID",
+            "LABEL",
+            "DEVICE",
+            "ID",
+            "NOMBRE"
+        ],
+        "correct": [
+            0,
+            1,
+            2
+        ]
+    },
+    {
+        "q": "¿Qué archivo de configuración de inicio de System V se utiliza comúnmente para establecer el nivel de ejecución (runlevel) predeterminado?",
+        "type": "text",
+        "correct": "/etc/inittab"
+    },
+    {
+        "q": "Dados los enlaces en System V: /etc/rc1.d/K01apache2 y /etc/rc2.d/S02apache2, ¿cuándo se ejecutan? (Elija dos).",
+        "type": "checkbox",
+        "options": [
+            "S02apache2 se ejecuta al entrar al nivel 2.",
+            "S02apache2 se ejecuta al salir del nivel 2.",
+            "K01apache2 nunca se ejecuta.",
+            "Ambos se ejecutan durante el apagado.",
+            "K01apache2 se ejecuta al entrar al nivel 1."
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "In the below example output, which columns detail the percent of time the CPU spent running non-kernel code and the percent of time the CPU spent running kernel code? (Choose TWO correct answers.)\n\n# vmstat 1 100\nprocs -----------memory---------- ---swap-- -----io---- --system-- ----cpu----\nr b swpd free buff cache si so bi bo in cs us sy id wa\n0 0 0 282120 134108 5797012 0 0 0 2 0 0 0 0 100 0",
+        "type": "checkbox",
+        "options": [
+            "id",
+            "us",
+            "wa",
+            "sy"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "Which of the following are kernel image files? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "vmlinuz",
+            "bzImage",
+            "vmlinux.bin",
+            "linux.img",
+            "kernel.exe"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "When compiling a kernel, what is the purpose of the 'make oldconfig' command?",
+        "type": "radio",
+        "options": [
+            "It deletes all files generated during previous compilations.",
+            "It uses an existing .config file and only asks for new configuration options.",
+            "It creates a default configuration based on the current hardware.",
+            "It installs the newly compiled kernel over the old one."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which command is used to display the messages produced by the kernel during system boot?",
+        "type": "text",
+        "correct": "dmesg"
+    },
+    {
+        "q": "Which directory contains the documentation for the currently installed Linux kernel?",
+        "type": "text",
+        "correct": "/usr/src/linux/Documentation"
+    },
+    {
+        "q": "Which of the following commands will list all the modules currently loaded in the kernel? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "lsmod",
+            "cat /proc/modules",
+            "modprobe -l",
+            "insmod -list",
+            "kern-list"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "Which command is used to insert a module into the Linux kernel and automatically handle its dependencies?",
+        "type": "text",
+        "correct": "modprobe"
+    },
+    {
+        "q": "In which file can you specify parameters for kernel modules to be used by modprobe?",
+        "type": "radio",
+        "options": [
+            "/etc/modules.conf",
+            "/etc/modprobe.d/*.conf",
+            "/lib/modules/parameters",
+            "/etc/sysctl.conf"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which command displays information about a specific kernel module, such as its author, description, and dependencies?",
+        "type": "text",
+        "correct": "modinfo"
+    },
+    {
+        "q": "What is the result of the following command?\n# lsmod",
+        "type": "radio",
+        "options": [
+            "It lists the kernel modules that are currently loaded.",
+            "It lists all the modules available on the system.",
+            "It lists the modules that will be loaded at next boot.",
+            "It shows the dependencies of all installed modules."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to remove a module from the kernel? (Choose TWO answers.)",
+        "type": "checkbox",
+        "options": [
+            "rmmod",
+            "modprobe -r",
+            "delmod",
+            "unmod",
+            "mod -d"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "What does the following command do?\n# patch -p1 < patch-4.6.4",
+        "type": "radio",
+        "options": [
+            "It creates a backup of the current kernel before patching.",
+            "It applies a patch to the source code, stripping one level of the directory path.",
+            "It installs a pre-compiled kernel binary.",
+            "It checks if the patch is compatible without applying changes."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "When building a kernel, which command is used to create the initial ramdisk (initrd)?",
+        "type": "text",
+        "correct": "mkinitrd"
+    },
+    {
+        "q": "After downloading patch-4.6.4.xz from kernel.org, what are the next steps to prepare the build of a version 4.6.4 Linux kernel? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "Uncompress the file and move the resulting directory to /usr/src/linux",
+            "Apply the patch file to the kernel source directory containing kernel version 4.6.0",
+            "Apply the patch file to the kernel source directory containing kernel version 4.6.3",
+            "Uncompress the file using xz to get the uncompressed patch file",
+            "Use patch to apply the uncompressed patch file to the source directory of any previous kernel version"
+        ],
+        "correct": [
+            2,
+            3
+        ]
+    },
+    {
+        "q": "After installation of a self-compiled kernel, modules that need to be loaded cannot be found. What make target was likely missed while installing the kernel?",
+        "type": "text",
+        "correct": "modules_install"
+    },
+    {
+        "q": "Which of the following parameters instructs the kernel at boot time to use only one of the available processors?",
+        "type": "radio",
+        "options": [
+            "maxcpus=1",
+            "usecpus=1",
+            "smpcpus=1",
+            "vcpumx=1",
+            "vmxcpus=1"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands displays the physical path of the kernel module named dummy?",
+        "type": "radio",
+        "options": [
+            "modprobe -i dummy",
+            "modinfo -n dummy",
+            "modpath -v dummy",
+            "depmod -n dummy",
+            "modshow -p dummy"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "In which directory tree are files modified when changing kernel parameters using the command sysctl?",
+        "type": "radio",
+        "options": [
+            "/sys/kernel/",
+            "/proc/kernel/",
+            "/proc/sys/",
+            "/etc/sysctl.d/",
+            "/lib/sysctl.d/"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following commands lists all the modules that are currently loaded into the kernel?",
+        "type": "radio",
+        "options": [
+            "lsmod",
+            "listmod",
+            "insmod -l",
+            "modprobe -l",
+            "modinfo -a"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands is used to update the information about available kernel modules and their dependencies?",
+        "type": "text",
+        "correct": "depmod"
+    },
+    {
+        "q": "Which utility is used to unload a kernel module and all of its dependencies if they are not in use?",
+        "type": "radio",
+        "options": [
+            "rmmod",
+            "modprobe -r",
+            "unmod",
+            "kmod -u",
+            "unload"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which of the following commands displays the hardware detected by the kernel during the boot process?",
+        "type": "radio",
+        "options": [
+            "lsdev",
+            "lspci",
+            "dmesg",
+            "hwinfo"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which file in the /proc filesystem contains information about the current kernel version and the compilation date?",
+        "type": "text",
+        "correct": "/proc/version"
+    },
+    {
+        "q": "What is the correct order of commands to compile and install a new kernel from source?",
+        "type": "radio",
+        "options": [
+            "make, make modules, make install, make modules_install",
+            "make config, make install, make modules, make modules_install",
+            "make, make modules_install, make install",
+            "make all, make install_all"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which tool allows you to configure kernel parameters at runtime via the /proc/sys/ directory?",
+        "type": "text",
+        "correct": "sysctl"
+    },
+    {
+        "q": "Which command is used to remove a module from the kernel, provided it is not in use?",
+        "type": "radio",
+        "options": [
+            "delmod",
+            "rmmod",
+            "modprobe -r",
+            "kmod -u"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "What is the primary difference between a 'monolithic' kernel and a 'microkernel'?",
+        "type": "radio",
+        "options": [
+            "A monolithic kernel runs all OS services in kernel space, while a microkernel runs only the essentials in kernel space.",
+            "A monolithic kernel is only for Linux, while microkernels are for Windows.",
+            "A monolithic kernel cannot be updated without a reboot.",
+            "Microkernels are much larger in size than monolithic kernels."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which utility is used to apply changes to the source code, usually for a new kernel version?",
+        "type": "radio",
+        "options": [
+            "diff",
+            "update",
+            "upgrade",
+            "change",
+            "patch"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "Which of the following commands changes into the directory which contains the modules of the running kernel?",
+        "type": "radio",
+        "options": [
+            "cd /lib/modules/$(kernel -v)",
+            "cd /lib/modules/$(uname -r)",
+            "cd /lib/modules/current",
+            "cd /lib/modules/$(uptime -k)",
+            "cd /lib/modules/running"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Running sysctl has the same effect as:",
+        "type": "radio",
+        "options": [
+            "There is no equivalent to this utility",
+            "Editing files inside /etc/sysconfig",
+            "Changing the kernel compilation parameters",
+            "Writing to files inside /proc",
+            "Changing process limits using ulimit"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "In which directory can all parameters available to sysctl be found? (Provide the full path)",
+        "type": "text",
+        "correct": "/proc/sys"
+    },
+    {
+        "q": "You have installed some new libraries, but these are not available to programs and are not listed by ldconfig -p. What file should the path to the libraries be added to, before running ldconfig?",
+        "type": "text",
+        "correct": "/etc/ld.so.conf"
+    },
+    {
+        "q": "You are not sure whether the kernel has detected a piece of hardware in your machine. What command, without options or parameters, should be run to present the contents of the kernel ringbuffer?",
+        "type": "text",
+        "correct": "dmesg"
+    },
+    {
+        "q": "Which of the following init systems comes along with an own UEFI boot loader?",
+        "type": "radio",
+        "options": [
+            "systemd",
+            "SysVinit",
+            "Upstart",
+            "OpenRC",
+            "launchd"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "What is the first program the Linux kernel runs at the end of the boot process?",
+        "type": "text",
+        "correct": "init"
+    },
+    {
+        "q": "Which of the following is the default configuration file for GRUB 2?",
+        "type": "radio",
+        "options": [
+            "/boot/grub/grub.conf",
+            "/etc/grub.conf",
+            "/boot/grub/grub.cfg",
+            "/etc/grub/grub.cfg"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which command is used to generate the main GRUB 2 configuration file based on templates and detected operating systems?",
+        "type": "text",
+        "correct": "grub-mkconfig"
+    },
+    {
+        "q": "In a systemd-based system, which command is used to change the default boot target to multi-user?",
+        "type": "radio",
+        "options": [
+            "systemctl set-default multi-user.target",
+            "systemctl change-target multi-user",
+            "telinit 3",
+            "init 3"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to reboot a system? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "shutdown -r now",
+            "reboot",
+            "halt -p",
+            "init 0",
+            "suspend"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "Which file is used by SysV init to determine the default runlevel and the processes to be started?",
+        "type": "text",
+        "correct": "/etc/inittab"
+    },
+    {
+        "q": "Which GRUB 2 command defines the partition that contains the /boot directory?",
+        "type": "radio",
+        "options": [
+            "root",
+            "set root",
+            "bootp",
+            "part"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "What is the name of the systemd unit that replaces the traditional runlevel 5 (graphical mode)?",
+        "type": "text",
+        "correct": "graphical.target"
+    },
+    {
+        "q": "Which command displays the current and previous runlevel in a SysV init system?",
+        "type": "text",
+        "correct": "runlevel"
+    },
+    {
+        "q": "During the boot process, which component is responsible for loading the initial RAM disk (initramfs) into memory?",
+        "type": "radio",
+        "options": [
+            "The BIOS/UEFI",
+            "The Boot Loader (GRUB)",
+            "The Kernel",
+            "The Init system"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "In GRUB 2, which directory contains the scripts used to generate the grub.cfg file?",
+        "type": "text",
+        "correct": "/etc/grub.d"
+    },
+    {
+        "q": "What is the purpose of the 'initrd' or 'initramfs'?",
+        "type": "radio",
+        "options": [
+            "To provide the kernel with necessary drivers to mount the root filesystem.",
+            "To provide a backup of the kernel in case of failure.",
+            "To manage the graphical login screen.",
+            "To speed up the network configuration."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "In /etc/inittab, which action keyword is used to specify the default system runlevel?",
+        "type": "text",
+        "correct": "initdefault"
+    },
+    {
+        "q": "What happens if the Linux kernel can't mount the root filesystem when booting?",
+        "type": "radio",
+        "options": [
+            "An error message is shown and the administrator is asked by the kernel to specify a valid root filesystem to continue the boot process.",
+            "An error message is shown and the system reboots after a keypress.",
+            "An error message is shown and the system boots in maintenance mode.",
+            "An error message is shown showing which device couldn't be mounted or informing that init couldn't be found.",
+            "An error message is shown stating that the corresponding kernel module couldn't be loaded."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which file tells GRUB the paths of the filesystem partitions in both Linux format and in the GRUB syntax?",
+        "type": "text",
+        "correct": "device.map"
+    },
+    {
+        "q": "Which command is used to install a new LILO boot loader?",
+        "type": "radio",
+        "options": [
+            "lilo",
+            "lilo-config",
+            "lilo-install",
+            "install-lilo"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which option to the update-rc.d command will cause the removal of all symlinks to /etc/rcX.d/ *test2 even when the script /etc/init.d/test2 still exists?",
+        "type": "radio",
+        "options": [
+            "-d",
+            "-f",
+            "-n",
+            "-r"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Please enter the complete path to the main SysV init process configuration file.",
+        "type": "text",
+        "correct": "/etc/inittab"
+    },
+    {
+        "q": "Why is the root file system mounted read-only during boot and remounted with write permission later on?",
+        "type": "radio",
+        "options": [
+            "Because if problems with the root file system are detected during the boot, fsck can be run, without risk of damage.",
+            "To avoid other operating systems overwriting the Linux root partition",
+            "Because this way crackers cannot collect information about root with boot sniffers",
+            "Because the disk has its own write protection that cannot change by the operating system.",
+            "To avoid writing to the disk, unless the root password is known."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "During which stage of the boot process would this message be seen? ide_setup:hdc=ide-scsi",
+        "type": "radio",
+        "options": [
+            "Boot loader start and hand off to kernel",
+            "Kernel loading",
+            "Hardware initialization and setup",
+            "Daemon initialization and setup"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "A GRUB boot loader installed in the MBR was accidentally overwritten. After booting with a rescue CDROM, how can the lost GRUB first stage loader be recovered?",
+        "type": "radio",
+        "options": [
+            "Run fdisk --mbr /dev/had assuming that the boot harddisk is /dev/hda.",
+            "Run grub-install after verifying that grub.conf is correct.",
+            "Running mformat will create a new MBR and fix GRUB using info from grub.conf",
+            "Use dd to restore a previous backup of the MBR",
+            "Install LILO since there is no easy way to recover GRUB"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "During which stage of the boot process would this message be seen? Ide0: BM-DMA at 0xff00-0xff07, BIOS settings: hda:DMA, hdb:DMA",
+        "type": "radio",
+        "options": [
+            "Kernel loading",
+            "Boot loader start and hand off to kernel",
+            "Hardware initialization and setup",
+            "Daemon initialization and setup"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "On bootup, LILO prints out LIL and stops. What is the cause of this?",
+        "type": "radio",
+        "options": [
+            "LILO failed to load the second stage loader",
+            "LILO failed to load the primary stage loader",
+            "The descriptor table is bad",
+            "LILO failed to locate the kernel image"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "What is the appropriate configuration file entry to allow SSH to run from inetd?",
+        "type": "radio",
+        "options": [
+            "ssh stream tcp nowait root /usr/sbin/tcpd sshd",
+            "ssh stream tcp nowait root /usr/sbin/tcpd tcpd",
+            "ssh stream tcpd nowait root /usr/sbin/tcpd sshd",
+            "ssh data tcpd nowait root /usr/sbin/tcpd sshd",
+            "ssh data tcp nowait root /usr/sbin/tcpd sshd"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which site-specific configuration file for the shadow login suite must be modified to log login failures? Please enter the complete path to that file.",
+        "type": "text",
+        "correct": "/etc/login.defs"
+    },
+    {
+        "q": "What compression formats can be used to create initramfs images? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "gzip",
+            "xz",
+            "Rar",
+            "Cpio",
+            "bzip2"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "Which systemd command finds and displays the overridden systemd configuration files? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "systemd-delta"
+    },
+    {
+        "q": "What command discards unused blocks on a mounted file system in order to support SSD devices? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "fstrim"
+    },
+    {
+        "q": "How can the label root be added to the ext4 filesystem on /dev/sda1?",
+        "type": "radio",
+        "options": [
+            "relabel /dev/sda1 root",
+            "tune2fs –L root /dev/sda1",
+            "echo ‘root’ > /proc/fs/sda1/label",
+            "labelfs --device /dev/sda1 root"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "What command ensures that the file systems are written to disk after a lot of write operations? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "sync"
+    },
+    {
+        "q": "Which of the following commands erases the contents of the /dev/sdb3 partition?",
+        "type": "radio",
+        "options": [
+            "rm /dev/sdb3",
+            "dd of=/dev/zero if=/dev/sdb3",
+            "dd if=/dev/zero of=/dev/sdb3",
+            "umount /dev/sdb3"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following commands creates a Btrfs subvolume named volume in /mnt?",
+        "type": "radio",
+        "options": [
+            "btrfs subvolume add –n volume /mnt",
+            "btrfs create subvolume /mnt volume",
+            "btrfs-subvolume create /mnt/volume",
+            "btrfs subvolume new volume /mnt",
+            "btrfs subvolume create /mnt/volume"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "What keyword is missing in the following line from /etc/fstab in order to grant the user fred write access to the files in the vfat file system on /dev/sdb1: /dev/sdb1 /mnt/usbflash vfat defaults, _________=fred, umask=022, 0 0 (Specify ONLY the option name without any path or parameters.)",
+        "type": "text",
+        "correct": "uid"
+    },
+    {
+        "q": "Which of the following is a CD-ROM filesystem standard?",
+        "type": "radio",
+        "options": [
+            "OSI 9660",
+            "ISO 9660",
+            "SR0FS",
+            "ISO 8859",
+            "ROM-EO"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "A system has one hard disk and one CD writer which are both connected to SATA controllers. Which device represents the CD writer?",
+        "type": "radio",
+        "options": [
+            "/dev/hdb",
+            "/dev/sdd",
+            "/dev/scd1",
+            "/dev/sr0",
+            "/dev/sr1"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which directory contains the system-specific udev rule files? (Specify the absolute path.)",
+        "type": "text",
+        "correct": "/etc/udev/rules.d"
+    },
+    {
+        "q": "Why is the root file system mounted read-only during boot and remounted with write permission later on?",
+        "type": "radio",
+        "options": [
+            "Because if problems with the root file system are detected during the boot, fsck can be run, without risk of damage.",
+            "Because this way crackers cannot collect information about root with boot sniffers.",
+            "To avoid writing to the disk, unless the root password is known.",
+            "To avoid other operating systems overwriting the Linux root partition.",
+            "Because the disk has its own write protection that cannot be changed by the operating system."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "The main configuration file for autofs has this entry: /home /etc/auto.home What is the meaning of the /etc/auto.home file?",
+        "type": "radio",
+        "options": [
+            "It has the indirect maps for the mounting of file systems.",
+            "It has configuration information, such as passwords and keys, for the remote file server.",
+            "It has configuration information on settings for the /home mount point.",
+            "It is the holds the SSL key to allow authentication to the remote file server."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following are common Linux filesystem types used for root partitions? (Choose THREE correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "ext4",
+            "VFAT",
+            "NTFS",
+            "XFS",
+            "Btrfs"
+        ],
+        "correct": [
+            0,
+            3,
+            4
+        ]
+    },
+    {
+        "q": "Which of the following best describes the format of the /etc/fstab file?",
+        "type": "radio",
+        "options": [
+            "device name; filesystem type; mount point; mount options; dump filesystem; fsck order",
+            "device name; mount point; filesystem type; mount options; dump filesystem; fsck order",
+            "device name; mount point; mount options; filesystem type; dump filesystem; fsck order",
+            "mount point; filesystem type; device name; mount options; dump filesystem; fsck order",
+            "mount point; device name; filesystem type; mount options; dump filesystem; fsck order"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which command turns an existing ext2 filesystem non-destructively into an ext3 filesystem? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "tune2fs"
+    },
+    {
+        "q": "Which files are updated as devices are mounted and unmounted to provide information on the currently mounted devices and the options used? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "/proc/dtab",
+            "/etc/mtab",
+            "/etc/fstab",
+            "/proc/mounts",
+            "/proc/devices"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "What is the main template file used by autofs?",
+        "type": "radio",
+        "options": [
+            "default.maps",
+            "auto.conf",
+            "auto.master",
+            "autofs.master"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which directory in /dev/disk/ can be used to determine the UUID of a connected hard disk?",
+        "type": "text",
+        "correct": "by-uuid"
+    },
+    {
+        "q": "What does a 0 in the last field (fsck order) of /etc/fstab indicate about the filesystem?",
+        "type": "radio",
+        "options": [
+            "The filesystem should be checked before filesystems with higher values.",
+            "The filesystem should be checked after filesystems with higher values",
+            "The filesystem check counter is ignored.",
+            "The filesystem has been disabled from being checked and mounted on the system.",
+            "The filesystem does not require an fsck check when being mounted."
+        ],
+        "correct": 4
+    },
+    {
+        "q": "What is one of the possible commands that an ordinary (non-root) user can use to mount the /dev/sdb1 partition on the /media/usb0 mount point?",
+        "type": "text",
+        "correct": "mount /media/usb0"
+    },
+    {
+        "q": "Where would fsck put any unreferenced file or file fragments on a ext4 filesystem?",
+        "type": "radio",
+        "options": [
+            "recover",
+            "lost+found",
+            "back",
+            "lost"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "What is the device name for the first SCSI tape drive on a system when used without automatic rewinding after each write operation? (Please specify the full path to the device.)",
+        "type": "text",
+        "correct": "/dev/nst0"
+    },
+    {
+        "q": "Which of the following commands displays the UUID label and type for all partitions and volumes of a Linux system?",
+        "type": "radio",
+        "options": [
+            "blkls",
+            "lsmount",
+            "blkinfo",
+            "lsdevs",
+            "blkid"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "When doing automated file system checks during system startup what value is typically used for the root file system in the last field (fsck order) of /etc/fstab?",
+        "type": "radio",
+        "options": [
+            "The value depends on how many root filesystems are present.",
+            "A value of 1 (one) is used",
+            "It is left blank",
+            "A value of 0 (zero) is used",
+            "A value of 2 (two) is used."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Journalling doesn't appear to be working on an ext3 file-system. When booting, the following line appears: VFS: Mounted root (ext2 filesystem) readonly. What could be causing the problem?",
+        "type": "radio",
+        "options": [
+            "The system was not shut down cleanly.",
+            "The kernel does not contain ext3 support.",
+            "The file-system is specified as ext2 in/etc/fstab.",
+            "An old version of e2fsprogs is installed."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which command is used to make an exact copy, at a single point in time, of a logical volume while still allowing the original logical volume to be updated?",
+        "type": "radio",
+        "options": [
+            "lvcclone",
+            "lvcreate",
+            "lvm2",
+            "lvsnap",
+            "lvsnapshot"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "What command will remove a physical volume from a volume group?",
+        "type": "text",
+        "correct": "vgreduce"
+    },
+    {
+        "q": "What information is found in the following excerpt from the file /proc/mdstat? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "One of the disks in /dev/md0 has failed and a spare disk is used to recreate full redundancy",
+            "The spare disk /dev/sda1 is used to restore full redundancy after the current recovery",
+            "The information [UU_] means that the RAID is missing one disk and is not fully redundant",
+            "The device is using version 1.2 metadata to allow LILO and GRUB Legacy to use /dev/md0 as the boot partition. This would not have been necessary with GRUB2",
+            "The information [3/2] means that 3 RAID disks belong to the array and 2 disks are spare. Together they equal the number of available disks"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "What is the minimum number of disks required in a fully redundant RAID5 array?",
+        "type": "radio",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which subcommand to cryptsetup shows information about an encrypted LUKS partition?",
+        "type": "radio",
+        "options": [
+            "luksDump",
+            "luksInfo",
+            "luksDebug",
+            "luksLS",
+            "luksShow"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "What action should be performed after increasing the size of a logical volume?",
+        "type": "radio",
+        "options": [
+            "Run vgresize",
+            "Increase the size of the filesystem used for the logical volume",
+            "Run lvresize",
+            "Remount the logical volume"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Due to extreme system use, a Linux system requires some additional swap space. To initialize 5GB of additional swap space, which combination of commands should be used?",
+        "type": "radio",
+        "options": [
+            "dd if=/dev/zero of=/tmp/swapfile bs=1024 count=5120000; mkswap /tmp/swapfile; mount /tmp/swapfile",
+            "dd if=/dev/zero of=/tmp/swapfile bs=1024 count=5120000; swapon /tmp/swapfile",
+            "dd if=/dev/zero of=/tmp/swapfile bs=1024 count=5120000; mkswap /tmp/swapfile; swapon /tmp/swapfile",
+            "touch -5G /tmp/swapfile; swapon /tmp/swapfile",
+            "mkswap /tmp/swapfile 512000; swapon /tmp/swapfile"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "What component of a system does smartd monitor?",
+        "type": "radio",
+        "options": [
+            "CPU",
+            "RAM",
+            "Hard drives",
+            "Ethernet traffic"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which single command simulates a failed device within a RAID 5 array?",
+        "type": "radio",
+        "options": [
+            "mdadm --remove /dev/md0 /dev/sdd1",
+            "mdadm --zero-superblock /dev/sdf3",
+            "mdadm --force-fault /dev/md2 /dev/sde2",
+            "mdadm --fail /dev/md0 /dev/sdc1",
+            "mdadm /dev/md0 --offline /dev/sdc1"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "What is the purpose of the smartd daemon?",
+        "type": "radio",
+        "options": [
+            "It is a user space daemon used for reading smart cards and integrated circuit chips.",
+            "It attempts to automatically repair file systems upon a failed file system check.",
+            "It monitors process activity and helps the kernel decide which processes to kill when the kernel overcommits",
+            "It monitors certain disk drives and attempts to predict when they will fail."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which file in /proc contains information on the status of local software RAID devices?",
+        "type": "radio",
+        "options": [
+            "/proc/raidstat",
+            "/proc/mdstat",
+            "/proc/raidstatus",
+            "/proc/mdstatus",
+            "/proc/raid/status"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which two LVM commands are missing from the following sequence which is used to create, format, mount and make use of a logical volume? pvcreate, ________________, __________, mkfs, mount",
+        "type": "radio",
+        "options": [
+            "lvcreate, mdadm",
+            "lvcreate, vgcreate",
+            "lvmcreate, vgcreate",
+            "vgcreate, lvcreate",
+            "vgcreate, mdadm"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "What mount option must be used in /etc/fstab when mounting an iSCSI target?",
+        "type": "radio",
+        "options": [
+            "_santarget",
+            "iscsi",
+            "waitiscsi",
+            "_netdev"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "What is the purpose of the command vgextend?",
+        "type": "radio",
+        "options": [
+            "Extend a volume group's footprint on disk.",
+            "Add physical volumes to an existing volume group.",
+            "Increase the number of days between scheduled error checking.",
+            "Create a volume group which uses all available space on disk."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which of the following is an example path to a Linux software RAID array?",
+        "type": "radio",
+        "options": [
+            "/dev/raid0",
+            "/dev/rd1",
+            "/dev/pr0",
+            "/dev/md1",
+            "/dev/raid/status"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which of the following commands is used to set up a RAID volume?",
+        "type": "radio",
+        "options": [
+            "makerd",
+            "mdadm",
+            "mkfs.raid",
+            "makeraid",
+            "rdconfig"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which RAID level value must be used with Linux software RAID in order to create an array of mirrored devices?",
+        "type": "radio",
+        "options": [
+            "1",
+            "5",
+            "6",
+            "container",
+            "mirrorstripe"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "The IDE hard drive /dev/hda does not have DMA enabled. Which command must be run to enable DMA on it?",
+        "type": "radio",
+        "options": [
+            "hdparm -d /dev/hda",
+            "hdparm --dma /dev/had",
+            "hdparm --dma /dev/hda1",
+            "hdparm -d /dev/hda1",
+            "hdparm -d 1 /dev/hda"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "What are the options to node.startup in the iscsid.conf file? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "login",
+            "initiate",
+            "manual",
+            "discover",
+            "automatic"
+        ],
+        "correct": [
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Which of the following are possible names for the first logical volume named vo101 in the volume group vg01 on a Linux system? (Choose three.)",
+        "type": "checkbox",
+        "options": [
+            "/dev/md-0",
+            "/dev/dm-0",
+            "/dev/mapper/vg01-vol01",
+            "/dev/mapper-vg01-vol1",
+            "/dev/vg01/vol01"
+        ],
+        "correct": [
+            1,
+            2,
+            4
+        ]
+    },
+    {
+        "q": "The hard drive /dev/sda does not have write caching enabled. Which command is used to enable write caching on /dev/sda?",
+        "type": "radio",
+        "options": [
+            "hdparm --enable-write-cache /dev/sda",
+            "hdparm --wee 1 /dev/sda",
+            "hdparm -C 1 /dev/sda",
+            "hdparm -W 1 /dev/sda",
+            "hdparm -D 1 /dev/sda"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "What command is used to add an additional physical volume to a volume group? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "vgextend"
+    },
+    {
+        "q": "Which command is used to retrieve SMART values from a hard disk? (Specify ONLY the command without any path or parameters.)",
+        "type": "text",
+        "correct": "smartctl"
+    },
+    {
+        "q": "How many different passwords can be used for a LUKS partition at the same time?",
+        "type": "radio",
+        "options": [
+            "4",
+            "64",
+            "8",
+            "16",
+            "32"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following commands shows capabilities and usable frequencies for the wireless interface wlan0?",
+        "type": "radio",
+        "options": [
+            "iw phy pyh0 info",
+            "iw dev wlan0 info",
+            "iw dev wlan0 show",
+            "iw phy wlan0 show",
+            "iw phy0 show"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following properties should be recorded in order to monitor the quality of a network link? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "Bandwidth in both directions",
+            "Number of nodes using the link",
+            "Effective Latency",
+            "Number of IPv4 and IPv6 packets",
+            "Number of used TCP ports"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "The users of the local network complain that name resolution is not fast enough. Which command shows the time taken to resolve a DNS query?",
+        "type": "text",
+        "correct": "dig"
+    },
+    {
+        "q": "Which of the filter keywords below could be used in the following command: tcpdump –i eth0 ____________ 203.0.113.8 (Choose three.)",
+        "type": "checkbox",
+        "options": [
+            "host",
+            "ip",
+            "src",
+            "dst",
+            "ipv6"
+        ],
+        "correct": [
+            0,
+            2,
+            3
+        ]
+    },
+    {
+        "q": "On a Linux node with multiple active network interfaces, each having a default route to the Internet, which default route is preferred?",
+        "type": "radio",
+        "options": [
+            "The default route with the highest metric value",
+            "The default route with the highest MTU value",
+            "The default route with the lowest TTL value",
+            "The default route with the highest TTL value",
+            "The default route with the lowest metric value"
+        ],
+        "correct": 4
+    },
+    {
+        "q": "Which of the following configuration files are used by tcpwrapper?",
+        "type": "radio",
+        "options": [
+            "/etc/tcpd.allow and /etc/tcpd.deny",
+            "/etc/tcpwrapper.allow and /etc/tcpwrapper.deny",
+            "/etc/hosts.allow and /etc/hosts.deny",
+            "/etc/access.allow and /etc/access.deny",
+            ". /etc/service.allow and /etc/service.deny"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following commands adds a static IPv6 address to the network interface eth0?",
+        "type": "radio",
+        "options": [
+            "ip add addr 2001:db8::1337/64 dev eth0",
+            "ip -6 add addr 2001:db8::1337/64 dev eth0",
+            "ip addr add 2001:db8::1337/64 dev eth0",
+            "ip -6 addr add new 2001:db8::1337/64 dev eth0",
+            "ip addr add -6 2001:db8::1337/64 dev eth0"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following commands lists IPv4 addresses and MAC addresses of network nodes that the local system has seen on its directly connected IP networks?",
+        "type": "radio",
+        "options": [
+            "arp",
+            "ifconfig",
+            "ipadm",
+            "iwlist"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "The following is an excerpt from the output of tcpdump -nli eth1. Which network service or protocol was used?",
+        "type": "radio",
+        "options": [
+            "FTP",
+            "HTTP",
+            "SSH",
+            "DNS",
+            "DHCP"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "What should be done to ensure a client machine uses the recursive nameserver running on the IP address 192.168.0.1? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "Add nameserver 192.168.0.1 to /etc/resolv.conf",
+            "Run route add nameserver 192.168.0.1",
+            "Run ifconfig eth0 nameserver 192.168.0.1",
+            "Ensure that the dns service is listed in the hosts entry in the /etc/nsswitch.conf file",
+            "Run bind add nameserver 192.168.0.1"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "A network client has an Ethernet interface (eth0) configured with an IP address in the subnet 192.168.0.0/24. This subnet has a router, with the IP address 192.168.0.1, that connects this subnet to the Internet. Which of the following commands can be used on the client to enable it to use the router as its default gateway? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "route add default gw 192.168.0.1 eth0",
+            "ifconfig eth0 defaultroute 192.168.0.1",
+            "ip route add default via 192.168.0.1",
+            "echo defaultroute 192.168.0.1 >> /etc/resolv.conf",
+            "route add defaultgw=192.168.0.1 if=eth0"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Under which of the following circumstances would the command ping output the string (DUP!)?",
+        "type": "radio",
+        "options": [
+            "When the ICMP packets are send to a broadcast address and multiple hosts respond.",
+            "When the host being sent ICMP packets is on a different network.",
+            "When the router responds to the ICMP packet in addition to the host receiving the ICMP packets.",
+            "When the host sending the ICMP packet is the same host as the one receiving the ICMP packets."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to script interactions with various TCP or UDP services?",
+        "type": "radio",
+        "options": [
+            "tcpdump",
+            "wget",
+            "strings",
+            "nc",
+            "ftp"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Considering the following kernel IP routing table below, which of the following commands must be used to remove the route to the network 10.10.1.0/24? (Select TWO answers)",
+        "type": "checkbox",
+        "options": [
+            "ip net delete 10.10.1.0/24",
+            "route del 10.10.1.0/24",
+            "route del -net 10.10.1.0/24",
+            "route del 10.10.1.0/24 gw 192.168.246.11",
+            "ip route delete 10.10.1.0/24"
+        ],
+        "correct": [
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Which of the following filter keywords for tcpdump specify the transfer direction for network packets? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "source",
+            "src",
+            "dest",
+            "src or dst",
+            "both"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "Which of the following commands will list the IPv4 neighbors of the current system? This includes IP and MAC addresses. (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "arp",
+            "ifconfig -lv eth0",
+            "netstat -al",
+            "ip neigh show"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "Running tcpdump -nli eth1 'tcp' shows output... What is the source IP address of this packet?",
+        "type": "text",
+        "correct": "10.1.52.145"
+    },
+    {
+        "q": "According to the tcpdump output below, what is the IP address of the client host?",
+        "type": "text",
+        "correct": "192.168.246.11"
+    },
+    {
+        "q": "The following is an excerpt from the output of tcpdump -nli eth1 'udp'... Which network service or protocol was used?",
+        "type": "radio",
+        "options": [
+            "FTP",
+            "HTTP",
+            "SSH",
+            "DNS",
+            "DHCP"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which of the following wireless tools can be used to check the wireless network link quality? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "iwconfig",
+            "iwlink",
+            "iwscan",
+            "iwifi",
+            "iw"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "What is incorrect about these entries in /etc/hosts which could be causing host name lookup problems with host2? host1 192.168.1.12 host2 192.168.1.12",
+        "type": "radio",
+        "options": [
+            "Two host names are using the same IP address.",
+            "The server doing the query is on a different subnet.",
+            "The fields are out of order.",
+            "host2 is not a fully qualified domain name."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Which of the following files are used to resolve hostnames to IP addresses? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "/etc/systems",
+            "/etc/hosts",
+            "/etc/network",
+            "/etc/dns.conf",
+            "/etc/resolv.conf"
+        ],
+        "correct": [
+            1,
+            4
+        ]
+    },
+    {
+        "q": "Which of the following statements about /etc/hosts.allow and /etc/hosts.deny are true? (Choose TWO correct answers.)",
+        "type": "checkbox",
+        "options": [
+            "Both files must be edited, to get tcp_wrappers to work properly",
+            "It is possible to configure tcp_wrappers using just one file",
+            "(x) inetd requires these files",
+            "All programs that provide network services use these files to control access",
+            "tcpd uses these files to control access to network services"
+        ],
+        "correct": [
+            1,
+            4
+        ]
+    },
+    {
+        "q": "To which destination will a route appear in the Linux routing table after activating IPv6 on a router's network interface, even when no global IPv6 addresses have been assigned to the interface?",
+        "type": "radio",
+        "options": [
+            "fe80::/10",
+            "0::/128",
+            "0::/0",
+            "fe80::/64",
+            "2000::/3"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Which of the following files will be looked for and used by GNU make, if one of them exists, unless a different file is specified on the command line when trying to compile software from source code? (Choose two.)",
+        "type": "checkbox",
+        "options": [
+            "configure",
+            "config.h.in",
+            "makefile",
+            "Makefile",
+            "Makefile.in"
+        ],
+        "correct": [
+            2,
+            3
+        ]
+    },
+    {
+        "q": "Which of the following commands restores only those files containing lpi in their name from the archive lpifiles.tar.gz?",
+        "type": "radio",
+        "options": [
+            "tar xvzf lpifiles.tar.gz --wildcards '*lpi*'",
+            "tar xvzwf lpifiles.tar.gz '*lpi*'",
+            "tar -xvfz lpifiles.tar.gz --deep '*lpi*'",
+            "tar -xvzf lpifiles.tar.gz --subdirs '*lpi*'",
+            "tar xvzf lpifiles.tar.gz --globbing '*lpi*'"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to determine which shared libraries a given executable depends on?",
+        "type": "radio",
+        "options": [
+            "ldd",
+            "ldconfig",
+            "ld.so",
+            "lib-dep",
+            "ls-lib"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands should be used to update the shared library cache after installing a new library in /usr/local/lib?",
+        "type": "radio",
+        "options": [
+            "ldd",
+            "ldconfig",
+            "ld.so",
+            "lib-update",
+            "ls-cache"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which of the following commands is used to create or update the symbolic links to the most recent shared libraries and also to create the cache file /etc/ld.so.cache?",
+        "type": "radio",
+        "options": [
+            "ldconfig",
+            "ldd",
+            "libtool",
+            "slibclean"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following environment variables can be used to provide an additional search path for the dynamic linker?",
+        "type": "radio",
+        "options": [
+            "LD_LIBRARY_PATH",
+            "LD_RUN_PATH",
+            "LD_LOAD_PATH",
+            "LD_SHARE_PATH"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following files contains a list of directories where the dynamic linker searches for shared libraries?",
+        "type": "radio",
+        "options": [
+            "/etc/ld.so.conf",
+            "/etc/ld.conf",
+            "/etc/dynamic.conf",
+            "/etc/libs.conf"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "What is the purpose of the patch command?",
+        "type": "radio",
+        "options": [
+            "To update the kernel to a new version.",
+            "To apply changes to a file based on a difference file.",
+            "To install new software packages.",
+            "To repair a corrupted file system."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Which of the following commands can be used to create a backup of a file system to a tape drive?",
+        "type": "radio",
+        "options": [
+            "tar",
+            "cp",
+            "mv",
+            "ls"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to list the contents of a tar archive without extracting it?",
+        "type": "radio",
+        "options": [
+            "tar -tvf archive.tar",
+            "tar -xvf archive.tar",
+            "tar -cvf archive.tar",
+            "tar -rvf archive.tar"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following options for the tar command is used to compress the archive using gzip?",
+        "type": "radio",
+        "options": [
+            "-z",
+            "-j",
+            "-J",
+            "-Z"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands is used to extract a gzipped tar archive?",
+        "type": "radio",
+        "options": [
+            "tar -xvzf archive.tar.gz",
+            "tar -xvjf archive.tar.bz2",
+            "tar -xvJf archive.tar.xz",
+            "tar -xvf archive.tar"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands can be used to copy files and directories to a remote host over an encrypted connection?",
+        "type": "radio",
+        "options": [
+            "scp",
+            "ftp",
+            "rcp",
+            "telnet"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands is a more versatile alternative to scp for synchronizing files and directories between different locations?",
+        "type": "radio",
+        "options": [
+            "rsync",
+            "scp",
+            "ftp",
+            "rcp"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands is used to create a summary of the differences between two files or directories?",
+        "type": "radio",
+        "options": [
+            "diff",
+            "patch",
+            "cmp",
+            "comm"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following commands is used to apply the differences found by the diff command to another file?",
+        "type": "radio",
+        "options": [
+            "patch",
+            "diff",
+            "cmp",
+            "comm"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following is the standard location for system-wide configuration files in Linux?",
+        "type": "radio",
+        "options": [
+            "/etc",
+            "/bin",
+            "/usr",
+            "/var"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which of the following is the standard location for user home directories in Linux?",
+        "type": "radio",
+        "options": [
+            "/home",
+            "/etc",
+            "/bin",
+            "/usr"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Which command is used to copy files and at the same time set permissions and ownership? (Provide only the command without any path or parameters.)",
+        "type": "text",
+        "correct": "install"
+    },
+    {
+        "q": "What is the mt command used for?",
+        "type": "radio",
+        "options": [
+            "It is used to mount SCSI tape drives.",
+            "It formats SCSI tapes for use with tar.",
+            "It is a replacement for dd for writing data to SCSI tape drives.",
+            "It places a SCSI tape in a specific position.",
+            "It marks a SCSI tape with a unique identifier (UUID)."
+        ],
+        "correct": 3
+    }
+]

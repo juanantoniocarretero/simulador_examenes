@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Certificaciones Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="quiz-card">
+        <div id="setup">
+            <h1>Simulador Certificaciones</h1>
+            
+            <label class="label-group">Selecciona el Examen:</label>
+            <select id="exam-select" class="btn">
+                <option value="json/lpic101.json">LPIC-1 (Examen 101)</option>
+                <option value="json/lpic102.json">LPIC-1 (Examen 102)</option>
+                <option value="json/lpic201.json">LPIC-2 (Examen 201)</option>
+                <option value="json/lpic202.json">LPIC-2 (Examen 202)</option>
+                <option value="itilv4.json">ITIL v4 Foundation (Sin funcionalidad aún)</option>
+            </select>
+
+            <label class="label-group">Cantidad de Preguntas:</label>
+            <select id="num-questions" class="btn">
+                </select>
+
+            <button class="btn" onclick="initQuiz(false)" style="background:var(--accent); color:white; border:none; margin-top:20px;">Iniciar Simulación</button>
+            
+            <div id="history-section">
+                <h3>Últimos Resultados</h3>
+                <div id="history-list"></div>
+            </div>
+        </div>
+
+        <div id="quiz" class="hidden">
+            <div class="stats-bar">
+                <span id="progress-text">Pregunta 1</span>
+                <div style="display: flex; gap: 15px;">
+                    <div class="stat-item">✅ <span id="count-success" class="stat-success">0</span></div>
+                    <div class="stat-item">❌ <span id="count-error" class="stat-error">0</span></div>
+                </div>
+            </div>
+            <h2 id="question-text" style="font-size: 1.2rem; min-height: 60px;">Cargando...</h2>
+            <div id="ans-container"></div>
+            <p id="feedback" style="min-height: 1.5em; margin-top: 15px; font-weight: bold;"></p>
+            
+            <button id="main-btn" class="btn" onclick="handleMainAction()">Verificar</button>
+            
+            <button id="exit-btn" class="btn-exit" onclick="confirmExit()">
+                Finalizar intento y ver resultados
+            </button>
+        </div>
+
+        <div id="results" class="hidden">
+            <h1 style="margin-bottom: 10px;">Test Finalizado</h1>
+            <div style="text-align: center;">
+                <div id="score-display" style="font-size: 4rem; font-weight: bold; color: var(--primary);">0</div>
+                <p id="final-msg" style="margin-bottom: 25px;"></p>
+                
+                <button id="retry-failed-btn" class="btn hidden" onclick="initQuiz(true)" style="background:var(--success); color:white; border:none;">
+                    Repetir preguntas falladas
+                </button>
+                <button class="btn" onclick="location.reload()" style="background:var(--accent); color:white; border:none;">
+                    Volver al inicio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
