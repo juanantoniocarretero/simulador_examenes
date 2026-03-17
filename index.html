@@ -22,8 +22,10 @@
             </select>
 
             <label class="label-group">Cantidad de Preguntas:</label>
-            <select id="num-questions" class="btn">
-                </select>
+            <select id="num-questions" class="btn"></select>
+
+            <label class="label-group">Tiempo Límite:</label>
+            <select id="timer-select" class="btn"></select>
 
             <button class="btn" onclick="initQuiz(false)" style="background:var(--accent); color:white; border:none; margin-top:20px;">Iniciar Simulación</button>
             
@@ -35,8 +37,11 @@
 
         <div id="quiz" class="hidden">
             <div class="stats-bar">
-                <span id="progress-text">Pregunta 1</span>
-                <div style="display: flex; gap: 15px;">
+                <div style="display: flex; flex-direction: column;">
+                    <span id="progress-text">Pregunta 1</span>
+                    <span id="timer-display" style="font-weight: bold; color: var(--accent); font-size: 1.1rem;"></span>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: center;">
                     <div class="stat-item">✅ <span id="count-success" class="stat-success">0</span></div>
                     <div class="stat-item">❌ <span id="count-error" class="stat-error">0</span></div>
                 </div>

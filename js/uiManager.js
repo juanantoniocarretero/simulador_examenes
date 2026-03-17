@@ -1,4 +1,24 @@
 /**
+ * Genera dinámicamente las opciones del selector de tiempo (Nuevo)
+ */
+export function setupSelectorTiempo() {
+    const select = document.getElementById("timer-select");
+    if (!select) return;
+    
+    const opciones = [
+        { val: 0, text: "Sin límite de tiempo" },
+        { val: 15, text: "15 Minutos" },
+        { val: 30, text: "30 Minutos" },
+        { val: 60, text: "60 Minutos" },
+        { val: 90, text: "90 Minutos" }
+    ];
+
+    select.innerHTML = opciones
+        .map(opt => `<option value="${opt.val}">${opt.text}</option>`)
+        .join('');
+}
+
+/**
  * Genera dinámicamente las opciones del selector de 20 en 20
  */
 export function setupSelectorPreguntas() {
