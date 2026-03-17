@@ -137,3 +137,24 @@ input[type="text"] {
     cursor: pointer;
     width: 100%;
 }
+/* Estilos para la tabla de revisión final */
+#detailed-report table {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#detailed-report th {
+    background-color: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+#detailed-report td {
+    line-height: 1.4;
+}
+
+#detailed-report tr:hover {
+    filter: brightness(0.95);
+}
