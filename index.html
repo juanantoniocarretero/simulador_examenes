@@ -22,12 +22,16 @@
             </select>
 
             <label class="label-group">Cantidad de Preguntas:</label>
-            <select id="num-questions" class="btn"></select>
+            <select id="num-questions" class="btn">
+                </select>
 
             <label class="label-group">Tiempo Límite:</label>
-            <select id="timer-select" class="btn"></select>
+            <select id="timer-select" class="btn">
+                </select>
 
-            <button class="btn" onclick="initQuiz(false)" style="background:var(--accent); color:white; border:none; margin-top:20px;">Iniciar Simulación</button>
+            <button class="btn" onclick="initQuiz(false)" style="background:var(--accent); color:white; border:none; margin-top:20px;">
+                Iniciar Simulación
+            </button>
             
             <div id="history-section">
                 <h3>Últimos Resultados</h3>
@@ -37,38 +41,57 @@
 
         <div id="quiz" class="hidden">
             <div class="stats-bar">
-                <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column; width: 65%;">
                     <span id="progress-text">Pregunta 1</span>
-                    <span id="timer-display" style="font-weight: bold; color: var(--accent); font-size: 1.1rem;"></span>
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="timer-display">⏱️ 00:00</span>
                 </div>
+                
                 <div style="display: flex; gap: 15px; align-items: center;">
                     <div class="stat-item">✅ <span id="count-success" class="stat-success">0</span></div>
                     <div class="stat-item">❌ <span id="count-error" class="stat-error">0</span></div>
                 </div>
             </div>
+
             <h2 id="question-text" style="font-size: 1.2rem; min-height: 60px;">Cargando...</h2>
+            
             <div id="ans-container"></div>
+            
             <p id="feedback" style="min-height: 1.5em; margin-top: 15px; font-weight: bold;"></p>
             
-            <button id="main-btn" class="btn" onclick="handleMainAction()">Verificar</button>
+            <div class="action-controls" style="display: flex; gap: 10px; margin-top: 15px;">
+                <button id="main-btn" class="btn" onclick="handleMainAction()" style="flex: 2; margin: 0;">Verificar</button>
+                <button id="flag-btn" class="btn" onclick="toggleFlag()" style="flex: 1; margin: 0; background: #f39c12; color: white; border: none;">
+                    🚩 Duda
+                </button>
+            </div>
             
-            <button id="exit-btn" class="btn-exit" onclick="confirmExit()">
+            <button id="exit-btn" class="btn-exit" onclick="confirmExit()" style="margin-top: 20px;">
                 Finalizar intento y ver resultados
             </button>
         </div>
 
         <div id="results" class="hidden">
-            <h1 style="margin-bottom: 10px;">Test Finalizado</h1>
+            <h1>Test Finalizado</h1>
             <div style="text-align: center;">
                 <div id="score-display" style="font-size: 4rem; font-weight: bold; color: var(--primary);">0</div>
                 <p id="final-msg" style="margin-bottom: 25px;"></p>
+
+                <div id="flagged-review" class="hidden" style="margin: 20px 0; text-align: left; background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba;">
+                    <h4 style="margin-top: 0; color: #856404;">⚠️ Preguntas marcadas para revisión:</h4>
+                    <ul id="flagged-list" style="padding-left: 20px; color: #856404; font-size: 0.9rem;"></ul>
+                </div>
                 
-                <button id="retry-failed-btn" class="btn hidden" onclick="initQuiz(true)" style="background:var(--success); color:white; border:none;">
-                    Repetir preguntas falladas
-                </button>
-                <button class="btn" onclick="location.reload()" style="background:var(--accent); color:white; border:none;">
-                    Volver al inicio
-                </button>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <button id="retry-failed-btn" class="btn hidden" onclick="initQuiz(true)" style="background:var(--success); color:white; border:none;">
+                        Repetir preguntas falladas
+                    </button>
+                    <button class="btn" onclick="location.reload()" style="background:var(--accent); color:white; border:none;">
+                        Volver al inicio
+                    </button>
+                </div>
             </div>
         </div>
     </div>
