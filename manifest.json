@@ -1,0 +1,16 @@
+{
+  "name": "Simulador de Certificaciones",
+  "short_name": "SimuCert",
+  "description": "Simulador de exámenes LPIC e ITIL",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2c3e50",
+  "theme_color": "#3498db",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1902/1902161.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
