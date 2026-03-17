@@ -33,7 +33,7 @@ async function initQuiz(onlyFailed = false) {
     if (!onlyFailed) {
         const examFile = document.getElementById("exam-select").value;
         const limit = parseInt(document.getElementById("num-questions").value);
-        
+                
         // Capturamos el tiempo seleccionado del nuevo selector
         const timeLimit = parseInt(document.getElementById("timer-select").value);
         
@@ -51,7 +51,7 @@ async function initQuiz(onlyFailed = false) {
             let shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
             
             sessionQuestions = (limit === 0) ? shuffled : shuffled.slice(0, limit);
-
+            
             // Iniciar el temporizador con el valor elegido
             startTimer(timeLimit);
 
@@ -61,7 +61,7 @@ async function initQuiz(onlyFailed = false) {
             return;
         }
     } else {
-        // Modo repetir preguntas falladas: Reutilizamos el tiempo del selector
+
         const timeLimit = parseInt(document.getElementById("timer-select").value);
         startTimer(timeLimit);
         sessionQuestions = [...failedQuestions].sort(() => 0.5 - Math.random());
@@ -270,7 +270,7 @@ function checkAnswer() {
 }
 
 /**
- * Finaliza el quiz, detiene timer y muestra resumen de dudas
+ * Finaliza el quiz, detiene timer y muestra reportes
  */
 function finishQuiz() {
     clearInterval(timerInterval); 
@@ -285,14 +285,14 @@ function finishQuiz() {
     const ratio = successes / sessionQuestions.length;
     document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Nivel de examen." : "Sigue practicando.";
     
-    // 2. Reporte Detallado de Fallos/Aciertos
+    // 1. Reporte Detallado (Aciertos/Fallos)
     const reportContainer = document.getElementById("report-container");
     if (reportContainer) {
         // Generamos la tabla de aciertos y fallos
         reportContainer.innerHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
     }
 
-    // 3. REVISIÓN DE DUDAS (Corregido)
+    // 2. Resumen de dudas marcadas
     const flagReviewDiv = document.getElementById("flagged-review");
     const flagList = document.getElementById("flagged-list");
     

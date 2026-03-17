@@ -36,34 +36,36 @@ export function setupSelectorPreguntas() {
 /**
  * Genera la tabla detallada de resultados final
  */
-export function renderDetailedReport(userAnswers, sessionLength) {
-    let reportHTML = `
-        <div id="detailed-report" style="margin-top: 25px; text-align: left; border-top: 2px solid #eee; padding-top: 20px;">
-            <h3 style="text-align:center">Revisión del Intento</h3>
-            <div style="overflow-x: auto;">
-                <table style="width:100%; border-collapse: collapse; font-size: 0.85rem;">
-                    <thead>
-                        <tr style="background:#f8f9fa;">
-                            <th style="padding:10px; border:1px solid #ddd;">Pregunta</th>
-                            <th style="padding:10px; border:1px solid #ddd;">Tu Respuesta</th>
-                            <th style="padding:10px; border:1px solid #ddd;">Resultado</th>
-                        </tr>
-                    </thead>
-                    <tbody>`;
+export function renderDetailedReport(userAnswers, total) {
+    let html = `
+    <table style="width:100%; border-collapse: collapse; margin-top:20px;">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Pregunta</th>
+                <th>Tu respuesta</th>
+                <th>Correcta</th>
+                <th>Estado</th>
+                <th>🚩</th> 
+            </tr>
+        </thead>
+        <tbody>`;
 
-    userAnswers.forEach(ans => {
-        const rowColor = ans.status === "✅" ? "#f0fff4" : "#fff5f5";
-        reportHTML += `
-            <tr style="background: ${rowColor}">
-                <td style="padding:10px; border:1px solid #ddd;">${ans.question}</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                    ${ans.user} 
-                    ${ans.status === "❌" ? `<br><small style="color:var(--success)"><b>Correcta:</b> ${ans.correct}</small>` : ""}
-                </td>
-                <td style="padding:10px; border:1px solid #ddd; text-align:center">${ans.status}</td>
+    userAnswers.forEach((ans, idx) => {
+        // Si la pregunta fue marcada como duda, le damos un color de fondo especial
+        const rowStyle = ans.wasFlagged ? 'style="background-color: #fff3cd;"' : '';
+        
+        html += `
+            <tr ${rowStyle}>
+                <td>${idx + 1}</td>
+                <td>${ans.question}</td>
+                <td>${ans.user}</td>
+                <td>${ans.correct}</td>
+                <td>${ans.status}</td>
+                <td>${ans.wasFlagged ? '🚩' : ''}</td>
             </tr>`;
     });
 
-    reportHTML += `</tbody></table></div></div>`;
-    return reportHTML;
+    html += `</tbody></table>`;
+    return html;
 }
