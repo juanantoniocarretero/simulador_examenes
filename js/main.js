@@ -285,30 +285,35 @@ function finishQuiz() {
     const ratio = successes / sessionQuestions.length;
     document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Nivel de examen." : "Sigue practicando.";
     
-    // 2. GENERAR REPORTE DETALLADO (Fallos y Aciertos)
+    // 2. Reporte Detallado de Fallos/Aciertos
     const reportContainer = document.getElementById("report-container");
     if (reportContainer) {
-        // Generamos el HTML usando tu uiManager
-        const reportHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
-        reportContainer.innerHTML = reportHTML;
+        // Generamos la tabla de aciertos y fallos
+        reportContainer.innerHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
     }
 
-    // 3. Mostrar lista de dudas si existen
+    // 3. REVISIÓN DE DUDAS (Corregido)
     const flagReviewDiv = document.getElementById("flagged-review");
+    const flagList = document.getElementById("flagged-list");
+    
     if (flaggedQuestions.size > 0) {
-        flagReviewDiv.classList.remove("hidden");
-        const flagList = document.getElementById("flagged-list");
+        flagReviewDiv.classList.remove("hidden"); // Mostrar el contenedor amarillo
         flagList.innerHTML = Array.from(flaggedQuestions).map(idx => {
-            return `<li><b>Pregunta ${idx + 1}:</b> ${sessionQuestions[idx].q.substring(0, 70)}...</li>`;
+            // Buscamos la pregunta original usando el índice guardado en el Set
+            const questionData = sessionQuestions[idx];
+            return `<li><b>Pregunta ${idx + 1}:</b> ${questionData.q}</li>`;
         }).join('');
     } else {
-        flagReviewDiv.classList.add("hidden");
+        flagReviewDiv.classList.add("hidden"); // Ocultar si no hay dudas
     }
 
     // 4. Botón de reintentar fallidas
     const retryBtn = document.getElementById("retry-failed-btn");
-    if (failedQuestions.length > 0) retryBtn.classList.remove("hidden");
-    else retryBtn.classList.add("hidden");
+    if (failedQuestions.length > 0) {
+        retryBtn.classList.remove("hidden");
+    } else {
+        retryBtn.classList.add("hidden");
+    }
 
     // 5. Guardar en historial
     storage.saveToHistory(
