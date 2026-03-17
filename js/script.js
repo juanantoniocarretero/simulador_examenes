@@ -1,4 +1,4 @@
-// Variables globales de estado
+// Variables de estado del simulador
 let allQuestions = [];
 let sessionQuestions = [];
 let failedQuestions = []; 
@@ -8,21 +8,20 @@ let errors = 0;
 let state = "check"; 
 let currentExamName = "";
 
-// Al cargar la página
+// Al cargar la página, inicializamos historial y selector
 window.onload = () => {
     showHistory();
     setupSelectorPreguntas();
 };
 
 /**
- * Genera dinámicamente las opciones del selector de 0 a 200
+ * Genera las opciones del selector de 20 en 20 hasta 200
  */
 function setupSelectorPreguntas() {
     const select = document.getElementById("num-questions");
     if (!select) return;
 
-    // Limpiamos contenido previo por si acaso
-    select.innerHTML = "";
+    select.innerHTML = ""; // Limpiar por si acaso
 
     for (let i = 0; i <= 200; i += 20) {
         const opt = document.createElement("option");
@@ -33,7 +32,7 @@ function setupSelectorPreguntas() {
 }
 
 /**
- * Inicializa el quiz cargando el JSON o las fallidas
+ * Inicializa el examen y gestiona si el archivo existe o no
  */
 async function initQuiz(onlyFailed = false) {
     if (!onlyFailed) {
@@ -43,20 +42,30 @@ async function initQuiz(onlyFailed = false) {
 
         try {
             const res = await fetch(examFile);
+            
+            // Si el archivo no existe en el servidor (404), redirigimos
+            if (!res.ok) {
+                window.location.href = "404.html";
+                return;
+            }
+
             allQuestions = await res.json();
             let shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
             
-            // Si el límite es 0 o mayor al total disponible, usamos todas
+            // Si el usuario elige 0, cargamos todo el JSON
             sessionQuestions = (limit === 0) ? shuffled : shuffled.slice(0, limit);
+
         } catch (e) {
-            console.error(e);
-            return alert("Error al cargar el archivo JSON de preguntas.");
+            console.error("Error al cargar:", e);
+            alert("Error crítico al cargar el test. Revisa la consola.");
+            return;
         }
     } else {
+        // Modo repetir falladas
         sessionQuestions = [...failedQuestions].sort(() => 0.5 - Math.random());
     }
 
-    // Resetear contadores
+    // Reset de variables para nueva sesión
     currentIdx = 0;
     successes = 0;
     errors = 0;
@@ -69,7 +78,7 @@ async function initQuiz(onlyFailed = false) {
 }
 
 /**
- * Dibuja la pregunta actual en el DOM
+ * Muestra la pregunta actual
  */
 function renderQuestion() {
     const item = sessionQuestions[currentIdx];
@@ -91,8 +100,6 @@ function renderQuestion() {
         input.autocomplete = "off";
         container.appendChild(input);
         input.focus();
-        
-        // Permitir check con la tecla Enter
         input.onkeypress = (e) => { if(e.key === 'Enter') handleMainAction(); };
     } else {
         item.options.forEach((opt, idx) => {
@@ -106,7 +113,7 @@ function renderQuestion() {
 }
 
 /**
- * Gestiona el botón principal (Verificar / Siguiente)
+ * Controla el flujo del botón principal
  */
 function handleMainAction() {
     if (state === "check") {
@@ -122,7 +129,7 @@ function handleMainAction() {
 }
 
 /**
- * Comprueba si la respuesta es correcta
+ * Lógica de validación de respuestas
  */
 function checkAnswer() {
     const item = sessionQuestions[currentIdx];
@@ -140,7 +147,7 @@ function checkAnswer() {
             isCorrect = JSON.stringify(selected.sort()) === JSON.stringify(item.correct.sort());
         }
 
-        // Marcar opciones correctas/incorrectas visualmente
+        // Estilos visuales para opciones
         document.querySelectorAll('#ans-container label').forEach((label, idx) => {
             const isChoiceCorrect = Array.isArray(item.correct) ? item.correct.includes(idx) : idx === item.correct;
             if (isChoiceCorrect) label.classList.add("correct");
@@ -157,38 +164,32 @@ function checkAnswer() {
     } else {
         errors++;
         failedQuestions.push(item); 
-        const sol = item.type === "text" ? `Solución: ${item.correct}` : "Ver opciones resaltadas";
+        const sol = item.type === "text" ? `Solución: ${item.correct}` : "Revisa las marcas verdes";
         feedback.innerText = `Incorrecto. ${sol}`;
         feedback.style.color = "var(--error)";
     }
 
     document.getElementById("count-success").innerText = successes;
     document.getElementById("count-error").innerText = errors;
-    document.getElementById("main-btn").innerText = "Siguiente Pregunta";
+    document.getElementById("main-btn").innerText = "Siguiente";
     state = "next";
 }
 
 /**
- * Botón para salir antes de tiempo
+ * Permite al usuario terminar el examen manualmente
  */
 function confirmExit() {
-    if (confirm("¿Finalizar el examen ahora? Se calculará tu nota con lo que has respondido hasta el momento.")) {
-        // Determinamos cuántas preguntas se han intentado realmente
-        const totalIntentadas = currentIdx + (state === "next" ? 1 : 0);
+    if (confirm("¿Quieres finalizar el intento ahora? Calcularemos tu nota con lo que llevas.")) {
+        const respondidas = currentIdx + (state === "next" ? 1 : 0);
+        if (respondidas === 0) return location.reload();
         
-        if (totalIntentadas === 0) {
-            location.reload();
-            return;
-        }
-
-        // Redimensionamos las preguntas de la sesión para el cálculo final
-        sessionQuestions = sessionQuestions.slice(0, totalIntentadas);
+        sessionQuestions = sessionQuestions.slice(0, respondidas);
         finishQuiz();
     }
 }
 
 /**
- * Finaliza el quiz y muestra pantalla de resultados
+ * Finaliza el quiz y guarda historial
  */
 function finishQuiz() {
     document.getElementById("quiz").classList.add("hidden");
@@ -196,7 +197,7 @@ function finishQuiz() {
     document.getElementById("score-display").innerText = `${successes} / ${sessionQuestions.length}`;
     
     const ratio = successes / sessionQuestions.length;
-    document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Apto para el examen." : "Sigue practicando.";
+    document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Aprobado! Excelente trabajo." : "No has alcanzado el mínimo. ¡Sigue practicando!";
     
     const retryBtn = document.getElementById("retry-failed-btn");
     if (failedQuestions.length > 0) retryBtn.classList.remove("hidden");
@@ -206,11 +207,10 @@ function finishQuiz() {
 }
 
 /**
- * Guarda el resultado en LocalStorage
+ * Persistencia en LocalStorage
  */
 function saveToHistory(s, t, name) {
     let history = JSON.parse(localStorage.getItem('multi_cert_history') || '[]');
-    // Guardamos solo el nombre del examen sin el paréntesis para limpiar
     const cleanName = name.split('(')[0].trim();
     history.unshift({ exam: cleanName, result: `${s}/${t}`, date: new Date().toLocaleDateString() });
     localStorage.setItem('multi_cert_history', JSON.stringify(history.slice(0, 5)));
@@ -218,7 +218,7 @@ function saveToHistory(s, t, name) {
 }
 
 /**
- * Muestra el historial en el setup inicial
+ * Muestra los últimos 5 resultados
  */
 function showHistory() {
     const history = JSON.parse(localStorage.getItem('multi_cert_history') || '[]');
@@ -230,5 +230,5 @@ function showHistory() {
             <span>${h.exam} (${h.date})</span>
             <strong>${h.result}</strong>
         </div>
-    `).join('') : "<p style='text-align:center; color:gray'>No hay intentos previos</p>";
+    `).join('') : "<p style='text-align:center; color:gray'>No hay historial disponible</p>";
 }
