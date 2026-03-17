@@ -81,13 +81,13 @@ async function initQuiz(onlyFailed = false) {
  * Gestiona el cronómetro del examen de forma ajustable
  */
 function startTimer(minutes) {
-    clearInterval(timerInterval); // Limpiar cualquier intervalo previo
+    clearInterval(timerInterval); 
     const timerDisplay = document.getElementById("timer-display");
 
-    // Lógica para "Sin límite de tiempo" (valor 0)
     if (minutes === 0) {
         timerDisplay.innerText = "⏱️ Modo Libre";
         timerDisplay.style.color = "var(--accent)";
+        timerDisplay.classList.remove("blink-warning"); // Quitar animación si existía
         return; 
     }
 
@@ -97,20 +97,24 @@ function startTimer(minutes) {
         const mins = Math.floor(timeLeft / 60);
         const secs = timeLeft % 60;
         
-        // Actualizar visualmente el tiempo
         timerDisplay.innerText = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs}`;
         
-        // Cambio de color visual si queda menos de 1 minuto
-        if (timeLeft < 60) {
+        // LÓGICA DE NIVELES DE ALERTA
+        if (timeLeft <= 300 && timeLeft > 0) {
+            // Faltan 5 minutos o menos: Iniciar parpadeo y color rojo
             timerDisplay.style.color = "red";
+            timerDisplay.classList.add("blink-warning");
         } else {
+            // Tiempo normal
             timerDisplay.style.color = "var(--accent)";
+            timerDisplay.classList.remove("blink-warning");
         }
         
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
+            timerDisplay.classList.remove("blink-warning");
             alert("¡Tiempo agotado!");
-            finishQuiz(); // Finaliza automáticamente al llegar a cero
+            finishQuiz();
         } else {
             timeLeft--;
         }

@@ -158,3 +158,14 @@ input[type="text"] {
 #detailed-report tr:hover {
     filter: brightness(0.95);
 }
+
+/* Animación de parpadeo */
+.blink-warning {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.3;
+    }
+}
