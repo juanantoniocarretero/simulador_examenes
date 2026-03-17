@@ -169,3 +169,52 @@ input[type="text"] {
         opacity: 0.3;
     }
 }
+/* --- ESTILOS PARA PÁGINA 404 --- */
+
+.body-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f7f9; /* Un tono gris muy claro para que resalte el blanco */
+}
+
+.error-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.error-title {
+    font-size: 6rem;
+    margin: 0;
+    color: var(--primary); /* Usa tu color principal */
+    line-height: 1;
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Botón específico para el 404 para asegurar visibilidad */
+.btn-primary-alt {
+    background-color: var(--accent) !important;
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+    border: none;
+}
