@@ -18,16 +18,13 @@
                 <option value="json/lpic102.json">LPIC-1 (Examen 102)</option>
                 <option value="json/lpic201.json">LPIC-2 (Examen 201)</option>
                 <option value="json/lpic202.json">LPIC-2 (Examen 202)</option>
-                <option value="itilv4.json">ITIL v4 Foundation (Sin funcionalidad aún)</option>
             </select>
 
             <label class="label-group">Cantidad de Preguntas:</label>
-            <select id="num-questions" class="btn">
-                </select>
+            <select id="num-questions" class="btn"></select>
 
             <label class="label-group">Tiempo Límite:</label>
-            <select id="timer-select" class="btn">
-                </select>
+            <select id="timer-select" class="btn"></select>
 
             <button class="btn" onclick="initQuiz(false)" style="background:var(--accent); color:white; border:none; margin-top:20px;">
                 Iniciar Simulación
@@ -68,7 +65,7 @@
                 </button>
             </div>
             
-            <button id="exit-btn" class="btn-exit" onclick="confirmExit()" style="margin-top: 20px;">
+            <button id="exit-btn" class="btn-exit" onclick="confirmExit()">
                 Finalizar intento y ver resultados
             </button>
         </div>
@@ -79,8 +76,10 @@
                 <div id="score-display" style="font-size: 4rem; font-weight: bold; color: var(--primary);">0</div>
                 <p id="final-msg" style="margin-bottom: 25px;"></p>
 
+                <div id="report-container" style="margin-bottom: 30px;"></div>
+
                 <div id="flagged-review" class="hidden" style="margin: 20px 0; text-align: left; background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba;">
-                    <h4 style="margin-top: 0; color: #856404;">⚠️ Preguntas marcadas para revisión:</h4>
+                    <h4 style="margin-top: 0; color: #856404;">⚠️ Marcadas para revisión:</h4>
                     <ul id="flagged-list" style="padding-left: 20px; color: #856404; font-size: 0.9rem;"></ul>
                 </div>
                 

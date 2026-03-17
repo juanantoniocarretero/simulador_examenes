@@ -279,17 +279,25 @@ function finishQuiz() {
     const resDiv = document.getElementById("results");
     resDiv.classList.remove("hidden");
     
+    // 1. Mostrar puntuación
     document.getElementById("score-display").innerText = `${successes} / ${sessionQuestions.length}`;
     
     const ratio = successes / sessionQuestions.length;
     document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Nivel de examen." : "Sigue practicando.";
     
-    // Mostrar lista de dudas si existen
+    // 2. GENERAR REPORTE DETALLADO (Fallos y Aciertos)
+    const reportContainer = document.getElementById("report-container");
+    if (reportContainer) {
+        // Generamos el HTML usando tu uiManager
+        const reportHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
+        reportContainer.innerHTML = reportHTML;
+    }
+
+    // 3. Mostrar lista de dudas si existen
     const flagReviewDiv = document.getElementById("flagged-review");
-    const flagList = document.getElementById("flagged-list");
-    
     if (flaggedQuestions.size > 0) {
         flagReviewDiv.classList.remove("hidden");
+        const flagList = document.getElementById("flagged-list");
         flagList.innerHTML = Array.from(flaggedQuestions).map(idx => {
             return `<li><b>Pregunta ${idx + 1}:</b> ${sessionQuestions[idx].q.substring(0, 70)}...</li>`;
         }).join('');
@@ -297,18 +305,12 @@ function finishQuiz() {
         flagReviewDiv.classList.add("hidden");
     }
 
-    const oldReport = document.getElementById("detailed-report");
-    if(oldReport) oldReport.remove();
-    
-    const reportHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
-    const wrapper = document.createElement("div");
-    wrapper.innerHTML = reportHTML;
-    resDiv.insertBefore(wrapper, resDiv.querySelector("button").parentNode.nextSibling);
-
+    // 4. Botón de reintentar fallidas
     const retryBtn = document.getElementById("retry-failed-btn");
     if (failedQuestions.length > 0) retryBtn.classList.remove("hidden");
     else retryBtn.classList.add("hidden");
 
+    // 5. Guardar en historial
     storage.saveToHistory(
         successes, 
         sessionQuestions.length, 
