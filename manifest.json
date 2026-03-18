@@ -8,13 +8,13 @@
   "theme_color": "#3498db",
   "icons": [
     {
-      "src": "icon.svg",
+      "src": "img/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "img/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -22,14 +22,14 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-desktop.png",
+      "src": "img/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Vista de escritorio del simulador"
     },
     {
-      "src": "screenshot-mobile.png",
+      "src": "img/screenshot-mobile.png",
       "sizes": "750x1334",
       "type": "image/png",
       "label": "Vista móvil del simulador"

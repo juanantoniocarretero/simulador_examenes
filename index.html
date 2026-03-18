@@ -2,19 +2,27 @@
 <html lang="es">
 
 <head>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#3498db">
-
-    <script>
-        // Registrar el Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Certificaciones Pro</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db">
+    
+    <link rel="apple-touch-icon" href="img/icon-512.png">
+
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW registrado', reg))
+                    .catch(err => console.log('Error SW', err));
+            });
+        }
+    </script>
 </head>
 
 <body>
