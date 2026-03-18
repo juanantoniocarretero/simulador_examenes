@@ -1,7 +1,7 @@
 {
   "name": "Simulador de Certificaciones",
   "short_name": "SimuCert",
-  "description": "Simulador de exámenes LPIC e ITIL",
+  "description": "Practica para tus exámenes LPIC e ITIL",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#2c3e50",
@@ -14,10 +14,25 @@
       "purpose": "any"
     },
     {
-      "src": "icon.svg",
+      "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Vista de escritorio del simulador"
+    },
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "label": "Vista móvil del simulador"
     }
   ]
 }
