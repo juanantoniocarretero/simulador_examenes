@@ -1282,338 +1282,991 @@
         "type": "text",
         "correct": "cron.allow"
     },
-    {
-        "q": "¿Qué salida producirá la siguiente secuencia de comandos? echo '1 2 3 4 5 6' | while read a b c; do echo result: $c $b $a; done",
-        "type": "radio",
-        "options": [
-            "resultado: 3 4 5 6 2 1",
-            "resultado: 1 2 3 4 5 6",
-            "resultado: 6 5 4",
-            "resultado: 6 5 4 3 2 1",
-            "resultado: 3 2 1"
-        ],
-        "correct": 0
-    },
-    {
-        "q": "Cuando el comando 'echo $?' genera 1, ¿cuál de las siguientes afirmaciones es verdadera?",
-        "type": "radio",
-        "options": [
-            "Es el ID del proceso del comando echo.",
-            "Es el ID del proceso del shell actual.",
-            "Es el valor de salida del comando ejecutado inmediatamente antes de echo.",
-            "Es el valor de salida del comando echo."
-        ],
-        "correct": 2
-    },
-    {
-        "q": "¿Qué palabra falta en la siguiente sentencia SQL? insert into tablename _______ (909, 'text');",
-        "type": "text",
-        "correct": "values"
-    },
-    {
-        "q": "¿Cuál de las siguientes es una sentencia SQL válida para extraer datos de una base de datos?",
-        "type": "radio",
-        "options": [
-            "GET FROM TABLE nombre_tabla;",
-            "SELECT * FROM nombre_tabla;",
-            "READ ALL FROM nombre_tabla;",
-            "FETCH * FROM nombre_tabla;"
-        ],
-        "correct": 1
-    },
-    {
-        "q": "¿Qué comando se utiliza para listar las variables de entorno actuales en Bash?",
-        "type": "radio",
-        "options": [
-            "listenv",
-            "show env",
-            "env",
-            "print variables",
-            "vlist"
-        ],
-        "correct": 2
-    },
-    {
-        "q": "En un script de Bash, ¿qué significa la variable '$0'?",
-        "type": "radio",
-        "options": [
-            "El primer argumento pasado al script.",
-            "El nombre del script que se está ejecutando.",
-            "El número total de argumentos pasados.",
-            "El ID del proceso del script.",
-            "El código de salida del último comando."
-        ],
-        "correct": 1
-    },
-    {
-        "q": "¿Cuál es el propósito del comando 'export' en Bash?",
-        "type": "radio",
-        "options": [
-            "Enviar archivos a otro servidor.",
-            "Guardar el historial de comandos en un archivo.",
-            "Hacer que una variable esté disponible para los procesos hijos.",
-            "Finalizar la sesión actual del shell.",
-            "Instalar un nuevo paquete de software."
-        ],
-        "correct": 2
-    },
-    {
-        "q": "¿Qué archivo, si está presente, se utiliza para configurar los alias y funciones de Bash para todos los usuarios en un sistema Debian?",
-        "type": "text",
-        "correct": "/etc/bash.bashrc"
-    },
-    {
-        "q": "Se desea cambiar el idioma de los mensajes de un programa a portugués (pt). ¿Qué variable de entorno debe configurarse en /etc/bash_profile?",
-        "type": "radio",
-        "options": [
-            "LANGUAGE",
-            "MESSAGE",
-            "UI_MESSAGES",
-            "LC_MESSAGES",
-            "ALL_MESSAGES"
-        ],
-        "correct": 3
-    },
-    {
-        "q": "¿En qué archivo se deben enumerar los usuarios que tienen permiso para usar el sistema de programación cron?",
-        "type": "text",
-        "correct": "/etc/cron.allow"
-    },
-    {
-        "q": "¿Qué comandos se pueden usar para cambiar la información de antigüedad (aging) de la cuenta de un usuario? (Seleccione tres).",
-        "type": "checkbox",
-        "options": [
-            "usermod",
-            "passwd",
-            "chattr",
-            "chage",
-            "chsh"
-        ],
-        "correct": [0, 1, 3]
-    },
-    {
-        "q": "¿Qué comando se utiliza para agregar un grupo al sistema?",
-        "type": "text",
-        "correct": "groupadd"
-    },
-    {
-        "q": "¿Qué información NO contiene la configuración regional (locale) del sistema operativo?",
-        "type": "radio",
-        "options": [
-            "Símbolo monetario",
-            "Idioma",
-            "Zona horaria",
-            "Separador de miles"
-        ],
-        "correct": 2
-    },
-    {
-        "q": "¿Qué es cierto acerca del archivo /etc/localtime?",
-        "type": "radio",
-        "options": [
-            "Es un archivo de texto simple que contiene una cadena como Europe/Berlin.",
-            "Es mantenido por el servicio NTP basado en la geolocalización de la IP.",
-            "Es un enlace simbólico a /sys/device/clock/ltime.",
-            "Es un enlace simbólico o una copia de un archivo de zona horaria como /usr/share/zoneinfo/Europe/Berlin."
-        ],
-        "correct": 3
-    },
-    {
-        "q": "¿Qué sucede al ejecutar el comando 'userdel --force --remove bob'? (Elija dos).",
-        "type": "checkbox",
-        "options": [
-            "El usuario bob se elimina de la base de datos de usuarios.",
-            "Se elimina el directorio de inicio (home) del usuario bob.",
-            "Se actualiza la base de datos locate para eliminar sus archivos.",
-            "Se eliminan todos los archivos propiedad de bob en todos los sistemas de archivos.",
-            "Si bob era el último miembro de un grupo, el grupo se elimina."
-        ],
-        "correct": [0, 1]
-    },
-    {
-        "q": "¿Cuál de los siguientes programas se puede utilizar para determinar la ruta (saltos de red) hacia un destino determinado?",
-        "type": "radio",
-        "options": [
-            "dig",
-            "netstat",
-            "ping",
-            "route",
-            "traceroute"
-        ],
-        "correct": 4
-    },
-    {
-        "q": "¿Cuál de las siguientes es una dirección IPv6 válida?",
-        "type": "radio",
-        "options": [
-            "2001:db8:3241::1",
-            "2001::db8:4581::1",
-            "2001:db8:0g41::1",
-            "2001%db8%9990%%1",
-            "2001.db8.819f..1"
-        ],
-        "correct": 0
-    },
-    {
-        "q": "¿Qué comando se utiliza para mostrar o manipular la tabla de enrutamiento IP de Linux?",
-        "type": "text",
-        "correct": "route"
-    },
-    {
-        "q": "¿Cuál de los siguientes archivos almacena la configuración de los servidores DNS que el sistema debe consultar?",
-        "type": "text",
-        "correct": "/etc/resolv.conf"
-    },
-    {
-        "q": "¿Qué utilidad permite configurar los parámetros de red de una interfaz, como la dirección IP y la máscara de subred, en tiempo de ejecución?",
-        "type": "radio",
-        "options": [
-            "netconfig",
-            "ifconfig",
-            "ipconfig",
-            "netset",
-            "ifset"
-        ],
-        "correct": 1
-    },
-    {
-        "q": "¿Qué comando se usa para consultar registros de recursos DNS, como direcciones IP, de un nombre de dominio?",
-        "type": "radio",
-        "options": [
-            "dig",
-            "dnslookup",
-            "getaddr",
-            "query",
-            "name"
-        ],
-        "correct": 0
-    },
-    {
-        "q": "¿Cuál es la máscara de red predeterminada para una red de Clase C?",
-        "type": "radio",
-        "options": [
-            "255.0.0.0",
-            "255.255.0.0",
-            "255.255.255.0",
-            "255.255.255.255"
-        ],
-        "correct": 2
-    },
-    {
-        "q": "En la estación de trabajo de un usuario normal, el comando 'route' tarda mucho tiempo en imprimir la tabla de enrutamiento. ¿Cuál es la causa más probable?",
-        "type": "radio",
-        "options": [
-            "La información de enrutamiento local está dañada.",
-            "Uno de los enrutadores no está disponible y el protocolo ARF-D está esperando.",
-            "Hay más de un enrutador predeterminado y se está realizando una elección.",
-            "La resolución de DNS no funciona y el comando está intentando resolver nombres de red y destinos.",
-            "El ancho de banda de la red es demasiado bajo para procesar la tabla."
-        ],
-        "correct": 3
-    },
-    {
-        "q": "¿Qué palabra clave debe aparecer en la opción 'hosts' del archivo /etc/nsswitch.conf para que las búsquedas consulten el archivo /etc/hosts?",
-        "type": "text",
-        "correct": "files"
-    },
-    {
-        "q": "En un archivo de configuración de xinetd, ¿qué atributo especifica la dirección de red que se utilizará para proporcionar el servicio?",
-        "type": "text",
-        "correct": "bind"
-    },
-    {
-        "q": "¿Cuál de las siguientes acciones se puede realizar con el comando 'ssh-keygen'?",
-        "type": "radio",
-        "options": [
-            "Cifrar y descifrar archivos de datos.",
-            "Crear un par de claves pública y privada para la autenticación SSH.",
-            "Gestionar las contraseñas de los usuarios locales.",
-            "Configurar el firewall para permitir el tráfico SSH."
-        ],
-        "correct": 1
-    },
-    {
-        "q": "¿Qué comando se utiliza para limitar la cantidad de recursos (como la memoria o el tamaño de archivos) que un usuario puede utilizar en una sesión de shell?",
-        "type": "radio",
-        "options": [
-            "umask",
-            "usermod",
-            "ulimit",
-            "passwd",
-            "chage"
-        ],
-        "correct": 2
-    },
-    {
-        "q": "En un sistema Linux con contraseñas ocultas (shadow passwords), ¿qué archivo contiene los hashes de las contraseñas?",
-        "type": "text",
-        "correct": "/etc/shadow"
-    },
-    {
-        "q": "¿Cuál de los siguientes comandos se conecta al host remoto example.com en el puerto TCP 2222? (Elija dos).",
-        "type": "checkbox",
-        "options": [
-            "ssh --port 2222 example.com",
-            "ssh -p 2222 example.com",
-            "ssh -o Port=2222 example.com",
-            "ssh -o GatewayPort 2222 example.com",
-            "ssh example.com:2222"
-        ],
-        "correct": [1, 2]
-    },
-    {
-        "q": "¿Qué comando se utiliza para listar los trabajos programados del usuario actual en el sistema cron?",
-        "type": "text",
-        "correct": "crontab -l"
-    },
-    {
-        "q": "¿Cuál es el propósito del archivo /etc/skel/?",
-        "type": "radio",
-        "options": [
-            "Almacenar archivos temporales del sistema.",
-            "Contener los archivos de configuración predeterminados que se copian al directorio home de un nuevo usuario.",
-            "Guardar los registros de errores de la instalación de paquetes.",
-            "Almacenar las claves públicas de SSH del administrador."
-        ],
-        "correct": 1
-    },
-    {
-        "q": "Para permitir que un usuario ejecute comandos con privilegios de root mediante 'sudo', ¿en qué archivo o directorio se debe configurar?",
-        "type": "radio",
-        "options": [
-            "/etc/users.sudo",
-            "/etc/sudoers",
-            "/etc/shadow",
-            "/etc/passwd"
-        ],
-        "correct": 1
-    },
-    {
-        "q": "En un script de Bash, ¿qué estructura se utiliza para cerrar un bloque 'case'?",
-        "type": "text",
-        "correct": "esac"
-    },
-    {
-        "q": "¿Qué comando se utiliza para ver las conexiones de red activas, tablas de enrutamiento y estadísticas de interfaz (reemplazado recientemente por 'ss')?",
-        "type": "radio",
-        "options": ["ifconfig", "netstat", "route", "iptables", "tcpdump"],
-        "correct": 1
-    },
-    {
-        "q": "¿Cuál es el puerto predeterminado para el protocolo SSH?",
-        "type": "text",
-        "correct": "22"
-    },
-    {
-        "q": "¿Qué opción del comando 'useradd' permite crear la cuenta pero mantenerla bloqueada (sin password)?",
-        "type": "radio",
-        "options": ["-l", "-p !", "-n", "-s /bin/false"],
-        "correct": 1
-    },
-    {
-        "q": "¿Qué sentencia SQL se utiliza para eliminar una tabla completa de la base de datos?",
-        "type": "radio",
-        "options": ["DELETE TABLE", "REMOVE TABLE", "DROP TABLE", "ERASE TABLE"],
-        "correct": 2
-    }
+  {
+    "q": "¿Qué salida producirá la siguiente secuencia de comandos?\necho '1 2 3 4 5 6' | while read a b c; do\necho result: $c $b $a;\ndone",
+    "type": "radio",
+    "options": [
+      "resultado: 3 4 5 6 2 1",
+      "resultado: 1 2 3 4 5 6",
+      "resultado: 6 5 4",
+      "resultado: 6 5 4 3 2 1",
+      "resultado: 3 2 1"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Cuando el comando echo $? genera 1, ¿cuál de las siguientes afirmaciones es verdadera?",
+    "type": "radio",
+    "options": [
+      "Es el ID del proceso del comando echo",
+      "Es el ID del proceso del shell actual",
+      "Es el valor de salida del comando ejecutado inmediatamente antes de echo",
+      "Es el valor de salida del comando echo"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué palabra falta en la siguiente sentencia SQL?\nINSERT INTO nombre_tabla ________(909, 'text');",
+    "type": "text",
+    "correct": "values"
+  },
+  {
+    "q": "¿Qué comando hace que la variable de shell llamada VARIABLE sea visible para las subshells?",
+    "type": "radio",
+    "options": [
+      "export $VARIABLE",
+      "export VARIABLE",
+      "set $VARIABLE",
+      "set VARIABLE"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué salida producirá el comando seq 10?",
+    "type": "radio",
+    "options": [
+      "Un flujo continuo de números que aumentan en incrementos de 10",
+      "Los números del 1 al 10 con un número por línea",
+      "Los números del 0 al 9 con un número por línea",
+      "El número 10 en la salida estándar"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "De forma predeterminada, ¿el contenido de qué directorio se copiará al directorio de inicio de un nuevo usuario cuando se utiliza useradd -m?",
+    "type": "text",
+    "correct": "/etc/skel"
+  },
+  {
+    "q": "¿Qué palabra falta en la siguiente declaración SQL?\n__________ COUNT(*) FROM nombre_tabla;",
+    "type": "text",
+    "correct": "select"
+  },
+  {
+    "q": "Después de emitir: function myfunction { echo $1 $2 ; } en Bash, ¿qué salida produce: myfunction ABC?",
+    "type": "radio",
+    "options": [
+      "A B",
+      "ABC",
+      "A C",
+      "CBA"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos coloca la salida del comando date en la variable de shell mydate?",
+    "type": "radio",
+    "options": [
+      "mydate=\"$(date)\"",
+      "mydate=\"exec date\"",
+      "mydate=\"$((date))\"",
+      "mydate=\"date\"",
+      "mydate=\"${date}\""
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cuáles de los siguientes archivos, cuando existen, afectan el comportamiento del shell Bash? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "~/.bashconf",
+      "~/.bashrc",
+      "~/.bash_defaults",
+      "~/.bash_etc",
+      "~/.bash_profile"
+    ],
+    "correct": [1, 4]
+  },
+  {
+    "q": "¿Cuál es la diferencia entre los comandos 'test -e ruta' y 'test -f ruta'?",
+    "type": "radio",
+    "options": [
+      "-e comprueba si la ruta existe; -f comprueba si la ruta existe y es un archivo regular",
+      "-f comprueba si la ruta existe; -e comprueba si la ruta existe y es un archivo regular",
+      "-e comprueba si la ruta es ejecutable; -f comprueba si es un archivo",
+      "Ambos comandos son exactamente iguales en funcionalidad"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cómo se puede anular la variable de entorno FOOBAR solo para la ejecución de ./myscript?",
+    "type": "radio",
+    "options": [
+      "unset -v FOOBAR; ./myscript",
+      "set -a FOOBAR=\"\"; ./myscript",
+      "env -u FOOBAR ./myscript",
+      "env -i FOOBAR ./myscript"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Cuando el comando echo $$ genera 12942, ¿cuál es el significado de dicho número?",
+    "type": "radio",
+    "options": [
+      "Es el ID del proceso del comando echo",
+      "Es el ID del proceso del shell actual",
+      "Es el valor de salida del comando anterior",
+      "Es el ID del proceso del último comando en segundo plano"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál de las siguientes palabras clave se utiliza para restringir los registros devueltos por una consulta SELECT según criterios de valor?",
+    "type": "radio",
+    "options": [
+      "CASE",
+      "FROM",
+      "WHERE",
+      "IF"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando se utiliza para establecer el nombre de host del sistema local?",
+    "type": "text",
+    "correct": "hostname"
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos enumera todas las variables y funciones definidas en el shell Bash actual?",
+    "type": "radio",
+    "options": [
+      "env",
+      "set",
+      "env -a",
+      "echo $ENV"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál es la consulta SQL correcta para contar cuántos pedidos hay de cada tipo en la tabla 'pedidos'?",
+    "type": "radio",
+    "options": [
+      "SELECT tipo_de_pedido, COUNT(*) FROM pedidos WHERE tipo_de_pedido;",
+      "SELECT tipo_de_pedido, COUNT(*) FROM pedidos GROUP BY tipo_de_pedido;",
+      "COUNT(SELECT tipo_de_pedido FROM pedidos);",
+      "SELECT COUNT(*) FROM pedidos ORDER BY tipo_de_pedido;"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál es el propósito del archivo /etc/profile?",
+    "type": "radio",
+    "options": [
+      "Contiene el mensaje de bienvenida tras el inicio de sesión",
+      "Contiene perfiles de seguridad para el inicio de sesión",
+      "Contiene variables de entorno globales que se establecen al iniciar sesión",
+      "Contiene perfiles predeterminados para aplicaciones de usuario"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando muestra todos los alias definidos en el shell actual?",
+    "type": "text",
+    "correct": "alias"
+  },
+  {
+    "q": "¿Cuáles de los siguientes son requisitos para ejecutar un script de shell como un comando normal desde cualquier parte del sistema? (Elija TRES)",
+    "type": "checkbox",
+    "options": [
+      "El usuario debe estar en el grupo 'script'",
+      "El archivo debe estar en un directorio incluido en el $PATH",
+      "El archivo debe tener permisos de ejecución",
+      "Debe empezar con una línea shebang (#!) válida",
+      "El sistema debe estar en modo monousuario"
+    ],
+    "correct": [1, 2, 3]
+  },
+  {
+    "q": "¿Qué archivo utilizado por XDM especifica el fondo de pantalla predeterminado?",
+    "type": "radio",
+    "options": [
+      "/etc/X11/xdm/Xsetup",
+      "/etc/X11/xdm.conf",
+      "/etc/X11/xdm/Valores predeterminados",
+      "/etc/X11/defaults.conf"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Qué comando se puede usar para investigar las propiedades de una ventana en particular en X haciendo clic en ella?",
+    "type": "text",
+    "correct": "xwininfo"
+  },
+  {
+    "q": "En el archivo xorg.conf, ¿cómo se delimita el contenido de una sección específica?",
+    "type": "radio",
+    "options": [
+      "Se coloca entre llaves: Section \"Nombre\" { ... }",
+      "Se coloca entre una línea Section \"Nombre\" y una línea EndSection",
+      "Se coloca entre etiquetas XML: <Section> ... </Section>",
+      "Se coloca debajo de un encabezado entre corchetes: [Nombre]",
+      "Se define mediante sangría de tabulación tras el nombre de la sección"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál es el propósito de un lector de pantalla?",
+    "type": "radio",
+    "options": [
+      "Lee el texto en pantalla para personas ciegas o con problemas de visión",
+      "Envía el contenido de la pantalla a una impresora remota",
+      "Permite aumentar partes de la pantalla para mejorar la visibilidad",
+      "Convierte comandos de voz en texto en el terminal"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cuál de las siguientes afirmaciones sobre el archivo ~/.xsession es verdadera?",
+    "type": "radio",
+    "options": [
+      "Es un script de shell que define el entorno gráfico del usuario",
+      "Se ejecuta automáticamente cada vez que un usuario inicia sesión en la consola (TTY)",
+      "Solo lo utiliza el administrador de escritorio GNOME",
+      "Contiene la configuración del teclado para el servidor X"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cuál es el nombre predeterminado del archivo de configuración del servidor Xorg X11?",
+    "type": "text",
+    "correct": "xorg.conf"
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos muestra la profundidad de color actual del servidor X?",
+    "type": "radio",
+    "options": [
+      "xcd",
+      "xcdepth",
+      "xwininfo",
+      "xcolordepth",
+      "cat /etc/X11"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "En términos de asistencia de accesibilidad, ¿cuál de los siguientes programas es un teclado en pantalla?",
+    "type": "radio",
+    "options": [
+      "xkb",
+      "atkb",
+      "GOK",
+      "xOSK"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Cómo se llama el administrador de inicio de sesión gráfico simple que viene con la instalación estándar de X11?",
+    "type": "text",
+    "correct": "xdm"
+  },
+  {
+    "q": "¿Cuáles de las siguientes son tareas manejadas por un administrador de pantalla como XDM o KDM? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "Iniciar y preparar el entorno de escritorio para el usuario",
+      "Configurar dinámicamente nuevos monitores o proyectores",
+      "Gestionar la autenticación e inicio de sesión del usuario",
+      "Compilar controladores de video en tiempo de ejecución",
+      "Activar las funciones de accesibilidad del kernel"
+    ],
+    "correct": [0, 2]
+  },
+  {
+    "q": "¿Cuál de los siguientes pasos impide que un usuario obtenga una sesión de inicio de sesión interactiva?",
+    "type": "radio",
+    "options": [
+      "Ejecutar el comando chsh -s /bin/false para el usuario",
+      "Establecer el UID del usuario en 0",
+      "Eliminar al usuario del grupo 'staff'",
+      "Agregar al usuario al archivo /etc/noaccess",
+      "Crear un archivo .nologin en el directorio personal del usuario"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Qué archivo especifica las cuentas de usuario que NO pueden enviar trabajos a través de 'at' o 'batch'?",
+    "type": "text",
+    "correct": "/etc/at.deny"
+  },
+  {
+    "q": "¿Qué carácter en el campo de contraseña de /etc/passwd indica que la contraseña cifrada se almacena en /etc/shadow?",
+    "type": "radio",
+    "options": ["*", "-", "s", "x"],
+    "correct": 3
+  },
+  {
+    "q": "La zona horaria del sistema se puede configurar vinculando /etc/localtime a un archivo en qué directorio?",
+    "type": "text",
+    "correct": "/usr/share/zoneinfo/"
+  },
+  {
+    "q": "¿Cuáles de los siguientes campos están disponibles tanto en el archivo global /etc/crontab como en los archivos crontab específicos de usuario? (Elija DOS)",
+    "type": "checkbox",
+    "options": ["Minuto", "Nombre de usuario", "Comando", "Año", "Identificador de tarea"],
+    "correct": [0, 2]
+  },
+  {
+    "q": "¿Qué comando se utiliza para crear, editar o listar las tareas programadas de un usuario específico?",
+    "type": "text",
+    "correct": "crontab"
+  },
+  {
+    "q": "¿Cuál es la ruta completa al archivo que contiene los servidores de nombres (DNS) que el sistema debe consultar?",
+    "type": "text",
+    "correct": "/etc/resolv.conf"
+  },
+  {
+    "q": "¿Qué comando se utiliza para cambiar la información de caducidad de la contraseña de un usuario?",
+    "type": "radio",
+    "options": ["passwd -e", "chage", "usermod -x", "chsh"],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando se usa para añadir un usuario a un grupo secundario sin eliminarlo de sus grupos actuales?",
+    "type": "radio",
+    "options": ["groupadd -u", "usermod -aG", "useradd -g", "gpasswd -d"],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál de los siguientes archivos contiene la configuración predeterminada para la creación de usuarios (rango de UID, etc.)?",
+    "type": "text",
+    "correct": "/etc/login.defs"
+  },
+  {
+    "q": "¿Qué variable de entorno se debe configurar para cambiar la zona horaria solo para la sesión actual?",
+    "type": "text",
+    "correct": "TZ"
+  },
+  {
+    "q": "¿Cuál es el propósito del comando 'last'?",
+    "type": "radio",
+    "options": [
+      "Muestra el último comando ejecutado",
+      "Muestra una lista de los últimos usuarios que han iniciado sesión",
+      "Muestra el último archivo modificado",
+      "Muestra el último proceso finalizado"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál es la función del archivo /etc/skel?",
+    "type": "radio",
+    "options": [
+      "Almacena scripts de apagado",
+      "Contiene archivos que se copian al home de un nuevo usuario",
+      "Contiene contraseñas cifradas",
+      "Guarda perfiles de kernel"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando permite ejecutar una tarea una sola vez en un futuro específico?",
+    "type": "text",
+    "correct": "at"
+  },
+  {
+    "q": "¿Cuál es la utilidad del comando 'id'?",
+    "type": "radio",
+    "options": [
+      "Muestra el nombre del host",
+      "Muestra los UID, GID y grupos del usuario",
+      "Genera un identificador de sistema",
+      "Verifica la base de datos de usuarios"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué opción de 'userdel' elimina también el directorio personal del usuario?",
+    "type": "radio",
+    "options": ["-d", "-f", "-m", "-r"],
+    "correct": 3
+  },
+  {
+    "q": "¿En qué archivo se definen localmente las correspondencias entre IPs y nombres de host?",
+    "type": "text",
+    "correct": "/etc/hosts"
+  },
+  {
+    "q": "¿Qué comando se usa para actualizar la base de datos de 'locate'?",
+    "type": "text",
+    "correct": "updatedb"
+  },
+  {
+    "q": "¿Cuáles son protocolos para sincronizar la hora del sistema? (Elija DOS)",
+    "type": "checkbox",
+    "options": ["NTP", "SNMP", "Chrony", "PTP", "HTTP"],
+    "correct": [0, 2]
+  },
+  {
+    "q": "¿Qué archivo define los grupos y sus miembros?",
+    "type": "text",
+    "correct": "/etc/group"
+  },
+  {
+    "q": "¿Qué elemento geográfico se puede configurar como parte de la localización del sistema?",
+    "type": "radio",
+    "options": ["Símbolo monetario", "Idioma", "Zona horaria", "Separador de miles"],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué es cierto sobre /etc/localtime?",
+    "type": "radio",
+    "options": [
+      "Es un archivo de texto simple",
+      "Es mantenido por NTP mediante IP",
+      "Es un enlace simbólico a /sys/device/clock",
+      "Es un enlace simbólico o copia de un archivo en /usr/share/zoneinfo"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "¿Qué ocurre al ejecutar 'userdel --force --remove bob'? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "Se elimina al usuario de la base de datos",
+      "Se elimina su directorio de inicio",
+      "Se actualiza 'locate' automáticamente",
+      "Se borran sus archivos en todo el sistema",
+      "Se elimina su grupo primario aunque tenga otros miembros"
+    ],
+    "correct": [0, 1]
+  },
+  {
+    "q": "¿Qué campos se encuentran en /etc/group? (Elija TRES)",
+    "type": "checkbox",
+    "options": [
+      "Nombre del grupo",
+      "Contraseña del grupo (o 'x')",
+      "GID (ID de grupo)",
+      "Directorio personal del grupo",
+      "Lista de usuarios del grupo"
+    ],
+    "correct": [0, 1, 2]
+  },
+  {
+    "q": "¿Qué opción del archivo /etc/ntp.conf especifica una fuente NTP externa para consultar la información de tiempo?",
+    "type": "text",
+    "correct": "server"
+  },
+  {
+    "q": "Tras configurar la impresión, ¿qué comando se utiliza para mostrar el estado de la cola de impresión?",
+    "type": "text",
+    "correct": "lpq"
+  },
+  {
+    "q": "¿Cuáles de las siguientes tareas se pueden realizar utilizando el comando 'date'? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "Sincronizar los relojes del hardware y del sistema",
+      "Mostrar la fecha y hora en diferentes formatos",
+      "Configurar la hora del reloj del sistema",
+      "Configurar el reloj del hardware (BIOS/RTC)",
+      "Actualizar la hora directamente vía protocolo NTP"
+    ],
+    "correct": [1, 2]
+  },
+  {
+    "q": "¿Cuáles de las siguientes son funciones (facilities) de syslog? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "local7",
+      "mail",
+      "advanced",
+      "postmaster",
+      "remote"
+    ],
+    "correct": [0, 1]
+  },
+  {
+    "q": "¿Cuál es el propósito del comando 'mailq'?",
+    "type": "radio",
+    "options": [
+      "Descargar correos nuevos mediante POP3 o IMAP",
+      "Gestionar listas de correo multiusuario",
+      "Es una herramienta exclusiva del MTA qmail",
+      "Enumerar los mensajes de correo que están en la cola de salida"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "¿Qué comando se utiliza para enviar un mensaje de registro al daemon del sistema (syslog)?",
+    "type": "text",
+    "correct": "logger"
+  },
+  {
+    "q": "¿Cuál es el archivo de configuración principal para el demonio de registro del sistema (syslog)?",
+    "type": "text",
+    "correct": "/etc/syslog.conf"
+  },
+  {
+    "q": "¿Qué comando se utiliza para eliminar un trabajo de impresión de la cola?",
+    "type": "text",
+    "correct": "lprm"
+  },
+  {
+    "q": "¿Cuál es la función del archivo /etc/aliases en un servidor de correo?",
+    "type": "radio",
+    "options": [
+      "Define los nombres de host permitidos para enviar correo",
+      "Asocia nombres de usuario locales con otras direcciones de destino",
+      "Contiene las contraseñas de los usuarios de correo",
+      "Configura los filtros de spam del sistema"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando se utiliza para sincronizar el reloj del sistema con un servidor NTP de forma inmediata?",
+    "type": "text",
+    "correct": "ntpdate"
+  },
+  {
+    "q": "¿Cuál de las siguientes herramientas se utiliza para gestionar la rotación, compresión y borrado de archivos de log?",
+    "type": "text",
+    "correct": "logrotate"
+  },
+  {
+    "q": "¿En qué directorio se almacenan normalmente los archivos de registro (logs) en un sistema Linux?",
+    "type": "text",
+    "correct": "/var/log"
+  },
+  {
+    "q": "¿Cuál es el protocolo estándar utilizado para enviar correos electrónicos entre servidores (MTA)?",
+    "type": "radio",
+    "options": [
+      "POP3",
+      "IMAP",
+      "SMTP",
+      "HTTP",
+      "NTP"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando se utiliza para imprimir un archivo desde la línea de comandos en sistemas con CUPS o BSD?",
+    "type": "text",
+    "correct": "lpr"
+  },
+  {
+    "q": "¿Qué archivo de configuración permite a un usuario reenviar su correo personal a otra dirección?",
+    "type": "text",
+    "correct": "~/.forward"
+  },
+  {
+    "q": "En el contexto de syslog, ¿qué nivel de prioridad indica la condición más grave?",
+    "type": "radio",
+    "options": [
+      "debug",
+      "info",
+      "warning",
+      "emerg",
+      "crit"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "¿Cuál es el propósito del comando 'hwclock'?",
+    "type": "radio",
+    "options": [
+      "Sincronizar la hora con un servidor GPS",
+      "Consultar y configurar el reloj del hardware (RTC)",
+      "Medir la velocidad del procesador",
+      "Configurar la zona horaria del sistema"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué es cierto acerca del comando 'ntpdate'?",
+    "type": "radio",
+    "options": [
+      "Es el comando principal de administración del servidor NTP",
+      "Solo actualiza la fecha, pero no la hora",
+      "Consulta uno o más servidores NTP y ajusta la hora del sistema",
+      "Envía la hora local a servidores remotos para redistribución"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué es cierto con respecto al archivo ~/.forward?",
+    "type": "radio",
+    "options": [
+      "Solo puede ser editado por el root mediante 'editaliases'",
+      "Requiere ejecutar 'newaliases' tras ser modificado",
+      "Permite reenviar el correo entrante a uno o más destinatarios",
+      "Solo permite reenviar correo a direcciones del mismo dominio"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos se utiliza para rotar, comprimir y enviar por correo los registros del sistema?",
+    "type": "radio",
+    "options": [
+      "logrotate",
+      "syslogd --rotate",
+      "logger",
+      "rotatelog"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cuál es el comando para eliminar la puerta de enlace predeterminada (default gateway) de la tabla de enrutamiento IP del sistema? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "route del default",
+      "ifconfig unset default",
+      "netstat -r default",
+      "ip route del default",
+      "sysctl ipv4.default_gw=0"
+    ],
+    "correct": [0, 3]
+  },
+  {
+    "q": "¿Cuál es el propósito del archivo /etc/nsswitch.conf?",
+    "type": "radio",
+    "options": [
+      "Configura dónde busca la biblioteca C información como nombres de host y contraseñas",
+      "Configura los números de puerto de protocolos como HTTP o SMTP",
+      "Configura los servicios de autenticación LDAP para el sistema local",
+      "Configura qué servicios de red se activarán en el próximo arranque"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "En IPv6, ¿cuántos bits se utilizan para el identificador de interfaz de una dirección de unidifusión (unicast)?",
+    "type": "text",
+    "correct": "64"
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos ayuda a identificar un enrutador fallido entre la máquina local y una remota?",
+    "type": "radio",
+    "options": [
+      "ps",
+      "netstat",
+      "nslookup",
+      "ifconfig",
+      "traceroute"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "¿Cuál de los siguientes detalles se puede encontrar en el archivo /etc/hosts?",
+    "type": "radio",
+    "options": [
+      "Nombres de servidores DNS externos",
+      "Mapeos locales de direcciones IP a nombres de host",
+      "Configuración de las interfaces de red",
+      "Rutas estáticas del sistema"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando se utiliza para mostrar todas las interfaces de red, incluso aquellas que están desactivadas?",
+    "type": "radio",
+    "options": [
+      "ifconfig -a",
+      "ifconfig -v",
+      "ip link show all",
+      "netstat -i"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Qué comando se utiliza para cambiar la dirección IP de una interfaz de red (sin usar herramientas de persistencia)?",
+    "type": "text",
+    "correct": "ifconfig"
+  },
+  {
+    "q": "¿Cuál es la máscara de subred predeterminada para una red de Clase C en notación decimal?",
+    "type": "text",
+    "correct": "255.255.255.0"
+  },
+  {
+    "q": "¿Qué protocolo se utiliza para asignar automáticamente direcciones IP a los dispositivos en una red?",
+    "type": "text",
+    "correct": "dhcp"
+  },
+  {
+    "q": "¿Cuál de los siguientes archivos contiene la lista de servicios de red y sus puertos asociados (como SSH en el 22)?",
+    "type": "text",
+    "correct": "/etc/services"
+  },
+  {
+    "q": "¿Qué comando muestra la tabla de enrutamiento IP actual?",
+    "type": "radio",
+    "options": [
+      "route -n",
+      "ip route show",
+      "netstat -r",
+      "Todas las anteriores son correctas"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "¿Cuál de los siguientes es un ejemplo de una dirección IPv6 válida?",
+    "type": "radio",
+    "options": [
+      "2001:db8:85a3:0000:0000:8a2e:0370:7334",
+      "192.168.1.1.0.0.1",
+      "2001::gh78::1",
+      "ff02:1:3::89::1"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Qué comando se utiliza para consultar registros específicos de un dominio en un servidor DNS?",
+    "type": "text",
+    "correct": "dig"
+  },
+  {
+    "q": "¿Cuál es el propósito del comando 'ping'?",
+    "type": "radio",
+    "options": [
+      "Medir el ancho de banda disponible",
+      "Verificar la conectividad a nivel de IP con otro host",
+      "Descargar archivos de un servidor remoto",
+      "Rastrear la ruta de los paquetes"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué archivo de configuración indica el orden en que se resuelven los nombres de host (por ejemplo, si mirar primero en /etc/hosts o en DNS)?",
+    "type": "text",
+    "correct": "/etc/nsswitch.conf"
+  },
+  {
+    "q": "¿Cuál es la dirección de bucle invertido (localhost) estándar en IPv4?",
+    "type": "text",
+    "correct": "127.0.0.1"
+  },
+  {
+    "q": "¿Qué comando (actualmente preferido sobre netstat) muestra estadísticas de sockets y conexiones activas?",
+    "type": "text",
+    "correct": "ss"
+  },
+  {
+    "q": "¿Cuál de las siguientes herramientas informa no solo de la respuesta del servidor de nombres, sino también de detalles sobre la consulta?",
+    "type": "radio",
+    "options": [
+      "nslookup",
+      "host",
+      "dig",
+      "hostname"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando se utiliza para configurar una interfaz de red inalámbrica?",
+    "type": "text",
+    "correct": "iwconfig"
+  },
+  {
+    "q": "¿Cuál es el prefijo de red estándar para una dirección IPv6 de enlace local (link-local)?",
+    "type": "text",
+    "correct": "fe80::/10"
+  },
+  {
+    "q": "En el archivo /etc/resolv.conf, ¿qué palabra clave define la dirección IP del servidor DNS a consultar?",
+    "type": "text",
+    "correct": "nameserver"
+  },
+  {
+    "q": "¿Qué herramienta se utiliza para capturar y analizar el tráfico de red en tiempo real desde la consola?",
+    "type": "text",
+    "correct": "tcpdump"
+  },
+  {
+    "q": "¿Cuál de las siguientes es una dirección IPv4 privada según la RFC 1918?",
+    "type": "radio",
+    "options": [
+      "8.8.8.8",
+      "172.16.0.5",
+      "200.10.20.1",
+      "127.0.0.1"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando permite ver el nombre de dominio NIS/YP del sistema?",
+    "type": "text",
+    "correct": "domainname"
+  },
+  {
+    "q": "¿Cuál de las siguientes es la abreviatura correcta de la dirección IPv6 2001:0db8:0000:0000:0000:8a2e:0370:7334?",
+    "type": "radio",
+    "options": [
+      "2001:db8::8a2e:370:7334",
+      "2001:db8:0:0:8a2e:370:7334",
+      "2001:db8::8a2e:0370:7334",
+      "2001:db8:0000:8a2e:370:7334"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "¿Cuáles de las siguientes palabras clave se pueden usar en el archivo /etc/resolv.conf? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "substitute",
+      "nameserver",
+      "search",
+      "lookup",
+      "method"
+    ],
+    "correct": [1, 2]
+  },
+  {
+    "q": "Si el comando 'route' tarda mucho en mostrar la tabla, ¿cuál suele ser la causa?",
+    "type": "radio",
+    "options": [
+      "La tabla de rutas está corrupta",
+      "Un router no responde al protocolo ARF-D",
+      "Hay demasiados routers predeterminados",
+      "La resolución de DNS no funciona y el comando espera el tiempo de espera (timeout) al intentar resolver nombres"
+    ],
+    "correct": 3
+  },
+{
+  "q": "¿Qué comando se utiliza para mostrar las estadísticas de red de una interfaz específica, como los paquetes transmitidos y recibidos?",
+  "type": "radio",
+  "options": [
+    "ifconfig",
+    "netstat -i",
+    "ip -s link show",
+    "Todas las anteriores son correctas"
+  ],
+  "correct": 3
+},
+  {
+    "q": "En un archivo de configuración de xinetd, ¿qué atributo especifica la dirección de red que se utilizará para proporcionar el servicio?",
+    "type": "text",
+    "correct": "bind"
+  },
+  {
+    "q": "¿Qué argumento de la opción -type del comando 'find' coincidirá con los archivos que son enlaces simbólicos?",
+    "type": "text",
+    "correct": "l"
+  },
+  {
+    "q": "Con el reenvío X11 en SSH, ¿qué variable de entorno se configura automáticamente en el shell del host remoto?",
+    "type": "text",
+    "correct": "DISPLAY"
+  },
+  {
+    "q": "¿La presencia de qué archivo impedirá temporalmente que todos los usuarios, excepto root, inicien sesión en el sistema?",
+    "type": "text",
+    "correct": "/etc/nologin"
+  },
+  {
+    "q": "¿Qué archivo de configuración se editaría para cambiar las opciones predeterminadas para las sesiones SSH salientes (cliente)?",
+    "type": "radio",
+    "options": [
+      "/etc/ssh/sshd_config",
+      "/etc/ssh/ssh",
+      "/etc/ssh/cliente",
+      "/etc/ssh/ssh_config",
+      "/etc/ssh/ssh_client"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "¿Cuál es la función del comando 'ssh-keyscan'?",
+    "type": "radio",
+    "options": [
+      "Generar un nuevo par de claves pública/privada para el usuario",
+      "Escanear la red en busca de servidores SSH vulnerables",
+      "Recopilar las claves públicas de host de varios servidores SSH",
+      "Verificar si la clave privada del usuario ha sido comprometida"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando se utiliza para generar un par de claves (pública y privada) para la autenticación SSH?",
+    "type": "text",
+    "correct": "ssh-keygen"
+  },
+  {
+    "q": "¿Qué opción del comando 'useradd' permite especificar un directorio personal (home) personalizado para el nuevo usuario?",
+    "type": "radio",
+    "options": [
+      "-h",
+      "-d",
+      "-m",
+      "-u"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Qué comando muestra una lista de todos los archivos abiertos por los procesos del sistema?",
+    "type": "text",
+    "correct": "lsof"
+  },
+  {
+    "q": "¿Qué archivo contiene la lista de usuarios autorizados a utilizar el comando 'sudo'?",
+    "type": "text",
+    "correct": "/etc/sudoers"
+  },
+  {
+    "q": "¿Cuál es el propósito del comando 'faillog'?",
+    "type": "radio",
+    "options": [
+      "Muestra errores críticos del kernel",
+      "Muestra el registro de fallos de segmentación de las aplicaciones",
+      "Muestra los intentos fallidos de inicio de sesión",
+      "Limpia los archivos de log del sistema"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "¿Qué comando permite cambiar el propietario de un archivo o directorio?",
+    "type": "text",
+    "correct": "chown"
+  },
+  {
+    "q": "¿Qué comando se utiliza para ver o modificar los límites de recursos del sistema (como memoria o archivos abiertos) para el shell actual?",
+    "type": "text",
+    "correct": "ulimit"
+  },
+  {
+    "q": "¿Qué opción en sshd_config permite o prohíbe el inicio de sesión del usuario root?",
+    "type": "text",
+    "correct": "PermitRootLogin"
+  },
+  {
+    "q": "¿Cuál es el propósito de una clave de host (host key) en SSH?",
+    "type": "radio",
+    "options": [
+      "Identificar al usuario ante el servidor",
+      "Proporcionar la identidad del servidor a los clientes que se conectan",
+      "Firmar todas las claves públicas de los usuarios del sistema",
+      "Permitir conexiones automáticas sin contraseña"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos limita la cantidad de memoria que un usuario puede usar?",
+    "type": "radio",
+    "options": [
+      "umask",
+      "usermod",
+      "ulimit",
+      "passwd",
+      "chage"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "En un sistema con contraseñas ocultas (shadow passwords), ¿en qué archivo se almacenan los hashes de las contraseñas?",
+    "type": "text",
+    "correct": "/etc/shadow"
+  },
+  {
+    "q": "¿Cuál de los siguientes comandos se conecta al host 'example.com' en el puerto 2222? (Elija DOS)",
+    "type": "checkbox",
+    "options": [
+      "ssh --port 2222 example.com",
+      "ssh -p 2222 example.com",
+      "ssh example.com:2222",
+      "ssh -o Port=2222 example.com",
+      "ssh -P 2222 example.com"
+    ],
+    "correct": [1, 3]
+  }
 ]
