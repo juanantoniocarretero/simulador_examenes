@@ -45,7 +45,7 @@
       "0%",
       "5%"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de las siguientes afirmaciones es verdadera cuando un sistema de archivos, que no está listado en /etc/fstab ni es conocido por el sistema, se monta manualmente?",
@@ -127,7 +127,7 @@
       "chown dave+personal datos.txt",
       "chown dave:staff data.txt"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Al considerar el uso de enlaces físicos, ¿cuáles son razones válidas para no usarlos?",
@@ -324,7 +324,7 @@
       "grub-setup /dev/sdc",
       "grub-install /dev/sdc"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes tipos de particiones se utiliza para los espacios de intercambio de Linux al particionar unidades de disco duro?",
@@ -372,7 +372,7 @@
       "dpkg -v nombredelpaquete",
       "dpkg -r nombredelpaquete"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos enumera las dependencias del archivo del paquete RPM foo.rpm?",
@@ -521,7 +521,7 @@
       "SIGKILL",
       "SIGINT"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos muestra la salida del comando foo en la pantalla y también la escribe en un archivo llamado /tmp/foodata?",
@@ -533,7 +533,7 @@
       "foo | tee /tmp/foodata",
       "foo > salida estándar >> /tmp/foodata"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Qué resultado se mostrará cuando el usuario fred ejecute el siguiente comando: echo 'fred $USER'?",
@@ -557,7 +557,7 @@
       "whatis foo",
       "which foo"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Al redirigir la salida de find al comando xargs, ¿qué opción de find es útil si los nombres de archivo contienen espacios?",
@@ -569,7 +569,7 @@
       "-ignorar-espacio",
       "-print0"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos puede realizar búsquedas en el contenido de archivos utilizando expresiones regulares?",
@@ -617,7 +617,7 @@
       "sort -t: -k1,7 /etc/passwd",
       "cut -d: -f1,7 /etc/passwd"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Si el archivo tar comprimido con gzip 'texts.tgz' contiene los archivos a.txt y b.txt, ¿qué archivo estará presente en el directorio actual después de ejecutar 'gunzip texts.tgz'?",
@@ -629,7 +629,7 @@
       "Solo a.txt y b.txt",
       "Solo texts.tar"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "En el editor vi, ¿cómo se pueden ejecutar comandos (como mover el cursor o copiar líneas) varias veces de forma consecutiva?",
@@ -738,16 +738,16 @@
     "correct": 3
   },
   {
-    "q": "¿Qué afirmaciones son correctas sobre el disco RAM inicial (initramfs) en el arranque de Linux? (Elija dos).",
+    "q": "¿Cuáles de las siguientes afirmaciones son correctas sobre el disco RAM inicial involucrado en el proceso de arranque de Linux?.(Escoge dos.)",
     "type": "checkbox",
     "options": [
-      "Es un archivo de sistema de archivos comprimido que puede ser extraído para examinarse.",
-      "Contiene el MBR, el gestor de arranque y el kernel de Linux.",
-      "Tras el arranque, su contenido permanece disponible en /run/initramfs/.",
+      "Un initramfs es un archivo de sistema de archivos comprimido, que se puede desempaquetar para examinar su contenido.",
+      "Un archivo initramfs contiene el MBR, el cargador de arranque y el Kernel de Linux.",
+      "Después del arranque, el contenido está disponible en /run/initramfs/.",
       "El kernel lo utiliza temporalmente antes de montar el sistema de archivos raíz real.",
-      "No depende de una versión específica del kernel."
+      "Initramfs no depende de una versión del Kernel y no se cambia después de la instalación inicial."
     ],
-    "correct": [0, 3]
+    "correct": [0, 2]
   },
   {
     "q": "¿Cuál de los siguientes comandos carga un módulo del kernel junto con todas sus dependencias necesarias?",
@@ -800,7 +800,7 @@
       "Se almacena en un área especial dentro de los metadatos de GPT.",
       "Se carga desde una posición de disco de arranque fija."
     ],
-    "correct": [0, 1]
+    "correct": [1, 3]
   },
   {
     "q": "Un paquete Debian crea varios archivos durante su instalación. ¿Cuál de los siguientes comandos busca qué paquete es el propietario del archivo /etc/debian_version?",
@@ -856,14 +856,14 @@
     "options": [
       "Imágenes del kernel de Linux (vmlinuz).",
       "Binarios del shell Bash.",
-      "Archivos de configuración del cargador de arranque (como grub.cfg).",
-      "Imágenes del disco RAM inicial (initramfs).",
-      "Binarios de comprobación del sistema de archivos (fsck)."
+      "Unidades de destino y servicio de systemd.",
+      "Imágenes iniciales de ramdisk.",
+      "binarios fsck."
     ],
-    "correct": [0, 3]
+    "correct": [0, 2]
   },
   {
-    "q": "¿Qué archivo define los repositorios y ubicaciones de red desde donde el administrador de paquetes APT de Debian descarga el software?",
+    "q": "¿Qué archivo define las ubicaciones de red desde donde el administrador de paquetes de Debian descarga el software?",
     "type": "radio",
     "options": [
       "/etc/dpkg/dpkg.cfg",
@@ -872,7 +872,7 @@
       "/etc/dpkg/dselect.cfg",
       "/etc/apt/sources.list"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Al eliminar un paquete en un sistema Debian mediante la herramienta dpkg, ¿qué opción garantiza que también se eliminen los archivos de configuración de dicho paquete?",
@@ -899,7 +899,7 @@
     "correct": [0, 1, 3]
   },
   {
-    "q": "La instalación de un paquete Debian local (.deb) falló debido a dependencias no satisfechas. ¿Cuál de los siguientes comandos intenta corregir las dependencias rotas y completar la instalación del paquete interrumpido?",
+    "q": "La instalación de un paquete Debian local falló debido a dependencias no satisfechas. ¿Cuál de los siguientes comandos intenta corregir las dependencias rotas y completar la instalación del paquete interrumpido?",
     "type": "radio",
     "options": [
       "dpkg --fix --all",
@@ -908,7 +908,7 @@
       "apt-get all",
       "apt-get install -f"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos enumera todos los paquetes actualmente instalados en un sistema que utiliza administración de paquetes RPM?",
@@ -920,7 +920,7 @@
       "rpm --list --installed",
       "rpm --query --all"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuáles de los siguientes comandos son válidos en el archivo de configuración de GRUB 2 (grub.cfg)? (Elija dos).",
@@ -935,7 +935,7 @@
     "correct": [0, 3]
   },
   {
-    "q": "¿Cuándo se restablece el contenido del búfer de anillo (ring buffer) del kernel? (Elija dos).",
+    "q": "¿Cuándo se restablece el contenido del búfer de anillo del kernel? (Elija dos).",
     "type": "checkbox",
     "options": [
       "Cuando el búfer se limpia explícitamente con el comando 'dmesg --clear'.",
@@ -1040,7 +1040,7 @@
       "La copia de seguridad consume menos espacio porque los enlaces duros apuntan a los mismos datos en el disco en lugar de crear copias redundantes.",
       "La copia de seguridad se ejecuta más rápido porque, en lugar de copiar los datos de cada archivo, los enlaces duros solo crean nuevas entradas en los metadatos del sistema de archivos."
     ],
-    "correct": [3, 4]
+    "correct": [1, 3]
   },
   {
     "q": "¿Cuál es la forma correcta de configurar el 'target' de arranque predeterminado de systemd al modo multiusuario (equivalente al runlevel 3)?",
@@ -1100,7 +1100,7 @@
       "rpm --list --installed",
       "rpm --query --all"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "De acuerdo con el Estándar de Jerarquía del Sistema de Archivos (FHS), ¿en cuál de los siguientes directorios se encuentran las páginas de manual (man pages)?",
@@ -1124,7 +1124,7 @@
       "grep loga.log \":08:[09]+:[09]\"",
       "grep -E \":08:[0-9]+:[0-9]+\" loga.log"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "En una estructura de directorios anidados, ¿qué opción del comando 'find' se usaría para restringir la búsqueda a un número máximo determinado de subdirectorios?",
@@ -1163,7 +1163,7 @@
     "correct": 3
   },
   {
-    "q": "¿Cuál es el nivel de prioridad (niceness) predeterminado cuando se inicia un proceso con el comando 'nice' sin especificar un valor?",
+    "q": "¿Cuál es el nivel de prioridad predeterminado cuando se inicia un proceso con el comando 'nice' sin especificar un valor?",
     "type": "radio",
     "options": [
       "-10",
@@ -1172,10 +1172,10 @@
       "15",
       "20"
     ],
-    "correct": 2
+    "correct": 1
   },
   {
-    "q": "¿Cuál de los siguientes comandos utiliza un 'Here Document' (EOF) para enviar el texto 'test' a la entrada estándar?",
+    "q": "¿Cuál de los siguientes comandos envía una prueba al shell?",
     "type": "radio",
     "options": [
       "cat <<!EOT – test – EOT",
@@ -1184,7 +1184,7 @@
       "cat & <EOT – test – EOT",
       "cat <<EOT\ntest\nEOT"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Considere el siguiente directorio:\ndrwxrwxr-x 2 root sales 4096 1 de enero 15:21 sales\n¿Qué comandos garantizan que los archivos nuevos creados dentro del directorio 'sales' hereden automáticamente el grupo 'sales'? (Elija dos).",
@@ -1196,7 +1196,7 @@
       "chown --persistent sales sales",
       "chmod 2775 sales"
     ],
-    "correct": [0, 4]
+    "correct": [2, 4]
   },
   {
     "q": "¿Cuál de los siguientes comandos cambia todos los saltos de línea CR-LF del archivo 'userlist.txt' a saltos de línea LF estándar de Linux y guarda el resultado en 'newlist.txt'?",
@@ -1239,10 +1239,10 @@
       "fred fred",
       "fred /home/fred/",
       "“~fred $USER”",
-      "fred fred",
+      "fred $USER",
       "~fred fred”"
     ],
-    "correct": 0
+    "correct": 3
   },
   {
     "q": "¿Cuál de los siguientes comandos muestra la ruta completa al archivo ejecutable que se invocaría al escribir el comando 'foo'?",
@@ -1266,7 +1266,7 @@
       "sort -t: -k 1,7 /etc/passwd",
       "cut -d: -f1,7 /etc/passwd"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Inmediatamente después de eliminar 3 líneas de texto en vi y mover el cursor a una línea diferente, ¿qué comando de un solo carácter insertará el contenido eliminado justo debajo de la línea actual?",
@@ -1296,7 +1296,7 @@
     "type": "radio",
     "options": [
       "El sistema de archivos raíz (/) de Linux.",
-      "El cargador de arranque de primera etapa (bootloader).",
+      "El cargador de arranque de primera etapa.",
       "El archivo de intercambio (swap) del sistema.",
       "Los binarios del shell predeterminado de Linux.",
       "Los directorios de inicio (home) de los usuarios."
@@ -1306,7 +1306,7 @@
   {
     "q": "¿Qué directorio contiene los archivos de configuración (.repo) para repositorios adicionales de yum/dnf? (Especifique la ruta completa al directorio).",
     "type": "text",
-    "correct": "/etc/yum.repos.d"
+    "correct": "/etc/yum.conf"
   },
   {
     "q": "¿Cuál de las siguientes afirmaciones es cierta cuando un administrador monta manualmente un sistema de archivos que no está listado en /etc/fstab?",
@@ -1318,7 +1318,7 @@
       "Systemd desmontará automáticamente el sistema de archivos tras un corto periodo si no existe una unidad de montaje.",
       "Es obligatorio usar 'systemctl unmount' para liberar el descriptor de archivos del punto de montaje."
     ],
-    "correct": 2
+    "correct": 1
   },
   {
     "q": "En el modo normal de vi, ¿qué carácter se utiliza para iniciar una búsqueda de texto hacia atrás (hacia arriba) desde la posición actual del cursor?",
@@ -1354,7 +1354,7 @@
       "0227",
       "0027"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes identificadores de tipo de partición se utiliza para el espacio de intercambio (swap) de Linux en unidades MBR?",
@@ -1410,7 +1410,7 @@
     "options": [
       "Permite que el color resalte la parte coincidente.",
       "Muestra información sobre la versión del comando.",
-      "Invierte la coincidencia: solo muestra las líneas que NO coinciden.",
+      "Solo genera líneas que no coinciden.",
       "Cambia el orden de salida mostrando primero la última línea coincidente.",
       "Muestra todas las líneas y antepone un '+' a las líneas coincidentes."
     ],
@@ -1438,7 +1438,7 @@
       "0%",
       "5%"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos imprime el directorio de trabajo actual cuando se usa un shell Bash? (Elija dos).",
@@ -1534,7 +1534,7 @@
       "chown dave+staff data.txt",
       "chown dave:staff data.txt"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál es el ID de proceso (PID) del proceso de inicio (init) en un sistema basado en Linux?",
@@ -1633,14 +1633,14 @@
     "correct": 3
   },
   {
-    "q": "¿Cuáles de las siguientes propiedades de un sistema Linux deberían cambiarse obligatoriamente después de clonar una máquina virtual para evitar conflictos? (Elija dos).",
+    "q": "¿C¿Cuál de las siguientes propiedades de un sistema Linux debe cambiarse cuando se clona una máquina virtual? (Elija dos).",
     "type": "checkbox",
     "options": [
-      "El esquema de particionado del disco.",
-      "El tipo de sistema de archivos (ext4, xfs, etc.).",
-      "El Machine ID de D-Bus (/etc/machine-id).",
+      "El esquema de partición.",
+      "El sistema de archivos.",
+      "La identificación de la máquina D-Bus.",
       "Los permisos del directorio /root/.",
-      "Las claves de host de SSH (SSH host keys)."
+      "Las claves de host de SSH."
     ],
     "correct": [2, 4]
   },
@@ -1650,7 +1650,7 @@
     "options": [
       "Pasar argumentos de configuración a un servidor gráfico X11.",
       "Repetir la ejecución de un comando utilizando parámetros gráficos.",
-      "Leer datos de la entrada estándar (stdin) y convertirlos en argumentos para ejecutar otros comandos.",
+      "Leer datos de la entrada estándar y convertirlos en argumentos para ejecutar otros comandos.",
       "Mostrar una interfaz gráfica para hacer preguntas al usuario y devolver la respuesta al shell.",
       "Permite convertir automáticamente opciones cortas de comandos en opciones largas."
     ],
@@ -1774,7 +1774,7 @@
       "SIGKILL",
       "SIGINT"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál es el resultado de aplicar la expresión regular de sustitución 's/[ABC][abc]/xx/g' a la cadena 'ABCabc'?",
@@ -1782,11 +1782,11 @@
     "options": [
       "ABxxdc",
       "xxCxxC",
-      "Axxxc",
+      "xxxxx",
       "ABCabc",
       "ABxxbc"
     ],
-    "correct": 3
+    "correct": 2
   },
   {
     "q": "¿Cuál de los siguientes comandos lee un archivo y crea fragmentos (archivos más pequeños) de un tamaño determinado?",
@@ -1805,7 +1805,7 @@
     "type": "radio",
     "options": [
       "La salida del comando se redirige automáticamente a /dev/null.",
-      "El comando se ejecuta en segundo plano (background) en el shell actual.",
+      "El comando se ejecuta en segundo plano en el shell actual.",
       "La salida del comando es interpretada inmediatamente por el shell.",
       "El comando se ejecuta como un hijo directo del proceso init (PID 1).",
       "La entrada del comando se lee obligatoriamente desde /dev/null."
@@ -1822,7 +1822,7 @@
       "Solo a.txt y b.txt.",
       "Solo texts.tar."
     ],
-    "correct": 3
+    "correct": 1
   },
   {
     "q": "¿Cuál de los siguientes comandos enumera las dependencias de un archivo de paquete RPM local llamado 'foo.rpm'?",
@@ -1864,13 +1864,13 @@
     "q": "Tras un corte de energía, el sistema de archivos XFS en /dev/sda3 es inconsistente. ¿Qué herramienta debe usarse para reparar los errores del sistema de archivos?",
     "type": "radio",
     "options": [
-      "mount -f para forzar el montaje.",
-      "xfsck.",
+      "Usar mount -f para forzar un montaje del sistema de archivos.",
+      "Ejecutar xfsck en el sistema de archivos ",
       "Montar el sistema con la opción 'xfs_repair'.",
-      "xfsadmin repair.",
-      "xfs_repair."
+      "Ejecutar xfsadmin repair en el sistema de archivos.",
+      "Ejecutar xfs_repair en el sistema de archivos."
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos muestra el resultado del comando 'foo' en la pantalla y, simultáneamente, lo escribe en el archivo '/tmp/foodata'?",
@@ -1918,29 +1918,30 @@
       "tar cf archive.tgz",
       "tar ztf archive.tgz"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Al redirigir la salida de 'find' al comando 'xargs', ¿qué opción de 'find' es necesaria para manejar correctamente nombres de archivos que contienen espacios o caracteres especiales?",
     "type": "radio",
     "options": [
-      "-rep-space",
+      "“”rep-space",
       "-printnul",
       "-nospace",
       "-ignore-space",
-      "-print0"
+      "“”print0"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
-    "q": "Un sistema carga el kernel e initramfs pero se bloquea después. Al arrancar con un CD de rescate, ¿qué método es el más efectivo para investigar la causa raíz en el disco duro original?",
+    "q": "Al arrancar desde el disco duro, una computadora carga correctamente el kernel de Linux e initramfs, pero se bloquea durante las tareas de inicio posteriores. El sistema se inicia conun CD de rescate basado en Linux para investigar el problema. ¿Cuál de los siguientes métodos ayuda a identificar la causa raíz del problema?",
     "type": "radio",
     "options": [
-      "Usar 'dmesg' desde el shell del CD para ver los registros del sistema original.",
-      "Revisar el archivo /proc/kmsg del disco duro.",
-      "Montar la partición raíz del disco duro y examinar los archivos en /var/log/.",
-      "Usar 'chroot' hacia el disco duro y ejecutar 'dmesg'.",
-      "Reiniciar el sistema simplemente para ver si el error se repite."
+      "Usando el comando dmesg del shell del CD para ver los registros de arranque del sistema original",
+      "Investigar el archivo /proc/kmsg del HDD en busca de errores ",
+      "Investigar el archivo /var/log en el disco duro de la computadora en busca de posibles errores.",
+      "Usar chroot para cambiar el sistema de archivos del disco y usar dmesg para ver los registros",
+      "Reinicio de nuevo porque inicio bien el CD Live"
+
     ],
     "correct": 2
   },
@@ -1966,7 +1967,7 @@
       "pgrep -u 0",
       "pgrep -c 0"
     ],
-    "correct": [1, 3]
+    "correct": [1, 2]
   },
   {
     "q": "Utilizando 'dpkg', ¿qué comando desinstala un paquete pero conserva sus archivos de configuración en el sistema?",
@@ -1978,7 +1979,7 @@
       "dpkg -v pkgname",
       "dpkg -r pkgname"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes subcomandos de 'apt-get' instala las versiones más recientes de todos los paquetes instalados actualmente sin eliminar ningún paquete?",
@@ -1987,20 +1988,20 @@
       "auto-update",
       "dist-upgrade",
       "full-upgrade",
-      "upgrade",
+      "install",
       "update"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
-    "q": "¿Qué afirmaciones son ciertas con respecto a la configuración de 'yum/dnf'? (Elija dos).",
+    "q": "¿Qué afirmaciones son ciertas con respecto a la configuración de 'yum'? (Elija dos).",
     "type": "checkbox",
     "options": [
-      "Los cambios requieren ejecutar 'yum confupdate' para aplicarse.",
-      "Los cambios se activan tras reiniciar el demonio 'yumd'.",
-      "La configuración de los repositorios puede dividirse en varios archivos dentro de /etc/yum.repos.d/.",
-      "Las rutas de los repositorios pueden incluir variables como $basearch o $releasever.",
-      "Si existe /etc/yum.repos.d/, el archivo /etc/yum.conf se ignora por completo."
+      "Los cambios en la configuración del repositorio se aplican tras ejecutar “yum confupdate”.",
+      "Los cambios en la configuración de yum se activan tras reiniciar el servicio yumd.",
+      "La configuración de los repositorios de paquetes se pueden dividir en varios archivos.",
+      "Las configuraciones del repositorio pueden incluir variables como $basearch o $releaseve",
+      "En caso de que /etc/yum.repos.d contenga archivos, se ignora /etc/yum.conf."
     ],
     "correct": [2, 3]
   },
@@ -2014,7 +2015,7 @@
       "grub-setup /dev/sdc",
       "grub-install /dev/sdc"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "Considere que el archivo 'a.txt' tiene el número de inodo 525385. ¿Cómo se crearía un nuevo enlace duro llamado 'c.txt' que apunte al mismo inodo que 'a.txt'?",
@@ -2046,11 +2047,11 @@
     "options": [
       "Ctrl XX",
       "Ctrl : w",
-      "Esc :wq",
-      "Esc ZZ",
-      "Esc :x"
+      "Esc.ZZ",
+      "Esc wq",
+      "Esc ZZ"
     ],
-    "correct": [2, 4]
+    "correct": [3, 4]
   },
   {
     "q": "¿Qué tipo de sistema de archivos crea 'mkfs' de forma predeterminada cuando se ejecuta solo con el nombre del dispositivo de bloque y sin parámetros adicionales?",
@@ -2067,7 +2068,7 @@
   {
     "q": "¿Qué señal se envía a un proceso en primer plano cuando se presiona la combinación de teclas Ctrl+Z?",
     "type": "text",
-    "correct": "SIGTSTP"
+    "correct": "SIGSTOP"
   },
   {
     "q": "Según el FHS, ¿dónde deben colocarse los binarios instalados localmente por el administrador para que estén disponibles para todos los usuarios? (Ruta completa).",
@@ -2119,7 +2120,7 @@
   {
     "q": "¿Qué comando muestra el uso del espacio en disco de los sistemas de archivos montados (espacio libre/usado por partición)? (Solo el comando).",
     "type": "text",
-    "correct": "df"
+    "correct": "du"
   },
   {
     "q": "¿Qué archivo del sistema de archivos /proc contiene la lista de todos los sistemas de archivos montados actualmente? (Ruta completa).",
@@ -2129,7 +2130,7 @@
   {
     "q": "Tiene bibliotecas en /usr/local/lib y desea que estén disponibles en /usr/lib. ¿Cuál es la forma preferida de hacerlo sin duplicar los archivos físicos?",
     "type": "text",
-    "correct": "ln -s"
+    "correct": "Crear un enlace simbólico."
   },
   {
     "q": "¿Qué herramienta es la estándar para verificar y reparar sistemas de archivos dañados (ext2/3/4, vfat, etc.)? (Solo el comando).",
@@ -2169,9 +2170,9 @@
     "correct": [0, 1, 2]
   },
   {
-    "q": "Un usuario intenta leer un archivo con permisos 640 (-rw-r-----) pero no es el propietario. Sin usar 'sudo', ¿qué cambio de propiedad de grupo permitiría el acceso si el usuario pertenece al grupo 'admins'?",
+    "q": "Un usuario que es miembro del grupo de administradores personalizados intenta leer el contenido de un archivo pero no es el propietario del archivo. En lugar de otorgar acceso a sudo a este archivo, ¿cuál es otra forma de otorgar acceso de lectura, suponiendo que el archivo está actualmente marcado con 640 permisos?",
     "type": "text",
-    "correct": "chgrp admins"
+    "correct": "Use chgrp para cambiar la propiedad del grupo a los administradores."
   },
   {
     "q": "¿Qué utilidad de línea de comandos está diseñada específicamente para crear y manipular tablas de particiones GPT (GUID Partition Table)?",
@@ -2184,8 +2185,8 @@
     "correct": "9"
   },
   {
-    "q": "¿Qué comando permite ejecutar un proceso (como 'dbmaint &') de modo que ignore la señal SIGHUP y continúe ejecutándose tras cerrar la sesión del usuario?",
+    "q": "El comando dbmaint & se usó para ejecutar dbmaint en segundo plano. Sin embargo, dbmaint finaliza después de cerrar sesión en el sistema. ¿Qué invocación alternativa de dbmaint permite que dbmaint continúe ejecutándose incluso cuando el usuario que ejecuta el programa cierra la sesión?",
     "type": "text",
-    "correct": "nohup"
+    "correct": "nohup dbmaint &"
   }
 ]
