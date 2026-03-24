@@ -1254,7 +1254,7 @@
       "whatis foo",
       "which foo"
     ],
-    "correct": 3
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos genera una lista que contiene únicamente los nombres de usuario y sus shells de inicio de sesión desde el archivo /etc/passwd?",
