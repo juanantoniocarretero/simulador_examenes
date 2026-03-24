@@ -1178,11 +1178,11 @@
     "q": "¿Cuál de los siguientes comandos envía una prueba al shell?",
     "type": "radio",
     "options": [
-      "cat <<!EOT – test – EOT",
-      "cat <|EOT – test – EOT",
-      "cat | <EOT – test – EOT",
-      "cat & <EOT – test – EOT",
-      "cat <<EOT\ntest\nEOT"
+      "cat &lt;&lt;!EOT – test – EOT",
+      "cat &lt;|EOT – test – EOT",
+      "cat | &lt;EOT – test – EOT",
+      "cat &amp; &lt;EOT – test – EOT",
+      "cat &lt;&lt;EOT\ntest\nEOT"
     ],
     "correct": 4
   },
