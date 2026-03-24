@@ -1196,7 +1196,7 @@
       "chown --persistent sales sales",
       "chmod 2775 sales"
     ],
-    "correct": [2, 4]
+    "correct": [0, 4]
   },
   {
     "q": "¿Cuál de los siguientes comandos cambia todos los saltos de línea CR-LF del archivo 'userlist.txt' a saltos de línea LF estándar de Linux y guarda el resultado en 'newlist.txt'?",
