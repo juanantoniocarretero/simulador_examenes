@@ -1160,7 +1160,7 @@
       "rmdir ~/\\dir",
       "rmdir \"~/\\dir\""
     ],
-    "correct": 3
+    "correct": 0
   },
   {
     "q": "¿Cuál es el nivel de prioridad predeterminado cuando se inicia un proceso con el comando 'nice' sin especificar un valor?",
