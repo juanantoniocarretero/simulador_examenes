@@ -115,7 +115,7 @@
   {
     "q": "¿Qué comando muestra el uso actual del espacio en disco para todos los sistemas de archivos montados? (Especifique SOLO el comando sin ninguna ruta ni parámetros).",
     "type": "text",
-    "correct": "df"
+    "correct": "du"
   },
   {
     "q": "¿Qué comando chown cambia la propiedad a dave y el grupo a staff en un archivo llamado data.txt?",
