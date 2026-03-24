@@ -533,7 +533,7 @@
       "foo | tee /tmp/foodata",
       "foo > salida estándar >> /tmp/foodata"
     ],
-    "correct": 4
+    "correct": 3
   },
   {
     "q": "¿Qué resultado se mostrará cuando el usuario fred ejecute el siguiente comando: echo 'fred $USER'?",
