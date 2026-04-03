@@ -16,43 +16,107 @@ let currentExamName = "";
 let timerInterval;
 let timeLeft;
 
-// Variable para el marcador de dudas (Set para evitar duplicados)
+// Variable para el marcador de dudas
 let flaggedQuestions = new Set(); 
 
-// Al cargar la página, inicializamos historial y selectores
+/**
+ * Inicialización al cargar la página
+ */
 window.onload = () => {
     showHistory();
     ui.setupSelectorPreguntas();
-    ui.setupSelectorTiempo(); // Poblamos el selector dinámico de tiempo
+    ui.setupSelectorTiempo();
+    
+    // Escuchar cambios en el examen para actualizar los contadores de tipo
+    const examSelect = document.getElementById("exam-select");
+    if (examSelect) {
+        examSelect.addEventListener("change", updateTypeCounts);
+        // Ejecución inicial para el primer examen de la lista
+        updateTypeCounts();
+    }
 };
 
 /**
- * Inicializa el quiz cargando el JSON o las fallidas
+ * Actualiza dinámicamente el selector de tipos con el conteo (tipo / total)
+ */
+async function updateTypeCounts() {
+    const examFile = document.getElementById("exam-select").value;
+    const typeSelect = document.getElementById("type-select");
+    
+    try {
+        const res = await fetch(examFile);
+        const questions = await res.json();
+
+        const total = questions.length;
+        const counts = {
+            all: total,
+            radio: questions.filter(q => q.type === "radio").length,
+            checkbox: questions.filter(q => q.type === "checkbox").length,
+            text: questions.filter(q => q.type === "text").length
+        };
+
+        // Actualizamos el texto de cada opción con el formato (X / Total)
+        typeSelect.options[0].text = `Todas las preguntas (${counts.all} / ${total})`;
+        typeSelect.options[1].text = `Selección Única (${counts.radio} / ${total})`;
+        typeSelect.options[2].text = `Selección Múltiple (${counts.checkbox} / ${total})`;
+        typeSelect.options[3].text = `Completar Texto (${counts.text} / ${total})`;
+
+        // Deshabilitar opciones que no tengan preguntas
+        for (let i = 1; i < typeSelect.options.length; i++) {
+            const val = typeSelect.options[i].value;
+            typeSelect.options[i].disabled = (counts[val] === 0);
+        }
+
+        // Si la opción seleccionada quedó deshabilitada, volver a "all"
+        if (typeSelect.selectedOptions[0].disabled) {
+            typeSelect.value = "all";
+        }
+
+    } catch (e) {
+        console.error("Error al actualizar conteos:", e);
+        typeSelect.options[0].text = "Error al cargar tipos";
+    }
+}
+
+/**
+ * Inicializa el quiz con filtros de tipo y cantidad
  */
 async function initQuiz(onlyFailed = false) {
     if (!onlyFailed) {
         const examFile = document.getElementById("exam-select").value;
         const limit = parseInt(document.getElementById("num-questions").value);
-                
-        // Capturamos el tiempo seleccionado del nuevo selector
+        const selectedType = document.getElementById("type-select").value;
         const timeLimit = parseInt(document.getElementById("timer-select").value);
         
         currentExamName = document.getElementById("exam-select").options[document.getElementById("exam-select").selectedIndex].text;
 
         try {
             const res = await fetch(examFile);
-            
             if (!res.ok) {
                 window.location.href = "404.html";
                 return;
             }
 
             allQuestions = await res.json();
-            let shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
             
-            sessionQuestions = (limit === 0) ? shuffled : shuffled.slice(0, limit);
+            // Aplicar filtro por tipo
+            let filtered = (selectedType === "all") 
+                ? [...allQuestions] 
+                : allQuestions.filter(q => q.type === selectedType);
+
+            if (filtered.length === 0) {
+                alert("No hay preguntas disponibles para este filtro.");
+                return;
+            }
+
+            // Mezclar y limitar según la cantidad seleccionada
+            let shuffled = filtered.sort(() => 0.5 - Math.random());
             
-            // Iniciar el temporizador con el valor elegido
+            // Si el límite es 0 (Todos) o mayor al disponible, usamos el total filtrado
+            sessionQuestions = (limit === 0 || limit > shuffled.length) 
+                ? shuffled 
+                : shuffled.slice(0, limit);
+            
             startTimer(timeLimit);
 
         } catch (e) {
@@ -61,13 +125,12 @@ async function initQuiz(onlyFailed = false) {
             return;
         }
     } else {
-
         const timeLimit = parseInt(document.getElementById("timer-select").value);
         startTimer(timeLimit);
         sessionQuestions = [...failedQuestions].sort(() => 0.5 - Math.random());
     }
 
-    // Resetear contadores, estado, respuestas y dudas
+    // Reset de estado de la sesión
     currentIdx = 0;
     successes = 0;
     errors = 0;
@@ -82,29 +145,24 @@ async function initQuiz(onlyFailed = false) {
 }
 
 /**
- * Gestiona el cronómetro del examen con alerta de parpadeo a los 5 min
+ * Control del cronómetro
  */
 function startTimer(minutes) {
     clearInterval(timerInterval); 
     const timerDisplay = document.getElementById("timer-display");
 
-    // Lógica para "Modo Libre" (valor 0)
     if (minutes === 0) {
         timerDisplay.innerText = "⏱️ Modo Libre";
         timerDisplay.style.color = "var(--accent)";
-        timerDisplay.classList.remove("blink-warning");
         return; 
     }
 
     timeLeft = minutes * 60;
-
     timerInterval = setInterval(() => {
         const mins = Math.floor(timeLeft / 60);
         const secs = timeLeft % 60;
-        
         timerDisplay.innerText = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs}`;
         
-        // Alerta visual: Parpadeo y color rojo si faltan 5 minutos o menos
         if (timeLeft <= 300 && timeLeft > 0) {
             timerDisplay.style.color = "red";
             timerDisplay.classList.add("blink-warning");
@@ -115,7 +173,6 @@ function startTimer(minutes) {
         
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            timerDisplay.classList.remove("blink-warning");
             alert("¡Tiempo agotado!");
             finishQuiz();
         } else {
@@ -125,28 +182,11 @@ function startTimer(minutes) {
 }
 
 /**
- * Alterna la marca de duda en la pregunta actual
- */
-function toggleFlag() {
-    const flagBtn = document.getElementById("flag-btn");
-    if (flaggedQuestions.has(currentIdx)) {
-        flaggedQuestions.delete(currentIdx);
-        flagBtn.innerText = "🚩 Duda";
-        flagBtn.classList.remove("active-flag");
-    } else {
-        flaggedQuestions.add(currentIdx);
-        flagBtn.innerText = "🚩 Marcada";
-        flagBtn.classList.add("active-flag");
-    }
-}
-
-/**
- * Dibuja la pregunta actual y actualiza la barra de progreso
+ * Dibuja la pregunta actual en el DOM
  */
 function renderQuestion() {
     const item = sessionQuestions[currentIdx];
     
-    // Actualizar texto y barra de progreso visual
     document.getElementById("progress-text").innerText = `Pregunta ${currentIdx + 1} de ${sessionQuestions.length}`;
     const progressPercent = ((currentIdx + 1) / sessionQuestions.length) * 100;
     document.getElementById("progress-bar").style.width = `${progressPercent}%`;
@@ -158,7 +198,6 @@ function renderQuestion() {
     document.getElementById("main-btn").innerText = "Verificar";
     state = "check";
 
-    // Actualizar estado visual del botón de duda según si el índice está en el Set
     const flagBtn = document.getElementById("flag-btn");
     if (flaggedQuestions.has(currentIdx)) {
         flagBtn.innerText = "🚩 Marcada";
@@ -191,7 +230,7 @@ function renderQuestion() {
 }
 
 /**
- * Gestiona el botón principal (Verificar / Siguiente)
+ * Lógica del botón principal
  */
 function handleMainAction() {
     if (state === "check") {
@@ -207,7 +246,7 @@ function handleMainAction() {
 }
 
 /**
- * Comprueba la respuesta y la guarda para el reporte
+ * Validación de respuestas
  */
 function checkAnswer() {
     const item = sessionQuestions[currentIdx];
@@ -234,7 +273,6 @@ function checkAnswer() {
             correctText = item.correct.map(i => item.options[i]).join(", ");
         }
 
-        // Marcar opciones visualmente
         document.querySelectorAll('#ans-container label').forEach((label, idx) => {
             const isOk = Array.isArray(item.correct) ? item.correct.includes(idx) : idx === item.correct;
             if (isOk) label.classList.add("correct");
@@ -244,7 +282,6 @@ function checkAnswer() {
         });
     }
 
-    // Guardar respuesta y si fue marcada como duda
     userAnswers.push({
         question: item.q,
         user: userText,
@@ -260,8 +297,7 @@ function checkAnswer() {
     } else {
         errors++;
         failedQuestions.push(item); 
-        const sol = item.type === "text" ? `Solución: ${item.correct}` : "Ver opciones en verde";
-        feedback.innerText = `Incorrecto. ${sol}`;
+        feedback.innerText = `Incorrecto. ${item.type === "text" ? 'Solución: ' + item.correct : 'Ver opciones'}`;
         feedback.style.color = "var(--error)";
     }
 
@@ -270,52 +306,38 @@ function checkAnswer() {
 }
 
 /**
- * Finaliza el quiz, detiene timer y muestra reportes
+ * Finalización y Reporte
  */
 function finishQuiz() {
     clearInterval(timerInterval); 
-    
     document.getElementById("quiz").classList.add("hidden");
-    const resDiv = document.getElementById("results");
-    resDiv.classList.remove("hidden");
+    document.getElementById("results").classList.remove("hidden");
     
-    // 1. Mostrar puntuación
     document.getElementById("score-display").innerText = `${successes} / ${sessionQuestions.length}`;
     
     const ratio = successes / sessionQuestions.length;
     document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Nivel de examen." : "Sigue practicando.";
     
-    // 1. Reporte Detallado (Aciertos/Fallos)
     const reportContainer = document.getElementById("report-container");
     if (reportContainer) {
-        // Generamos la tabla de aciertos y fallos
         reportContainer.innerHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
     }
 
-    // 2. Resumen de dudas marcadas
     const flagReviewDiv = document.getElementById("flagged-review");
     const flagList = document.getElementById("flagged-list");
     
     if (flaggedQuestions.size > 0) {
-        flagReviewDiv.classList.remove("hidden"); // Mostrar el contenedor amarillo
+        flagReviewDiv.classList.remove("hidden");
         flagList.innerHTML = Array.from(flaggedQuestions).map(idx => {
-            // Buscamos la pregunta original usando el índice guardado en el Set
-            const questionData = sessionQuestions[idx];
-            return `<li><b>Pregunta ${idx + 1}:</b> ${questionData.q}</li>`;
+            return `<li><b>Pregunta ${idx + 1}:</b> ${sessionQuestions[idx].q}</li>`;
         }).join('');
     } else {
-        flagReviewDiv.classList.add("hidden"); // Ocultar si no hay dudas
+        flagReviewDiv.classList.add("hidden");
     }
 
-    // 4. Botón de reintentar fallidas
     const retryBtn = document.getElementById("retry-failed-btn");
-    if (failedQuestions.length > 0) {
-        retryBtn.classList.remove("hidden");
-    } else {
-        retryBtn.classList.add("hidden");
-    }
+    if (retryBtn) retryBtn.classList.toggle("hidden", failedQuestions.length === 0);
 
-    // 5. Guardar en historial
     storage.saveToHistory(
         successes, 
         sessionQuestions.length, 
@@ -328,7 +350,7 @@ function finishQuiz() {
 }
 
 /**
- * Muestra el historial
+ * Historial y Utilidades Globales
  */
 function showHistory() {
     const history = storage.getHistory();
@@ -337,13 +359,13 @@ function showHistory() {
 
     list.innerHTML = history.length ? history.map((h, i) => `
         <div class="history-item" onclick="retryFromHistory(${i})" style="cursor:pointer;">
-            <span>${h.exam} (${h.date}) <small style="color:var(--accent)">↩ Repetir</small></span>
+            <span>${h.exam} (${h.date})</span>
             <strong>${h.result}</strong>
         </div>
     `).join('') : "<p style='text-align:center; color:gray'>Sin intentos</p>";
 }
 
-function retryFromHistory(index) {
+window.retryFromHistory = (index) => {
     const history = storage.getHistory();
     const record = history[index];
     if (record) {
@@ -351,13 +373,23 @@ function retryFromHistory(index) {
         document.getElementById("num-questions").value = record.limit;
         initQuiz(false);
     }
-}
+};
 
-// Exponer funciones globales
+window.toggleFlag = () => {
+    const flagBtn = document.getElementById("flag-btn");
+    if (flaggedQuestions.has(currentIdx)) {
+        flaggedQuestions.delete(currentIdx);
+        flagBtn.innerText = "🚩 Duda";
+        flagBtn.classList.remove("active-flag");
+    } else {
+        flaggedQuestions.add(currentIdx);
+        flagBtn.innerText = "🚩 Marcada";
+        flagBtn.classList.add("active-flag");
+    }
+};
+
 window.initQuiz = initQuiz;
 window.handleMainAction = handleMainAction;
-window.retryFromHistory = retryFromHistory;
-window.toggleFlag = toggleFlag;
 window.confirmExit = () => {
     if (confirm("¿Deseas finalizar el examen ahora?")) {
         const answered = currentIdx + (state === "next" ? 1 : 0);
