@@ -1172,7 +1172,7 @@
       "15",
       "20"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "q": "¿Cuál de los siguientes comandos envía una prueba al shell?",
@@ -1822,7 +1822,7 @@
       "Solo a.txt y b.txt.",
       "Solo texts.tar."
     ],
-    "correct": 1
+    "correct": 4
   },
   {
     "q": "¿Cuál de los siguientes comandos enumera las dependencias de un archivo de paquete RPM local llamado 'foo.rpm'?",
