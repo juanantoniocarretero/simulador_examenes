@@ -497,7 +497,7 @@
   },
   {
     "q": "¿Cuál de los siguientes comandos muestra por pantalla los bytes transmitidos y recibidos a través de la interfaz eth0?",
-    "type": "checkbox",
+    "type": "radio",
     "options": [
       "route -v via eth0",
       "ip stat show dev eth0",
