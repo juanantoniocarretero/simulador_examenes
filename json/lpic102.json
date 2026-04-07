@@ -731,7 +731,7 @@
       "result: 6 5 4 3 2 1",
       "result: 3 2 1"
     ],
-    "correct": 4
+    "correct": 2
   },
   {
     "q": "¿Qué se almacena en el diario systemd?",
