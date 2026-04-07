@@ -1362,13 +1362,13 @@
     "q": "¿Cuál de los siguientes comandos coloca la salida del comando date en la variable de shell mydate?",
     "type": "radio",
     "options": [
-      "mydate=\"$(date)\"",
-      "mydate=\"exec date\"",
-      "mydate=\"$((date))\"",
-      "mydate=\"date\"",
-      "mydate=\"${date}\""
+      "mydate = “date”",
+      "mydate = “exec date”",
+      "mydate = “$(date)”",
+      "mydate = “$((date))”",
+      "mydate = “${date}”"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "q": "¿Cuáles de los siguientes archivos, cuando existen, afectan el comportamiento del shell Bash? (Elija DOS)",
