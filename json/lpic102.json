@@ -434,13 +434,13 @@
     "q": "¿Cuál de las siguientes es una dirección IPV6 válida?",
     "type": "radio",
     "options": [
-      "2001:db8:0g21::1",
-      "2001:db8:4581::1",
       "2001:db8:3241::1",
+      "2001::db8:4581::1",
+      "2001:db8:0g41::1",
       "2001%db8%9990%%1",
       "2001.db8.819f..1"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "q": "¿Cuál de las siguientes situaciones es observada y corregida por un cliente NTP?",
@@ -497,7 +497,7 @@
   },
   {
     "q": "¿Cuál de los siguientes comandos muestra por pantalla los bytes transmitidos y recibidos a través de la interfaz eth0?",
-    "type": "checkbox",
+    "type": "radio",
     "options": [
       "route -v via eth0",
       "ip stat show dev eth0",
@@ -505,7 +505,7 @@
       "ifconfig eth0",
       "ip -s link show eth0"
     ],
-    "correct": [3, 4]
+    "correct": 4
   },
   {
     "q": "¿Cúal de las siguientes palabras clave se puede utilizar en el archivo /etc/resolv.conf? (escoge 2)",
@@ -731,7 +731,7 @@
       "result: 6 5 4 3 2 1",
       "result: 3 2 1"
     ],
-    "correct": 4
+    "correct": 2
   },
   {
     "q": "¿Qué se almacena en el diario systemd?",
@@ -1362,13 +1362,13 @@
     "q": "¿Cuál de los siguientes comandos coloca la salida del comando date en la variable de shell mydate?",
     "type": "radio",
     "options": [
-      "mydate=\"$(date)\"",
-      "mydate=\"exec date\"",
-      "mydate=\"$((date))\"",
-      "mydate=\"date\"",
-      "mydate=\"${date}\""
+      "mydate = “date”",
+      "mydate = “exec date”",
+      "mydate = “$(date)”",
+      "mydate = “$((date))”",
+      "mydate = “${date}”"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "q": "¿Cuáles de los siguientes archivos, cuando existen, afectan el comportamiento del shell Bash? (Elija DOS)",
@@ -2343,7 +2343,7 @@
   {
     "q": "¿Qué comando, según sus opciones, puede mostrar las conexiones de red abiertas, las tablas de enrutamiento y las estadísticas de la interfaz de red. (Especifique SOLO el comando sin ninguna ruta ni parámetros).",
     "type": "text",
-    "correct": "netstat o /bin/netstat o ss o /usr/bin/ss"
+    "correct": "netstat"
   },
   {
     "q": "¿Cuál es el puerto del servidor predeterminado para el protocolo HTTPS? (Especifique el número de puerto utilizando dígitos).",
