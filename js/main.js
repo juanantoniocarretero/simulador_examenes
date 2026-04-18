@@ -27,17 +27,15 @@ window.onload = () => {
     ui.setupSelectorPreguntas();
     ui.setupSelectorTiempo();
     
-    // Escuchar cambios en el examen para actualizar los contadores de tipo
     const examSelect = document.getElementById("exam-select");
     if (examSelect) {
         examSelect.addEventListener("change", updateTypeCounts);
-        // Ejecución inicial para el primer examen de la lista
         updateTypeCounts();
     }
 };
 
 /**
- * Actualiza dinámicamente el selector de tipos con el conteo (tipo / total)
+ * Actualiza dinámicamente el selector de tipos con el conteo
  */
 async function updateTypeCounts() {
     const examFile = document.getElementById("exam-select").value;
@@ -55,19 +53,16 @@ async function updateTypeCounts() {
             text: questions.filter(q => q.type === "text").length
         };
 
-        // Actualizamos el texto de cada opción con el formato (X / Total)
         typeSelect.options[0].text = `Todas las preguntas (${counts.all} / ${total})`;
         typeSelect.options[1].text = `Selección Única (${counts.radio} / ${total})`;
         typeSelect.options[2].text = `Selección Múltiple (${counts.checkbox} / ${total})`;
         typeSelect.options[3].text = `Completar Texto (${counts.text} / ${total})`;
 
-        // Deshabilitar opciones que no tengan preguntas
         for (let i = 1; i < typeSelect.options.length; i++) {
             const val = typeSelect.options[i].value;
             typeSelect.options[i].disabled = (counts[val] === 0);
         }
 
-        // Si la opción seleccionada quedó deshabilitada, volver a "all"
         if (typeSelect.selectedOptions[0].disabled) {
             typeSelect.value = "all";
         }
@@ -79,7 +74,7 @@ async function updateTypeCounts() {
 }
 
 /**
- * Inicializa el quiz con filtros de tipo y cantidad
+ * Inicializa el quiz con filtros
  */
 async function initQuiz(onlyFailed = false) {
     if (!onlyFailed) {
@@ -99,7 +94,6 @@ async function initQuiz(onlyFailed = false) {
 
             allQuestions = await res.json();
             
-            // Aplicar filtro por tipo
             let filtered = (selectedType === "all") 
                 ? [...allQuestions] 
                 : allQuestions.filter(q => q.type === selectedType);
@@ -109,10 +103,8 @@ async function initQuiz(onlyFailed = false) {
                 return;
             }
 
-            // Mezclar y limitar según la cantidad seleccionada
             let shuffled = filtered.sort(() => 0.5 - Math.random());
             
-            // Si el límite es 0 (Todos) o mayor al disponible, usamos el total filtrado
             sessionQuestions = (limit === 0 || limit > shuffled.length) 
                 ? shuffled 
                 : shuffled.slice(0, limit);
@@ -130,7 +122,6 @@ async function initQuiz(onlyFailed = false) {
         sessionQuestions = [...failedQuestions].sort(() => 0.5 - Math.random());
     }
 
-    // Reset de estado de la sesión
     currentIdx = 0;
     successes = 0;
     errors = 0;
@@ -198,6 +189,17 @@ function renderQuestion() {
     document.getElementById("main-btn").innerText = "Verificar";
     state = "check";
 
+    const imgContainer = document.getElementById("question-image-container");
+    if (imgContainer) {
+        if (item.image) {
+            imgContainer.innerHTML = `<img src="${item.image}" alt="Imagen de la pregunta">`;
+            imgContainer.classList.remove("hidden");
+        } else {
+            imgContainer.innerHTML = "";
+            imgContainer.classList.add("hidden");
+        }
+    }
+
     const flagBtn = document.getElementById("flag-btn");
     if (flaggedQuestions.has(currentIdx)) {
         flagBtn.innerText = "🚩 Marcada";
@@ -214,9 +216,13 @@ function renderQuestion() {
         const input = document.createElement("input");
         input.type = "text";
         input.id = "text-ans";
+        input.className = "input-text-ans";
         input.autocomplete = "off";
+        input.placeholder = "Puedes dejarlo en blanco o escribir tu respuesta...";
         container.appendChild(input);
-        input.focus();
+        
+        setTimeout(() => input.focus(), 50);
+        
         input.onkeypress = (e) => { if(e.key === 'Enter') handleMainAction(); };
     } else {
         item.options.forEach((opt, idx) => {
@@ -246,7 +252,7 @@ function handleMainAction() {
 }
 
 /**
- * Validación de respuestas
+ * Validación de respuestas (Modificada para permitir blancos)
  */
 function checkAnswer() {
     const item = sessionQuestions[currentIdx];
@@ -256,10 +262,21 @@ function checkAnswer() {
     let correctText = "";
 
     if (item.type === "text") {
-        const val = document.getElementById("text-ans").value.trim();
-        isCorrect = val.toLowerCase() === item.correct.toLowerCase();
-        userText = val || "(Vacío)";
-        correctText = item.correct;
+        const inputEl = document.getElementById("text-ans");
+        if (!inputEl) return;
+
+        const val = inputEl.value.trim();
+        const solution = String(item.correct);
+        
+        // Comparamos: si está vacío, obviamente isCorrect será false (a menos que la solución sea vacía)
+        isCorrect = val.toLowerCase() === solution.toLowerCase();
+        
+        userText = val === "" ? "(Vacío)" : val;
+        correctText = solution;
+
+        inputEl.disabled = true;
+        inputEl.classList.add(isCorrect ? "correct-input" : "wrong-input");
+
     } else {
         const sel = Array.from(document.querySelectorAll('input[name="ans"]:checked')).map(i => parseInt(i.value));
         
@@ -297,7 +314,7 @@ function checkAnswer() {
     } else {
         errors++;
         failedQuestions.push(item); 
-        feedback.innerText = `Incorrecto. ${item.type === "text" ? 'Solución: ' + item.correct : 'Ver opciones'}`;
+        feedback.innerText = `Incorrecto. Solución: ${correctText}`;
         feedback.style.color = "var(--error)";
     }
 
@@ -306,7 +323,7 @@ function checkAnswer() {
 }
 
 /**
- * Finalización y Reporte
+ * Finalización
  */
 function finishQuiz() {
     clearInterval(timerInterval); 
@@ -350,7 +367,7 @@ function finishQuiz() {
 }
 
 /**
- * Historial y Utilidades Globales
+ * Historial
  */
 function showHistory() {
     const history = storage.getHistory();
