@@ -2,572 +2,1489 @@
   {
     "q": "Some users are unable to connect to specific local hosts by name, while accessing hosts in other zones works as expected. Given that the hosts are reachable by their IP addresses, which is the default log file that could provide hints about the problem?",
     "type": "radio",
-    "options": ["/var/log/bind_errors", "/var/lib/named/dev/log", "/var/log/messages", "/var/named/log", "/var/log/bind/errors"],
+    "options": [
+      "/var/log/bind_errors",
+      "/var/lib/named/dev/log",
+      "/var/log/messages",
+      "/var/named/log",
+      "/var/log/bind/errors"
+    ],
     "correct": 2
   },
   {
     "q": "To securely use dynamic DNS updates, the use of TSIG is recommended. Which TWO statements about TSIG are true?",
     "type": "checkbox",
-    "options": ["TSIG is used in zone files", "TSIG is used for zone data encryption", "Servers using TSIG must be in sync (time zone!)", "TSIG is a signal to start a zone update", "TSIG is used only in server configuration"],
-    "correct": [2, 4]
+    "options": [
+      "TSIG is used in zone files",
+      "TSIG is used for zone data encryption",
+      "Servers using TSIG must be in sync (time zone!)",
+      "TSIG is a signal to start a zone update",
+      "TSIG is used only in server configuration"
+    ],
+    "correct": [
+      2,
+      4
+    ]
   },
   {
     "q": "Which of these ways can be used to only allow access to a DNS server from specified networks/hosts?",
     "type": "radio",
-    "options": ["Using the allow-query{...;}; statement in the named configuration file.", "Using the answer{...;}; statement in the named configuration file.", "Using the limit{...;}; statement in the named configuration file.", "Using the answer only{...;}; statement in the named configuration file.", "Using the query access{...;}; statement in the named configuration file."],
+    "options": [
+      "Using the allow-query{...;}; statement in the named configuration file.",
+      "Using the answer{...;}; statement in the named configuration file.",
+      "Using the limit{...;}; statement in the named configuration file.",
+      "Using the answer only{...;}; statement in the named configuration file.",
+      "Using the query access{...;}; statement in the named configuration file."
+    ],
     "correct": 0
   },
   {
     "q": "A BIND server should be upgraded to use TSIG. Which configuration parameters should be added, if the server should use the algorithm hmac-md5 and the key skrKc4DoTzi/ tAkllPi7JZA== ?",
     "type": "radio",
-    "options": ["TSIG server.example.com. { algorithm hmac-md5; secret \"skrKc4DoTzi/tAkllPi7JZA==\"; };", "key server.example.com. { algorithm hmac-md5; secret skrKc4DoTzi/tAkllPi7JZA==; };", "key server.example.com. { algorithm hmac-md5; secret \"skrKc4DoTzi/tAkllPi7JZA==\"; };", "key server.example.com. { algorithm=hmac-md5; secret=\"skrKc4DoTzi/tAkllPi7JZA==\"; };", "key server.example.com. { algorithm hmac-md5 secret \"skrKc4DoTzi/tAkI1Pi7JZA==\" };"],
+    "options": [
+      "TSIG server.example.com. \nalgorithm hmac-md5; \nsecret \"skrKc4DoTzi/tAkllPi7JZA==\"; \n};",
+      "key server.example.com. { \nalgorithm hmac-md5; \nsecret skrKc4DoTzi/tAkllPi7JZA==; \n};",
+      "key server.example.com. { \nalgorithm hmac-md5; \nsecret \"skrKc4DoTzi/tAkllPi7JZA==\"; \n};",
+      "key server.example.com. { \nalgorithm=hmac-md5; \nsecret=\"skrKc4DoTzi/tAkllPi7JZA==\"; \n};",
+      "key server.example.com. { \nalgorithm hmac-md5 \nsecret \"skrKc4DoTzi/tAkI1Pi7JZA==\" \n};"
+    ],
     "correct": 2
   },
   {
     "q": "What is the purpose of a PTR record?",
     "type": "radio",
-    "options": ["To provide additional host information.", "To provide name to IP resolution.", "To direct clients to another nameserver.", "To direct email to a specific host.", "To provide IP to name resolution."],
+    "options": [
+      "To provide additional host information.",
+      "To provide name to IP resolution.",
+      "To direct clients to another nameserver.",
+      "To direct email to a specific host.",
+      "To provide IP to name resolution."
+    ],
     "correct": 4
   },
   {
     "q": "What directive can be used in named.conf to restrict zone transfers to the 192.168.1.0/24 network?",
     "type": "radio",
-    "options": ["allow-axfr { 192.168.1.0/24; };", "allow-axfr { 192.168.1.0/24 };", "allow-xfer { 192.168.1.0/24; };", "allow-transfer { 192.168.1.0/24; };", "allow-transfer { 192.168.1.0/24 };"],
+    "options": [
+      "allow-axfr { 192.168.1.0/24; };",
+      "allow-axfr { 192.168.1.0/24 };",
+      "allow-xfer { 192.168.1.0/24; };",
+      "allow-transfer { 192.168.1.0/24; };",
+      "allow-transfer { 192.168.1.0/24 };"
+    ],
     "correct": 3
   },
   {
     "q": "A BIND server should never answer queries from certain networks or hosts. Which configuration directive could be used for this purpose?",
     "type": "radio",
-    "options": ["deny-access { ...; };", "deny-query { ...; };", "blackhole { ...; };", "no-answer { ...; };", "deny-answer { ...; };"],
+    "options": [
+      "deny-access { ...; };",
+      "deny-query { ...; };",
+      "blackhole { ...; };",
+      "no-answer { ...; };",
+      "deny-answer { ...; };"
+    ],
     "correct": 2
   },
   {
     "q": "Which of these would be the simplest way to configure BIND to return a different version number to queries?",
     "type": "radio",
-    "options": ["Set version \"my version\" in BIND's configuration file", "Set version=my version in BIND's configuration file", "Set version-string \"my version\" in BIND's configuration file.", "Compile BIND with the option -blur-version=my version", "Ser version-bind \"my version\" in BIND's configuration file."],
+    "options": [
+      "Set version \"my version\" in BIND's configuration file",
+      "Set version=my version in BIND's configuration file",
+      "Set version-string \"my version\" in BIND's configuration file.",
+      "Compile BIND with the option -blur-version=my version",
+      "Set version-bind \"my version\" in BIND's configuration file."
+    ],
     "correct": 0
   },
   {
     "q": "DNSSEC is used for?",
     "type": "radio",
-    "options": ["Secondary DNS queries for local zones.", "Cryptographic authentication of DNS zones.", "Querying a secure DNS section.", "Encrypted DNS queries between nameservers.", "Defining a secure DNS section."],
+    "options": [
+      "Secondary DNS queries for local zones.",
+      "Cryptographic authentication of DNS zones.",
+      "Querying a secure DNS section.",
+      "Encrypted DNS queries between nameservers.",
+      "Defining a secure DNS section."
+    ],
     "correct": 1
   },
   {
     "q": "What is a significant difference between host and zone keys generated by dnssec-keygen?",
     "type": "radio",
-    "options": ["Both zone key files ( .key/.private ) contain a public and private key.", "There is no difference", "Zone Keys must always be generated if is used; host keys are optional", "Host Keys must always be generated if DNSSEC is used; zone keys are optional", "Both host keys files ( .key/.private) contain a public and private key."],
+    "options": [
+      "There is no difference",
+      "Both zone key files (.key/.private) contain a public and private key.",
+      "Zone Keys must always be generated if DNSSEC is used; host keys are optional",
+      "Host Keys must always be generated if DNSSEC is used; zone keys are optional",
+      "Both host key files (.key/.private) contain a public and private key."
+    ],
     "correct": 0
   },
   {
     "q": "The mailserver is currently called fred, while the primary MX record points to mailhost.example.org. What must be done to direct example.org email towards fred?",
     "type": "radio",
-    "options": ["Add another MX record pointing to fred's IP address", "Add a PTR record from mailhost to fred.", "Add an A record for mailhost to fred's IP address.", "Add a CNAME record from mailhost to fred"],
+    "options": [
+      "Add another MX record pointing to fred's IP address",
+      "Add a PTR record from mailhost to fred.",
+      "Add an A record for mailhost to fred's IP address.",
+      "Add a CNAME record from mailhost to fred"
+    ],
     "correct": 2
   },
   {
     "q": "Which records must be entered in a zone file in order to use \"Round Robin Load Distribution\" for a web server?",
     "type": "radio",
-    "options": ["www.example.org. 60 IN A 192.168.1.1 www.example.org. 60 IN A 192.168.1.2 www.example.org. 60 IN A 192.168.1.3", "www.example.org. 60 IN A 192.168.1.1;192.168.1.2;192.168.1.3", "www.example.org. 60 IN A 192.168.1-3", "www.example.org. 60 IN RR 192.168.1:3", "www.example.org. 60 IN RR 192.168.1.1;192.168.1.2;192.168.1.3"],
+    "options": [
+      "www.example.org. 60 IN A 192.168.1.1 www.example.org. 60 IN A 192.168.1.2 www.example.org. 60 IN A 192.168.1.3",
+      "www.example.org. 60 IN A 192.168.1.1;192.168.1.2;192.168.1.3",
+      "www.example.org. 60 IN A 192.168.1-3",
+      "www.example.org. 60 IN RR 192.168.1:3",
+      "www.example.org. 60 IN RR 192.168.1.1;192.168.1.2;192.168.1.3"
+    ],
     "correct": 0
   },
   {
     "q": "Which of these tools can provide the most information about DNS queries?",
     "type": "radio",
-    "options": ["dig", "nslookup", "host", "named-checkconf", "named-checkzone"],
+    "options": [
+      "dig",
+      "nslookup",
+      "host",
+      "named-checkconf",
+      "named-checkzone"
+    ],
     "correct": 0
   },
   {
-    "q": "What word is missing in the following excerpt of a named.conf file? ____ friends { 10.10.0.0/24; 192.168.1.0/24; }; options { allow-query { friends; }; };",
+    "q": "What word is missing in the following excerpt of a named.conf file? \n\n____ friends { \n10.10.0.0/24; 192.168.1.0/24;\n}; \noptions { \nallow-query { friends; }; \n};\n",
     "type": "radio",
-    "options": ["networks", "net", "list", "acl"],
+    "options": [
+      "networks",
+      "net",
+      "list",
+      "acl"
+    ],
     "correct": 3
   },
   {
     "q": "In a BIND zone file, what does the @ character indicate?",
     "type": "radio",
-    "options": ["It's the fully qualified host name of the DNS server.", "It's an alias for the e-mail address of the zone master.", "It's the name of the zone as defined in the zone statement in named.conf.", "It's used to create an alias between two CNAME entries."],
+    "options": [
+      "It's the fully qualified host name of the DNS server.",
+      "It's an alias for the e-mail address of the zone master.",
+      "It's the name of the zone as defined in the zone statement in named.conf.",
+      "It's used to create an alias between two CNAME entries."
+    ],
     "correct": 2
   },
   {
     "q": "Which of the following are alternate DNS software packages to BIND? (Choose TWO correct answers.)",
     "type": "checkbox",
-    "options": ["djbdns", "easydns", "superdns", "dnsmasq", "dnstiny"],
-    "correct": [0, 3]
+    "options": [
+      "djbdns",
+      "easydns",
+      "superdns",
+      "dnsmasq",
+      "dnstiny"
+    ],
+    "correct": [
+      0,
+      3
+    ]
   },
   {
     "q": "Which of the following DNS record types is used to allow users and applications to make reverse DNS queries?",
     "type": "radio",
-    "options": ["CNAME", "IN", "PTR", "REV", "RIN"],
+    "options": [
+      "CNAME",
+      "IN",
+      "PTR",
+      "REV",
+      "RIN"
+    ],
     "correct": 2
   },
   {
     "q": "Where should the line: $TTL 86400 be placed in a BIND zone file?",
     "type": "radio",
-    "options": ["As the first line of the zone file.", "In any zone file containing hints to the root servers.", "In the SOA record of the zone file.", "It is required just before any A records are defined."],
+    "options": [
+      "As the first line of the zone file.",
+      "In any zone file containing hints to the root servers.",
+      "In the SOA record of the zone file.",
+      "It is required just before any A records are defined."
+    ],
     "correct": 0
   },
   {
     "q": "What option for BIND is required in the global options to disable recursive queries on the DNS server by default?",
     "type": "radio",
-    "options": ["allow-recursive-query { none; };", "allow-recursive-query off;", "recursion { none; };", "recursion no;"],
+    "options": [
+      "allow-recursive-query { none; };",
+      "allow-recursive-query off;",
+      "recursion { none; };",
+      "recursion no;"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Performing a DNS lookup with dig results in this answer: What might be wrong in the zone definition?",
+    "image": "img/imagen2.png",
+    "type": "radio",
+    "options": [
+      "There's no \".\" after linuserv in the PTR record in the forward lookup zone file.",
+      "Nothing. All seems to be good.",
+      "There's no \".\" after linuserv.example.net in the PTR record in the reverse lookup zone file.",
+      "The \".\" in the NS definition in reverse lookup zone has to be removed.",
+      "There's no \".\" after linuserv.example.net in the PTR record in the forward lookup zone file."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "",
+    "image": "img/imagen3.png",
+    "type": "radio",
+    "options": [
+      "If the server doesn't know the answer to a query, it sends a query to a root DNS server.",
+      "Hosts in the network 10.0.0.0/24 will be able to ask for zone transfers.",
+      "If the server doesn't know the answer to a query, it sends a recursive query to 192.168.0.4.",
+      "Any host, from any network, may use this server as its main DNS server.",
+      "If the server doesn't know the answer to a query, it sends a recursive query to 192.168.0.4 and, if this fails, it returns a failure."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of these tools provides DNS information in the following format?",
+    "image": "img/imagen7.png",
+    "type": "radio",
+    "options": [
+      "dig",
+      "nslookup",
+      "host",
+      "named-checkconf",
+      "named-checkzone"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which rdnc sub command can be used in conjunction with the name of a zone in order to make BIND reread the content of the specific zone file without reloading other zones as well?",
+    "type": "radio",
+    "options": [
+      "lookup",
+      "reload",
+      "fileupdate",
+      "reread",
+      "zoneupdate"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "A zone file contains the following lines:\n\nWhich problem is contained in this configuration?",
+    "image": "img/imagen8.png",
+    "type": "radio",
+    "options": [
+      "The zone statement is the BIND configuration must contain the cross-zone-data yes; statement.",
+      "The zone cannon contain records for a name which is outside the zone's hierarchy.",
+      "The $ORIGIN declaration cannot be used in zone files that are included for a specific zone name in the BIND configuration.",
+      "An A record cannot contain an IPv4 address because its value is supposed to be a reverse DNS name.",
+      "Names of records in a zone file cannot be fully qualified domain names."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What is the purpose of DANE?",
+    "type": "radio",
+    "options": [
+      "Verify the integrity of name information retrieved via DNS.",
+      "Allow secure dynamic DNS updates.",
+      "Invalidate name information stored on caching name servers to speed up DNS updates.",
+      "Discover which servers within a DNS domain offer a specific service.",
+      "Provide a way to verify the association of X 509 certificates to DNS host names."
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which port must be open on a firewall, to allow a DNS server to receive queries? (Enter only the port number).",
+    "type": "text",
+    "correct": [
+      "53"
+    ]
+  },
+  {
+    "q": "In which configuration file can a key-file be defined to enable secure DNS zone transfers? (Please enter the file name without the path)",
+    "type": "text",
+    "correct": [
+      "named.conf"
+    ]
+  },
+  {
+    "q": "Which type of DNS record defines which server(s) email for a domain should be sent to?",
+    "type": "text",
+    "correct": [
+      "MX"
+    ]
+  },
+  {
+    "q": "The users of the local network complain that name resolution is not fast enough. Enter the command, without the path or any options, that shows the time taken to resolve a DNS query.",
+    "type": "text",
+    "correct": [
+      "dig"
+    ]
+  },
+  {
+    "q": "Which is the preferred mail server for the domain example.com, according to the BIND configuration below? (Type the fully-qualified domain name.)",
+    "image": "img/imagen11.png",
+    "type": "text",
+    "correct": [
+      "mx-ny.certkiller.com"
+    ]
+  },
+  {
+    "q": "According to the configuration below, what is the e-mail address of the administrator for this domain?",
+    "image": "img/imagen13.png",
+    "type": "text",
+    "correct": [
+      "hostmaster@certkiller.com"
+    ]
+  },
+  {
+    "q": "Using only commands included with named, what is the command, with options or parameters, to make named re-read its zone files?",
+    "type": "text",
+    "correct": [
+      "rndc reload"
+    ]
+  },
+  {
+    "q": "Which of the following DNS records could be a glue record?",
+    "type": "radio",
+    "options": [
+      "ns1.lab A 198.51.100.53",
+      "lab NS 198.51.100.53",
+      "ns1.lab NS 198.51.100.53",
+      "NS1. A 198.51.100.53",
+      "ns1.lab GLUE 198.51.100.53"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which option in named.conf specifies which host has permission to request domain name information from the server?",
+    "type": "radio",
+    "options": [
+      "allowed-hosts",
+      "accept-query",
+      "query-permission",
+      "allow-query",
+      "query-group"
+    ],
     "correct": 3
   },
   {
     "q": "What should be done to ensure a client machine uses the recursive nameserver running on the IP address 192.168.0.1? (Choose two.)",
     "type": "checkbox",
-    "options": ["Add nameserver 192.168.0.1 to /etc/resolv.conf", "Run route add nameserver 192.168.0.1", "Run ifconfig eth0 nameserver 192.168.0.1", "Ensure that the dns service is listed in the hosts entry in the /etc/nsswitch.conf file", "Run bind add nameserver 192.168.0.1"],
-    "correct": [0, 3]
+    "options": [
+      "Add nameserver 192.168.0.1 to /etc/resolv.conf",
+      "Run route add nameserver 192.168.0.1",
+      "Run ifconfig eth0 nameserver 192.168.0.1",
+      "Ensure that the dns service is listed in the hosts entry in the /etc/nsswitch.conf file",
+      "Run bind add nameserver 192.168.0.1"
+    ],
+    "correct": [
+      0,
+      3
+    ]
   },
   {
-    "q": "Which network service or protocol was used in this tcpdump: 13:03:17.277 IP 192.168.123.5.1065 > 192.168.5.112.53: 43653+ A? lpi.org?",
+    "q": "The following is an excerpt from the output of tcpdump -nli eth1 'udp':\n\n13:03:17.277327 IP 192.168.123.5.1065 > 192.168.5.112.53: 43653+ A? lpi.org. (25)\n13:03:17.598624 IP 192.168.5.112.53 > 192.168.123.5.1065: 43653 1/0/0 A 198.51.100.42 (41)\n\nWhich network service or protocol was used?",
     "type": "radio",
-    "options": ["FTP", "HTTP", "SSH", "DNS", "DHCP"],
+    "options": [
+      "FTP",
+      "HTTP",
+      "SSH",
+      "DNS",
+      "DHCP"
+    ],
     "correct": 3
+  },
+  {
+    "q": "Which of the following files are used to resolve hostnames to IP addresses? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "/etc/systems",
+      "/etc/hosts",
+      "/etc/network",
+      "/etc/dns.conf",
+      "/etc/resolv.conf"
+    ],
+    "correct": [
+      1,
+      4
+    ]
   },
   {
     "q": "Which Squid configuration directive defines the authentication method to use?",
     "type": "radio",
-    "options": ["auth_param", "auth_mechanism", "proxy_auth", "auth_program", "auth_method"],
-    "correct": 0
-  },
-  {
-    "q": "Which statements about the Alias and Redirect directives in Apache are true?",
-    "type": "radio",
-    "options": ["Alias can only reference files under DocumentRoot", "Redirect is handled on the client side", "Alias is not a valid configuration directive", "Alias is handled on the server side", "Redirect works with regular expressions"],
-    "correct": 3
-  },
-  {
-    "q": "Considering the excerpt <Location>AllowOverride AuthConfig Indexes </Location>, which statement is correct?",
-    "type": "radio",
-    "options": ["Both directives will be overridden", "The excerpt is incorrect, AllowOverride cannot be used inside Location", "AllowOverride cannot be used with Indexes", "AuthConfig allows other auth-related directives"],
-    "correct": 1
-  },
-  {
-    "q": "Which directives in httpd.conf need to be adjusted to handle approximately 200 simultaneous requests?",
-    "type": "radio",
-    "options": ["MinSpareServers, MaxSpareServers, StartServers & MaxClients", "MinSpareServers & MaxSpareServers", "MinSpareServers, MaxSpareServers, StartServers, MaxClients & KeepAlive.", "MinServers, MaxServers & MaxClients."],
-    "correct": 0
-  },
-  {
-    "q": "Which of the following is recommended to reduce Squid's consumption of disk resources?",
-    "type": "radio",
-    "options": ["Disable access lists", "Rotate log files regularly", "Reduce the size of cache_dir", "Disable FQDN logging"],
-    "correct": 2
-  },
-  {
-    "q": "When Apache is configured to use name-based virtual hosts, which is true?",
-    "type": "radio",
-    "options": ["It's necessary to create a VirtualHost block for the main host", "The Listen directive is ignored", "Only ServerName and DocumentRoot may be used", "A different IP is needed for each host"],
-    "correct": 0
-  },
-  {
-    "q": "Which ACL type in Squid is used for authentication?",
-    "type": "radio",
-    "options": ["proxy_passwd", "auth_required", "proxyAuth", "proxy_auth"],
-    "correct": 3
-  },
-  {
-    "q": "In Apache 2.4.8+, what should be done with an intermediate certificate?",
-    "type": "radio",
-    "options": ["Merged with web server's certificate in SSLCertificateFile", "Deleted after verification", "Stored in SSLCaCertificateFile", "Imported into the browser"],
-    "correct": 0
-  },
-  {
-    "q": "Which option in Nginx defines the file system path for content?",
-    "type": "radio",
-    "options": ["location", "htdocs", "DocumentRoot", "root"],
-    "correct": 3
-  },
-  {
-    "q": "Which command tells the NFS server which filesystems to make available?",
-    "type": "radio",
-    "options": ["exportfs", "mkfs.nfs", "mount", "nfsservctl"],
-    "correct": 0
-  },
-  {
-    "q": "Which daemon is required on the client for DHCP?",
-    "type": "radio",
-    "options": ["dhcpd", "dhcpcd", "bootpd", "dhcp"],
-    "correct": 1
-  },
-  {
-    "q": "Which command releases a DHCP lease?",
-    "type": "radio",
-    "options": ["ipconfig /release", "ifconfig --release-all", "dhclient -r", "pump --release"],
-    "correct": 2
-  },
-  {
-    "q": "What is the dovecot variable for user mail location?",
-    "type": "radio",
-    "options": ["user_mail_dir", "user_dir", "mbox", "mail_location"],
-    "correct": 3
-  },
-  {
-    "q": "Which command administers IPv6 netfilter rules?",
-    "type": "radio",
-    "options": ["iptables", "iptablesv6", "iptables6", "ip6tables"],
-    "correct": 3
-  },
-  {
-    "q": "The users complain that name resolution is not fast enough. Which command shows the time taken to resolve a DNS query?",
-    "type": "text",
-    "correct": "dig"
-  },
-  {
-    "q": "Which tool provides DNS information in a concise format like 'name has address IP'?",
-    "type": "text",
-    "correct": "host"
-  },
-  {
-    "q": "Which Squid configuration directive defines the authentication method to use?",
-    "type": "radio",
-    "options": ["auth_param", "auth_mechanism", "proxy_auth", "auth_program", "auth_method"],
+    "options": [
+      "auth_param",
+      "auth_mechanism",
+      "proxy_auth",
+      "auth_program",
+      "auth_method"
+    ],
     "correct": 0
   },
   {
     "q": "Which statements about the Alias and Redirect directives in Apache's configuration file are true?",
     "type": "radio",
-    "options": ["Alias can only reference files under DocumentRoot", "Redirect is handled on the client side", "Alias is not a valid configuration directive", "Alias is handled on the server side", "Redirect works with regular expressions"],
+    "options": [
+      "Alias can only reference files under DocumentRoot",
+      "Redirect is handled on the client side",
+      "Alias is not a valid configuration directive",
+      "Alias is handled on the server side",
+      "Redirect works with regular expressions"
+    ],
     "correct": 3
   },
   {
-    "q": "Considering the following excerpt from the httpd.conf file, select the correct answer below: <Location>AllowOverride AuthConfig Indexes </Location>",
+    "q": "Considering the following excerpt from the httpd.conf file, select the correct answer below:\n\n<Location>AllowOverride AuthConfig Indexes </Location>\n",
     "type": "radio",
-    "options": ["Both directives AuthConfig and Indexes found in the server's .htaccess file will be overridden", "The excerpt is incorrect, because AllowOverride cannot be used inside a Location section", "The excerpt is incorrect, as the AllowOverride cannot be used with Indexes", "The AuthConfig used allows the use of other authentication-related directives", "The Indexes directive allows the use of other index-related directives"],
+    "options": [
+      "Both directives AuthConfig and Indexes found in the server's .htaccess file will be overridden by the same directives found in the httpd.conf file",
+      "The excerpt is incorrect, because AllowOverride cannot be used inside a Location section",
+      "The excerpt is incorrect, as the AllowOverride cannot be used with Indexes, since the latter cannot be overridden",
+      "The AuthConfig used allows the use of other authentication-related directives such as AuthType",
+      "The Indexes directive allows the use of other index-related directives such as DirectoryIndex"
+    ],
     "correct": 1
   },
   {
-    "q": "Which directives in httpd.conf need to be adjusted to handle approximately 200 simultaneous requests?",
+    "q": "A web server is expected to handle approximately 200 simultaneous requests during normal use with an occasional spike in activity and is performing slowly. Which directives in httpd.conf need to be adjusted?",
     "type": "radio",
-    "options": ["MinSpareServers, MaxSpareServers, StartServers & MaxClients", "MinSpareServers & MaxSpareServers", "MinSpareServers, MaxSpareServers, StartServers, MaxClients & KeepAlive.", "MinServers, MaxServers & MaxClients."],
+    "options": [
+      "MinSpareServers, MaxSpareServers, StartServers & MaxClients",
+      "MinSpareServers & MaxSpareServers",
+      "MinSpareServers, MaxSpareServers, StartServers, MaxClients & KeepAlive.",
+      "MinServers, MaxServers & MaxClients."
+    ],
     "correct": 0
   },
   {
     "q": "Which of the following is recommended to reduce Squid's consumption of disk resources?",
     "type": "radio",
-    "options": ["Disable the use of access lists", "Rotate log files regularly.", "Reduce the size of cache_dir in the configuration file", "Disable logging of fully qualified domain names.", "Reduce the number of child processes to be started"],
+    "options": [
+      "Disable the use of access lists",
+      "Rotate log files regularly.",
+      "Reduce the size of cache_dir in the configuration file",
+      "Disable logging of fully qualified domain names.",
+      "Reduce the number of child processes to be started in the configuration file."
+    ],
     "correct": 2
   },
   {
     "q": "When Apache is configured to use name-based virtual hosts:",
     "type": "radio",
-    "options": ["it's also necessary to create a VirtualHost block for the main host.", "the Listen directive is ignored by the server.", "only the directives ServerName and DocumentRoot may be used inside a block.", "it's also necessary to configure a different IP address for each virtual host.", "it starts multiple daemons."],
+    "options": [
+      "it's also necessary to create a VirtualHost block for the main host.",
+      "the Listen directive is ignored by the server.",
+      "only the directives ServerName and DocumentRoot may be used inside a block.",
+      "it's also necessary to configure a different IP address for each virtual host.",
+      "it starts multiple daemons (one for each virtual host)."
+    ],
     "correct": 0
   },
   {
     "q": "Which ACL type in Squid's configuration file is used for authentication purposes?",
     "type": "radio",
-    "options": ["proxy_passwd", "auth_required", "proxyAuth", "proxy_auth", "auth"],
+    "options": [
+      "proxy_passwd",
+      "auth_required",
+      "proxyAuth",
+      "proxy_auth",
+      "auth"
+    ],
     "correct": 3
   },
   {
-    "q": "In response to a certificate signing request, a certification authority sent a web server certificate along with an intermediate certificate. What should be done with the intermediate certificate in Apache 2.4.8+?",
+    "q": "In the file /var/squid/url_blacklist is a list of URLs that users should not be allowed to access. What is the correct entry in Squid's configuration file to create an acl named blacklist based on this file?",
     "type": "radio",
-    "options": ["The intermediate certificate should be merged with the web server's certificate into one file specified in SSLCertificateFile", "The intermediate certificate can be deleted after verification", "The intermediate certificate should be stored in its own file referenced in SSLCaCertificateFile", "The intermediate certificate should be imported into the web browser"],
+    "options": [
+      "acl blacklist urlpath_regex \"/var/squid/url_blacklist\"",
+      "acl blacklist file /var/squid/url_blacklist",
+      "acl urlpath_regex blacklist /var/squid/url_blacklist",
+      "acl blacklist urlpath_regex /var/squid/url_blacklist",
+      "acl blacklist \"/var/squid/url_blacklist\""
+    ],
+    "correct": 0
+  },
+  {
+    "q": "What of the following is NOT a valid ACL type, when configuring squid?",
+    "type": "radio",
+    "options": [
+      "source",
+      "time",
+      "url_regex",
+      "dstdomain",
+      "src"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Select the TWO correct statements about the following excerpt from httpd.conf: \n\n<Directory /var/web/dir1> \n<Files private.html> \nOrder allow, deny \nDeny from all \n</Files> \n</Directory>\n",
+    "type": "checkbox",
+    "options": [
+      "The configuration will deny access to /var/web/dir1/private.html, but it will allow access to /var/web/dirl/subdir2/private.htm1, for example.",
+      "The configuration will allow access to any file named private.html under /var/web/dir1, but it will deny access to any other files",
+      "The configuration will allow access just to the file named private.html under /var/web/dir1",
+      "The configuration will allow access to /var/web/private.html, if it exists",
+      "The configuration will deny access to /var/web/dir1/private.html, /var/web/dirl/subdir2/private.html, /var/web/dirl/subdir3/private.html and any other instance of private.html found under the /var/web/dir1/ directory."
+    ],
+    "correct": [
+      0,
+      4
+    ]
+  },
+  {
+    "q": "Users in the acl named 'sales_net' must only be allowed to access to the Internet at times specified in the time_acl named 'sales_time'. Which is the correct http_access directive, to configure this?",
+    "type": "radio",
+    "options": [
+      "http_access allow sales_net and sales_time",
+      "http_access allow sales_net sales_time",
+      "http_access deny sales_time sales_net",
+      "allow http_access sales_net sales_time",
+      "http_access sales_net sales_time"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "After setting up Apache to run inside a chroot jail as a non-root user, httpd no longer starts. What is the primary cause of the problem?",
+    "type": "radio",
+    "options": [
+      "Apache needs to start as root to bind to port 80",
+      "Apache cannot read the main index.html file because it was not moved into the chroot environment",
+      "Apache requires a VirtualHost directive when running from a chroot environment",
+      "A LoadModule line for mod_chroot needs to be added to httpd.conf",
+      "The mod_chroot configuration needs the absolute path to the chroot environment"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "There is a restricted area in an Apache site, which requires users to authenticate against the file /srv/www/security/site-passwd. Which command is used to CHANGE the password of existing users, without losing data, when Basic authentication is being used.",
+    "type": "radio",
+    "options": [
+      "None of the above.",
+      "htpasswd -D /srv/www/security/site-passwd user",
+      "htpasswd -c /srv/www/security/site passwd user",
+      "htpasswd /srv/www/security/site-passwd user",
+      "htpasswd -n /srv/www/security/site-passwd user"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which Apache directive is used to configure the main directory for the site, out of which it will serve documents?",
+    "type": "radio",
+    "options": [
+      "DocumentRoot",
+      "UserDir",
+      "Location",
+      "ServerRoot",
+      "DirectoryIndex"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which is a valid Squid option to define a listening port?",
+    "type": "radio",
+    "options": [
+      "port = 3128",
+      "http-listen-port=3128",
+      "http_port 3128",
+      "squid_port 3128"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which of the following lines in the Apache configuration file would allow only clients with a valid certificate to access the website?",
+    "type": "radio",
+    "options": [
+      "IfModule libexec/ssl.c",
+      "AuthType ssl",
+      "SSLVerifyClient require",
+      "SSLCA conf/ca.crt",
+      "SSLRequire"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "The Internet gateway connects the clients with the Internet by using a Squid proxy. Only the clients from the network 192.168.1.0/24 should be able to use the proxy. Which of the following configuration sections is correct?",
+    "type": "radio",
+    "options": [
+      "acl local src 192.168.1.0/24 \nhttp_access_allow=local",
+      "acl local src 192.168.1.0/24 \nhttp_allow local",
+      "acl local src 192.168.1.0/24 \nhttp access allow local",
+      "acl local src 192.168.1.0/24 \nhttpd local allow",
+      "acl local src 192.168.1.0/24 \nhttp_access allow local"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Consider the following /srv/www/default/html/restricted/.htaccess\n\nAuthType Basic\nAuthUserFile /srv/www/security/site-passwd\nAuthName Restricted\nRequire valid-user\nOrder deny,allow\nDeny from all\nAllow from 10.1.2.0/24\nSatisfy any\n\nConsidering that DocumentRoot is set to /srv/www/default/html, which TWO of the following sentences are true?",
+    "type": "checkbox",
+    "options": [
+      "Apache will require authentication for every client requesting connections to http://server/restricted/",
+      "Apache will only grant access to http://server/restricted/ to authenticated users connecting from clients in the 10.1.2.0/24 network",
+      "This setup will only work if the directory /srv/www/default/html/restricted/ is configured with AllowOverride AuthConfig Limit",
+      "The Satisfy directive could be removed without changing Apache behavior for this directory",
+      "Users connecting from clients in the 10.1.2.0/24 network won't need to authenticate themselves to access http://server/restricted/"
+    ],
+    "correct": [
+      2,
+      4
+    ]
+  },
+  {
+    "q": "Which Apache directive allows the use of external configuration files defined by the directive AccessFileName?",
+    "type": "radio",
+    "options": [
+      "AllowExternalConfig",
+      "AllowOverride",
+      "IncludeAccessFile",
+      "AllowAccessFile",
+      "AllowConfig"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Given this excerpt from an Apache configuration file, which of the numbered lines has INCORRECT syntax?\n\n1: <VirtualHost *:80>\n2: ServerAdmin admin9@server.example.org\n3: DocumentRoot /home/http/admin\n4: ServerName admin.server.example.org\n5: DirectoryIndex index.php default.php\n6: ErrorLog logs/admin.server.example.org-error_log\n7: CustomLog logs/admin.server.example.org-access_log common\n8: </VirtualHost>\n",
+    "type": "radio",
+    "options": [
+      "1, 4 and 7",
+      "1",
+      "1 and 5",
+      "1 and 4",
+      "None. The configuration is valid"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "A program, called vsftpd, running in a chroot jail, is giving the following error: /bin/vsftpd: error while loading shared libraries: libc.so.6: cannot open shared object file. No such file or directory. Which TWO of the following are possible solutions?",
+    "type": "checkbox",
+    "options": [
+      "Create a symbolic link that points to the required library outside the chroot jail",
+      "Get the vsftp source code and compile it statically",
+      "Run the program using the command chroot and the option --static_libs",
+      "Copy the required library to the appropriate lib directory in the chroot jail.",
+      "The file /etc/ld.so.conf must contain the path to the appropriate lib directory in the chroot jail"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "q": "When trying to reverse proxy a web server through Nginx, what keyword is missing from the following configuration sample?\n\nlocation / { \n_________ http://proxiedserver:8080; \n}",
+    "type": "radio",
+    "options": [
+      "remote_proxy",
+      "reverse_proxy",
+      "proxy_reverse",
+      "proxy_pass"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "When trying to reverse proxy a web server through Nginx, what keyword is required to pass the Host header from the original request to the proxied server? \n\n... {\n _________ Host $host \n... \n}\n",
+    "type": "radio",
+    "options": [
+      "proxy_pass_header",
+      "proxy_forward_header",
+      "proxy_set_header",
+      "proxy_header"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Given that all users have their home directory in /home and the following directive is present in the Apache HTTPD Server configuration file, what is the full filesystem path to the file referenced by the URL http://server/~joe/index.html? UserDir public_html",
+    "type": "radio",
+    "options": [
+      "/home/joe/public_html/index.html",
+      "/home/public_html/joe/index.html",
+      "/home/joe/public_html/htdocs/index.html",
+      "/home/joe/apache/public_html/index.html"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Why are different IP addresses recommended when hosting multiple HTTPS virtual hosts? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "Apache caches SSL keys based on IP address.",
+      "The SSL connection is made before the virtual host name is known by the server.",
+      "The SSL key is tied to a specific IP address when issued by the Certificate Authority.",
+      "This is only needed when dynamic content is being generated by more than one of the virtual hosts.",
+      "The Server Name Indication extension to TLS is not universally supported."
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which Squid configuration keyword is used to define networks and times that the service may be accessed?",
+    "type": "radio",
+    "options": [
+      "acl",
+      "allow",
+      "http_allow",
+      "permit"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which configuration block in Nginx is used to define settings for a reverse proxied web server?",
+    "type": "radio",
+    "options": [
+      "server",
+      "location",
+      "reverse",
+      "http"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which Apache directive will enable HTTPS protocol support?",
+    "type": "radio",
+    "options": [
+      "HTTPSEngine",
+      "SSLEngine",
+      "SSLEnable",
+      "HTTPSEnable"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which Apache directive is used to specify the method of authentication like e.g. None or Basic?",
+    "type": "radio",
+    "options": [
+      "AuthUser",
+      "AllowedAuthUser",
+      "AuthType",
+      "AllowAuth"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which Apache directive is used to specify the RSA private key that was used in the generation of the SSL certificate for the server?",
+    "type": "radio",
+    "options": [
+      "SSLCertificateKeyFile",
+      "SSLKeyFile",
+      "SSLPrivateKeyFile",
+      "SSLRSAKeyFile"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "In which Apache context should SSL support be activated?",
+    "type": "radio",
+    "options": [
+      "In a VirtualHost directive",
+      "In a Location directive",
+      "In a Directory directive which is set to /",
+      "In a SSLHost directive"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following are commonly used log file directives in Apache? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "ConfigLog",
+      "CustomLog",
+      "ErrorLog",
+      "ServerLog",
+      "VHostLog"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": "With Nginx, which of the following directives is used to proxy requests to a FastCGI application?",
+    "type": "radio",
+    "options": [
+      "fastcgi_pass",
+      "fastcgi_proxy",
+      "proxy_fastcgi",
+      "proxy_fastcgi_pass"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "The listing below is an excerpt from a Squid configuration file.",
+    "image": "img/imagen1.png",
+    "type": "radio",
+    "options": [
+      "A. Users connecting from localhost will be able to access web sites through this proxy",
+      "B. It's possible to use this proxy to access SSL enabled web sites listening on any port.",
+      "C. This proxy is misconfigured and no user will be able to access web sites through it.",
+      "D. It's necessary to include a http_access rule denying access to all, at the end of the rules.",
+      "E. This proxy can't be used to access FTP servers listening on the default port."
+    ],
+    "correct": 3
+  },
+  {
+    "q": "In order to protect a directory on an Apache HTTPD web server with a password, this configuration was added to an .htaccess file in the respective directory: Furthermore, a file /var/www/dir/.htpasswd was created with the following content: usera:S3cr3t Given that all these files were correctly processed by the web server processes, which of the following statements is true about requests to the directory?",
+    "image": "img/imagen4.png",
+    "type": "radio",
+    "options": [
+      "The user usera can access the site using the password s3cr3t",
+      "Accessing the directory as usera raises HTTP error code 442 (User Not Existent)",
+      "Requests are answered with HTTP error code 500 (Internal Server Error)",
+      "The browser prompts the visitor for a username and password but logins for usera do not seem to work",
+      "The web server delivers the content of the directory without requesting authentication"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "When using mod_authz_core, which of the following strings can be used as an argument to Require in an Apache HTTPD configuration file to specify the authentication provider? (Choose three.)",
+    "type": "checkbox",
+    "options": [
+      "method",
+      "all",
+      "regex",
+      "header",
+      "expr"
+    ],
+    "correct": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which tool creates a Certificate Signing Request (CSR) for serving HTTPS with Apache HTTPD?",
+    "type": "radio",
+    "options": [
+      "apachectl",
+      "certgen",
+      "csrtool",
+      "httpsgen",
+      "openssl"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "In response to a certificate signing request, a certification authority sent a web server certificate along with the certificate of an intermediate certification authority that signed the web server certificate. What should be done with the intermediate certificate in order to use the web server certificate with Apache HTTPD?",
+    "type": "radio",
+    "options": [
+      "The intermediate certificate should be merged with the web server's certificate into one file that is specified in SSLCertificateFile",
+      "The intermediate certificate should be used to verify the certificate before its deployment on the web server and can be deleted",
+      "The intermediate certificate should be stored in its own file which is referenced in SSLCaCertificateFile",
+      "The intermediate certificate should be improved into the certificate store of the web browser used to test the correct operation of the web server",
+      "The intermediate certificate should be archived and resent to the certification authority in order to request a renewal of the certificate"
+    ],
     "correct": 0
   },
   {
     "q": "Which option within a Nginx server configuration section defines the file system path from which the content of the server is retrieved?",
     "type": "radio",
-    "options": ["location", "htdocs", "DocumentRoot", "root", "base_dir"],
+    "options": [
+      "location",
+      "htdocs",
+      "DocumentRoot",
+      "root",
+      "base_dir"
+    ],
     "correct": 3
   },
   {
-    "q": "Which command is used to tell the NFS server which filesystems to make available to clients?",
+    "q": "The following Apache HTTPD configuration has been set up to create a virtual host available at www.example.com and www2.example.com: Even though Apache HTTPD correctly processed the configuration file, requests to both names are not handled correctly. What should be changed in order to ensure correct operations?",
+    "image": "img/imagen6.png",
     "type": "radio",
-    "options": ["exportfs", "mkfs.nfs", "mount", "nfsservctl", "telinit"],
-    "correct": 0
+    "options": [
+      "The configuration must be split into two VirtualHost sections since each virtual host may only have one name.",
+      "The port mentioned in opening VirtualHost tag has to be appended to the ServerName declaration's values.",
+      "Both virtual host names have to be placed as comma separated values in one ServerName declaration.",
+      "Both virtual host names have to be mentioned in the opening VirtualHost tag.",
+      "Only one Server name declaration may exist, but additional names can be declared in ServerAlias options."
+    ],
+    "correct": 4
   },
   {
-    "q": "Which daemon is required on the client if an ethernet device gets its IP address from a central server?",
-    "type": "radio",
-    "options": ["dhcpd", "dhcpcd", "bootpd", "dhcp", "ethd"],
-    "correct": 1
-  },
-  {
-    "q": "Which command would release the current IP address leased by a DHCP server?",
-    "type": "radio",
-    "options": ["ipconfig /release", "ifconfig --release-all", "dhclient -r", "ifconfig --release", "pump --release"],
-    "correct": 2
-  },
-  {
-    "q": "What is the name of the dovecot configuration variable that specifies the location of user mail?",
-    "type": "radio",
-    "options": ["user_mail_dir", "user_dir", "mbox", "mail_location", "maildir"],
-    "correct": 3
-  },
-  {
-    "q": "Which command is used to administer IPv6 netfilter rules?",
-    "type": "radio",
-    "options": ["iptables", "iptablesv6", "iptables6", "ip6tables", "ipv6tables"],
-    "correct": 3
-  },
-  {
-    "q": "Which of the following is a valid way to start a PPP connection to a remote server?",
-    "type": "radio",
-    "options": ["pppd start", "wvdial", "ppp-on", "pon", "chat"],
-    "correct": 3
-  },
-  {
-    "q": "In an LDAP directory, what does 'dc' stand for?",
-    "type": "radio",
-    "options": ["Directory Component", "Domain Component", "Data Center", "Distinguished Component"],
-    "correct": 1
-  },
-  {
-    "q": "Which file is used to map hostnames to IP addresses locally before querying a DNS server?",
-    "type": "text",
-    "correct": "/etc/hosts"
-  },
-  {
-    "q": "Which option in the sshd_config file is used to disable password-based logins?",
-    "type": "radio",
-    "options": ["PasswordAuthentication no", "PermitPasswords no", "DisablePasswords yes", "AuthMethod keys"],
-    "correct": 0
-  },
-  {
-    "q": "What should be done after updating the configuration file for syslogd? (Choose TWO)",
+    "q": "Given the following Squid configuration excerpt: cache_dir ufs /var/spool/squid3/ 1024 16 256 Which of the following directories will exist directly within the directory: /var/spool/squid3/? (Choose two.)",
     "type": "checkbox",
-    "options": ["No action required", "Send the HUP signal to the syslogd process", "Restart the syslogd service", "Run syslogd -u"],
-    "correct": [1, 2]
+    "options": [
+      "0F",
+      "A0",
+      "0b",
+      "FF",
+      "00"
+    ],
+    "correct": [
+      0,
+      4
+    ]
   },
   {
-    "q": "Which file contains the text message displayed after logging into the console?",
+    "q": "Which of the following statements are true regarding Server Name Indication (SNI)? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "It supports transparent failover of TLS sessions from one web server to another.",
+      "It allows multiple SSL/TLS secured virtual HTTP hosts to coexist on the same IP address.",
+      "It enables HTTP servers to update the DNS of their virtual hosts' names using the X 509 certificates of the virtual hosts.",
+      "It provides a list of available virtual hosts to the client during the TLS handshake.",
+      "It submits the host name of the requested URL during the TLS handshake."
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "What configuration directive of the Apache HTTPD server defines where log files are stored? (Specify ONE of the directives without any other options.)",
     "type": "text",
-    "correct": "/etc/motd"
+    "correct": [
+      "ErrorLog"
+    ]
   },
   {
-    "q": "What environment variable must be set for programs to appear in the user's native language?",
-    "type": "radio",
-    "options": ["LANG", "MESSAGES", "I18N", "LC_MSGS", "MSGS"],
-    "correct": 0
-  },
-  {
-    "q": "What is the correct command to set the system's timezone to Europe/Madrid using timedatectl?",
+    "q": "Which directive in a Nginx server configuration block defines the TCP ports on which the virtual host will be available, and which protocols it will use? (Specify ONLY the option name without any values.)",
     "type": "text",
-    "correct": "timedatectl set-timezone Europe/Madrid"
+    "correct": [
+      "listen"
+    ]
   },
   {
-    "q": "Which command displays the current status of the Slapd server?",
+    "q": "Please enter the complete command to create a new password file for HTTP basic authentication (/home/http/data/web _passwd) for user john.",
+    "type": "text",
+    "correct": [
+      "htpasswd -c /home/http/data/web_passwd john"
+    ]
+  },
+  {
+    "q": "Which file, in the local file-system, is presented when the client requests http://server/~joe/index.html and the following directive is present in server's Apache configuration file?\n\nUserDir site/html\nGiven that all users have their home directory in /home, please type in the FULL file name including the path.\n",
+    "type": "text",
+    "correct": [
+      "/home/joe/site/html/index.html"
+    ]
+  },
+  {
+    "q": "What is the name of the module in Apache that provides the HTTP Basic Authentication functionality? (Please provide ONLY the module name)",
+    "type": "text",
+    "correct": [
+      "mod_auth_basic"
+    ]
+  },
+  {
+    "q": "Which of the following are commonly used log file directives in Apache HTTPD? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "TransferLog",
+      "CustomLog",
+      "ErrorLog",
+      "ServerLog",
+      "VHostLog"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": "Which file contains the message that is displayed above the login prompt of the system console? (Specify the full name of the file, including path.)",
+    "type": "text",
+    "correct": [
+      "/etc/issue"
+    ]
+  },
+  {
+    "q": "When bash is invoked as an interactive login shell, which of the following sentences is true?",
     "type": "radio",
-    "options": ["ldapstatus", "slapcat", "slaptest", "systemctl status slapd"],
+    "options": [
+      "It reads and executes commands in ~/.bashrc only if /etc/profile or another initialization script calls it.",
+      "It first reads and executes commands in /etc/bashrc and then does same for /etc/profile",
+      "It first reads and executes commands in /etc/profile and then does same for ~/.bash_profile and ~/.bashrc",
+      "It first reads and executes commands in /etc/profile and then does same for ~/.bash_profile, ~/.bash_login and ~/.profile",
+      "It ignores /etc/profile and only reads and executes commands in ~/.bashrc"
+    ],
     "correct": 3
   },
   {
-    "q": "What is the default port for the LDAPS protocol?",
+    "q": "Which site-specific configuration file for the shadow login suite must be modified to log login failures? Please enter the complete path to that file.",
     "type": "text",
-    "correct": "636"
+    "correct": [
+      "/etc/login.defs"
+    ]
   },
   {
-    "q": "Which of the following files contains the configuration for the DHCP server?",
-    "type": "text",
-    "correct": "/etc/dhcp/dhcpd.conf"
-  },
-  {
-    "q": "Which file is used to configure which filesystems are exported via NFS?",
-    "type": "text",
-    "correct": "/etc/exports"
-  },
-  {
-    "q": "Which command is used to display the exported directories on a remote NFS server?",
-    "type": "radio",
-    "options": ["showmount -e", "nfsstat", "exportfs -v", "mount -l"],
-    "correct": 0
-  },
-  {
-    "q": "In Samba, which section of the smb.conf file is used to define global settings?",
-    "type": "text",
-    "correct": "[global]"
-  },
-  {
-    "q": "Which command is used to check the syntax of the smb.conf file?",
-    "type": "text",
-    "correct": "testparm"
-  },
-  {
-    "q": "What is the primary configuration file for the Postfix MTA?",
-    "type": "text",
-    "correct": "/etc/postfix/main.cf"
-  },
-  {
-    "q": "Which command is used to rebuild the Postfix alias database?",
-    "type": "text",
-    "correct": "newaliases"
-  },
-  {
-    "q": "In Dovecot, which protocol is used to retrieve mail from the server?",
+    "q": "What should be done after updating the configuration file for syslogd in order to make the changes become effective? (Choose TWO correct answers.)",
     "type": "checkbox",
-    "options": ["SMTP", "IMAP", "POP3", "HTTP"],
-    "correct": [1, 2]
+    "options": [
+      "No action is required, syslogd will notice the updated configuration file after a few minutes.",
+      "Send the HUP signal to the syslogd process.",
+      "Restart the syslogd service.",
+      "Run the command syslogd -u."
+    ],
+    "correct": [
+      1,
+      2
+    ]
   },
   {
-    "q": "Which command is used to list the current iptables rules?",
+    "q": "Which file contains the text message that is displayed after logging into the console? (Specify the full name of the file, including path.)",
     "type": "text",
-    "correct": "iptables -L"
+    "correct": [
+      "/etc/motd"
+    ]
   },
   {
-    "q": "Which policy in iptables is used to drop all incoming packets by default?",
+    "q": "Messages from programs are not appearing in the user's native language. What environment variable must be set for this to happen?",
     "type": "radio",
-    "options": ["iptables -P INPUT DROP", "iptables -A INPUT -j DROP", "iptables -F INPUT", "iptables -X"],
+    "options": [
+      "LANG",
+      "MESSAGES",
+      "I18N",
+      "LC_MSGS",
+      "MSGS"
+    ],
     "correct": 0
-  },
-  {
-    "q": "Which tool can be used to scan for open ports on a network?",
-    "type": "text",
-    "correct": "nmap"
-  },
-  {
-    "q": "What is the purpose of the 'fail2ban' service?",
-    "type": "radio",
-    "options": ["To ban IPs that show malicious signs", "To encrypt the filesystem", "To manage firewall rules manually", "To monitor CPU usage"],
-    "correct": 0
-  },
-  {
-    "q": "Which file stores the list of allowed hosts for tcp_wrappers?",
-    "type": "text",
-    "correct": "/etc/hosts.allow"
-  },
-  {
-    "q": "Which of the following is true about /etc/hosts.allow and /etc/hosts.deny? (Choose TWO)",
-    "type": "checkbox",
-    "options": ["Both must be edited", "It is possible to use just one file", "inetd requires these files", "tcpd uses these files to control access"],
-    "correct": [1, 3]
-  },
-  {
-    "q": "Which command shows the wireless network interfaces?",
-    "type": "text",
-    "correct": "iwconfig"
-  },
-  {
-    "q": "What is the default port for the HTTP protocol?",
-    "type": "text",
-    "correct": "80"
-  },
-  {
-    "q": "What is the default port for the HTTPS protocol?",
-    "type": "text",
-    "correct": "443"
-  },
-  {
-    "q": "Which Nginx command is used to test the configuration file?",
-    "type": "text",
-    "correct": "nginx -t"
-  },
-  {
-    "q": "In Apache, which directive defines the directory where website files are stored?",
-    "type": "text",
-    "correct": "DocumentRoot"
-  },
-  {
-    "q": "Which command is used to generate a certificate signing request (CSR) with OpenSSL?",
-    "type": "radio",
-    "options": ["openssl req", "openssl x509", "openssl csr", "openssl genrsa"],
-    "correct": 0
-  },
-  {
-    "q": "What is the purpose of the 'apachectl' command?",
-    "type": "radio",
-    "options": ["To control the Apache HTTP server", "To edit the Apache config file", "To view Apache logs", "To install Apache modules"],
-    "correct": 0
-  },
-  {
-    "q": "Which Squid directive defines the port the proxy listens on?",
-    "type": "text",
-    "correct": "http_port"
-  },
-  {
-    "q": "In LDAP, which command is used to search for entries?",
-    "type": "text",
-    "correct": "ldapsearch"
-  },
-  {
-    "q": "Which file is used to configure DNS resolvers on a Linux client?",
-    "type": "text",
-    "correct": "/etc/resolv.conf"
-  },
-  {
-    "q": "What is the default port for the SMTP protocol?",
-    "type": "text",
-    "correct": "25"
-  },
-  {
-    "q": "Which command is used to see the mail queue in Postfix?",
-    "type": "text",
-    "correct": "mailq"
-  },
-  {
-    "q": "Which file is used to configure sudo privileges?",
-    "type": "text",
-    "correct": "/etc/sudoers"
-  },
-  {
-    "q": "Which command is used to change the owner of a file?",
-    "type": "text",
-    "correct": "chown"
-  },
-  {
-    "q": "To which destination will a route appear in the routing table after activating IPv6 even without global addresses?",
-    "type": "radio",
-    "options": ["fe80::/10", "0::/128", "0::/0", "fe80::/64", "2000::/3"],
-    "correct": 3
-  },
-  {
-    "q": "Which tool allows establishing direct TCP connections to remote network services?",
-    "type": "checkbox",
-    "options": ["telnet", "nc", "ping", "traceroute"],
-    "correct": [0, 1]
   },
   {
     "q": "Which TWO of the following options are valid, in the /etc/exports file?",
     "type": "checkbox",
-    "options": ["uid", "rw", "rootsquash", "norootsquash", "ro"],
-    "correct": [1, 4]
+    "options": [
+      "uid",
+      "rw",
+      "rootsquash",
+      "norootsquash",
+      "ro"
+    ],
+    "correct": [
+      1,
+      4
+    ]
   },
   {
     "q": "Which command can be used to list all exported file systems from a remote NFS server:",
     "type": "radio",
-    "options": ["exportfs", "rpcinfo", "showmount", "importfs", "nfsstat"],
+    "options": [
+      "exportfs",
+      "rpcinfo",
+      "showmount",
+      "importfs",
+      "nfsstat"
+    ],
     "correct": 2
   },
   {
     "q": "How must Samba be configured, so that it can check passwords against the ones in /etc/passwd and /etc/shadow?",
     "type": "radio",
     "options": [
-      "It is not possible for Samba to use /etc/passwd and /etc/shadow",
-      "Set the parameter 'password file = /etc/passwd' in the [global] section",
-      "Set the parameter 'encrypt passwords = no' in the [global] section",
-      "Set the parameter 'encrypt passwords = yes' in the [global] section",
-      "Run the command 'smbpasswd -a' for each user"
+      "It is not possible for Samba to use/etc/passwd and /etc/shadow",
+      "Set the parameters \"encrypt passwords = yes\", \"password file = /etc/passwd\" and \"password algorithm =crypt\"",
+      "Delete the smbpasswd file and create a symbolic link to the passwd and shadow file",
+      "Set the parameters \"encrypt passwords = yes\" and \"password file = /etc/passwd\".",
+      "Run smbpasswd to convert /etc/passwd and /etc/shadow to a Samba password file"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following is needed, to synchronize the Unix password with the SMB password, when the encrypted SMB password in the smbpasswd file is changed?",
+    "type": "radio",
+    "options": [
+      "Add unix password sync = yes to smb.conf.",
+      "Run winbind --sync, to synchronize the passwords.",
+      "Run netvamp regularly, to convert the passwords.",
+      "Nothing, because this is not possible.",
+      "Add smb unix password = sync to smb.conf."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "You have to mount the /data filesystem from an NFS server(srvl) that does not support locking. Which of the following mount commands should you use?",
+    "type": "radio",
+    "options": [
+      "mount -a -t nfs",
+      "mount -o nolock /data@srvl /mn/data",
+      "mount -o nolock srvl:/data /mnt/data",
+      "mount -o locking=off srvl:/data /mnt/data",
+      "mount -o nolocking srvl:/data /mnt/data"
     ],
     "correct": 2
   },
   {
-    "q": "Which command is used to add a user to the Samba password database?",
+    "q": "After changing /etc/exports on a server, remote hosts are still unable to mount the exported directories. What should be the next action? Please select TWO correct answers.",
+    "type": "checkbox",
+    "options": [
+      "Restart the remote hosts",
+      "Restart the NFS daemon",
+      "Run exportfs -f on the server",
+      "Run showmount -a on the server",
+      "Run exportfs -a on the server"
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "The new file server is a member of the Windows domain \"foo\". Which TWO of the following configuration sections will allow members of the domain group \"all\" to read, write and execute files in \"/srv/ smb/data\"?",
+    "type": "checkbox",
+    "options": [
+      "[data] comment = data share path = /srv/smb/data write list = @foo+all force group = @foo+all create mask = 0550 directory mask = 0770",
+      "[data] comment = data share path = /srv/smb/data write list = @foo+all force group = @foo+all create mask = 0770 directory mask = 0770",
+      "[data] comment = data share path = /srv/smb/data write list = @foo+all force group = @foo+all directory mask = 0770",
+      "[data] path = /srv/smb/data write list = @foo+all force group = @foo+all create mask = 0770 directory mask = 0770",
+      "[data] comment = data share path = /srv/smb/data write list = @foo+all force group = all create mask = 0550 directory mask = 0770"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "q": "What command can be used to check the Samba configuration file?",
     "type": "radio",
-    "options": ["smbuser", "smbpasswd", "pdbedit", "useradd", "smbadd"],
+    "options": [
+      "testconfig",
+      "testsmbconfig",
+      "smbtestcfg",
+      "smbtestparm",
+      "testparm"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following configuration lines will export /usr/local/share/ to nfsclient with read-write access, ensuring that all changes are straight to the disk?",
+    "type": "radio",
+    "options": [
+      "/usr/local/share nfsclient(rw) written",
+      "nfsclient: /usr/local/share/:rw,sync",
+      "/usr/local/share nfsclient:rw:sync",
+      "/usr/local/share nfsclient(rw,sync)",
+      "nfsclient(rw,sync) /usr/local/share"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "A user requests a \"hidden\" Samba share, named confidential, similar to the Windows Administration Share. How can this be configured?",
+    "type": "radio",
+    "options": [
+      "[confidential]\ncomment = hidden share\npath = /srv/smb/hidden\nwrite list = user\ncreate mask = 0700\ndirectory mask = 0700\n",
+      "[$confidential]\ncomment = hidden share\npath = /srv/smb/hidden\nwrite list = user\ncreate mask = 0700\ndirectory mask = 0700\n",
+      "[#confidential]\ncomment = hidden share\npath = /srv/smb/hidden\nwrite list = user\ncreate mask = 0700\ndirectory mask = 0700\n",
+      "[%confidential]\ncomment = hidden share\npath = /srv/smb/hidden\nwrite list = user\ncreate mask = 0700\ndirectory mask = 0700\n",
+      "[confidential$]\ncomment = hidden share\npath = /srv/smb/hidden\nwrite list = user\ncreate mask = 0700\ndirectory mask = 0700\n"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "The Samba configuration file contains the following lines:\n\nhosts allow = 192.168.1.100 192.168.2.0/255.255.255.0 localhost\nhosts deny = 192.168.2.31\ninterfaces = 192.168.1.0/255.255.255.0 192.168.2.0/255.255.255.0\nA workstation is on the wired network with an IP address of 192.168.1.117 but is unable to access the Samba server. A wireless laptop with an IP address of 192.168.2.93 can access the Samba server. Additional troubleshooting shows that almost every machine on the wired network is unable to access the Samba server. Which single choice below will permit wired workstations to connect to the Samba server without denying access to any one else?\n",
+    "type": "radio",
+    "options": [
+      "hosts allow = 192.168.1.1-255",
+      "hosts allow = 192.168.1.100 192.168.2.200 localhost",
+      "hosts deny = 192.168.1.100/255.255.255.0 192.168.2.31 localhost",
+      "hosts deny = 192.168.2.200/255.255.255.0 192.168.2.31 localhost",
+      "hosts allow = 192.168.1.0/255.255.255.0 192.168.2.0/255.255.255.0 localhost"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following services must be started first on an NFS server?",
+    "type": "radio",
+    "options": [
+      "mountd",
+      "nfsd",
+      "portmap",
+      "statd"
+    ],
     "correct": 2
   },
   {
-    "q": "In Samba's configuration file, which parameter is used to define the Windows workgroup name?",
-    "type": "text",
-    "correct": "workgroup"
-  },
-  {
-    "q": "Which command is used to display the current Samba shares on a local or remote server?",
+    "q": "What does the testparm command confirm regarding Samba configuration?",
     "type": "radio",
-    "options": ["smbclient -L", "smbstatus", "testparm", "net view", "smbview"],
+    "options": [
+      "The configuration file will load successfully.",
+      "The services will operate as expected.",
+      "The Samba services will be started automatically when the system boots.",
+      "The netfilter configuration of the Samba server does not block any access to the services defined in the configuration."
+    ],
     "correct": 0
   },
   {
-    "q": "What is the name of the main configuration file for the INN news server?",
+    "q": "Which server program will understand and can reply to NetBIOS name service requests?",
+    "type": "radio",
+    "options": [
+      "netbios",
+      "nmbd",
+      "smbd",
+      "winbindd"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the following Samba configuration parameters is functionally identical to the parameter read only=yes?",
+    "type": "radio",
+    "options": [
+      "browseable=no",
+      "read write=no",
+      "writeable=no",
+      "write only=no",
+      "write access=no"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which of the following are Samba security modes or levels? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "ads",
+      "data",
+      "ldap",
+      "network",
+      "share"
+    ],
+    "correct": [
+      0,
+      4
+    ]
+  },
+  {
+    "q": "Which command is used to tell the NFS server which filesystems to make available to clients?",
+    "type": "radio",
+    "options": [
+      "exportfs",
+      "mkfs.nfs",
+      "mount",
+      "nfsservctl",
+      "telinit"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Select the Samba option below that should be used if the main intention is to setup a guest printer service?",
+    "type": "radio",
+    "options": [
+      "security = cups",
+      "security = ldap",
+      "security = pam",
+      "security = share",
+      "security = printing"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "In which CIFS share must printer drivers be placed to allow Point'n'Print driver deployment on Windows?",
+    "type": "radio",
+    "options": [
+      "winx64drv$",
+      "print$",
+      "The name of the share is specified in the option print driver share within each printable share in smb.conf",
+      "pnpdrivers$",
+      "NETLOGON"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the followig Samba services handles the membership of a file server in an Active Directory domain?",
+    "type": "radio",
+    "options": [
+      "winbindd",
+      "nmbd",
+      "msadd",
+      "admemb",
+      "samba"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following statements is true regarding the NFSv4 pseudo file system on the NFS server?",
+    "type": "radio",
+    "options": [
+      "It must be called /exports",
+      "It usually contains bind mounts of the directory trees to be exported",
+      "It must be a dedicated partition on the server",
+      "It is defined in the option Nfsv4-Root in /etc/pathmapd.conf",
+      "It usually contains symlinks to the directory trees to be exported"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "In order to export /usr and /bin via NFSv4, /exports was created and contains working bind mounts to /usr and /bin. The following lines are added to /etc/exports on the NFC server: \n\nAfter running mount -t nfsv4 server:/ /mnt \nof an NFC-Client, it is observed that /mnt contains the content of the server’s /usr directory instead of the content of the NFSv4 foot folder. \nWhich option in /etc/exports has to be changed or removed in order to make the NFSv4 root folder appear when mounting the highest level of the server? (Specify ONLY the option name without any values or parameters.)",
+    "image": "img/imagen10.png",
     "type": "text",
-    "correct": "inn.conf"
+    "correct": [
+      "fsid"
+    ]
+  },
+  {
+    "q": "What command displays NFS kernel statistics? (Specify ONLY the command without any path or parameters.)",
+    "type": "text",
+    "correct": [
+      "nfsstat"
+    ]
+  },
+  {
+    "q": "The command ___________ -x foo will delete the user foo from the Samba database. (Specify the command only, no path information.)",
+    "type": "text",
+    "correct": [
+      "smbpasswd"
+    ]
+  },
+  {
+    "q": "With which parameter in the smb.conf file can a share be hidden?",
+    "type": "text",
+    "correct": [
+      "browseable"
+    ]
+  },
+  {
+    "q": "Which Samba-related command will show all options that were not modified using smb.conf and thus are set to their default values? Please enter the command and its parameter(s):",
+    "type": "text",
+    "correct": [
+      "testparm -v"
+    ]
+  },
+  {
+    "q": "nfsd, portmap and ________ daemons must be running on an NFS server.",
+    "type": "text",
+    "correct": [
+      "mountd"
+    ]
+  },
+  {
+    "q": "Which of the following services belongs to NFSv4 and does not exist in NFSv3?",
+    "type": "radio",
+    "options": [
+      "rpc.idmapd",
+      "rpc.statd",
+      "NFSD",
+      "rpc.mountd"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "To join a file server to the Active Directory domain intra.example.com, the following smb.conf was created: The command net ads join generates an error and the server is not joined to the domain. What must be done to successfully join the domain?",
+    "type": "radio",
+    "options": [
+      "Change the server role to ad member server to join an Active Directory domain instead of an NT4 domain.",
+      "Add realm = intra.example.com to smb.conf and change the workgroup to the netbios workgroup name of the domain.",
+      "Manually create a computer account in the Active Directory domain and specify the computer account name with -U when starting the net ads join.",
+      "Remove winbind enum users and winbind enum groups as winbind is not compatible with Active Directory domains.",
+      "Remove all idmap configuration stanzas as id mapping is defined globally in an Active Directory domain and cannot be changed on a member server."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What is the appropriate configuration file entry to allow SSH to run from inetd?",
+    "type": "radio",
+    "options": [
+      "ssh stream tcp nowait root /usr/sbin/tcpd sshd",
+      "ssh stream tcp nowait root /usr/sbin/tcpd tcpd",
+      "ssh stream tcpd nowait root /usr/sbin/tcpd sshd",
+      "ssh data tcpd nowait root /usr/sbin/tcpd sshd",
+      "ssh data tcp nowait root /usr/sbin/tcpd sshd"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following configuration files are used by tcpwrapper?",
+    "type": "radio",
+    "options": [
+      "/etc/tcpd.allow and /etc/tcpd.deny",
+      "/etc/tcpwrapper.allow and /etc/tcpwrapper.deny",
+      "/etc/hosts.allow and /etc/hosts.deny",
+      "/etc/access.allow and /etc/access.deny",
+      ". /etc/service.allow and /etc/service.deny"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "The following is an excerpt from the output of tcpdump -nli eth1. Which network service or protocol was used?",
+    "image": "img/imagen2.png",
+    "type": "radio",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SSH",
+      "DNS",
+      "DHCP"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which TWO of the following statements about xinetd and inetd are correct?",
+    "type": "checkbox",
+    "options": [
+      "xinetd supports access control by time.",
+      "xinetd only supports TCP connections.",
+      "xinetd is faster than xinetd and should be preferred for this reason.",
+      "xinetd includes support for X connections.",
+      "xinetd and inetd are used to reduce the number of listening daemons"
+    ],
+    "correct": [
+      0,
+      4
+    ]
+  },
+  {
+    "q": "The innd configuration file has been changed and it should be used as soon as possible. What is the fastest way to accomplish that?",
+    "type": "radio",
+    "options": [
+      "kill - HUP process id",
+      "ctlinnd xexec innd",
+      "ctlinnd reload innd",
+      "/usr/sbin/innd reload",
+      "ctlinnd kill hup"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What command can be used to add a new newsgroup called ABC that allows posting?",
+    "type": "radio",
+    "options": [
+      "ctlinnd newgroup Certkiller n news",
+      "ctlinnd newgroup Certkiller y news",
+      "ctlinnd addgroup Certkiller y news",
+      "ctlinnd newgroup Certkiller +rw news",
+      "ctlinnd addgroup Certkiller +rw news"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the following defines the maximum allowed article size in the configuration file for INN?",
+    "type": "radio",
+    "options": [
+      "limitartsize",
+      "artsizelimit",
+      "maxartlimit",
+      "maxartsize",
+      "setartlimit"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which file, on a majordomo server, will contain a list of all members' email addresses for the mailing list \"linux-users\"? (Enter only the file name).",
+    "type": "text",
+    "correct": [
+      "linux-users"
+    ]
+  },
+  {
+    "q": "Please enter the name of the main majordomo configuration file without the path",
+    "type": "text",
+    "correct": [
+      "majordomo.cf"
+    ]
   },
   {
     "q": "In which file, on an INN news server, can access to the news server be configured? (Enter only the file name).",
     "type": "text",
-    "correct": "readers.conf"
+    "correct": [
+      "readers.conf"
+    ]
   },
   {
     "q": "Which of the following commands will securely copy the directory ./fyf/ to /var/tmp/ on the remote host deltaur using the remote user account kevin?",
@@ -576,206 +1493,9 @@
       "rsync -a -e ssh kevin@deltaur:/var/tmp/ fyf/",
       "rsync -a -u kevin -e ssh fyf/ deltaur:/var/tmp/",
       "rsync -a -u kevin -e ssh deltaur:/var/tmp/ fyf/",
-      "rsync -a -e ssh fyf/ kevin@deltaur:/var/tmp/",
-      "rsync -a -e ssh fyf kevin@deltaur:/var/tmp/"
+      "rsync -a -e ssh fyf/ kevin@deltaur:/var/tmp/"
     ],
     "correct": 3
-  },
-  {
-    "q": "Which command is used to start the Majordomo process?",
-    "type": "radio",
-    "options": ["majordomo start", "majordomo_daemon", "wrapper", "mj_daemon", "majordomo does not have a daemon process"],
-    "correct": 4
-  },
-  {
-    "q": "What is the purpose of the 'wrapper' program in Majordomo?",
-    "type": "radio",
-    "options": [
-      "To provide a web interface for list management",
-      "To allow Majordomo to run with the correct permissions",
-      "To encrypt mailing list archives",
-      "To filter spam from incoming messages",
-      "To bridge Majordomo with the Postfix MTA"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which configuration file is used by Majordomo to store global configuration settings?",
-    "type": "text",
-    "correct": "majordomo.cf"
-  },
-  {
-    "q": "What is the default directory where Majordomo stores its mailing list information?",
-    "type": "text",
-    "correct": "/usr/lib/majordomo"
-  },
-  {
-    "q": "In SSH, which file contains the public keys of users allowed to log into an account?",
-    "type": "text",
-    "correct": "authorized_keys"
-  },
-  {
-    "q": "Which file, found in a user's home directory, contains the user's private SSH key for version 2?",
-    "type": "text",
-    "correct": "id_rsa"
-  },
-  {
-    "q": "Which command is used to see the NFS kernel statistics?",
-    "type": "text",
-    "correct": "nfsstat"
-  },
-  {
-    "q": "In an /etc/exports file, which option prevents the remote root user from having root privileges on the NFS share?",
-    "type": "text",
-    "correct": "root_squash"
-  },
-  {
-    "q": "Which command is used to reload the /etc/exports file on the NFS server?",
-    "type": "text",
-    "correct": "exportfs -ra"
-  },
-  {
-    "q": "In Samba, which security level is used to integrate with a Windows Domain Controller for authentication?",
-    "type": "radio",
-    "options": ["security = user", "security = ads", "security = domain", "security = server", "security = share"],
-    "correct": 1
-  },
-  {
-    "q": "What is the command to test a Samba configuration file for errors?",
-    "type": "text",
-    "correct": "testparm"
-  },
-  {
-    "q": "Which service must be running for a Linux client to mount an NFS share?",
-    "type": "radio",
-    "options": ["nfsd", "mountd", "rpcbind", "smbd", "statd"],
-    "correct": 2
-  },
-  {
-    "q": "In OpenSSH, which directive in sshd_config allows you to specify which users can log in?",
-    "type": "text",
-    "correct": "AllowUsers"
-  },
-  {
-    "q": "What is the effect of 'exportfs -u host:path'?",
-    "type": "radio",
-    "options": [
-      "It updates the export for the host",
-      "It unexports the specified path for the host",
-      "It shows the usage statistics for that host",
-      "It mounts the path on the host"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "In Majordomo, where is the configuration file for the mailing list \"linux-users\" typically located?",
-    "type": "text",
-    "correct": "linux-users.config"
-  },
-  {
-    "q": "Which command generates an RSA key pair for SSH?",
-    "type": "text",
-    "correct": "ssh-keygen -t rsa"
-  },
-  {
-    "q": "What port does SSH use by default?",
-    "type": "text",
-    "correct": "22"
-  },
-  {
-    "q": "In Samba, what is the purpose of the 'nmbd' daemon?",
-    "type": "radio",
-    "options": [
-      "To handle file and printer sharing",
-      "To handle NetBIOS name resolution and browsing",
-      "To encrypt passwords",
-      "To manage user authentication"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which environment variable can be used to provide a passphrase to ssh-add automatically?",
-    "type": "text",
-    "correct": "SSH_ASKPASS"
-  },
-  {
-    "q": "What does the 'sync' option do in /etc/exports?",
-    "type": "radio",
-    "options": [
-      "Synchronizes the time between client and server",
-      "Ensures data is written to disk before the request is completed",
-      "Synchronizes user IDs",
-      "Updates the client cache"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "In INN, which file is used to specify the news feeds from other servers?",
-    "type": "text",
-    "correct": "newsfeeds"
-  },
-  {
-    "q": "Which tool is used to monitor the active Samba connections?",
-    "type": "text",
-    "correct": "smbstatus"
-  },
-  {
-    "q": "In /etc/ssh/sshd_config, what does 'PermitRootLogin no' do?",
-    "type": "radio",
-    "options": [
-      "Allows root login with a password only",
-      "Prevents the root user from logging in via SSH",
-      "Forces root to use a specific shell",
-      "Requires root to use a physical terminal"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "What is the command to mount an NFS export from server 'srv1' at '/data' to local '/mnt'?",
-    "type": "text",
-    "correct": "mount srv1:/data /mnt"
-  },
-  {
-    "q": "In Majordomo, which file contains the actual list of subscribers for a list?",
-    "type": "radio",
-    "options": ["list.config", "list.subscribers", "list", "subscribers.cf"],
-    "correct": 2
-  },
-  {
-    "q": "Which SSH tool is used to scan remote hosts for their public keys?",
-    "type": "text",
-    "correct": "ssh-keyscan"
-  },
-  {
-    "q": "What is the purpose of the 'all_squash' option in NFS exports?",
-    "type": "radio",
-    "options": [
-      "It maps all UIDs and GIDs to the anonymous user",
-      "It compresses all files in the export",
-      "It deletes all files in the export",
-      "It allows all users to have root access"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command is used to list the available newsgroups on an INN server?",
-    "type": "text",
-    "correct": "list"
-  },
-  {
-    "q": "In Samba, which parameter allows a share to be seen in the browse list?",
-    "type": "text",
-    "correct": "browsable"
-  },
-  {
-    "q": "What is the name of the SSH agent process?",
-    "type": "text",
-    "correct": "ssh-agent"
-  },
-  {
-    "q": "Which command is used to remove an SSH key's passphrase?",
-    "type": "text",
-    "correct": "ssh-keygen -p"
   },
   {
     "q": "Which answer best describes the meaning of the following LDAP search command: ldapsearch -x \" (& (cn=marie)(telephoneNumber=9*))\"",
@@ -795,110 +1515,483 @@
     "options": [
       "None of the above.",
       "It can't be configured to assign addresses to BOOTP clients.",
-      "The configuration file is dhcpd.conf and it's always located in /etc/.",
-      "The configuration file is dhcp.conf and its location varies depending on the distribution.",
-      "The configuration file is dhcpd.conf and its location varies depending on the distribution."
+      "It can't be used to assign addresses to X-terminals",
+      "Its default behavior is to send DHCPNAK to clients that request inappropriate addresses",
+      "It can be configured to only assign addresses to known clients."
     ],
     "correct": 4
   },
   {
-    "q": "In an LDAP directory, what is a 'DN'?",
+    "q": "In a PAM configuration file, a sufficient control allows access:",
     "type": "radio",
     "options": [
-      "Domain Name",
-      "Distinguished Name",
-      "Directory Node",
-      "Data Name"
+      "Immediately on success, regardless of other controls",
+      "Immediately, but only if the user is root",
+      "After waiting if all other controls return success",
+      "Immediately on success, if no previous required or requisite control failed"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following options can be passed to a DHCP client machine using configuration options on the DHCP server?",
+    "type": "radio",
+    "options": [
+      "The filter rules for iptables",
+      "The resolving order in /etc/resolv.conf",
+      "The contents of hosts.allow and hosts.deny",
+      "The NIS domain name",
+      "The priority order in nsswitch.conf"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which option is used to configure pppd to use up to two DNS server addresses provided by the remote server?",
+    "type": "radio",
+    "options": [
+      "dns",
+      "ms-dns",
+      "None of the above",
+      "nameserver",
+      "usepeerdns"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "The host, called \" Certkiller \", with the MAC address \"08:00:2b:4c:59:23\", should always be given the IP address of 192.168.1.2 by the DHCP server. Which of the following configurations will achieve this?",
+    "type": "radio",
+    "options": [
+      "host Certkiller { \nhardware-ethernet 08:00:2b:4c:59:23; \nfixed-address 192.168.1.2; \n}",
+      "host Certkiller { \nhardware ethernet 08:00:2b:4c:59:23; \nfixed-address 192.168.1.2; \n}",
+      "host Certkiller = 08:00:2b:4c:59:23 192.168.1.2",
+      "host Certkiller { \nhardware-address 08:00:2b.4c:59:23; \nfixed-ip 192.168.1.2; \n}",
+      "host Certkiller { \nmac=08:00:2b:4c:59:23; \nip= 192.168.1.2; \n}"
     ],
     "correct": 1
   },
   {
-    "q": "Which command is used to add entries to an LDAP directory from an LDIF file?",
-    "type": "text",
-    "correct": "ldapadd"
-  },
-  {
-    "q": "Which of the following is the default port for LDAP?",
-    "type": "text",
-    "correct": "389"
-  },
-  {
-    "q": "In PAM (Pluggable Authentication Modules), which control flag indicates that the module's success is required, and if it fails, PAM will immediately return a failure?",
-    "type": "radio",
+    "q": "For an LDAP client configuration, the LDAP base needs to be set. Which TWO of the following actions would achieve that?",
+    "type": "checkbox",
     "options": [
-      "required",
-      "requisite",
-      "sufficient",
-      "optional"
+      "Edit cldap.conf and add \"BASE dc=linuxfoo,dc=com\".",
+      "export BASE=dc=linuxfoo,dc=com",
+      "Edit ldap.conf and add \"BASE dc=linuxfoo,dc=com\".",
+      "export LDAPBASE=dc=linuxfoo,dc=com",
+      "Edit ldapbase.conf and add \"BASE dc=linuxfoo,dc=com\"."
     ],
-    "correct": 1
+    "correct": [
+      1,
+      2
+    ]
   },
   {
-    "q": "Which file is used to configure the default behavior of PAM for all services?",
-    "type": "text",
-    "correct": "/etc/pam.conf"
-  },
-  {
-    "q": "What is the purpose of the 'slapd.conf' file in an LDAP server?",
+    "q": "Which dhcpd.conf option defines the DNS server address(es) to be sent to the DHCP clients?",
     "type": "radio",
     "options": [
-      "To configure the client access",
-      "To configure the LDAP daemon settings",
-      "To store the directory data",
-      "To define the schema"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command allows you to change the LDAP user password?",
-    "type": "text",
-    "correct": "ldappasswd"
-  },
-  {
-    "q": "In DHCP, what is the purpose of the 'fixed-address' directive?",
-    "type": "radio",
-    "options": [
-      "To assign a random address to a client",
-      "To assign a specific IP address to a client based on its MAC address",
-      "To define the subnet mask",
-      "To set the default gateway"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command is used to monitor the DHCP lease assignments in real-time?",
-    "type": "text",
-    "correct": "tail -f /var/lib/dhcp/dhcpd.leases"
-  },
-  {
-    "q": "What does the 'BASE' directive in /etc/openldap/ldap.conf define?",
-    "type": "radio",
-    "options": [
-      "The starting point for LDAP searches",
-      "The administrator's password",
-      "The LDAP server's IP address",
-      "The schema to be used"
+      "domainname",
+      "domain-name-servers",
+      "domain-nameserver",
+      "domain-name-server"
     ],
     "correct": 0
   },
   {
-    "q": "Which PAM module is typically used to enforce password complexity?",
-    "type": "text",
-    "correct": "pam_cracklib.so"
-  },
-  {
-    "q": "What is the primary role of a 'getty' process?",
+    "q": "A new user was created on a master NIS server using useradd but cannot log in from an NIS client. Older users can log in. Which step was probably forgotten, when creating the new user?",
     "type": "radio",
     "options": [
-      "To manage network connections",
-      "To open a terminal line and wait for a login name",
-      "To encrypt the hard drive",
-      "To handle system logs"
+      "Restarting ypxfr daemons on the NIS client and server to fetch map changes",
+      "Starting the yppasswdd daemon on the NIS server to receive login re quests from NIS clients",
+      "Running make inside /var/yp on the NIS server to generate new maps",
+      "Running yppush on the NIS server to propagate map changes to NIS clients",
+      "Starting the ypxfr daemon on the NIS client to fetch map changes from the NIS server"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What is the advantage of using SASL authentication with OpenLDAP?",
+    "type": "radio",
+    "options": [
+      "It can prevent the transmission of plain text passwords over the network.",
+      "It allows the use of LDAP to authenticate system users over the network.",
+      "It enables the use of Access Control Lists.",
+      "All of the above.",
+      "It disables anonymous access to the LDAP server."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "How can a user's default shell be checked, by querying an NIS server?",
+    "type": "radio",
+    "options": [
+      "ypquery user@example.com",
+      "ypgrep user example.com",
+      "ypmatch -d example.com user passwd",
+      "ypcat -d example.com user",
+      "ypq @example.com user +shell"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "To configure an LDAP service in the company \" Certkiller Ltd\", which of the following entries should be added to slapd.conf, in the Database Directives section, to set the rootdn so that the common name is Manager and the company's domain is Certkiller.com ?",
+    "type": "radio",
+    "options": [
+      "rootdn cn=Manager dc= Certkiller dc=com",
+      "rootdn \"cn=Manager,dc= Certkiller ,dc=com\"",
+      "rootdn cn= Certkiller ,dc=com,dc=Manager",
+      "rootdn \"cn= Certkiller ,dc=com,dc=Manager\"",
+      "rootdn \"cn=Manager dc= Certkiller dc=com\""
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Remote access to a CD-RW device on a machine on a LAN must be restricted to a selected user group. Select the TWO correct alternatives that describe the possible solutions for this problem.",
+    "type": "checkbox",
+    "options": [
+      "The remote access to these devices can be allowed to users by changing the display manager configuration and allowing sudo access for the user that will log in remotely",
+      "The pam_console module allows access configuration to these devices via console, including simultaneous access by many users",
+      "The pam_console module can be used to control access to devices via console, allowing/denying access to these devices in the user's session",
+      "If the pam_console module is used, it must be checked as required, because it is essential for user authentication",
+      "Through the sudo configuration file, it is possible to set users that will have the power of the root user, so they can access the devices. Besides that, it is important to configure the /etc/ pam.d/su file, so the PAM modules can secure the service"
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which of the following sentences is true, when using the following /etc/pam.d/login file?\n\n#%PAM-l.0\nauth required /lib/security/pam_securetty.so\nauth required /lib/security/pam_nologin.so\nauth sufficient /lib/security/pam_unix.so shadow nullok md5 use_authtok\nauth required /lib/security/pam_ldap.so use_first_pass\naccount sufficient /lib/security/pam_unix.so\naccount required /lib/security/pam_ldap.so\npassword required /lib/security/pam_cracklib.so\npassword sufficient /lib/security/pam_unix.so nullok use_authtok md5 shadow\npassword required /lib/security/pam_ldap.so use_first_pass\nsession optional /lib/security/pam_console.so\nsession sufficient /lib/security/pam_unix.so\nsession required /lib/security/pam_ldap.so\n",
+    "type": "radio",
+    "options": [
+      "All users will be authenticated against the LDAP directory",
+      "This is the only file needed to configure LDAP authentication on Linux",
+      "Only local users will be able to log in, when the file/etc/nologin exists",
+      "Ordinary users will be able to change their password to be blank",
+      "If the control flags for auth were changed to required, local users wouldn't be able to log in"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "In a PAM configuration file, which of the following is true about the required control flag?",
+    "type": "radio",
+    "options": [
+      "If the module returns success, no more modules of the same type will be invoked",
+      "The success of the module is needed for the module-type facility to succeed. If it returns a failure,control is returned to the calling application",
+      "The success of the module is needed for the module-type facility to succeed. However, all remaining modules of the same type will be invoked.",
+      "The module is not critical and whether it returns success or failure is not important.",
+      "If the module returns failure, no more modules of the same type will be invoked"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Select the alternative that shows the correct way to disable a user login (except for root)",
+    "type": "radio",
+    "options": [
+      "The use of the pam_nologin module along with the /etc/login configuration file",
+      "The use of the pam_deny module along with the /etc/deny configuration file",
+      "The use of the pam_pwdb module along with the /etc/pwdb.conf configuration file",
+      "The use of the pam_console module along with the /etc/security/console.perms configuration file",
+      "The use of the pam_nologin module along with the /etc/nologin configuration file"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following is true, when a server uses PAM authentication and both /etc/pam.conf & /etc/pam.d/ exist?",
+    "type": "radio",
+    "options": [
+      "It causes error messages.",
+      "/etc /pam.conf will be ignored.",
+      "/etc /pam.d/ will be ignored.",
+      "Both are used, but /etc/pam.d/ has a higher priority.",
+      "Both are used, but /etc/pam.conf has a higher priority."
     ],
     "correct": 1
   },
   {
-    "q": "Which of these tools can provide dial-in access to a server?",
+    "q": "LDAP-based authentication against a newly-installed LDAP server does not work as expected. The file /etc/pam.d/login includes the following configuration parameters. Which of them is NOT correct?",
+    "type": "radio",
+    "options": [
+      "password required /lib/security/pam_ldap.so",
+      "auth sufficient /lib/security/pam_ldap.so use_first_pass",
+      "account sufficient /lib/security/pam_ldap.s",
+      "password required /lib/security/pam_pwdb.so",
+      "auth required /lib/security/pam_ldap.so"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following commands can gather entries from the specified administrative NIS database group?",
+    "type": "radio",
+    "options": [
+      "ypserv group",
+      "getent group",
+      "rpcinfo group",
+      "ypbind group",
+      "yppoll group"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the following is correct about this excerpt from an LDIF file? dn: cn=PrintOperators,ou=Groups,ou=IT,o=BR",
+    "type": "radio",
+    "options": [
+      "dn is the domain name.",
+      "o is the organizational unit.",
+      "cn is the common name.",
+      "dn is the relative distinguished name."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "The company intends to use a commercial LDAP schema.",
+    "type": "radio",
+    "options": [
+      "The company intends to use a commercial LDAP schema.",
+      "The company wants to make their directory available to the public on the Internet.",
+      "The company plans to create custom schema files for their directory.",
+      "The company wish to use an encrypted attribute."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Select the INCORRECT statement regarding the LDIF file format:",
+    "type": "radio",
+    "options": [
+      "It contains a dn line, that indicates where the attributes listed in the following lines of the file must be added.",
+      "In the file, a blank line separates one entry from another one.",
+      "If an attribute contains binary data, some specific configurations must be made for this entry.",
+      "The LDIF file accepts any type of file encoding."
+    ],
+    "correct": 3
+  },
+  {
+    "type": "text",
+    "q": "According to this LDIF excerpt, which organizational unit is Robert Smith part of? (Specify only the organizational unit.)\n\ndn: cn=Robert Smith,ou=people,dc=example,dc=com\nobjectclass: inetOrgPerson\ncn: Robert Smith\ncn: Robert J Smith\ncn: bob smith\nsn: smith\nuiD. rjsmith\nuserpassworD. rJsmitH\ncarlicensE. HISCAR 123\nhomephonE. 555-111-2222\nmail: r.smith@example.com\nmail: rsmith@example.com\nmail: bob.smith@example.com\ndescription: swell guy\n",
+    "correct": [
+      "people"
+    ]
+  },
+  {
+    "q": "If no ACL lines are included in slapd.conf, what is the default behavior of slapd?",
+    "type": "radio",
+    "options": [
+      "Allow anyone to read any entry.",
+      "Deny anyone from reading any entries.",
+      "Only certain attributes such as userPassword are protected from read access.",
+      "Access to the directory is only allowed from the local machine."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "While analyzing a slapd.conf file, an administrator noted that the rootdn and rootpw directives are not present. Where is the LDAP administrator account defined?",
+    "type": "radio",
+    "options": [
+      "It is using the default account admin with the password admin.",
+      "The account is defined by an ACL in slapd.conf.",
+      "It is using the default account admin without a password.",
+      "The account is defined in the file /etc/ldap.secret.",
+      "The account is defined in the file /etc/ldap.root.conf."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "By default OpenLDAP logs via syslogd. What is the slapd.conf file directive to have the LDAP logs written to /var/log/ldap.log?",
+    "type": "radio",
+    "options": [
+      "loglevel",
+      "logfile",
+      "syslogfile",
+      "logfilepath"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Given the following section of a ISC DHCPD configuration file.\n\nsubnet 192.168.1.0 netmask 255.255.255.0 {\n...\nSet the default gateway to be used by\nthe PC clients\noption _____________ 192.168.1.254;\n...\n}\nWhat keyword is missing in order to provide a default gateway address to clients?\n",
+    "type": "radio",
+    "options": [
+      "gateway",
+      "nexthop",
+      "route",
+      "routers",
+      "transit"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following commands is used to change user passwords in an OpenLDAP directory?",
+    "type": "radio",
+    "options": [
+      "passwd",
+      "ldpasswd",
+      "smbpasswd",
+      "ldappasswd",
+      "chpasswd"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of these sets of entries will the following command return? ldapsearch -x \"(|(cn=marie)(!(telephoneNumber=9*)))\"",
+    "type": "radio",
+    "options": [
+      "Entries that don't have a cn of marie or don't have a telephoneNumber that begins with 9.",
+      "Entries that have a cn of marie or don't have a telephoneNumber beginning with 9",
+      "Entries that have a cn of marie and a telephoneNumber ending with 9.",
+      "Entries that don't have a cn of marie and don't have a telephoneNumber beginning with 9.",
+      "Entries that have a cn of marie or have a telephoneNumber beginning with 9."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the following PAM modules will allow the system administrator to use an arbitrary file containing a list of user and group names with restrictions on the system resources available to them?",
+    "type": "radio",
+    "options": [
+      "pam_filter",
+      "pam_limits",
+      "pam_listfile",
+      "pam_unix"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What is the name of the root element of the LDAP tree holding the configuration of an OpenLDAP server that is using directory based configuration? (Specify ONLY the element’s name without any additional information.)",
+    "type": "text",
+    "correct": [
+      "cn=config"
+    ]
+  },
+  {
+    "q": "In order to specify alterations to an LDAP entry, what keyword is missing from the following LDIF file excerpt? Specify the keyword only and no other information.",
+    "type": "text",
+    "image": "img/imagen9.png",
+    "correct": [
+      "modify"
+    ]
+  },
+  {
+    "q": "Which attitude of an object in LDAP defines which other attributes can be set for the object? (Specify ONLY the attribute name without any values.)",
+    "type": "text",
+    "correct": [
+      "objectClass"
+    ]
+  },
+  {
+    "q": "According to the dhcpd.conf file below, which domain name will clients in the 172.16.87.0/24 network get?",
+    "type": "text",
+    "image": "img/imagen12.png",
+    "correct": [
+      "lab.certkiller.com"
+    ]
+  },
+  {
+    "q": "In which directory are the PAM modules stored?",
+    "type": "text",
+    "correct": [
+      "/lib/security"
+    ]
+  },
+  {
+    "q": "How are PAM modules organized and stored?",
+    "type": "radio",
+    "options": [
+      "As plain text files in /etc/security/",
+      "A statically linked binaries in /etc/pam.d/bin/",
+      "As Linux kernel modules within the respective sub directory of /lib/modules/",
+      "As shared object files within the /lib/ directory hierarchy",
+      "As dynamically linked binaries in /usr/lib/pam/sbin/"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following statements in the ISC DHCPD configuration is used to specify whether or not an address pool can be used by nodes which have a corresponding host section in the configuration?",
+    "type": "radio",
+    "options": [
+      "identified-nodes",
+      "unconfigured-hosts",
+      "missing-peers",
+      "unmatched-hwaddr",
+      "unknown-clients"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following lines is valid in a configuration file in /etc/pam.d/?",
+    "type": "radio",
+    "options": [
+      "auth required pam_unix.so try_first_pass nullok",
+      "auth required:pam_unix.so(try_first_pass nullok)",
+      "auth try_first_pass nullok, require pam_unix.so",
+      "auth pam_unix.so(required try_first_pass nullok)"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following values can be used in the OpenLDAP attribute olcBackend for any object of the class olcBackendConfig to specify a backend? (Choose three.)",
+    "type": "checkbox",
+    "options": [
+      "xml",
+      "bdb",
+      "passwd",
+      "ldap",
+      "text"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "q": "Which of the following types of IPv6 address assignments does DHCPv6 support? (Choose three.)",
+    "type": "checkbox",
+    "options": [
+      "Normal IPv6 address assignments that can be renewed.",
+      "Temporary IPv6 address assignments that cannot be renewed.",
+      "Blacklisted IPv6 address assignments that should no longer be used.",
+      "IPv6 prefix assignments that can be used for routing or further assignments.",
+      "Anonymous IPv6 address assignments whose assignment is not logged by the DHCPv6 server."
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "q": "Which of the following PAM modules sets and unsets environment variables?",
+    "type": "radio",
+    "options": [
+      "pam_set",
+      "pam_shell",
+      "pam-vars",
+      "pam-env",
+      "pam_export"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "When configuring a PPP dial-in server, which option is used (in the pppd configuration file) to enable user authentication against the system password database?",
+    "type": "radio",
+    "options": [
+      "local",
+      "login",
+      "password",
+      "auth",
+      "user"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which daemon is required on the client if an ethernet device gets its IP address from a central server?",
+    "type": "radio",
+    "options": [
+      "dhcpd",
+      "dhcpcd",
+      "bootpd",
+      "dhcp",
+      "ethd"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which of the following tools, on its own, can provide dial-in access to a server?",
     "type": "radio",
     "options": [
       "mingetty",
@@ -910,7 +2003,7 @@
     "correct": 4
   },
   {
-    "q": "A network has many network printers; which printer information is needed to always assign them the same IP via DHCP?",
+    "q": "A network has many network printers connected and they should get their addresses using DHCP. What information from each printer is needed to always assign them the same IP address when dhcpd is used as the DHCP server?",
     "type": "radio",
     "options": [
       "MAC address",
@@ -932,199 +2025,6 @@
       "pump --release"
     ],
     "correct": 2
-  },
-  {
-    "q": "Which command is used to display the current IPv6 routing table?",
-    "type": "radio",
-    "options": [
-      "route -6 show",
-      "ip -6 route show",
-      "ipv6 route list",
-      "netstat -r6"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "What is the compressed form of the IPv6 address 2001:0db8:0000:0000:0000:ff00:0042:8329?",
-    "type": "text",
-    "correct": "2001:db8::ff00:42:8329"
-  },
-  {
-    "q": "In IPv6, which address type is used for communication within a single local network link?",
-    "type": "radio",
-    "options": [
-      "Global Unicast",
-      "Link-Local",
-      "Unique Local",
-      "Multicast"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command is used to configure a new IPv6 address on an interface?",
-    "type": "text",
-    "correct": "ip -6 addr add"
-  },
-  {
-    "q": "Which protocol is used in IPv6 to replace the Role of ARP in IPv4?",
-    "type": "radio",
-    "options": [
-      "ICMPv6 (Neighbor Discovery)",
-      "DHCPv6",
-      "IGMP",
-      "RARP"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "What is the loopback address in IPv6?",
-    "type": "text",
-    "correct": "::1"
-  },
-  {
-    "q": "Which command is used to scan a network for live hosts using IPv6?",
-    "type": "text",
-    "correct": "nmap -6"
-  },
-  {
-    "q": "In PAM, which directory usually contains the service-specific configuration files?",
-    "type": "text",
-    "correct": "/etc/pam.d"
-  },
-  {
-    "q": "What does the 'sufficient' control flag mean in PAM?",
-    "type": "radio",
-    "options": [
-      "The module must succeed for the overall result to be success",
-      "If the module succeeds, PAM returns success immediately if no previous 'required' module failed",
-      "The result of the module is ignored",
-      "The module is only used for logging"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which tool is used to manage the LDAP server indices?",
-    "type": "text",
-    "correct": "slapindex"
-  },
-  {
-    "q": "In LDAP, what does 'ou' stand for?",
-    "type": "text",
-    "correct": "Organizational Unit"
-  },
-  {
-    "q": "Which directive in dhcpd.conf specifies the DNS servers that clients should use?",
-    "type": "text",
-    "correct": "option domain-name-servers"
-  },
-  {
-    "q": "What is the purpose of the 'authoritative' directive in dhcpd.conf?",
-    "type": "radio",
-    "options": [
-      "It makes the DHCP server the primary server for the network",
-      "It allows the server to send DHCPNAK to clients with invalid leases",
-      "It enables administrative logging",
-      "It sets the root password for the server"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command displays the current active login sessions and their TTYs?",
-    "type": "text",
-    "correct": "who"
-  },
-  {
-    "q": "What is the default port for LDAPS?",
-    "type": "text",
-    "correct": "636"
-  },
-  {
-    "q": "Which command is used to check the consistency of an LDAP database?",
-    "type": "text",
-    "correct": "slaptest"
-  },
-  {
-    "q": "In IPv6, which prefix is reserved for Link-Local addresses?",
-    "type": "text",
-    "correct": "fe80::/10"
-  },
-  {
-    "q": "Which command is used to view the Neighbor Discovery cache (IPv6 ARP table)?",
-    "type": "text",
-    "correct": "ip -6 neighbor show"
-  },
-  {
-    "q": "What does 'RADVD' stand for in an IPv6 context?",
-    "type": "text",
-    "correct": "Router Advertisement Daemon"
-  },
-  {
-    "q": "Which command is used to add a default gateway for IPv6?",
-    "type": "text",
-    "correct": "ip -6 route add default via"
-  },
-  {
-    "q": "Which file specifies which PAM modules are used for the 'sshd' service?",
-    "type": "text",
-    "correct": "/etc/pam.d/sshd"
-  },
-  {
-    "q": "In PAM, which management group is responsible for updating passwords?",
-    "type": "text",
-    "correct": "password"
-  },
-  {
-    "q": "What is the purpose of the 'pam_wheel.so' module?",
-    "type": "radio",
-    "options": [
-      "To allow only users in the 'wheel' group to use 'su' to become root",
-      "To manage disk quotas",
-      "To encrypt home directories",
-      "To monitor system performance"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command is used to export LDAP entries to an LDIF file?",
-    "type": "text",
-    "correct": "slapcat"
-  },
-  {
-    "q": "In DHCP, what is the 'lease time'?",
-    "type": "radio",
-    "options": [
-      "The time the server is up",
-      "The duration for which an IP address is assigned to a client",
-      "The time it takes to boot the client",
-      "The frequency of server updates"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command is used to verify an LDIF file's syntax without importing it?",
-    "type": "text",
-    "correct": "ldapmodify -n"
-  },
-  {
-    "q": "What is the purpose of the 'pam_limits.so' module?",
-    "type": "radio",
-    "options": [
-      "To restrict system resource usage (ulimit) via /etc/security/limits.conf",
-      "To limit the number of users in the system",
-      "To set time limits for logins",
-      "To limit the number of installed packages"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which IPv6 address is used for all nodes on the local link?",
-    "type": "text",
-    "correct": "ff02::1"
-  },
-  {
-    "q": "Which command displays the hardware address (MAC) of an interface?",
-    "type": "text",
-    "correct": "ip link show"
   },
   {
     "q": "What is the name of the dovecot configuration variable that specifies the location of user mail?",
@@ -1154,281 +2054,390 @@
     "q": "Which setting in the Courier IMAP configuration file will tell the IMAP daemon to only listen on the localhost interface?",
     "type": "radio",
     "options": [
-      "LOCALHOST_ONLY=1",
-      "INTERFACE=127.0.0.1",
-      "ADDRESS=127.0.0.1",
-      "BIND=127.0.0.1",
-      "LISTEN_ADDR=127.0.0.1"
+      "A. LOCALHOST_ONLY=1",
+      "B. INTERFACE=127.0.0.1",
+      "C. ADDRESS=127.0.0.1",
+      "D. Listen 127.0.0.1"
     ],
     "correct": 2
   },
   {
-    "q": "Which of the following commands will rebuild the database of mail aliases?",
+    "q": "What does the following procmail configuration section do?\n\n:0fw/n* < 256000/n| /usr/bin/foo/n",
     "type": "radio",
     "options": [
-      "make aliases",
-      "newaliases",
-      "aliases -rebuild",
-      "sendmail -bi",
-      "postalias"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "What is the default port for the IMAP protocol?",
-    "type": "text",
-    "correct": "143"
-  },
-  {
-    "q": "What is the default port for the IMAPS (IMAP over SSL) protocol?",
-    "type": "text",
-    "correct": "993"
-  },
-  {
-    "q": "In Postfix, which configuration file defines how to map local users to other addresses?",
-    "type": "text",
-    "correct": "/etc/aliases"
-  },
-  {
-    "q": "Which command is used to see the mail queue in Postfix?",
-    "type": "radio",
-    "options": [
-      "postqueue -p",
-      "mailq",
-      "showmail",
-      "postshow",
-      "postqueue -l"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which Postfix command is used to force the delivery of messages in the queue?",
-    "type": "radio",
-    "options": [
-      "postqueue -f",
-      "postflush",
-      "mailq -f",
-      "sendmail -q",
-      "postqueue -s"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "What is the purpose of the 'myhostname' parameter in Postfix's main.cf?",
-    "type": "radio",
-    "options": [
-      "To define the local domain name",
-      "To define the internet hostname of the mail system",
-      "To set the login name for the admin",
-      "To define the relay host"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command allows you to manage the Postfix configuration from the command line?",
-    "type": "text",
-    "correct": "postconf"
-  },
-  {
-    "q": "In Dovecot, which protocol is typically used by the server to send mail?",
-    "type": "radio",
-    "options": [
-      "SMTP",
-      "IMAP",
-      "POP3",
-      "Dovecot does not send mail (it is a MDA/IMAP/POP3 server)"
+      "A. The program foo is used instead of procmail for all emails larger than 256000 Bytes",
+      "B. If an email contains a value less than 256000 anywhere within it, procmail will process the email with the program foo",
+      "C. procmail sends all email older than 256000 seconds to the external program foo",
+      "D. If the email smaller than 256000 Bytes, procmail will process it with the program foo",
+      "E. procmail sends mail containing less than 256000 words to program foo"
     ],
     "correct": 3
   },
   {
-    "q": "Which Dovecot configuration file is used to define authentication mechanisms?",
-    "type": "text",
-    "correct": "10-auth.conf"
-  },
-  {
-    "q": "Which tool can be used to test an IMAP connection interactively?",
-    "type": "checkbox",
-    "options": [
-      "telnet",
-      "nc",
-      "openssl s_client",
-      "curl"
-    ],
-    "correct": [0, 1, 2]
-  },
-  {
-    "q": "What does the Sieve 'fileinto' command do?",
+    "q": "The following is an excerpt from a procmail configuration file./n/n:0 c/n* ! ^To: backup/n! backup/n/nWhich of the following is correct?/n",
     "type": "radio",
     "options": [
-      "Deletes the message",
-      "Delivers the message into a specific folder",
-      "Forwards the message to another user",
-      "Saves the message to a backup file"
+      "A. All mails to the local email address backup will be stored in the directory backup.",
+      "B. All mails will be backed up to the path defined by $MAILDIR",
+      "C. Mails not addressed to backup are passed through a filter program named backup.",
+      "D. A copy of all mails will be stored in file backup.",
+      "E. A copy of all mails will be send to the local email address backup."
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following recipes will append emails from \"root\" to the \"rootmails\" mailbox?",
+    "type": "radio",
+    "options": [
+      "A. :0c:\nrootmails\n* ^From.*root",
+      "B. :0c:\n* ^From=*root\nrootmails",
+      "C. :0c:\n* ^From.*root\nrootmails",
+      "D. :0c:\n$From=$root\nrootmails",
+      "E. :0c:\n* ^From=root\nrootmails"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "The syntax of the procmail configuration file is?",
+    "type": "radio",
+    "options": [
+      "A. [* condition] \naction \n:0[flags][:[lockfile]]",
+      "B. :0[flags][:[lockfile]] \n[* condition] \naction",
+      "C. :0[flags][:[lockfile]]:[* condition]:action",
+      "D. :0[flags][:[lockfile]] \n[* condition] action",
+      "E. :0[flags][:[lockfile]]:[* condition] \naction"
     ],
     "correct": 1
   },
   {
-    "q": "In Procmail, what does the '!' character at the start of an action line signify?",
+    "q": "The internal network (192.168.1.0-192.168.1.255) needs to be able to relay email through the site's sendmail server. What line must be added to /etc/mail/access to allow this?",
     "type": "radio",
     "options": [
-      "Reject the message",
-      "Forward the message to the specified email address",
-      "Run the message through an external command",
-      "Mark the message as important"
+      "A. 192.168.1.0/24 RELAY",
+      "B. 192.168.1.0/24 OK",
+      "C. 192.168.1 RELAY",
+      "D. 192.168.1 OK"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
-    "q": "Which file is the system-wide configuration file for Procmail?",
-    "type": "text",
-    "correct": "/etc/procmailrc"
-  },
-  {
-    "q": "Which Postfix parameter defines the domains for which the server is the final destination?",
-    "type": "text",
-    "correct": "mydestination"
-  },
-  {
-    "q": "Which command is used to delete all messages from the Postfix mail queue?",
-    "type": "text",
-    "correct": "postsuper -d ALL"
-  },
-  {
-    "q": "In Sieve, which keyword is used to stop the processing of a script?",
-    "type": "text",
-    "correct": "stop"
-  },
-  {
-    "q": "What is the purpose of the 'mynetworks' parameter in Postfix?",
+    "q": "On a newly-installed mail server with the IP address 10.10.10.1, ONLY local networks should be able to send email. How can the configuration be tested, using telnet, from outside the local network?",
     "type": "radio",
     "options": [
-      "To list all local IP addresses",
-      "To define which clients are trusted to relay mail through the server",
-      "To define the internal DNS servers",
-      "To list the server's neighbors"
+      "A. telnet 10.10.10.1 25 \nHELO: bogus.example.com \nRCPT FROM:anyone@example.org \nMAIL TO:someone@example.net",
+      "B. telnet 10.10.10.1 25 \nHELLO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net",
+      "C. telnet 10.10.10.1 25 \nRCPT FROM:admin@example.com \nMAIL TO:someone@example.org",
+      "D. telnet 10.10.10.1 25 \nMAIL FROMadmin@example.com \nRECEIPT TO:someone@example.org",
+      "E. telnet 10.10.10.1 25 \nHELO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net"
     ],
-    "correct": 1
+    "correct": 4
   },
   {
-    "q": "Which protocol does Dovecot use to allow users to manage their Sieve filters?",
-    "type": "text",
-    "correct": "ManageSieve"
-  },
-  {
-    "q": "What is the default port for the POP3 protocol?",
-    "type": "text",
-    "correct": "110"
-  },
-  {
-    "q": "What is the default port for POP3S (POP3 over SSL)?",
-    "type": "text",
-    "correct": "995"
-  },
-  {
-    "q": "Which Sieve action is used to send a rejection message back to the sender?",
-    "type": "text",
-    "correct": "reject"
-  },
-  {
-    "q": "In Postfix, which parameter is used to limit the maximum size of a message?",
-    "type": "text",
-    "correct": "message_size_limit"
-  },
-  {
-    "q": "Which command is used to map a text-based alias file into a database format for Postfix?",
-    "type": "text",
-    "correct": "postalias"
-  },
-  {
-    "q": "Which of the following is a valid mailbox format supported by Dovecot?",
-    "type": "checkbox",
-    "options": [
-      "mbox",
-      "maildir",
-      "sdbox",
-      "mdbox"
-    ],
-    "correct": [0, 1, 2, 3]
-  },
-  {
-    "q": "In Procmail, which flag indicates that the body of the email should be sent to the pipe?",
+    "q": "What is the standard port number for the unencrypted IMAP service?",
     "type": "radio",
     "options": [
-      "h",
-      "b",
-      "f",
-      "w"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "What does the 'smtpd_banner' parameter in Postfix control?",
-    "type": "radio",
-    "options": [
-      "The logo on the webmail interface",
-      "The text displayed when a client connects to the SMTP port",
-      "The signature added to outgoing emails",
-      "The error message for rejected mail"
-    ],
-    "correct": 1
-  },
-  {
-    "q": "Which command is used to check the Dovecot configuration for errors?",
-    "type": "text",
-    "correct": "doveconf -n"
-  },
-  {
-    "q": "In Sieve, which test is used to check the value of a specific header?",
-    "type": "text",
-    "correct": "header"
-  },
-  {
-    "q": "What is the name of the Postfix daemon responsible for delivering mail to local users?",
-    "type": "text",
-    "correct": "local"
-  },
-  {
-    "q": "Which file is used by a user to define their personal Procmail recipes?",
-    "type": "text",
-    "correct": ".procmailrc"
-  },
-  {
-    "q": "Which Postfix parameter allows the server to relay mail for a specific list of domains?",
-    "type": "text",
-    "correct": "relay_domains"
-  },
-  {
-    "q": "Which command can be used to read the content of a specific message in the Postfix queue?",
-    "type": "text",
-    "correct": "postcat -q"
-  },
-  {
-    "q": "In Dovecot, what does the 'disable_plaintext_auth' setting do?",
-    "type": "radio",
-    "options": [
-      "Forces users to use SSL/TLS for authentication",
-      "Allows passwords to be sent in clear text",
-      "Disables all types of authentication",
-      "Only allows logins from localhost"
+      "A. 143",
+      "B. 993",
+      "C. 1066",
+      "D. 443",
+      "E. 25"
     ],
     "correct": 0
   },
   {
-    "q": "Which Sieve action silences a message without delivering it or notifying the sender?",
-    "type": "text",
-    "correct": "discard"
+    "q": "Which network service or protocol is used by sendmail for RBLs (Realtime Blackhole Lists)?",
+    "type": "radio",
+    "options": [
+      "A. HTTP",
+      "B. FTP",
+      "C. RBLP",
+      "D. SMTP",
+      "E. DNS"
+    ],
+    "correct": 4
   },
   {
-    "q": "Which of the following actions are defined in the core Sieve language? (Choose three.)",
+    "q": "You suspect that you are receiving messages with a forged From: address. What could help you find out where the mail is originating?",
+    "type": "radio",
+    "options": [
+      "A. Add the command 'define ('LOG_REAL_FROM') dnl' to the sendmail.mc file",
+      "B. Add the command 'FR-strlog' to the sendmail.cf file",
+      "C. Look in the Received and Message-ID parts of the mail header",
+      "D. Install TCP wrappers, and log all connections on port 25",
+      "E. Run a filter in the aliases file that checks the originating address when mail arrives"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "A user is on holiday for two weeks. Anyone sending an email to that account should receive an autoresponse. Which of the following procmail rules should be used, so that all incoming emails are processed by vacation?",
+    "type": "radio",
+    "options": [
+      ":0c: \n| /usr/bin/vacation nobody",
+      ":w \n| /usr/bin/vacation nobody",
+      ":0fc: \n|/usr/bin/vacation nobody",
+      "| /usr/bin/vacation nobody",
+      ":> |/usr/bin/vacation nobody"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which file can be used to make sure that procmail is used to filter a user's incoming email?",
+    "options": [
+      "${HOME}/.procmail",
+      "${HOME}/.forward",
+      "${HOME}/.bashrc",
+      "/etc/procmailrc",
+      "/etc/aliases"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Where is the procmail configuration of the user foo stored if home directories are located in /home? (Specify the full name of the file, including path.)",
+    "type": "text",
+    "correct": [
+      "/home/foo/.procmailrc"
+    ]
+  },
+  {
+    "q": "It has been discovered that the company mail server is configured as an open relay. Which of the following actions would help prevent the mail server from being used as an open relay? (Choose TWO correct answers.)",
     "type": "checkbox",
     "options": [
+      "Restrict Postfix to only accept e-mail for domains hosted on this server.",
+      "Configure Dovecot to support IMAP connectivity",
+      "Configure netfilter to not permit port 25 traffic on the public network",
+      "Restrict Postfix to only relay outbound SMTP from the internal network",
+      "Upgrade the mailbox format from mbox to maildir"
+    ],
+    "correct": [
+      0,
+      3
+    ]
+  },
+  {
+    "q": "Why should the Postfix parameter disable_vrfy_command be set to yes on a publicly accessible mail server?",
+    "type": "radio",
+    "options": [
+      "It prevents e-mail delivery attempts to a non-existent user.",
+      "It prevents some techniques of gathering existing e-mail addresses.",
+      "It enables verification attempts on the sender e-mail address.",
+      "It speeds up forwarding of relayed e-mail."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Which configuration parameter on a Postfix server modifies only the sender address and not the recipient address?",
+    "type": "radio",
+    "options": [
+      "alias_maps",
+      "alias_rewrite_maps",
+      "sender_canonical_maps",
+      "sender_rewrite_maps"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What is the name of the procmail configuration file that is placed in a user home directory? (Specify the file name only without any path.)",
+    "type": "text",
+    "correct": [
+      ".procmailrc"
+    ]
+  },
+  {
+    "q": "Which format, for storing user e-mail, uses the directories tmp, cur and new in order to solve reliability problems in other storage formats?",
+    "type": "radio",
+    "options": [
+      "imap",
+      "maildir",
+      "mbox",
+      "mh",
+      "pop3"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "In the main Postfix configuration file, how are service definitions continued on the next line?",
+    "type": "radio",
+    "options": [
+      "It isn't possible. The service definition must fit on one line.",
+      "The initial line must end with a backslash character ().",
+      "The following line must begin with a plus character (+).",
+      "The following line must begin with white space indentation.",
+      "The service definition continues on the following lines until all of the required fields are specified."
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which Postfix command can be used to rebuild all of the alias database files with a single invocation?",
+    "type": "radio",
+    "options": [
+      "makealiases",
+      "newaliases",
+      "postalias",
+      "postmapbuild"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "A company is transitioning to a new domain name and wants to accept e-mail for both domains for all of its users on a Postfix server. Which configuration option should be updated to accomplish this?",
+    "type": "radio",
+    "options": [
+      "mydomain",
+      "mylocations",
+      "mydestination",
+      "myhosts",
+      "mydomains"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "When are Sieve filters usually applied to an email?",
+    "type": "radio",
+    "options": [
+      "When the email is delivered to a mailbox",
+      "When the email is relayed by an SMTP server",
+      "When the email is received by an SMTP smarthost",
+      "When the email is sent to the first server by an MUA",
+      "When the email is retrieved by an MUA"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "After the installation of Dovecot, it is observed that the dovecot processes are shown in ps ax like this: In order to associate the processes with users and peers, the username, IP address of the peer and the connection status, which of the following options must be set?",
+    "image": "img/imagen5.png",
+    "type": "radio",
+    "options": [
+      "--with-linux-extprocnames for ./configure when building Dovecot",
+      "sys.ps.allow_descriptions = 1 in sysct1.conf or /proc",
+      "proc.all.show_status = 1 in sysctl.conf or /proc",
+      "verbose_proctitle = yes in the Dovecot configuration",
+      "process_format = \"%u %I %s\" in the Dovecot configuration"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following authentication mechanisms are supported by Dovecot? (Choose three.)",
+    "type": "checkbox",
+    "options": [
+      "ldap",
+      "digest-md5",
+      "cram-md5",
+      "plain",
+      "krb5"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "q": "Which of the following commands displays an overview of the Postfix queue content to help identify remote sites that are causing excessive mail traffic?",
+    "type": "radio",
+    "options": [
+      "mailtraf",
+      "queuequery",
+      "qshape",
+      "postmap",
+      "poststats"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What is the path to the global Postfix configuration file? (Specify the full name of the file, including path.)",
+    "type": "text",
+    "correct": [
+      "/etc/postfix/main.cf"
+    ]
+  },
+  {
+    "q": "Which action in a Sieve filter forwards a message to another email address without changing the message? (Specify ONLY the action’s name without any parameters.)",
+    "type": "text",
+    "correct": [
+      "redirect"
+    ]
+  },
+  {
+    "q": "Which doveadm sub-command displays a list of connections of Dovecot in the following format? (Specify ONLY the command without any parameters.)",
+    "type": "text",
+    "correct": [
+      "who"
+    ]
+  },
+  {
+    "q": "Which option in the Postfix configuration makes Postfix pass email to external destinations to another SMTP-server? (Specify ONLY the option name without any values.)",
+    "type": "text",
+    "correct": [
+      "relayhost"
+    ]
+  },
+  {
+    "q": "All machines outside the network are able to send emails through the server to addresses not served by that server. If the server accepts and delivers the email, then it is a (n) _______________.",
+    "type": "text",
+    "correct": [
+      "open relay"
+    ]
+  },
+  {
+    "q": "What is the default location for sendmail configuration files? (Please provide the complete path to the directory)",
+    "type": "text",
+    "correct": [
+      "/etc/mail"
+    ]
+  },
+  {
+    "q": "Postfix daemons can be chroot'd by setting the chroot flag in _______. (Supply only the filename, without a path)",
+    "type": "text",
+    "correct": [
+      "master.cf"
+    ]
+  },
+  {
+    "q": "A malicious user has sent a 35MB video clip, as an attachment, to hundreds of Recipients.\nLooking in the outbound queue reveals that this is the only mail there.\nThis mail can be removed with the command rm _______________ * . Complete the path below.",
+    "type": "text",
+    "correct": [
+      "/var/spool/postfix/deferred"
+    ]
+  },
+  {
+    "q": "A procmail recipe is required to delete all emails marked as spam. Please complete the recipe. \n\n:0: \n* ^X-Spam-Status: Yes",
+    "type": "text",
+    "correct": [
+      "/dev/null"
+    ]
+  },
+  {
+    "q": "Which file on a Postfix server modifies the sender address for outgoing e-mails? Please enter only the file name without the path",
+    "type": "text",
+    "correct": [
+      "sender_canonical_maps"
+    ]
+  },
+  {
+    "q": "What is the missing keyword in the following configuration sample for dovecot which defines which authentication types to support? (Specify only the keyword) auth default { ______ = plain login cram-md5 }",
+    "type": "radio",
+    "options": [
+      "mechanisms",
+      "methods",
+      "auth_order",
+      "supported"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following actions is available in Sieve core filters? (Choose three.)",
+    "type": "checkbox",
+    "options": [
+      "Drop",
       "discard",
       "fileinto",
-      "drop",
-      "reject",
-      "relay"
+      "relay",
+      "reject"
     ],
-    "correct": [0, 1, 3]
+    "correct": [
+      1,
+      2,
+      4
+    ]
   },
   {
     "q": "Which of the following statements allows logical combinations of conditions in Sieve filters? (Choose two.)",
@@ -1440,479 +2449,828 @@
       "and",
       "or"
     ],
-    "correct": [0, 1]
+    "correct": [
+      0,
+      1
+    ]
   },
   {
     "q": "A correctly formatted entry has been added to /etc/hosts.deny to prevent certain clients from connecting to a service but this is having no effect. What could be the cause of this? (Choose TWO correct answers.)",
     "type": "checkbox",
     "options": [
-      "tcpd needs to be sent the HUP signal.",
-      "The service needs to be restarted.",
-      "The machine needs to be restarted.",
-      "There is a conflicting entry in /etc/hosts.allow.",
-      "The service does not support tcpwrapper."
+      "a) tcpd needs to be sent the HUP signal.",
+      "b) The service needs to be restarted.",
+      "c) The machine needs to be restarted.",
+      "d) There is a conflicting entry in /etc/hosts.allow.",
+      "e) The service does not support tcpwrapper."
     ],
-    "correct": [3, 4]
+    "correct": [
+      3,
+      4
+    ]
   },
   {
     "q": "Which /etc/hosts.allow entries will permit access to sshd for users from the 192.168.1.0/24 subnet? (Choose TWO correct answers.)",
     "type": "checkbox",
     "options": [
-      "sshd : 192.168.1.",
-      "sshd : 192.168.1",
-      "sshd : 192.168.1.0 netmask 255.255.255.0",
-      "sshd : 192.168.1.0/255.255.255.0",
-      "sshd : 192.168.1.0/24"
+      "A. sshd : 192.168.1.",
+      "B. sshd : 192.168.1",
+      "C. sshd : 192.168.1.0 netmask 255.255.255.0",
+      "D. sshd : 192.168.1.0/255.255.255.0",
+      "E. sshd : 192.168.1.0"
     ],
-    "correct": [0, 3]
+    "correct": [
+      0,
+      3
+    ]
   },
   {
-    "q": "Which command is used to display the current Neighbor Discovery cache (IPv6 ARP table)?",
-    "type": "text",
-    "correct": "ip -6 neighbor show"
-  },
-  {
-    "q": "What is the purpose of the 'all_squash' option in an NFS export?",
+    "q": "Which command can be used to scan a specified network looking for IP addresses that appear to be in use?",
     "type": "radio",
     "options": [
-      "It maps all user IDs to the anonymous user.",
-      "It maps only the root user to the anonymous user.",
-      "It prevents any user from accessing the share.",
-      "It compresses all files in the exported directory."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which file is used to specify the DNS search path and nameservers on a Linux system?",
-    "type": "text",
-    "correct": "/etc/resolv.conf"
-  },
-  {
-    "q": "In an IPv6 address, how many bits are used for the interface identifier (typically)?",
-    "type": "text",
-    "correct": "64"
-  },
-  {
-    "q": "Which command is used to check the available bandwidth and link quality between two hosts?",
-    "type": "radio",
-    "options": [
-      "iperf",
-      "ping",
-      "netstat",
-      "ifconfig"
+      "a) nmap",
+      "b) tcpdump",
+      "c) ip",
+      "d) netscan",
+      "e) hostdiscover"
     ],
     "correct": 0
   },
   {
-    "q": "What does the command 'ip -6 addr show' display?",
+    "q": "Which of the following Linux services has support for only the Routing Information Protocol (RIP) routing protocol?",
     "type": "radio",
     "options": [
-      "The IPv6 routing table.",
-      "The IPv6 addresses assigned to all interfaces.",
-      "The neighbors on the local link.",
-      "The firewall rules for IPv6."
+      "A. netfilter",
+      "B. routed",
+      "C. gated",
+      "D. zebra",
+      "E. ipchains"
     ],
     "correct": 1
   },
   {
-    "q": "Which of the following is a valid IPv6 link-local address?",
+    "q": "Which of the following is NOT included in a Snort rule header?",
     "type": "radio",
     "options": [
-      "fe80::211:22ff:fe33:4455",
-      "2001:db8::1",
-      "::1",
-      "ff02::1"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command displays all currently active TCP connections?",
-    "type": "radio",
-    "options": [
-      "netstat -at",
-      "netstat -au",
-      "netstat -l",
-      "netstat -r"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "What is the compressed form of the IPv6 address 0000:0000:0000:0000:0000:0000:0000:0001?",
-    "type": "text",
-    "correct": "::1"
-  },
-  {
-    "q": "Which tool is used to monitor network traffic in real-time at the packet level?",
-    "type": "text",
-    "correct": "tcpdump"
-  },
-  {
-    "q": "Which file is checked first by the tcpd daemon for access control?",
-    "type": "text",
-    "correct": "/etc/hosts.allow"
-  },
-  {
-    "q": "What does the 'EXCEPT' keyword do in /etc/hosts.allow?",
-    "type": "radio",
-    "options": [
-      "It excludes a specific host or network from a rule.",
-      "It stops the processing of the file.",
-      "It defines an error message.",
-      "It is not a valid keyword."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command shows the capabilities of the wireless interface wlan0, such as supported frequencies?",
-    "type": "text",
-    "correct": "iw phy0 show"
-  },
-  {
-    "q": "Which of the following properties should be recorded to monitor link quality? (Choose TWO)",
-    "type": "checkbox",
-    "options": [
-      "Bandwidth in both directions",
-      "Number of nodes",
-      "Effective Latency",
-      "Number of TCP ports"
-    ],
-    "correct": [0, 2]
-  },
-  {
-    "q": "Which command shows the time taken to resolve a DNS query?",
-    "type": "text",
-    "correct": "dig"
-  },
-  {
-    "q": "Which tool provides a concise 'name has address IP' format for DNS?",
-    "type": "text",
-    "correct": "host"
-  },
-  {
-    "q": "Which command is used to see the IPv6 routing table?",
-    "type": "text",
-    "correct": "ip -6 route show"
-  },
-  {
-    "q": "What prefix is used for IPv6 multicast addresses?",
-    "type": "text",
-    "correct": "ff00::/8"
-  },
-  {
-    "q": "Which command captures packets and saves them to a .pcap file?",
-    "type": "text",
-    "correct": "tcpdump -w"
-  },
-  {
-    "q": "In /etc/hosts.allow, what does 'ALL : ALL' mean?",
-    "type": "radio",
-    "options": [
-      "Allow all services for all hosts.",
-      "Deny all services for all hosts.",
-      "Allow only SSH for all hosts.",
-      "Allow all services for the local network."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command shows the status of network interfaces, including MTU and MAC?",
-    "type": "text",
-    "correct": "ip link show"
-  },
-  {
-    "q": "Which tool is a more modern replacement for 'netstat'?",
-    "type": "text",
-    "correct": "ss"
-  },
-  {
-    "q": "What is the default port for the SSH service?",
-    "type": "text",
-    "correct": "22"
-  },
-  {
-    "q": "Which command allows you to change the system hostname permanently on systemd systems?",
-    "type": "text",
-    "correct": "hostnamectl set-hostname"
-  },
-  {
-    "q": "What does 'mtr' combine in one tool?",
-    "type": "radio",
-    "options": [
-      "ping and traceroute",
-      "ping and dig",
-      "traceroute and netstat",
-      "ifconfig and route"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which file defines the order in which hostnames are resolved (e.g., files vs dns)?",
-    "type": "text",
-    "correct": "/etc/nsswitch.conf"
-  },
-  {
-    "q": "Which command is used to add a static route in Linux using the 'ip' command?",
-    "type": "text",
-    "correct": "ip route add"
-  },
-  {
-    "q": "What is the maximum length of an IPv6 address in bits?",
-    "type": "text",
-    "correct": "128"
-  },
-  {
-    "q": "Which command displays the hardware (MAC) address of the interface eth0?",
-    "type": "text",
-    "correct": "ip link show eth0"
-  },
-  {
-    "q": "Which command is used to trace the path packets take to a destination?",
-    "type": "text",
-    "correct": "traceroute"
-  },
-  {
-    "q": "In IPv6, what is the 'unspecified address'?",
-    "type": "text",
-    "correct": "::"
-  },
-  {
-    "q": "Which command is used to send ICMP echo requests to a host?",
-    "type": "text",
-    "correct": "ping"
-  },
-  {
-    "q": "What is the purpose of the 'lo' interface?",
-    "type": "radio",
-    "options": [
-      "Loopback interface for local communication.",
-      "External interface for internet access.",
-      "Wireless interface.",
-      "Interface for logging."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command shows which process is using which network port?",
-    "type": "radio",
-    "options": [
-      "lsof -i",
-      "ps aux",
-      "top",
-      "ifstat"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "What is the typical MTU for an Ethernet interface?",
-    "type": "text",
-    "correct": "1500"
-  },
-  {
-    "q": "Which command is used to bring an interface up or down?",
-    "type": "radio",
-    "options": [
-      "ip link set <dev> up/down",
-      "ifconfig up/down",
-      "route up/down",
-      "netstat up/down"
-    ],
-    "correct": 0
-  },
-  {
-    "q": "In /etc/hosts.allow, what does 'LOCAL' match?",
-    "type": "radio",
-    "options": [
-      "Any host whose name contains no dot.",
-      "Any host on the same subnet.",
-      "Only the localhost (127.0.0.1).",
-      "Hosts with private IP addresses."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command displays the kernel's routing cache?",
-    "type": "text",
-    "correct": "ip route show cache"
-  },
-  {
-    "q": "Which tool can be used to perform a security audit of network services?",
-    "type": "text",
-    "correct": "nmap"
-  },
-  {
-    "q": "What does the 'PARANOID' keyword do in tcp_wrappers?",
-    "type": "radio",
-    "options": [
-      "Matches any host whose name does not match its IP address.",
-      "Enables maximum encryption.",
-      "Logs every connection attempt.",
-      "Blocks all connections."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command is used to configure parameters for wireless interfaces?",
-    "type": "text",
-    "correct": "iw"
-  },
-  {
-    "q": "Which file contains the list of network services and their ports?",
-    "type": "text",
-    "correct": "/etc/services"
-  },
-  {
-    "q": "What is the purpose of 'ifplugd'?",
-    "type": "radio",
-    "options": [
-      "To detect when an ethernet cable is plugged in or out.",
-      "To block unwanted network plugins.",
-      "To manage firewall plugins.",
-      "To monitor power usage of the NIC."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command shows statistics for all network interfaces (bytes in/out)?",
-    "type": "text",
-    "correct": "ip -s link"
-  },
-  {
-    "q": "Which tool is used to test the throughput of a network link?",
-    "type": "text",
-    "correct": "iperf3"
-  },
-  {
-    "q": "What is the default port for the Telnet service?",
-    "type": "text",
-    "correct": "23"
-  },
-  {
-    "q": "In IPv6, what replaced the broadcast address?",
-    "type": "radio",
-    "options": [
-      "Anycast",
-      "Multicast",
-      "Unicast",
-      "Loopback"
+      "A. protocol",
+      "B. packet byte offset",
+      "C. source IP address",
+      "D. action",
+      "E. source port"
     ],
     "correct": 1
   },
   {
-    "q": "Which command displays the current DNS servers used by the system?",
-    "type": "text",
-    "correct": "resolvectl status"
-  },
-  {
-    "q": "Which file stores the static hostname of the machine?",
-    "type": "text",
-    "correct": "/etc/hostname"
-  },
-  {
-    "q": "Which command is used to see the bandwidth usage of each process in real-time?",
-    "type": "text",
-    "correct": "nethogs"
-  },
-  {
-    "q": "What does the 'ss -lntp' command do?",
+    "q": "In what mode is your FTP session when the client side makes the connections to both the data and command ports of the FTP server?",
     "type": "radio",
     "options": [
-      "Shows listening TCP ports with process names.",
-      "Shows all UDP connections.",
-      "Shows routing table entries.",
-      "Shows interface statistics."
+      "A. active",
+      "B. inactive",
+      "C. passive",
+      "D. safe",
+      "E. impassive"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
-    "q": "Which command is used to set the speed and duplex of an ethernet interface?",
-    "type": "text",
-    "correct": "ethtool"
-  },
-  {
-    "q": "What is the default port for DNS queries?",
-    "type": "text",
-    "correct": "53"
-  },
-  {
-    "q": "Which command allows you to see the path of a packet including the latency of each hop?",
-    "type": "text",
-    "correct": "mtr"
-  },
-  {
-    "q": "In /etc/hosts.allow, how do you specify a range of IPs like 192.168.1.0 to 192.168.1.255?",
-    "type": "text",
-    "correct": "192.168.1."
-  },
-  {
-    "q": "Which command shows the wireless signal strength?",
-    "type": "text",
-    "correct": "iw dev wlan0 link"
-  },
-  {
-    "q": "What is the purpose of 'ethtool -i eth0'?",
-    "type": "radio",
-    "options": [
-      "To show driver information for the interface.",
-      "To show IP address information.",
-      "To show the routing table.",
-      "To show the ARP cache."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which command shows the current neighbors on the IPv4 network?",
-    "type": "text",
-    "correct": "ip neighbor show"
-  },
-  {
-    "q": "Which tool can be used to create a virtual tunnel between two hosts?",
-    "type": "text",
-    "correct": "ip tunnel"
-  },
-  {
-    "q": "What is the default port for the SNMP service?",
-    "type": "text",
-    "correct": "161"
-  },
-  {
-    "q": "Which command is used to list all available network interfaces, including hidden ones?",
-    "type": "text",
-    "correct": "ip addr show"
-  },
-  {
-    "q": "Which file is used to configure network interfaces on Debian/Ubuntu systems (traditionally)?",
-    "type": "text",
-    "correct": "/etc/network/interfaces"
-  },
-  {
-    "q": "Which command is used to check the reachability of a host using IPv6?",
-    "type": "text",
-    "correct": "ping6"
-  },
-  {
-    "q": "What is the purpose of the 'Known Hosts' file in SSH?",
-    "type": "radio",
-    "options": [
-      "To store the public keys of servers you have connected to.",
-      "To store your private keys.",
-      "To store the usernames of your friends.",
-      "To list the servers that are currently down."
-    ],
-    "correct": 0
-  },
-  {
-    "q": "Which tool allows establishing direct TCP connections to remote network services?",
+    "q": "Which of the following organisations track and report on security related flaws in computer technology? (Please select TWO answers)",
     "type": "checkbox",
     "options": [
-      "telnet",
-      "nc",
-      "ping",
-      "traceroute"
+      "A. Kernel.org",
+      "B. CSIS",
+      "C. Freshmeat",
+      "D. Bugtraq",
+      "E. CERT"
     ],
-    "correct": [0, 1]
+    "correct": [
+      3,
+      4
+    ]
   },
   {
-    "q": "To which destination will a route appear in the Linux routing table after activating IPv6 on an interface even without global addresses?",
+    "q": "What is the name of the network security scanner project which, at the core, is a server with a set of network vulnerability tests (NVTs)?",
+    "type": "radio",
+    "options": [
+      "A. Snort",
+      "B. OpenVAS",
+      "C. wireshark",
+      "D. nmap"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What tool scans log files for unsuccessful login attempts and blocks the offending IP addresses with firewall rules?",
+    "type": "radio",
+    "options": [
+      "A. nmap",
+      "B. watchlogs",
+      "C. fail2ban",
+      "D. nessus",
+      "E. nc"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "A security-conscious administrator would change which TWO of the following lines found in an SSH configuration file?",
+    "type": "checkbox",
+    "options": [
+      "A. PermitEmptyPasswords no",
+      "B. Protocol 2, 1",
+      "C. PermitRootLogin yes",
+      "D. IgnoreRhosts yes",
+      "E. Port 22"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": "Which environment variables are used by ssh-agent? (Please select TWO variables)",
+    "type": "checkbox",
+    "options": [
+      "A. SSH_AUTH_PID",
+      "B. SSH_AUTH_SOCK",
+      "C. SSH_AGENT_PID",
+      "D. SSH_AGENT_SOCK",
+      "E. SSH_AGENT_KEY"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": "When connecting to an SSH server for the first time, its fingerprint is received and stored in a file, which is located at:",
+    "type": "radio",
+    "options": [
+      "A. ~/ .ssh/gpg.txt",
+      "B. ~/ .ssh/fingerprints",
+      "C. ~/ .ssh/known_hosts",
+      "D. ~/ .ssh/id_dsa.pub",
+      "E. ~/ .ssh/id_dsa"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "When the default policy for the iptables INPUT chain is set to DROP, why should a rule allowing traffic to localhost exist?",
+    "type": "radio",
+    "options": [
+      "A. All traffic to localhost must always be allowed.",
+      "B. It doesn't matter; iptables never affects packets addressed to localhost",
+      "C. Sendmail delivers emails to localhost",
+      "D. syslogd receives messages on localhost",
+      "E. Some applications use the localhost interface to communicate with other applications."
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Which of the following can the program tripwire NOT check?",
+    "type": "radio",
+    "options": [
+      "A. Boot sectors.",
+      "B. Permissions.",
+      "C. File size.",
+      "D. File signature.",
+      "E. File existence."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "A correctly-formatted entry has been added to /etc/hosts.allow to allow certain clients to connect to a service, but this is having no effect. What would be the cause of this?",
+    "type": "radio",
+    "options": [
+      "A. The service needs to be restarted.",
+      "B. The service does not support tcpwrappers",
+      "C. tcpd needs to be sent the HUP signal.",
+      "D. The machine needs to be restarted.",
+      "E. There is a conflicting entry in /etc/hosts.deny ."
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Connecting to a remote host on the same LAN using ssh public-key authentication works but forwarding X11 doesn't. The remote host allows access to both services. Which of the following can be the reason for that behavior?",
+    "type": "radio",
+    "options": [
+      "A. X11 though SSH needs a special X11 server application installed",
+      "B. X11 cannot be forwarded if public-key authentication was used",
+      "C. The remote user's ssh_config file disallows X11 forwarding",
+      "D. A different public key has to be used for X11",
+      "E. The remote server's sshd_config file disallows X11 forwarding"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "What security precautions must be taken when creating a directory into which files can be uploaded anonymously using FTP?",
+    "type": "radio",
+    "options": [
+      "A. The directory must not have the read or execute permission set.",
+      "B. The directory must not have the write permission set.",
+      "C. The directory must not contain other directories.",
+      "D. The directory must not have the read permission set.",
+      "E. The directory must not have the execute permission set."
+    ],
+    "correct": 3
+  },
+  {
+    "q": "To be able to access the server with the IP address 10.12.34.56 using HTTPS, a rule for iptables has to be written. Given that the client host's IP address is 192.168.43.12, which of the following commands is correct?",
+    "type": "radio",
+    "options": [
+      "A. iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 80 -j ACCEPT",
+      "B. iptables - A FORWARD -p tcp -s 192.168.43.12 d 10.12.34.56:443 -j ACCEPT",
+      "C. iptables - A FORWARD -p tcp -s 192.168.43.12 -d 10.12.34.56 --dport 443 -j ACCEPT.",
+      "D. iptables - A INPUT -p tcp -s 192.168.43.12 - d 10.12.34.56:80 -j ACCEPT.",
+      "E. iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 443 -j ACCEPT."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "An SSH server is configured to use tcp_wrappers and only hosts from the class C network 192.168.1.0 should be allowed to access it. Which of the following lines would achieve this, when entered in/etc/hosts.allow?",
+    "type": "radio",
+    "options": [
+      "sshd : 192.168.1.0/255.255.255.0 : ALLOW",
+      "192.168.1.0/255.255.255.0 : ALLOW: sshd",
+      "ALLOW: 192.168.1.0/255.255.255.0 : sshd",
+      "tcpD. sshd : 192.168.1.0/255.255.255.0 : ALLOW",
+      "sshd : ALLOW: 192.168.1.0/255.255.255.0"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "As of Linux kernel 2.4, which software is used to configure a VPN?",
+    "type": "radio",
+    "options": [
+      "IPSec",
+      "SSH",
+      "net - tools",
+      "FreeS/WAN",
+      "iproute2"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which THREE of the following actions should be considered when a FTP chroot jail is created?",
+    "type": "checkbox",
+    "options": [
+      "Create /dev/ and /etc/ in the chroot enviroment",
+      "Create /etc/passwd in the chroot enviroment",
+      "Create /var/cache/ftp in the chroot enviroment",
+      "Create the user ftp in the chroot enviroment",
+      "Create /usr/sbin/ in the chroot enviroment"
+    ],
+    "correct": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which command line create an SSH tunnel for POP and SMTP protocols?",
+    "type": "radio",
+    "options": [
+      "ssh- L :110 -L :25 -1 user -N mailhost",
+      "ssh -L 25:110 -1 user -N mailhost",
+      "ssh -L mailhost:110 -L mailhost:25 -1 user -N mailhost",
+      "ssh -L mailhost:25:110 -1 user",
+      "ssh -L 110:mailhost:110 -L 25:mailhost:25 -1 user -N mailhost"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "An iptables firewall was configured to use the target MASQUERADE to share a dedicated wireless connection to the Internet with a few hosts on the local network.\nThe Internet connection becomes very unstable in rainy days and users complain their connections drop when downloading e-mail or large files, while web browsing seems to be working fine.\nWhich change to your iptables rules could alleviate the problem?\n",
+    "type": "radio",
+    "options": [
+      "Change the target MASQUERADE to SNAT",
+      "Change the target MASQUERADE to DNAT",
+      "Change the target MASQUERADE to BALANCE and provide a backup Internet connection",
+      "Change the target MASQUERADE to REDIRECT and provide a backup Internet connection",
+      "Change the target MASQUERADE to BNAT"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Which of the following sentences is TRUE about FreeS/WAN?",
+    "type": "radio",
+    "options": [
+      "FreeS/WAN doesn't support remote users (i.e. notebook users with dynamic IP addresses) connecting to the LAN",
+      "FreeS/WAN needs a patch to support NAT traversal for users behind a NAT gateway",
+      "FreeS/WAN doesn't require any Linux kernel 2.4 modules to work properly",
+      "FreeS/WAN only enables the use of strong encryption between Linux hosts",
+      "FreeS/WAN can't be used to establish a VPN between a Linux host and a Microsoft Windows 2000 Server host"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "A system monitoring service checks the availability of a database server on port 5432 of destination.example.com. The problem with this is that the password will be sent in clear text.\nWhen using an SSH tunnel to solve the problem, which command should be used?\n",
+    "type": "radio",
+    "options": [
+      "ssh -1 5432:127.0.0.1:5432 destination.example.com",
+      "ssh -L 5432:destination.example.com:5432 127.0.0.1",
+      "ssh -L 5432:127.0.0.1:5432 destination.example.com",
+      "ssh -x destination.example.com:5432",
+      "ssh -R 5432:127.0.0.1:5432 destination.example.com"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What is the correct format for an ftpusers file entry?",
+    "type": "radio",
+    "options": [
+      "Use only one username on each line.",
+      "Add a colon after each username.",
+      "Add a semicolon after each username.",
+      "Add ALLOW after each username.",
+      "Add DENY after each username."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "An SSH port-forwarded connection to the web server www.example.com was invoked using the command ssh -TL 80 :www.example.com:80 user@www.example.com. Which TWO of the following are correct?",
+    "type": "checkbox",
+    "options": [
+      "The client can connect to the web server by typing http://www.example.com/ into the browser's address bar and the connection will be encrypted",
+      "The client can connect to www.example.com by typing http://localhost/ into the browser's address bar and the connection will be encrypted",
+      "The client can't connect to the web server by typing http://www.example.com/ into the browser's address bar. This is only possible using http://localhost/",
+      "It is only possible to port-forward connections to insecure services that provide an interactive shell (like telnet)",
+      "The client can connect to the web server by typing http://www.example.com/ into the browser's address bar and the connection will not be encrypted"
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "A server is being used as a smurf amplifier, whereby it is responding to ICMP Echo- Request packets sent to its broadcast address. To disable this, which command needs to be run?",
+    "type": "radio",
+    "options": [
+      "ifconfig eth0 nobroadcast",
+      "echo \"0\" > /proc/sys/net/ipv4/icmp_echo_accept_broadcasts",
+      "iptables -A INPUT -p icmp -j REJECT",
+      "echo \"1\" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts",
+      "echo \"1\" > /proc/sys/net/ipv4/icmp_echo_nosmurf"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "What could be a reason for invoking vsftpd from (x) inetd?",
+    "type": "radio",
+    "options": [
+      "It's not a good idea, because (x) inetd is not secure",
+      "Running vsftpd in standalone mode is only possible as root, which could be a security risk",
+      "vsftpd cannot be started in standalone mode",
+      "(x) inetd has more access control capabilities",
+      "(x) inetd is needed to run vsftpd in a chroot jail"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What must be done on a host to allow a user to log in to that host using an SSH key?",
+    "type": "radio",
+    "options": [
+      "Add their private key to ~/. ssh/authorized_keys",
+      "Reference their public key in ~/. ssh/config",
+      "Run ssh-agent on that host",
+      "Add their public key to ~/. ssh/authorized_keys",
+      "Reference their private key in ~/. ssh/config"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which TWO of the following statements about the tcp_wrappers configuration files are correct?",
+    "type": "checkbox",
+    "options": [
+      "Both files must be edited, to get tcp_wrappers to work properly",
+      "It is possible to configure tcp_wrappers using just one file",
+      "(x) inetd requires these files",
+      "All programs that provide network services use these files to control access",
+      "tcpd uses these files to control access to network services"
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "To allow X connections to be forwarded from or through an SSH server, what configuration keyword must be set to yes in the sshd configuration file?",
+    "type": "radio",
+    "options": [
+      "AllowForwarding",
+      "ForwardingAllow",
+      "X11ForwardingAllow",
+      "X11Forwarding"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which command is used to administer IPv6 netfilter rules?",
+    "type": "radio",
+    "options": [
+      "iptables",
+      "iptablesv6",
+      "iptables6",
+      "ip6tables",
+      "ipv6tables"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "For what purpose is TCP/IP stack fingerprinting used by nmap?",
+    "type": "radio",
+    "options": [
+      "It is used to determine the remote operating system.",
+      "It is used to filter out responses from specific servers.",
+      "It is used to identify duplicate responses from the same remote server",
+      "It is used to masquerade the responses of remote servers.",
+      "It is used to uniquely identify servers on the network for forensics."
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Unlike many other services, OpenSSH cannot be configured to hide its version information without recompiling from source code. What is the primary reason for this disclosure of version information?",
+    "type": "radio",
+    "options": [
+      "There are many inconsistent SSH client and server versions. This information is used to enable protocol compatibility adjustments.",
+      "The information is used for surveys of SSH servers on the internet by the OpenSSH project.",
+      "Being a security centric application, the OpenSSH developers do not rely on security through obscurity.",
+      "It is used by network auditing tools to report on when versions of ssh require security updates."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which of the following sshd configuration settings should be set to no in order to fully disable password based logins? (Choose THREE correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "PAMAuthentication",
+      "ChallengeResponseAuthentication",
+      "UsePAM",
+      "UsePasswords",
+      "PasswordAuthentication"
+    ],
+    "correct": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "q": "With netfilter, which packet matching table contains built-in chains called INPUT, OUTPUT and FORWARD?",
+    "type": "radio",
+    "options": [
+      "ipconn",
+      "filter",
+      "nat",
+      "default",
+      "masq"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "What parameter in the sshd configuration file instructs sshd to permit only specific user names to log in to a system? (Please specify the parameter only without settings)",
+    "type": "text",
+    "correct": [
+      "AllowUsers"
+    ]
+  },
+  {
+    "q": "Which subcommands to the openssl command are used in the process of generating a private key and a Certificate Signing Request (CSR)? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "csr",
+      "gencsr",
+      "genkey",
+      "genrsa",
+      "req"
+    ],
+    "correct": [
+      3,
+      4
+    ]
+  },
+  {
+    "q": "What parameter in the sshd configuration file instructs sshd to prevent specific user names from logging in to a system? (Please specify the parameter only without settings.)",
+    "type": "text",
+    "correct": [
+      "DenyUsers"
+    ]
+  },
+  {
+    "q": "What types of virtual network devices does OpenVPN use for connections? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "eth",
+      "tap",
+      "lo",
+      "tun",
+      "ppp"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "q": "Specify the command to create a SSH key-pair. (Specify ONLY the command without any path or parameters.)",
+    "type": "text",
+    "correct": [
+      "ssh-keygen"
+    ]
+  },
+  {
+    "q": "The program vsftpd, running in a chroot jail, gives the following error:\n\n/bin/vsftpD. error while loading shared libraries: libc.so.6:\ncannot open shared object filE.No such file or directory.\nWhich of the following actions would fix the error?\n",
+    "type": "radio",
+    "options": [
+      "The file /etc/ld.so.conf in the root filesystem must contain the path to the appropriate lib directory in the chroot jail.",
+      "Create a symbolic link that points to the required library outside the chroot jail.",
+      "Copy the required library to the appropriate lib directory in the chroot jail.",
+      "Run the program using the command chroot and the option --static_libs."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What information can be found in the file specified by the status parameter in an OpenVPN server configuration file? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "Errors and warnings generated by the openvpn daemon",
+      "Routing information",
+      "Statistical information regarding the currently running openvpn daemon",
+      "A list of currently connected clients",
+      "A history of all clients who have connected at some point"
+    ],
+    "correct": [
+      2,
+      3
+    ]
+  },
+  {
+    "q": "Which of the following files needs to be changed in order to enable anonymous FTP logins with vsftpd?",
+    "type": "radio",
+    "options": [
+      "/etc/vsftpd/ftpd.conf",
+      "/etc/ftpd.conf",
+      "/etc/vsftpd/anon.conf",
+      "/etc/vsftpd.conf",
+      "/etc/vsftp/ftp.conf"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "What is the standard port used by OpenVPN?",
+    "type": "radio",
+    "options": [
+      "1723",
+      "4500",
+      "500",
+      "1194"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "With fail2ban what is a 'jail'?",
+    "type": "radio",
+    "options": [
+      "A netfilter rules chain blocking offending IP addresses for a particular service.",
+      "A group of services on the server which should be monitored for similar attack patterns in the log files.",
+      "A filter definition and a set of one or more actions to take when the filter is matched.",
+      "The chroot environment in which fail2ban runs."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "What option in the client configuration file would tell OpenVPN to use a dynamic source port when making a connection to a peer?",
+    "type": "radio",
+    "options": [
+      "src-port",
+      "remote",
+      "source-port",
+      "nobind"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Which of the following are predefined targets for netfilter rules? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "JUMP",
+      "REROUTE",
+      "NAT",
+      "ACCEPT",
+      "RETURN"
+    ],
+    "correct": [
+      3,
+      4
+    ]
+  },
+  {
+    "q": "What command is used to reload a set of saved netfilter rules?",
+    "type": "radio",
+    "options": [
+      "iptables-restore",
+      "iptables-recover",
+      "iptables-load",
+      "iptables-reload"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "After having a laptop assigned to a new subnet, a user is no longer able to login to the SSH server with an error message like Connection closed by remote host. Which of the following are possible approaches to determine and fix the cause of this problem? (Choose TWO correct answers.)",
+    "type": "checkbox",
+    "options": [
+      "Generate a new host key on the client and replace the current client host key on the SSH server.",
+      "Verify that the settings in /etc/host.allow and /etc/host.deny are not preventing access.",
+      "Flush the ARP table and the neighbor discovery cache on both the SSH server and the client.",
+      "Add the new IP address of the client to the AllowHosts configuration setting on the SSH server.",
+      "Check that there are no netfilter rules that reject SSH connections from the new IP address."
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which of the following nmap parameters scans a target for open TCP ports? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "-sO",
+      "-sZ",
+      "-sT",
+      "-sU",
+      "-sS"
+    ],
+    "correct": [
+      2,
+      4
+    ]
+  },
+  {
+    "q": "Which Linux user is used by vsftpd to perform file system operations for anonymous FTP users?",
+    "type": "radio",
+    "options": [
+      "The Linux user which runs the vsftpd process",
+      "The Linux user that owns the root FTP directory served by vsftpd",
+      "The Linux user with the same user name that was used to anonymously log into the FTP server",
+      "The Linux user root, but vsftpd grants access to anonymous users only to globally read-/writeable files",
+      "The Linux user specified in the configuration option ftp_username"
+    ],
+    "correct": 4
+  },
+  {
+    "q": "The content of which local file has to be transmitted to a remote SSH server in order to be able to log into the remote server using SSH keys?",
+    "type": "radio",
+    "options": [
+      "~/.ssh/authorized_keys",
+      "~/.ssh/config",
+      "~/.ssh/id_rsa.pub",
+      "~/.ssh/id_rsa",
+      "~./ssh/known_hosts"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which of the following information has to be submitted to a certification authority in order to request a web server certificate?",
+    "type": "radio",
+    "options": [
+      "The web server's private key.",
+      "The IP address of the web server.",
+      "The list of ciphers supported by the web server.",
+      "The web server's SSL configuration file.",
+      "The certificate signing request."
+    ],
+    "correct": 4
+  },
+  {
+    "q": "Using its standard configuration, how does fail2ban block offending SSH clients?",
+    "type": "radio",
+    "options": [
+      "By rejecting connections due to its role as a proxy in front of SSHD.",
+      "By modifying and adjusting the SSHD configuration.",
+      "By creating and maintaining netfilter rules.",
+      "By creating null routes that drop any answer packets sent to the client.",
+      "By modifying and adjusting the TCP Wrapper configuration for SSHD."
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which FTP names are recognized as anonymous users in vsftp when the option anonymous_enable is set to yes in the configuration files? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "anonymous",
+      "ftp",
+      "In the described configuration, any username which neither belongs to an existing user nor has another special meaning is treated as anonymous user.",
+      "nobody",
+      "guest"
+    ],
+    "correct": [
+      0,
+      1
+    ]
+  },
+  {
+    "q": "After running ssh-keygen and accepting the default values, which of the following files are changed or created? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "~/.ssh/id_rsa.key",
+      "~/.ssh/id_rsa.pub",
+      "~/.ssh/id_rsa.prv",
+      "~/.ssh/id_rsa.crt",
+      "~/.ssh/id_rsa"
+    ],
+    "correct": [
+      1,
+      4
+    ]
+  },
+  {
+    "q": "Which of the following OpenVPN configuration options makes OpenVPN forward network packets between VPN clients itself instead of passing the packets on to the Linux host which runs the OpenVPN server for further processing?",
+    "type": "radio",
+    "options": [
+      "inter-client-traffic",
+      "client-to-client",
+      "client-router",
+      "client-pass",
+      "grant-client-traffic"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Please enter the command used to remove Kerberos tickets from the cache below.",
+    "type": "text",
+    "correct": [
+      "kdestroy"
+    ]
+  },
+  {
+    "q": "Which keys are stored in the authorized_keys file?",
+    "type": "text",
+    "correct": [
+      "public keys"
+    ]
+  },
+  {
+    "q": "To allow X connections to be forwarded from or through an SSH server, what line must exist in the sshd configuration file?",
+    "type": "text",
+    "correct": [
+      "X11Forwarding yes"
+    ]
+  },
+  {
+    "q": "Please enter the Kerberos 5 configuration file name without path below.",
+    "type": "text",
+    "correct": [
+      "krb5.conf"
+    ]
+  },
+  {
+    "q": "Which command can be used to save the current iptables rules into a file? Please enter only the command without path or parameters.",
+    "type": "text",
+    "correct": [
+      "iptables-save"
+    ]
+  },
+  {
+    "q": "On a Linux router, packet forwarding for IPv4 has been enabled. After a reboot, the machine no longer forwards IP packets from other hosts. The command: echo 1 > /proc/sys/net/ipv4/ip_forward temporarily resolves this problem. Which of the following is the best way to ensure this setting is saved across system reboots?",
+    "type": "radio",
+    "options": [
+      "Add echo 1 > /proc/sys/net/ipv4/ip_forward to the root user's login script",
+      "Add echo 1 > /proc/sys/net/ipv4/ip_forward to any user login script",
+      "In /etc/sysctl.conf change net.ipv4.ip_forward to 1",
+      "In /etc/rc.local add net.ipv4.ip_forward = 1",
+      "In /etc/sysconfig/iptables-config add ipv4.ip_forward = 1"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Which of the following statements are correct regarding the following commands, which are executed on a Linux router? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "Packets with source or destination addresses of fe80::/64 will never occur in the FORWARD chain",
+      "The rules disable packet forwarding because network nodes always use addresses from fe80::/64 to identify routers in their routing tables",
+      "ip6tables returns an error for the second command because the affected network is already part of another rule",
+      "Both ip6tables commands complete without an error or warning message",
+      "The rules suppress any automatic configuration through router advertisements or DHCPv6"
+    ],
+    "correct": [
+      0,
+      3
+    ]
+  },
+  {
+    "q": "Which of the following commands can be used to connect and interact with remote TCP network services? (Choose two.)",
+    "type": "checkbox",
+    "options": [
+      "NETTALK",
+      "Nc",
+      "Telnet",
+      "cat",
+      "nmap"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": "To which destination will a route appear in the Linux routing table after activating IPv6 on a router's network interface, even when no global IPv6 addresses have been assigned to the interface?",
     "type": "radio",
     "options": [
       "fe80::/10",
