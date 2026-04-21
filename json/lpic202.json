@@ -825,11 +825,11 @@
     "image": "img/imagen1.png",
     "type": "radio",
     "options": [
-      "A. Users connecting from localhost will be able to access web sites through this proxy",
-      "B. It's possible to use this proxy to access SSL enabled web sites listening on any port.",
-      "C. This proxy is misconfigured and no user will be able to access web sites through it.",
-      "D. It's necessary to include a http_access rule denying access to all, at the end of the rules.",
-      "E. This proxy can't be used to access FTP servers listening on the default port."
+      "Users connecting from localhost will be able to access web sites through this proxy",
+      "It's possible to use this proxy to access SSL enabled web sites listening on any port.",
+      "This proxy is misconfigured and no user will be able to access web sites through it.",
+      "It's necessary to include a http_access rule denying access to all, at the end of the rules.",
+      "This proxy can't be used to access FTP servers listening on the default port."
     ],
     "correct": 3
   },
@@ -2054,10 +2054,10 @@
     "q": "Which setting in the Courier IMAP configuration file will tell the IMAP daemon to only listen on the localhost interface?",
     "type": "radio",
     "options": [
-      "A. LOCALHOST_ONLY=1",
-      "B. INTERFACE=127.0.0.1",
-      "C. ADDRESS=127.0.0.1",
-      "D. Listen 127.0.0.1"
+      "LOCALHOST_ONLY=1",
+      "INTERFACE=127.0.0.1",
+      "ADDRESS=127.0.0.1",
+      "Listen 127.0.0.1"
     ],
     "correct": 2
   },
@@ -2065,11 +2065,11 @@
     "q": "What does the following procmail configuration section do?\n\n:0fw/n* < 256000/n| /usr/bin/foo/n",
     "type": "radio",
     "options": [
-      "A. The program foo is used instead of procmail for all emails larger than 256000 Bytes",
-      "B. If an email contains a value less than 256000 anywhere within it, procmail will process the email with the program foo",
-      "C. procmail sends all email older than 256000 seconds to the external program foo",
-      "D. If the email smaller than 256000 Bytes, procmail will process it with the program foo",
-      "E. procmail sends mail containing less than 256000 words to program foo"
+      "The program foo is used instead of procmail for all emails larger than 256000 Bytes",
+      "If an email contains a value less than 256000 anywhere within it, procmail will process the email with the program foo",
+      "procmail sends all email older than 256000 seconds to the external program foo",
+      "If the email smaller than 256000 Bytes, procmail will process it with the program foo",
+      "procmail sends mail containing less than 256000 words to program foo"
     ],
     "correct": 3
   },
@@ -2077,11 +2077,11 @@
     "q": "The following is an excerpt from a procmail configuration file./n/n:0 c/n* ! ^To: backup/n! backup/n/nWhich of the following is correct?/n",
     "type": "radio",
     "options": [
-      "A. All mails to the local email address backup will be stored in the directory backup.",
-      "B. All mails will be backed up to the path defined by $MAILDIR",
-      "C. Mails not addressed to backup are passed through a filter program named backup.",
-      "D. A copy of all mails will be stored in file backup.",
-      "E. A copy of all mails will be send to the local email address backup."
+      "All mails to the local email address backup will be stored in the directory backup.",
+      "All mails will be backed up to the path defined by $MAILDIR",
+      "Mails not addressed to backup are passed through a filter program named backup.",
+      "A copy of all mails will be stored in file backup.",
+      "A copy of all mails will be send to the local email address backup."
     ],
     "correct": 4
   },
@@ -2089,11 +2089,11 @@
     "q": "Which of the following recipes will append emails from \"root\" to the \"rootmails\" mailbox?",
     "type": "radio",
     "options": [
-      "A. :0c:\nrootmails\n* ^From.*root",
-      "B. :0c:\n* ^From=*root\nrootmails",
-      "C. :0c:\n* ^From.*root\nrootmails",
-      "D. :0c:\n$From=$root\nrootmails",
-      "E. :0c:\n* ^From=root\nrootmails"
+      ":0c:\nrootmails\n* ^From.*root",
+      ":0c:\n* ^From=*root\nrootmails",
+      ":0c:\n* ^From.*root\nrootmails",
+      ":0c:\n$From=$root\nrootmails",
+      ":0c:\n* ^From=root\nrootmails"
     ],
     "correct": 2
   },
@@ -2101,11 +2101,11 @@
     "q": "The syntax of the procmail configuration file is?",
     "type": "radio",
     "options": [
-      "A. [* condition] \naction \n:0[flags][:[lockfile]]",
-      "B. :0[flags][:[lockfile]] \n[* condition] \naction",
-      "C. :0[flags][:[lockfile]]:[* condition]:action",
-      "D. :0[flags][:[lockfile]] \n[* condition] action",
-      "E. :0[flags][:[lockfile]]:[* condition] \naction"
+      "[* condition] \naction \n:0[flags][:[lockfile]]",
+      ":0[flags][:[lockfile]] \n[* condition] \naction",
+      ":0[flags][:[lockfile]]:[* condition]:action",
+      ":0[flags][:[lockfile]] \n[* condition] action",
+      ":0[flags][:[lockfile]]:[* condition] \naction"
     ],
     "correct": 1
   },
@@ -2113,10 +2113,10 @@
     "q": "The internal network (192.168.1.0-192.168.1.255) needs to be able to relay email through the site's sendmail server. What line must be added to /etc/mail/access to allow this?",
     "type": "radio",
     "options": [
-      "A. 192.168.1.0/24 RELAY",
-      "B. 192.168.1.0/24 OK",
-      "C. 192.168.1 RELAY",
-      "D. 192.168.1 OK"
+      "192.168.1.0/24 RELAY",
+      "192.168.1.0/24 OK",
+      "192.168.1 RELAY",
+      "192.168.1 OK"
     ],
     "correct": 2
   },
@@ -2124,11 +2124,11 @@
     "q": "On a newly-installed mail server with the IP address 10.10.10.1, ONLY local networks should be able to send email. How can the configuration be tested, using telnet, from outside the local network?",
     "type": "radio",
     "options": [
-      "A. telnet 10.10.10.1 25 \nHELO: bogus.example.com \nRCPT FROM:anyone@example.org \nMAIL TO:someone@example.net",
-      "B. telnet 10.10.10.1 25 \nHELLO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net",
-      "C. telnet 10.10.10.1 25 \nRCPT FROM:admin@example.com \nMAIL TO:someone@example.org",
-      "D. telnet 10.10.10.1 25 \nMAIL FROMadmin@example.com \nRECEIPT TO:someone@example.org",
-      "E. telnet 10.10.10.1 25 \nHELO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net"
+      "telnet 10.10.10.1 25 \nHELO: bogus.example.com \nRCPT FROM:anyone@example.org \nMAIL TO:someone@example.net",
+      "telnet 10.10.10.1 25 \nHELLO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net",
+      "telnet 10.10.10.1 25 \nRCPT FROM:admin@example.com \nMAIL TO:someone@example.org",
+      "telnet 10.10.10.1 25 \nMAIL FROMadmin@example.com \nRECEIPT TO:someone@example.org",
+      "telnet 10.10.10.1 25 \nHELO bogus.example.com \nMAIL FROM:anyone@example.org RCPT TO:someone@example.net"
     ],
     "correct": 4
   },
@@ -2136,11 +2136,11 @@
     "q": "What is the standard port number for the unencrypted IMAP service?",
     "type": "radio",
     "options": [
-      "A. 143",
-      "B. 993",
-      "C. 1066",
-      "D. 443",
-      "E. 25"
+      "143",
+      "993",
+      "1066",
+      "443",
+      "25"
     ],
     "correct": 0
   },
@@ -2148,11 +2148,11 @@
     "q": "Which network service or protocol is used by sendmail for RBLs (Realtime Blackhole Lists)?",
     "type": "radio",
     "options": [
-      "A. HTTP",
-      "B. FTP",
-      "C. RBLP",
-      "D. SMTP",
-      "E. DNS"
+      "HTTP",
+      "FTP",
+      "RBLP",
+      "SMTP",
+      "DNS"
     ],
     "correct": 4
   },
@@ -2160,11 +2160,11 @@
     "q": "You suspect that you are receiving messages with a forged From: address. What could help you find out where the mail is originating?",
     "type": "radio",
     "options": [
-      "A. Add the command 'define ('LOG_REAL_FROM') dnl' to the sendmail.mc file",
-      "B. Add the command 'FR-strlog' to the sendmail.cf file",
-      "C. Look in the Received and Message-ID parts of the mail header",
-      "D. Install TCP wrappers, and log all connections on port 25",
-      "E. Run a filter in the aliases file that checks the originating address when mail arrives"
+      "Add the command 'define ('LOG_REAL_FROM') dnl' to the sendmail.mc file",
+      "Add the command 'FR-strlog' to the sendmail.cf file",
+      "Look in the Received and Message-ID parts of the mail header",
+      "Install TCP wrappers, and log all connections on port 25",
+      "Run a filter in the aliases file that checks the originating address when mail arrives"
     ],
     "correct": 2
   },
@@ -2458,11 +2458,11 @@
     "q": "A correctly formatted entry has been added to /etc/hosts.deny to prevent certain clients from connecting to a service but this is having no effect. What could be the cause of this? (Choose TWO correct answers.)",
     "type": "checkbox",
     "options": [
-      "a) tcpd needs to be sent the HUP signal.",
-      "b) The service needs to be restarted.",
-      "c) The machine needs to be restarted.",
-      "d) There is a conflicting entry in /etc/hosts.allow.",
-      "e) The service does not support tcpwrapper."
+      "tcpd needs to be sent the HUP signal.",
+      "The service needs to be restarted.",
+      "The machine needs to be restarted.",
+      "There is a conflicting entry in /etc/hosts.allow.",
+      "The service does not support tcpwrapper."
     ],
     "correct": [
       3,
@@ -2473,11 +2473,11 @@
     "q": "Which /etc/hosts.allow entries will permit access to sshd for users from the 192.168.1.0/24 subnet? (Choose TWO correct answers.)",
     "type": "checkbox",
     "options": [
-      "A. sshd : 192.168.1.",
-      "B. sshd : 192.168.1",
-      "C. sshd : 192.168.1.0 netmask 255.255.255.0",
-      "D. sshd : 192.168.1.0/255.255.255.0",
-      "E. sshd : 192.168.1.0"
+      "sshd : 192.168.1.",
+      "sshd : 192.168.1",
+      "sshd : 192.168.1.0 netmask 255.255.255.0",
+      "sshd : 192.168.1.0/255.255.255.0",
+      "sshd : 192.168.1.0"
     ],
     "correct": [
       0,
@@ -2488,11 +2488,11 @@
     "q": "Which command can be used to scan a specified network looking for IP addresses that appear to be in use?",
     "type": "radio",
     "options": [
-      "a) nmap",
-      "b) tcpdump",
-      "c) ip",
-      "d) netscan",
-      "e) hostdiscover"
+      "nmap",
+      "tcpdump",
+      "ip",
+      "netscan",
+      "hostdiscover"
     ],
     "correct": 0
   },
@@ -2500,11 +2500,11 @@
     "q": "Which of the following Linux services has support for only the Routing Information Protocol (RIP) routing protocol?",
     "type": "radio",
     "options": [
-      "A. netfilter",
-      "B. routed",
-      "C. gated",
-      "D. zebra",
-      "E. ipchains"
+      "netfilter",
+      "routed",
+      "gated",
+      "zebra",
+      "ipchains"
     ],
     "correct": 1
   },
@@ -2512,11 +2512,11 @@
     "q": "Which of the following is NOT included in a Snort rule header?",
     "type": "radio",
     "options": [
-      "A. protocol",
-      "B. packet byte offset",
-      "C. source IP address",
-      "D. action",
-      "E. source port"
+      "protocol",
+      "packet byte offset",
+      "source IP address",
+      "action",
+      "source port"
     ],
     "correct": 1
   },
@@ -2524,11 +2524,11 @@
     "q": "In what mode is your FTP session when the client side makes the connections to both the data and command ports of the FTP server?",
     "type": "radio",
     "options": [
-      "A. active",
-      "B. inactive",
-      "C. passive",
-      "D. safe",
-      "E. impassive"
+      "active",
+      "inactive",
+      "passive",
+      "safe",
+      "impassive"
     ],
     "correct": 2
   },
@@ -2536,11 +2536,11 @@
     "q": "Which of the following organisations track and report on security related flaws in computer technology? (Please select TWO answers)",
     "type": "checkbox",
     "options": [
-      "A. Kernel.org",
-      "B. CSIS",
-      "C. Freshmeat",
-      "D. Bugtraq",
-      "E. CERT"
+      "Kernel.org",
+      "CSIS",
+      "Freshmeat",
+      "Bugtraq",
+      "CERT"
     ],
     "correct": [
       3,
@@ -2551,10 +2551,10 @@
     "q": "What is the name of the network security scanner project which, at the core, is a server with a set of network vulnerability tests (NVTs)?",
     "type": "radio",
     "options": [
-      "A. Snort",
-      "B. OpenVAS",
-      "C. wireshark",
-      "D. nmap"
+      "Snort",
+      "OpenVAS",
+      "wireshark",
+      "nmap"
     ],
     "correct": 1
   },
@@ -2562,11 +2562,11 @@
     "q": "What tool scans log files for unsuccessful login attempts and blocks the offending IP addresses with firewall rules?",
     "type": "radio",
     "options": [
-      "A. nmap",
-      "B. watchlogs",
-      "C. fail2ban",
-      "D. nessus",
-      "E. nc"
+      "nmap",
+      "watchlogs",
+      "fail2ban",
+      "nessus",
+      "nc"
     ],
     "correct": 2
   },
@@ -2574,11 +2574,11 @@
     "q": "A security-conscious administrator would change which TWO of the following lines found in an SSH configuration file?",
     "type": "checkbox",
     "options": [
-      "A. PermitEmptyPasswords no",
-      "B. Protocol 2, 1",
-      "C. PermitRootLogin yes",
-      "D. IgnoreRhosts yes",
-      "E. Port 22"
+      "PermitEmptyPasswords no",
+      "Protocol 2, 1",
+      "PermitRootLogin yes",
+      "IgnoreRhosts yes",
+      "Port 22"
     ],
     "correct": [
       1,
@@ -2589,11 +2589,11 @@
     "q": "Which environment variables are used by ssh-agent? (Please select TWO variables)",
     "type": "checkbox",
     "options": [
-      "A. SSH_AUTH_PID",
-      "B. SSH_AUTH_SOCK",
-      "C. SSH_AGENT_PID",
-      "D. SSH_AGENT_SOCK",
-      "E. SSH_AGENT_KEY"
+      "SSH_AUTH_PID",
+      "SSH_AUTH_SOCK",
+      "SSH_AGENT_PID",
+      "SSH_AGENT_SOCK",
+      "SSH_AGENT_KEY"
     ],
     "correct": [
       1,
@@ -2604,11 +2604,11 @@
     "q": "When connecting to an SSH server for the first time, its fingerprint is received and stored in a file, which is located at:",
     "type": "radio",
     "options": [
-      "A. ~/ .ssh/gpg.txt",
-      "B. ~/ .ssh/fingerprints",
-      "C. ~/ .ssh/known_hosts",
-      "D. ~/ .ssh/id_dsa.pub",
-      "E. ~/ .ssh/id_dsa"
+      " ~/ .ssh/gpg.txt",
+      " ~/ .ssh/fingerprints",
+      " ~/ .ssh/known_hosts",
+      " ~/ .ssh/id_dsa.pub",
+      " ~/ .ssh/id_dsa"
     ],
     "correct": 2
   },
@@ -2616,11 +2616,11 @@
     "q": "When the default policy for the iptables INPUT chain is set to DROP, why should a rule allowing traffic to localhost exist?",
     "type": "radio",
     "options": [
-      "A. All traffic to localhost must always be allowed.",
-      "B. It doesn't matter; iptables never affects packets addressed to localhost",
-      "C. Sendmail delivers emails to localhost",
-      "D. syslogd receives messages on localhost",
-      "E. Some applications use the localhost interface to communicate with other applications."
+      "All traffic to localhost must always be allowed.",
+      "It doesn't matter; iptables never affects packets addressed to localhost",
+      "Sendmail delivers emails to localhost",
+      "syslogd receives messages on localhost",
+      "Some applications use the localhost interface to communicate with other applications."
     ],
     "correct": 4
   },
@@ -2628,11 +2628,11 @@
     "q": "Which of the following can the program tripwire NOT check?",
     "type": "radio",
     "options": [
-      "A. Boot sectors.",
-      "B. Permissions.",
-      "C. File size.",
-      "D. File signature.",
-      "E. File existence."
+      "Boot sectors.",
+      "Permissions.",
+      "File size.",
+      "File signature.",
+      "File existence."
     ],
     "correct": 0
   },
@@ -2640,11 +2640,11 @@
     "q": "A correctly-formatted entry has been added to /etc/hosts.allow to allow certain clients to connect to a service, but this is having no effect. What would be the cause of this?",
     "type": "radio",
     "options": [
-      "A. The service needs to be restarted.",
-      "B. The service does not support tcpwrappers",
-      "C. tcpd needs to be sent the HUP signal.",
-      "D. The machine needs to be restarted.",
-      "E. There is a conflicting entry in /etc/hosts.deny ."
+      "The service needs to be restarted.",
+      "The service does not support tcpwrappers",
+      "tcpd needs to be sent the HUP signal.",
+      "The machine needs to be restarted.",
+      "There is a conflicting entry in /etc/hosts.deny ."
     ],
     "correct": 1
   },
@@ -2652,11 +2652,11 @@
     "q": "Connecting to a remote host on the same LAN using ssh public-key authentication works but forwarding X11 doesn't. The remote host allows access to both services. Which of the following can be the reason for that behavior?",
     "type": "radio",
     "options": [
-      "A. X11 though SSH needs a special X11 server application installed",
-      "B. X11 cannot be forwarded if public-key authentication was used",
-      "C. The remote user's ssh_config file disallows X11 forwarding",
-      "D. A different public key has to be used for X11",
-      "E. The remote server's sshd_config file disallows X11 forwarding"
+      "X11 though SSH needs a special X11 server application installed",
+      "X11 cannot be forwarded if public-key authentication was used",
+      "The remote user's ssh_config file disallows X11 forwarding",
+      "A different public key has to be used for X11",
+      "The remote server's sshd_config file disallows X11 forwarding"
     ],
     "correct": 4
   },
@@ -2664,11 +2664,11 @@
     "q": "What security precautions must be taken when creating a directory into which files can be uploaded anonymously using FTP?",
     "type": "radio",
     "options": [
-      "A. The directory must not have the read or execute permission set.",
-      "B. The directory must not have the write permission set.",
-      "C. The directory must not contain other directories.",
-      "D. The directory must not have the read permission set.",
-      "E. The directory must not have the execute permission set."
+      "The directory must not have the read or execute permission set.",
+      "The directory must not have the write permission set.",
+      "The directory must not contain other directories.",
+      "The directory must not have the read permission set.",
+      "The directory must not have the execute permission set."
     ],
     "correct": 3
   },
@@ -2676,11 +2676,11 @@
     "q": "To be able to access the server with the IP address 10.12.34.56 using HTTPS, a rule for iptables has to be written. Given that the client host's IP address is 192.168.43.12, which of the following commands is correct?",
     "type": "radio",
     "options": [
-      "A. iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 80 -j ACCEPT",
-      "B. iptables - A FORWARD -p tcp -s 192.168.43.12 d 10.12.34.56:443 -j ACCEPT",
-      "C. iptables - A FORWARD -p tcp -s 192.168.43.12 -d 10.12.34.56 --dport 443 -j ACCEPT.",
-      "D. iptables - A INPUT -p tcp -s 192.168.43.12 - d 10.12.34.56:80 -j ACCEPT.",
-      "E. iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 443 -j ACCEPT."
+      "iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 80 -j ACCEPT",
+      "iptables - A FORWARD -p tcp -s 192.168.43.12 d 10.12.34.56:443 -j ACCEPT",
+      "iptables - A FORWARD -p tcp -s 192.168.43.12 -d 10.12.34.56 --dport 443 -j ACCEPT.",
+      "iptables - A INPUT -p tcp -s 192.168.43.12 - d 10.12.34.56:80 -j ACCEPT.",
+      "iptables - A FORWARD -p tcp -s 0/0 -d 10.12.34.56 --dport 443 -j ACCEPT."
     ],
     "correct": 2
   },
