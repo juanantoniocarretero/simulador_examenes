@@ -1801,7 +1801,7 @@
       "syslogfile",
       "logfilepath"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "q": "Given the following section of a ISC DHCPD configuration file.\n\nsubnet 192.168.1.0 netmask 255.255.255.0 {\n...\nSet the default gateway to be used by\nthe PC clients\noption _____________ 192.168.1.254;\n...\n}\nWhat keyword is missing in order to provide a default gateway address to clients?\n",
@@ -2182,6 +2182,7 @@
   },
   {
     "q": "Which file can be used to make sure that procmail is used to filter a user's incoming email?",
+    "type": "radio",
     "options": [
       "${HOME}/.procmail",
       "${HOME}/.forward",
