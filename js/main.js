@@ -4,12 +4,12 @@ import * as ui from './uiManager.js';
 // Variables globales de estado
 let allQuestions = [];
 let sessionQuestions = [];
-let failedQuestions = []; 
-let userAnswers = []; 
+let failedQuestions = [];
+let userAnswers = [];
 let currentIdx = 0;
 let successes = 0;
 let errors = 0;
-let state = "check"; 
+let state = "check";
 let currentExamName = "";
 
 // Variables para el temporizador
@@ -17,7 +17,7 @@ let timerInterval;
 let timeLeft;
 
 // Variable para el marcador de dudas
-let flaggedQuestions = new Set(); 
+let flaggedQuestions = new Set();
 
 /**
  * Inicialización al cargar la página
@@ -26,7 +26,7 @@ window.onload = () => {
     showHistory();
     ui.setupSelectorPreguntas();
     ui.setupSelectorTiempo();
-    
+
     const examSelect = document.getElementById("exam-select");
     if (examSelect) {
         examSelect.addEventListener("change", updateTypeCounts);
@@ -40,7 +40,7 @@ window.onload = () => {
 async function updateTypeCounts() {
     const examFile = document.getElementById("exam-select").value;
     const typeSelect = document.getElementById("type-select");
-    
+
     try {
         const res = await fetch(examFile);
         const questions = await res.json();
@@ -60,7 +60,7 @@ async function updateTypeCounts() {
         typeSelect.options[1].text = `Selección Única (${counts.radio} / ${total})`;
         typeSelect.options[2].text = `Selección Múltiple (${counts.checkbox} / ${total})`;
         typeSelect.options[3].text = `Completar Texto (${counts.text} / ${total})`;
-        
+
         // Matrices V/F (índice 4)
         if (typeSelect.options[4]) {
             typeSelect.options[4].text = `Matrices V/F (${counts.matrix} / ${total})`;
@@ -102,7 +102,7 @@ async function initQuiz(onlyFailed = false) {
         const limit = parseInt(document.getElementById("num-questions").value);
         const selectedType = document.getElementById("type-select").value;
         const timeLimit = parseInt(document.getElementById("timer-select").value);
-        
+
         currentExamName = document.getElementById("exam-select").options[document.getElementById("exam-select").selectedIndex].text;
 
         try {
@@ -113,9 +113,9 @@ async function initQuiz(onlyFailed = false) {
             }
 
             allQuestions = await res.json();
-            
-            let filtered = (selectedType === "all") 
-                ? [...allQuestions] 
+
+            let filtered = (selectedType === "all")
+                ? [...allQuestions]
                 : allQuestions.filter(q => q.type === selectedType);
 
             if (filtered.length === 0) {
@@ -124,11 +124,11 @@ async function initQuiz(onlyFailed = false) {
             }
 
             let shuffled = filtered.sort(() => 0.5 - Math.random());
-            
-            sessionQuestions = (limit === 0 || limit > shuffled.length) 
-                ? shuffled 
+
+            sessionQuestions = (limit === 0 || limit > shuffled.length)
+                ? shuffled
                 : shuffled.slice(0, limit);
-            
+
             startTimer(timeLimit);
 
         } catch (e) {
@@ -145,9 +145,9 @@ async function initQuiz(onlyFailed = false) {
     currentIdx = 0;
     successes = 0;
     errors = 0;
-    failedQuestions = []; 
-    userAnswers = []; 
-    flaggedQuestions.clear(); 
+    failedQuestions = [];
+    userAnswers = [];
+    flaggedQuestions.clear();
 
     document.getElementById("setup").classList.add("hidden");
     document.getElementById("results").classList.add("hidden");
@@ -159,13 +159,13 @@ async function initQuiz(onlyFailed = false) {
  * Control del cronómetro
  */
 function startTimer(minutes) {
-    clearInterval(timerInterval); 
+    clearInterval(timerInterval);
     const timerDisplay = document.getElementById("timer-display");
 
     if (minutes === 0) {
         timerDisplay.innerText = "⏱️ Modo Libre";
         timerDisplay.style.color = "var(--accent)";
-        return; 
+        return;
     }
 
     timeLeft = minutes * 60;
@@ -173,7 +173,7 @@ function startTimer(minutes) {
         const mins = Math.floor(timeLeft / 60);
         const secs = timeLeft % 60;
         timerDisplay.innerText = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs}`;
-        
+
         if (timeLeft <= 300 && timeLeft > 0) {
             timerDisplay.style.color = "red";
             timerDisplay.classList.add("blink-warning");
@@ -181,7 +181,7 @@ function startTimer(minutes) {
             timerDisplay.style.color = "var(--accent)";
             timerDisplay.classList.remove("blink-warning");
         }
-        
+
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             alert("¡Tiempo agotado!");
@@ -197,7 +197,7 @@ function startTimer(minutes) {
  */
 function renderQuestion() {
     const item = sessionQuestions[currentIdx];
-    
+
     document.getElementById("progress-text").innerText = `Pregunta ${currentIdx + 1} de ${sessionQuestions.length}`;
     const progressPercent = ((currentIdx + 1) / sessionQuestions.length) * 100;
     document.getElementById("progress-bar").style.width = `${progressPercent}%`;
@@ -242,7 +242,7 @@ function renderQuestion() {
         input.placeholder = "Escribe tu respuesta...";
         container.appendChild(input);
         setTimeout(() => input.focus(), 50);
-        input.onkeypress = (e) => { if(e.key === 'Enter') handleMainAction(); };
+        input.onkeypress = (e) => { if (e.key === 'Enter') handleMainAction(); };
 
     } else if (item.type === "matrix") {
         const table = document.createElement("table");
@@ -250,12 +250,16 @@ function renderQuestion() {
         item.subquestions.forEach((sub, idx) => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${sub}</td>
-                <td class="matrix-cells">
-                    <label><input type="radio" name="matrix-${idx}" value="true"> V</label>
-                    <label><input type="radio" name="matrix-${idx}" value="false"> F</label>
-                </td>
-            `;
+            <td class="matrix-question-text">${sub}</td>
+            <td class="matrix-cells">
+                <label class="matrix-option">
+                    <input type="radio" name="matrix-${idx}" value="true"> <span>Sí</span>
+                </label>
+                <label class="matrix-option">
+                    <input type="radio" name="matrix-${idx}" value="false"> <span>No</span>
+                </label>
+            </td>
+        `;
             table.appendChild(row);
         });
         container.appendChild(table);
@@ -267,24 +271,24 @@ function renderQuestion() {
         item.left.forEach((text, idx) => {
             const row = document.createElement("div");
             row.className = "match-row";
-            
+
             const leftCol = document.createElement("div");
             leftCol.className = "match-left-text";
             leftCol.innerText = text;
-            
+
             const select = document.createElement("select");
             select.id = `match-${idx}`;
             select.className = "match-select";
-            
+
             // Opción por defecto
             let optionsHtml = `<option value="-1">Selecciona una relación...</option>`;
             // Añadir las opciones de la derecha
             item.right.forEach((rText, rIdx) => {
                 optionsHtml += `<option value="${rIdx}">${rText}</option>`;
             });
-            
+
             select.innerHTML = optionsHtml;
-            
+
             row.appendChild(leftCol);
             row.appendChild(select);
             matchContainer.appendChild(row);
@@ -326,7 +330,7 @@ function checkAnswer() {
     const item = sessionQuestions[currentIdx];
     const feedback = document.getElementById("feedback");
     let isCorrect = false;
-    let userText = ""; 
+    let userText = "";
     let correctText = "";
 
     if (item.type === "text") {
@@ -342,17 +346,41 @@ function checkAnswer() {
     } else if (item.type === "matrix") {
         let matrixResults = [];
         let allCorrect = true;
+
         item.subquestions.forEach((_, idx) => {
             const selected = document.querySelector(`input[name="matrix-${idx}"]:checked`);
             const userVal = selected ? (selected.value === "true") : null;
-            if (userVal !== item.correct[idx]) allCorrect = false;
-            matrixResults.push(userVal === null ? "?" : (userVal ? "V" : "F"));
-            
-            document.getElementsByName(`matrix-${idx}`).forEach(i => i.disabled = true);
+            const isRowOk = (userVal === item.correct[idx]);
+
+            if (!isRowOk) allCorrect = false;
+
+            // Guardamos el texto para el reporte
+            matrixResults.push(userVal === null ? "?" : (userVal ? "Sí" : "No"));
+
+            // --- Lógica de resaltado visual ---
+            const options = document.getElementsByName(`matrix-${idx}`);
+            options.forEach(input => {
+                const label = input.closest('.matrix-option');
+                const isCorrectOption = (input.value === String(item.correct[idx]));
+
+                if (isCorrectOption) {
+                    // Resaltamos la opción que era la correcta en verde
+                    label.classList.add("correct-matrix");
+                }
+
+                if (input.checked && !isRowOk) {
+                    // Si el usuario marcó esta y estaba mal, resaltamos en rojo
+                    label.classList.add("wrong-matrix");
+                }
+
+                // Deshabilitamos para que no se pueda cambiar
+                input.disabled = true;
+            });
         });
+
         isCorrect = allCorrect;
         userText = `Tus respuestas: [${matrixResults.join(", ")}]`;
-        correctText = `Correcto: [${item.correct.map(v => v ? "V" : "F").join(", ")}]`;
+        correctText = `Correcto: [${item.correct.map(v => v ? "Sí" : "No").join(", ")}]`;
 
     } else if (item.type === "match") {
         let allCorrect = true;
@@ -422,7 +450,7 @@ function checkAnswer() {
         feedback.style.color = "var(--success)";
     } else {
         errors++;
-        failedQuestions.push(item); 
+        failedQuestions.push(item);
         feedback.innerText = (item.type === "match") ? "Relación incorrecta." : `Error. ${correctText}`;
         feedback.style.color = "var(--error)";
     }
@@ -435,15 +463,15 @@ function checkAnswer() {
  * Finalización
  */
 function finishQuiz() {
-    clearInterval(timerInterval); 
+    clearInterval(timerInterval);
     document.getElementById("quiz").classList.add("hidden");
     document.getElementById("results").classList.remove("hidden");
-    
+
     document.getElementById("score-display").innerText = `${successes} / ${sessionQuestions.length}`;
-    
+
     const ratio = successes / sessionQuestions.length;
     document.getElementById("final-msg").innerText = ratio >= 0.7 ? "¡Excelente! Nivel de examen." : "Sigue practicando.";
-    
+
     const reportContainer = document.getElementById("report-container");
     if (reportContainer) {
         reportContainer.innerHTML = ui.renderDetailedReport(userAnswers, sessionQuestions.length);
@@ -451,7 +479,7 @@ function finishQuiz() {
 
     const flagReviewDiv = document.getElementById("flagged-review");
     const flagList = document.getElementById("flagged-list");
-    
+
     if (flaggedQuestions.size > 0) {
         flagReviewDiv.classList.remove("hidden");
         flagList.innerHTML = Array.from(flaggedQuestions).map(idx => {
@@ -465,13 +493,13 @@ function finishQuiz() {
     if (retryBtn) retryBtn.classList.toggle("hidden", failedQuestions.length === 0);
 
     storage.saveToHistory(
-        successes, 
-        sessionQuestions.length, 
-        currentExamName, 
-        document.getElementById("exam-select").value, 
+        successes,
+        sessionQuestions.length,
+        currentExamName,
+        document.getElementById("exam-select").value,
         document.getElementById("num-questions").value
     );
-    
+
     showHistory();
 }
 

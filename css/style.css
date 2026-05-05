@@ -358,3 +358,74 @@ input[type="text"] {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
 }
+.matrix-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espacio entre filas */
+    margin-top: 10px;
+}
+
+.matrix-question-text {
+    padding: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: var(--primary);
+    width: 75%; /* Da más espacio al texto */
+}
+
+.matrix-cells {
+    white-space: nowrap; /* Evita que V y F se rompan en dos líneas */
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.matrix-option {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.matrix-option:hover {
+    background: #f0f0f0;
+}
+
+.matrix-option input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Línea divisoria sutil entre filas */
+.matrix-table tr {
+    border-bottom: 1px solid #eee;
+}
+.matrix-option span {
+    display: inline-block;
+    min-width: 25px;
+    text-align: left;
+}
+/* Colores para el feedback de Matrix */
+.matrix-option.correct-matrix {
+    background-color: #d4edda !important; /* Verde claro */
+    border: 1px solid var(--success) !important;
+    color: #155724;
+    border-radius: 4px;
+}
+
+.matrix-option.wrong-matrix {
+    background-color: #f8d7da !important; /* Rojo claro */
+    border: 1px solid var(--error) !important;
+    color: #721c24;
+    border-radius: 4px;
+}
+
+/* Evitar que el hover cambie el color una vez verificado */
+.matrix-option input:disabled + span {
+    cursor: not-allowed;
+}
