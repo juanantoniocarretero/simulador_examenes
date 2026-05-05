@@ -63,7 +63,7 @@ async function updateTypeCounts() {
 
         // Matrices V/F (índice 4)
         if (typeSelect.options[4]) {
-            typeSelect.options[4].text = `Matrices V/F (${counts.matrix} / ${total})`;
+            typeSelect.options[4].text = `Si o No (${counts.matrix} / ${total})`;
             typeSelect.options[4].disabled = (counts.matrix === 0);
         }
 
