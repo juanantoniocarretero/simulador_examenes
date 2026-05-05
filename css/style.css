@@ -256,3 +256,105 @@ input[type="text"] {
     cursor: pointer;
     width: 100%;
 }
+/* --- Estilos para Preguntas de Emparejamiento (Match) --- */
+
+.match-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.match-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    gap: 15px;
+}
+
+.match-row:hover {
+    border-color: var(--accent);
+    background: #fcfdfe;
+}
+
+.match-left-text {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.match-select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    max-width: 50%; /* Evita que el select ocupe demasiado espacio */
+}
+
+.match-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* --- Estados de Validación (Integración con JS) --- */
+
+.match-select.correct-input {
+    border-color: var(--success) !important;
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    font-weight: bold;
+}
+
+.match-select.wrong-input {
+    border-color: var(--error) !important;
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+}
+
+/* Deshabilitado tras verificar */
+.match-select:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+    -webkit-appearance: none; /* Quita la flecha en algunos navegadores para un look más limpio */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .match-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .match-select {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.correct-match-hint {
+    font-size: 0.8rem;
+    color: var(--success);
+    margin-top: 4px;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: right; /* Alineado bajo el select */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

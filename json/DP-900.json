@@ -1,0 +1,4238 @@
+[
+    {
+        "q": "Pregunta 1: El análisis descriptivo te dice:",
+        "type": "radio",
+        "options": [
+            "qué es más probable que ocurra en el futuro.",
+            "qué ocurrió en el pasado.",
+            "qué acciones puedes realizar para influir en los resultados.",
+            "por qué ocurrió algo en el pasado."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 3: Un proceso de extracción, transformación y carga (ETL) requiere:",
+        "type": "radio",
+        "options": [
+            "un esquema coincidente en el origen de datos y en el destino de datos.",
+            "un almacén de datos de destino lo suficientemente potente como para transformar datos.",
+            "que los datos estén completamente procesados antes de cargarse en el almacén de datos de destino.",
+            "que el destino de datos sea una base de datos relacional."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 4: En el procesamiento por lotes (batch processing), __________",
+        "type": "radio",
+        "options": [
+            "los datos siempre se insertan una fila a la vez.",
+            "los datos se procesan en tiempo real.",
+            "se espera latencia.",
+            "el procesamiento solo puede ejecutarse de forma secuencial."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 5: Transcribir archivos de audio es un ejemplo de __________ análisis.",
+        "type": "radio",
+        "options": [
+            "cognitivo",
+            "descriptivo",
+            "predictivo",
+            "prescriptivo"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 9: El motor de procesamiento masivamente paralelo (MPP) de Azure Synapse Analytics __________",
+        "type": "radio",
+        "options": [
+            "distribuye el procesamiento entre nodos de cómputo.",
+            "distribuye el procesamiento entre nodos de control.",
+            "redirecciona conexiones de clientes entre nodos de cómputo.",
+            "redirecciona conexiones de clientes entre nodos de control."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 10: __________ es un objeto asociado con una tabla que ordena y almacena las filas de datos en la tabla según sus valores de clave.",
+        "type": "radio",
+        "options": [
+            "Un índice agrupado (clustered index)",
+            "Una FileTable",
+            "Una clave externa (foreign key)",
+            "Un procedimiento almacenado (stored procedure)"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 11: Una base de datos relacional es apropiada para escenarios que implican un alto volumen de __________",
+        "type": "radio",
+        "options": [
+            "cambios en las relaciones entre entidades",
+            "escrituras distribuidas geográficamente",
+            "escrituras transaccionales",
+            "escrituras que tienen estructuras de datos variables"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 14: Una visualización que muestra la matrícula actual de estudiantes de una universidad frente a la capacidad máxima es un ejemplo de __________ análisis.",
+        "type": "radio",
+        "options": [
+            "cognitivo",
+            "descriptivo",
+            "predictivo",
+            "prescriptivo"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 16: Los datos de la cuenta deben replicarse fuera de la región de Azure automáticamente. ¿Qué dos tipos de replicación puede usar para la cuenta de almacenamiento?",
+        "type": "checkbox",
+        "options": [
+            "almacenamiento con redundancia de zona (ZRS)",
+            "Almacenamiento con redundancia geográfica con acceso de lectura (RA-GRS)",
+            "almacenamiento con redundancia local (LRS)",
+            "almacenamiento con redundancia geográfica (GRS)"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 19: Tienes una consulta SQL que combina datos de clientes y datos de pedidos. La consulta incluye columnas calculadas. Debes crear un objeto de base de datos que permita a otros usuarios volver a ejecutar la misma consulta SQL. ¿Qué deberías crear?",
+        "type": "radio",
+        "options": [
+            "un índice",
+            "una vista",
+            "una tabla",
+            "una función escalar"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 20: Un almacén de datos clave/valor está optimizado para __________",
+        "type": "radio",
+        "options": [
+            "imponer restricciones",
+            "búsquedas simples",
+            "uniones de tablas",
+            "transacciones"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 23: ¿Cuáles son dos características del procesamiento de datos en tiempo real?",
+        "type": "checkbox",
+        "options": [
+            "Los datos se procesan periódicamente",
+            "Se espera baja latencia",
+            "La latencia alta es aceptable",
+            "Los datos se procesan a medida que se crean"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 27: ¿Qué tipo de análisis se muestra en el cuarto trimestre?",
+        "type": "radio",
+        "options": [
+            "Predictivo",
+            "Prescriptivo",
+            "Descriptivo",
+            "Diagnóstico"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 28: ¿Qué afirmación es un ejemplo de lenguaje de manipulación de datos (DML)?",
+        "type": "radio",
+        "options": [
+            "REVOKE",
+            "DISABLE",
+            "CREATE",
+            "UPDATE"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 29: Crear texto de subtítulos para archivos de audio es un ejemplo de _______",
+        "type": "radio",
+        "options": [
+            "cognitiva",
+            "descriptiva",
+            "predictiva",
+            "prescriptiva"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 30: Una visualización que muestra la matrícula actual de estudiantes de una universidad por departamento es un ejemplo de _______________ análisis.",
+        "type": "radio",
+        "options": [
+            "cognitiva",
+            "descriptiva",
+            "predictiva",
+            "prescriptiva"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 31: Un proceso de extracción, carga y transformación (ELT) requiere _______________",
+        "type": "radio",
+        "options": [
+            "un motor de transformación separado",
+            "un almacenamiento de datos de destino lo suficientemente potente como para transformar datos",
+            "datos que estén completamente procesados antes de cargarse en el almacén de destino",
+            "una canalización de datos que incluya un motor de transformación"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 32: Debes crear un recurso de Azure para almacenar datos en Azure Table Storage. ¿Qué comando debe ejecutar?",
+        "type": "radio",
+        "options": [
+            "az storage share create",
+            "az storage account create",
+            "az cosmosdb create",
+            "az storage container create"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 33: La API __________ de Azure Cosmos DB permite usar instrucciones SELECT para…",
+        "type": "radio",
+        "options": [
+            "Core (SQL)",
+            "Gremlin",
+            "MongoDB",
+            "Table"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 34: Debes modificar una vista en una base de datos relacional agregando una nueva columna ¿Qué declaración debe utilizar?",
+        "type": "radio",
+        "options": [
+            "MERGE",
+            "ALTER",
+            "INSERT",
+            "UPDATE"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 36: PostgreSQL en máquinas virtuales de Azure (Azure VMs): Azure Database for PostgreSQL:",
+        "type": "checkbox",
+        "options": [
+            "Infraestructura como servicio (IaaS)",
+            "Plataforma como servicio (PaaS)",
+            "Software como servicio (SaaS)",
+            "Infraestructura como servicio (IaaS)",
+            "Plataforma como servicio (PaaS)",
+            "Software como servicio (SaaS)"
+        ],
+        "correct": [
+            0,
+            4
+        ]
+    },
+    {
+        "q": "Pregunta 37: _________________ admiten de forma nativa el análisis de relaciones entre entidades.",
+        "type": "radio",
+        "options": [
+            "Bases de datos de familia de columnas",
+            "Bases de datos de documentos",
+            "Bases de datos de grafos",
+            "Almacenes clave‑valor"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 38: ¿Qué solución de almacenamiento de Azure proporciona soporte nativo para listas de control de acceso (ACL) compatibles con POSIX?",
+        "type": "radio",
+        "options": [
+            "Almacenamiento de tablas de Azure",
+            "Azure Data Lake Storage",
+            "Almacenamiento en cola de Azure",
+            "Archivos de Azure"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 39: Los datos relacionales se almacenan en ___________________",
+        "type": "radio",
+        "options": [
+            "un sistema de archivos como datos no estructurados",
+            "una estructura jerárquica de carpetas",
+            "una forma tabular de filas y columnas",
+            "archivos de valores separados por comas (CSV)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 40: ____________ ordena físicamente los datos en una tabla según los valores de una columna especificada.",
+        "type": "radio",
+        "options": [
+            "Una vista",
+            "Un índice agrupado (clustered index)",
+            "Un procedimiento almacenado",
+            "Un índice no agrupado (nonclustered index)"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 41: Un bloque de código que se ejecuta en una base de datos se llama ___________",
+        "type": "radio",
+        "options": [
+            "un procedimiento almacenado.",
+            "una tabla.",
+            "una vista.",
+            "un índice."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 43: ________ presenta contenido definido por una consulta.",
+        "type": "radio",
+        "options": [
+            "Un montón (heap) una tabla sin índice agrupado",
+            "Un procedimiento almacenado",
+            "Una vista",
+            "Un índice"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 44: ¿Qué tipo de base de datos es Azure Database for PostgreSQL?",
+        "type": "radio",
+        "options": [
+            "Platform as a service (PaaS)",
+            "Infrastructure as a service (IaaS)",
+            "Microsoft SQL Server",
+            "on-premises"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 45: ¿Qué solución de almacenamiento admite listas de control de acceso (ACL) a nivel de archivos y carpetas?",
+        "type": "radio",
+        "options": [
+            "Azure Data Lake Storage",
+            "Azure Queue storage",
+            "Azure Blob storage",
+            "Azure Cosmos DB"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 46: Un(a) __________ es un gráfico de rectángulos coloreados. El tamaño de los rectángulos representa el valor relativo de cada elemento. El gráfico puede ser jerárquico, mostrando los datos como un conjunto de rectángulos anidados dentro del rectángulo principal.",
+        "type": "radio",
+        "options": [
+            "gráfico de líneas",
+            "matriz",
+            "gráfico de dispersión",
+            "Mapa de árbol"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 47: ¿Cuál es una característica del procesamiento por lotes?",
+        "type": "radio",
+        "options": [
+            "Los datos ingeridos durante el procesamiento por lotes deben procesarse tan pronto como se reciban.",
+            "Los conjuntos de datos grandes deben dividirse en lotes de menos de 1 GB antes de poder procesar los datos.",
+            "Hay un retraso de tiempo notable entre la ingesta de datos y la obtención de los resultados del procesamiento de datos.",
+            "El procesamiento por lotes solo puede procesar datos estructurados."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 48: En una instrucción SQL, __________ son ejemplos de funciones de agregación.",
+        "type": "radio",
+        "options": [
+            "FROM and WHERE",
+            "GROUP BY and ORDER BY",
+            "JOIN and MERGE",
+            "MAX and MIN"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 50: Los datos relacionales usan __________ para imponer relaciones entre diferentes tablas.",
+        "type": "radio",
+        "options": [
+            "colecciones",
+            "columna",
+            "claves",
+            "particiones"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 51: ¿Qué declaración debe usar una consulta SQL para cambiar la cantidad de inventario del Producto1 a 270?",
+        "type": "radio",
+        "options": [
+            "INSERT",
+            "MERGE",
+            "UPDATE",
+            "CREATE"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 52: Su empresa necesita implementar una BD relacional en Azure. La solución debe minimizar el mantenimiento continuo. ¿Qué servicio de Azure debería usar?",
+        "type": "radio",
+        "options": [
+            "Azure HDInsight",
+            "Azure SQL Database",
+            "Azure Cosmos DB",
+            "SQL Server on Azure Virtual Machines"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 53: Estás escribiendo un conjunto de consultas SQL que los administradores usarán para solucionar problemas en una base de datos Azure SQL. Necesitas incrustar documentos y resultados de consultas en un cuaderno SQL. ¿Qué deberías usar?",
+        "type": "radio",
+        "options": [
+            "Microsoft SQL Server Management Studio (SSMS)",
+            "Azure Data Studio",
+            "Azure CLI",
+            "Azure Powershell"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 55: Tiene una aplicación de comercio electrónico que lee y escribe datos en una base de datos SQL de Azure. ¿Qué tipo de procesamiento utiliza la aplicación?",
+        "type": "radio",
+        "options": [
+            "stream processing",
+            "batch processing",
+            "Online Analytical Processing (OLAP)",
+            "Online Transaction Processing (OLTP)"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 56: ¿Qué puede usar una plantilla de Azure Resource Manager?",
+        "type": "radio",
+        "options": [
+            "para automatizar la creación de un grupo interdependiente de recursos de Azure de forma repetible",
+            "para aplicar políticas de Azure para implementaciones multiinquilino",
+            "para aprovisionar suscripciones de Azure",
+            "para controlar qué servicios y características pueden implementar los administradores y desarrolladores desde Azure Portal"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 57: Recientemente has cambiado la IP pública de tu ordenador no puedes acceder a la BD por Internet ¿Cuál es una posible causa del problema?",
+        "type": "radio",
+        "options": [
+            "control de acceso basado en roles (RBAC)",
+            "Protocolo de configuración dinámica de host (DHCP)",
+            "Servicio de nombres de dominio (DNS)",
+            "un firewall a nivel de base de datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 60: ¿Qué herramienta de línea de comandos puede usar para consultar las bases de datos de Azure SQL?",
+        "type": "radio",
+        "options": [
+            "sqlcmd",
+            "bcp",
+            "azdata",
+            "Azure CLI"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 68: Estás implementando una aplicación SaaS con una BD relacional ¿Qué servicio de Azure debe usar para admitir la aplicación?",
+        "type": "radio",
+        "options": [
+            "Azure Cosmos DB",
+            "Azure HDInsight",
+            "Azure SQL Database",
+            "Azure Synapse Analytics"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 69: ¿Cuáles son los dos beneficios de las ofertas de BD relacionales de plataforma como servicio (PaaS) en Azure, como Azure SQL database?",
+        "type": "checkbox",
+        "options": [
+            "acceso a las funciones más frecuentes",
+            "control total sobre los procesos de copia de seguridad y restauración",
+            "servicios de aprendizaje automático en la base de datos",
+            "esfuerzo administrativo reducido para administrar la infraestructura del servidor"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 72: Cuando creas una BD de Azure SQL ¿qué cuenta siempre puede conectarse a la BD?",
+        "type": "radio",
+        "options": [
+            "la cuenta de Azure Active Directory (Azure AD) que creó la BD",
+            "la cuenta de inicio de sesión del administrador del servidor del servidor lógico",
+            "la cuenta de administrador de Azure Active Directory (Azure AD)",
+            "la cuenta sa"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 73: ¿Qué declaración es un ejemplo de lenguaje de definición de datos (DDL)?",
+        "type": "radio",
+        "options": [
+            "SELECT",
+            "INSERT",
+            "DELETE",
+            "DROP"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 74: Los desarrolladores deben conectarse y consultar una BD Azure SQL desde cada una de sus máquinas. Los desarrolladores requieren funciones de asistencia de código como IntelliSense. ¿Qué deben usar los desarrolladores?",
+        "type": "radio",
+        "options": [
+            "sqlcmd",
+            "Microsoft SQL Server Management Studio (SSMS)",
+            "Azure Data Studio",
+            "Azure Data Explorer"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 75: Transparent Data Encryption (TDE) cifra _____________",
+        "type": "radio",
+        "options": [
+            "una columna para proteger los datos en reposo y en tránsito.",
+            "las consultas y sus resultados para proteger los datos en tránsito.",
+            "la base de datos para proteger los datos en reposo.",
+            "el servidor para proteger los datos en reposo."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 76: Debes asegurarte de que los usuarios usen la autenticación multifactor (MFA) cuando se conecten a una BD de Azure SQL. ¿Qué tipo de autenticación debes utilizar?",
+        "type": "radio",
+        "options": [
+            "autenticación de entidad de servicio",
+            "Autenticación de Azure Active Directory (Azure AD)",
+            "Autenticación SQL",
+            "autenticación de certificado"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 77: Selecciona la respuesta que completa correctamente la oración. Los objetos en los que se deben capturar y almacenar cosas sobre los datos se denomina ________________.",
+        "type": "radio",
+        "options": [
+            "tablas",
+            "entidades",
+            "filas",
+            "columnas"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 78: Necesita procesar datos que se generan continuamente y se requieren respuestas casi en tiempo real. Deberías utilizar ________________",
+        "type": "radio",
+        "options": [
+            "procesamiento batch",
+            "procesamiento de datos programado",
+            "almacenamiento en búfer y procesamiento",
+            "transmisión de procesamiento de datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 80: La técnica que proporciona acciones recomendadas que debe tomar para lograr una meta o un objetivo se denomina análisis ________________.",
+        "type": "radio",
+        "options": [
+            "Descriptivo",
+            "Diagnóstico",
+            "Predictivo",
+            "Prescriptivo"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 82: El proceso de dividir una entidad en más de una tabla para reducir la redundancia de datos se llama: ___________________.",
+        "type": "radio",
+        "options": [
+            "Deduplicación",
+            "Desnormalización",
+            "Normalización",
+            "Optimización"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 83: Azure SQL Database es un ejemplo de ___________________ como servicio.",
+        "type": "radio",
+        "options": [
+            "Plataforma",
+            "Infraestructura",
+            "Software",
+            "Aplicación"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 85: El acto de aumentar o disminuir los recursos que están disponibles para un servicio se llama: _________",
+        "type": "radio",
+        "options": [
+            "Computación",
+            "Aprovisionamiento",
+            "Redes",
+            "Escalado"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 87: ¿Cuáles son las tres características de los datos no relacionados? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Esquema forzado en estructuras de datos",
+            "Almacenamiento flexible de datos ingeridos",
+            "Las entidades se describen a sí mismas",
+            "Las entidades pueden tener diferentes campos",
+            "Cada fila tiene exactamente las mismas columnas"
+        ],
+        "correct": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 88: Tiene datos que consisten en documentos basados en JSON. Debes almacenar los datos en un entorno Azure que admita búsquedas eficientes basadas en campos sin claves. Debes utilizar __________________________ como almacén de datos.",
+        "type": "radio",
+        "options": [
+            "Almacenamiento de tablas de Azure",
+            "Almacenamiento de blobs de Azure",
+            "Almacenamiento de archivos de Azure",
+            "Azure Cosmos DB"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 89: Necesita crear una BD de gráficos ¿Qué servicio de datos de Azure debe usar?",
+        "type": "radio",
+        "options": [
+            "Azure Table",
+            "Azure Cosmos DB",
+            "Azure Blob",
+            "Azure File"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 90: Utiliza Azure Table Storage como un almacén de datos no relacional. Necesita optimizar la recuperación de datos. Debe utilizar ______________ como criterio de consulta.",
+        "type": "radio",
+        "options": [
+            "Solo clave de partición",
+            "Solo claves de fila",
+            "Claves de partición y claves de fila",
+            "Solo propiedades"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 91: Debes utilizar archivos de notación de objetos de JavaScript (JSON) para aprovisionar el almacenamiento de Azure. ¿Qué debes usar?",
+        "type": "radio",
+        "options": [
+            "Azure portal",
+            "Interfaz de línea de comandos (CLI) de Azure",
+            "Azure Powershell",
+            "Plantillas de Azure Resource Manager (ARM)"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 92: ¿Por qué motivo deberías implementar un Data Warehouse?",
+        "type": "radio",
+        "options": [
+            "Registrar transacciones de ventas diarias",
+            "Realizar análisis de tendencias de ventas",
+            "Imprimir órdenes de venta",
+            "Estado de búsquedas de órdenes de venta"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 93: ¿Qué dos servicios de datos de Azure admiten clústeres de Apache Spark? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Azure Synapse Analytics",
+            "Azure Cosmos DB",
+            "Azure Databricks",
+            "Azure Data Factory"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 94: Diseña una solución de transformación e ingesta de datos mediante el servicio Azure Data Factory. Necesitas obtener datos de una BD Azure SQL. ¿Qué dos recursos deberías utilizar?",
+        "type": "checkbox",
+        "options": [
+            "Servicio vinculado",
+            "Actividad de copia de datos",
+            "Conjunto de datos",
+            "Bloc de notas de Azure Databricks"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "Pregunta 95: ¿Qué componente de Azure Data Factory debes utilizar para representar los datos que deseas ingestar para tu procesamiento?",
+        "type": "radio",
+        "options": [
+            "Servicios vinculados",
+            "Datasets",
+            "Pipelines",
+            "notebook"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 96: Estás diseñando informes con Microsoft Power BI ¿Para qué tres escenarios puedes crear informes de Power BI como informes paginados?",
+        "type": "checkbox",
+        "options": [
+            "un informe que tiene una tabla visual con la capacidad de imprimir todos los datos en la tabla",
+            "un informe que tiene una tabla visual con la capacidad de ver todos los datos en la tabla",
+            "un informe con un encabezado y pie de página repetibles",
+            "un informe que está formateado para encajar bien en una página impresa",
+            "un informe que usa solo objetos visuales de Power BI"
+        ],
+        "correct": [
+            0,
+            2,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 97: ¿Cuál es el rol de un pipeline en una factoría de datos en la gestión de actividades?",
+        "type": "radio",
+        "options": [
+            "Un pipeline permite la gestión de actividades como un conjunto",
+            "Un pipeline permite la gestión de actividades de forma individual",
+            "Un pipeline permite la gestión de actividades de forma individual y en conjunto tanto",
+            "No hay papel de la pipeline en la gestión de actividades"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 98: ¿En las BD relacionales, todos los valores en una columna tendrán el mismo tipo de datos?",
+        "type": "radio",
+        "options": [
+            "Sí",
+            "No"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 99: ¿Cuál de las siguientes no es una característica de Azure Database for MariaDB?",
+        "type": "radio",
+        "options": [
+            "Alta disponibilidad y rendimiento predecible",
+            "Proporciona lectura y escritura de la base de datos del sistema mysql",
+            "Ajuste de escala automático, copias de seguridad automáticas y restauración a un momento dado",
+            "Protección segura de datos con seguridad y cumplimiento de nivel empresarial"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 100: ¿Cuál de los siguientes es un identificador único para el documento, a menudo con hash para la distribución uniforme de los datos, y ayuda en la recuperación de datos del documento en el almacén de datos del documento?",
+        "type": "radio",
+        "options": [
+            "Clave primaria",
+            "Clave hash",
+            "Clave secundaria",
+            "Clave del documento"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 101: Tienes los siguientes datos. { “firstname”: “John”; “lastname”: “Doe”; “address”: { “streetaddress”: “Avenue Gold, 22”; … ¿Qué tipo de datos son?",
+        "type": "radio",
+        "options": [
+            "no estructurado",
+            "semiestructurado",
+            "estructurado"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 102: Necesita implementar una plataforma como servicio (PaaS) de Azure que aloje una base de datos relacional. La solución debe ser compatible con el escalado automático integrado. ¿Qué servicio debería implementar?",
+        "type": "radio",
+        "options": [
+            "Base de datos SQL de Azure / Azure SQL Database",
+            "SQL Server en máquinas virtuales de Azure",
+            "Instancia administrada de Azure SQL",
+            "Azure SQL Edge"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 104: Un bloque de código que se ejecuta en una base de datos se llama __________.",
+        "type": "radio",
+        "options": [
+            "un procedimiento almacenado",
+            "una tabla",
+            "una vista",
+            "un índice"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 106: En una base de datos relacional, cada fila en una tabla tiene _______________.",
+        "type": "radio",
+        "options": [
+            "diferentes tipos de columnas",
+            "un par de clave-valor",
+            "el mismo tipo de columnas",
+            "datos no estructurados"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 109: _______________ admiten de forma nativa el análisis de relaciones entre entidades.",
+        "type": "radio",
+        "options": [
+            "Bases de datos de familia de columnas",
+            "Bases de datos de documentos",
+            "Bases de datos de grafos",
+            "Almacenes clave‑valor"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 110: En una instancia de infraestructura como servicio (IaaS) de Microsoft SQL Server en Azure, tú administras la __________ que hospeda SQL Server.",
+        "type": "radio",
+        "options": [
+            "elastic pool → grupo elástico",
+            "MySQL server → servidor MySQL",
+            "PostgreSQL server → servidor PostgreSQL",
+            "virtual machine → máquina virtual"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 111: Tener campos variables para cada entidad en un documento JSON es un ejemplo de __________.",
+        "type": "radio",
+        "options": [
+            "datos relacionales",
+            "datos semiestructurados",
+            "datos estructurados",
+            "datos no estructurados"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 112: Un documento JSON es un ejemplo de __________.",
+        "type": "radio",
+        "options": [
+            "datos de grafo",
+            "datos relacionales",
+            "datos semi-estructurados",
+            "datos no estructurados"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 113: ¿Qué propiedad de una carga de trabajo transaccional garantiza que cada transacción sea tratada como una unidad única que puede tener éxito completamente o fallar completamente?",
+        "type": "radio",
+        "options": [
+            "atomicidad",
+            "aislamiento",
+            "durabilidad",
+            "consistencia"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 114: Tiene un almacén de datos con la estructura que se muestra en la siguiente ilustración. ¿Qué tipo de almacén de datos es?",
+        "type": "radio",
+        "options": [
+            "clave-valor",
+            "datos del objeto",
+            "grafo",
+            "series temporales"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 115: ¿Qué tipo de base de datos contiene nodos y aristas?",
+        "type": "radio",
+        "options": [
+            "grafo",
+            "clave/valor",
+            "columnar",
+            "series temporales"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 116: ___________ es responsable de identificar qué reglas de negocio deben aplicarse a los datos de una empresa.",
+        "type": "radio",
+        "options": [
+            "Un analista de datos",
+            "Un ingeniero de datos",
+            "Un científico de datos"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 117: El flujo de trabajo para crear una solución de análisis en Microsoft Power BI comienza con __________.",
+        "type": "radio",
+        "options": [
+            "Power BI Desktop",
+            "la aplicación de Power BI para el teléfono",
+            "el servicio de Power BI"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 118: Estás escribiendo un conjunto de consultas SQL que los administradores usarán para solucionar problemas en una base de datos SQL de Azure. Necesitas incrustar documentos y resultados de consultas en un cuaderno de SQL. ¿Qué deberías usar?",
+        "type": "radio",
+        "options": [
+            "Microsoft SQL Server Management Studio (SSMS)",
+            "Azure Data Studio",
+            "CLI de Azure",
+            "Azure PowerShell"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 119: Al crear una base de datos SQL de Azure, ¿qué cuenta puede conectarse siempre a la base de datos?",
+        "type": "radio",
+        "options": [
+            "la cuenta de Azure Active Directory (Azure AD) que creó la base de datos",
+            "la cuenta de inicio de sesión del administrador del servidor del servidor lógico",
+            "la cuenta de administrador de Azure Active Directory (Azure AD)",
+            "la cuenta sa"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 120: ¿Cuál es el beneficio de alojar una base de datos en una instancia administrada de Azure SQL en comparación con una base de datos de Azure SQL?",
+        "type": "radio",
+        "options": [
+            "alta disponibilidad incorporada",
+            "Soporte nativo para consultas y transacciones entre bases de datos",
+            "copias de seguridad automáticas iniciadas por el sistema",
+            "soporte para cifrado en reposo"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 121: De forma predeterminada, cada base de datos de Azure SQL está protegida por __________.",
+        "type": "radio",
+        "options": [
+            "un grupo de seguridad de red (NSG)",
+            "un firewall a nivel de servidor",
+            "Azure Firewall",
+            "Azure Front Door"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 122: Necesita diseñar y modelar una base de datos mediante una herramienta gráfica que admita el desarrollo de bases de datos offline orientadas a proyectos. ¿Qué debería usar?",
+        "type": "radio",
+        "options": [
+            "Herramientas de datos de Microsoft SQL Server (SSDT)",
+            "Microsoft SQL Server Management Studio (SSMS)",
+            "Azure Databricks",
+            "Azure Data Studio"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 124: Tiene una aplicación transaccional que almacena datos en una instancia administrada de Azure SQL. ¿Cuándo debería implementar una réplica de base de datos de solo lectura?",
+        "type": "radio",
+        "options": [
+            "Necesita generar informes sin afectar la carga de trabajo transaccional.",
+            "Necesita auditar la aplicación transaccional.",
+            "Es necesario implementar alta disponibilidad en caso de una interrupción regional.",
+            "Necesita mejorar el objetivo del punto de recuperación (RPO)."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 125: Se debe usar una base de datos relacional cuando __________.",
+        "type": "radio",
+        "options": [
+            "se requiere un esquema dinámico.",
+            "los datos se almacenarán como pares clave/valor.",
+            "se almacenarán imágenes y videos grandes.",
+            "se requieren garantías de consistencia estricta."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 127: __________ es una tabla virtual que contiene contenido definido por una consulta.",
+        "type": "radio",
+        "options": [
+            "Un montón (A heap)",
+            "Un procedimiento almacenado (A stored procedure)",
+            "Una vista (A view)",
+            "Un índice (An index)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 128: Necesita consultar una tabla llamada Productos en una base de datos SQL de Azure. ¿Cuáles son los tres requisitos necesarios para consultar la tabla desde internet? Cada respuesta correcta representa parte de la solución.",
+        "type": "checkbox",
+        "options": [
+            "Se le debe asignar el rol de Lector para el grupo de recursos que contiene la base de datos.",
+            "Debe tener acceso SELECT a la tabla Productos.",
+            "Debe tener un usuario en la base de datos.",
+            "Se le debe asignar el rol de Colaborador para el grupo de recursos que contiene la base de datos.",
+            "Su dirección IP debe tener permiso para conectarse a la base de datos."
+        ],
+        "correct": [
+            1,
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Pregunta 129: ¿Qué cláusula debería utilizar en una declaración SELECT para combinar filas de una tabla con filas de otra tabla?",
+        "type": "radio",
+        "options": [
+            "SET",
+            "VALUE",
+            "KEY",
+            "JOIN"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 130: Su empresa necesita garantizar que una máquina virtual de Azure pueda conectarse a bases de datos de Azure SQL sin exponerlas a internet. ¿Qué debería usar?",
+        "type": "radio",
+        "options": [
+            "Puerta de enlace de aplicaciones de Azure → Azure Application Gateway",
+            "Administrador de tráfico de Azure → Azure Traffic Manager",
+            "DNS de Azure → Azure DNS",
+            "Enlace privado de Azure → Azure Private Link"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 132: ¿Qué declaración T-SQL se debe utilizar para indicar a un sistema de gestión de bases de datos que utilice un índice en lugar de realizar un escaneo completo de la tabla?",
+        "type": "radio",
+        "options": [
+            "SELECC",
+            "WHERE",
+            "JOIN"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 314: _______________ utiliza escrituras en varias regiones, índices y particionado para proporcionar un rendimiento rápido de lectura y escritura para grandes volúmenes de datos.",
+        "type": "radio",
+        "options": [
+            "Azure Blob Storage",
+            "Azure Cosmos DB",
+            "Azure SQL Database",
+            "Azure Table Storage"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 313: _______________ es una plataforma como servicio (PaaS) que admite múltiples bases de datos en la misma instancia y el uso del servicio SQL Server Agent.",
+        "type": "radio",
+        "options": [
+            "Azure SQL Database",
+            "Azure SQL Edge",
+            "Azure SQL Managed Instance",
+            "SQL Server on Azure Virtual Machines"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 312: ¿Qué proceso de diseño de esquemas minimiza la duplicación de datos y refuerza la integridad de los datos?",
+        "type": "radio",
+        "options": [
+            "Normalización",
+            "Procesamiento por lotes",
+            "Extracción",
+            "Virtualización"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 311: _____ is a common format for delimited data.",
+        "type": "radio",
+        "options": [
+            "CSV",
+            "JSON",
+            "ORC",
+            "XML"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 309: ¿Qué servicio puede utilizarse para crear canalizaciones de extracción, transformación y carga (ETL)?",
+        "type": "radio",
+        "options": [
+            "Azure Data Factory",
+            "Azure Pipelines",
+            "Azure SQL Database",
+            "Azure Cosmos DB",
+            "Azure Databricks"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 308: ______________ es un formato de datos columnar que almacena los datos de cada columna en el mismo grupo de filas.",
+        "type": "radio",
+        "options": [
+            "Apache Parquet",
+            "Avro",
+            "JSON",
+            "XML"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 307: ¿Qué tipo de visualización de Microsoft Power BI puedes utilizar para examinar tendencias a lo largo del tiempo para una o más series de valores?",
+        "type": "radio",
+        "options": [
+            "Gráfico de embudo (funnel chart)",
+            "Gráfico circular (pie chart)",
+            "Tabla (table)",
+            "Gráfico de líneas (line chart)"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 306: ¿Qué API de Azure Cosmos DB almacena los datos en formato BSON y utiliza MQL para consultarlos?",
+        "type": "radio",
+        "options": [
+            "MongoDB",
+            "Apache Gremlin",
+            "Table",
+            "PostgreSQL"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 305: Datos estructurados:",
+        "type": "radio",
+        "options": [
+            "contiene entidades que tienen los mismos atributos.",
+            "contiene entidades que tienen atributos diferentes.",
+            "se almacena comúnmente utilizando el enfoque de esquema al leer (schema‑on‑read).",
+            "NO está organizado de una manera predefinida."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 304: Datos estructurados:",
+        "type": "radio",
+        "options": [
+            "contiene entidades que tienen los mismos atributos.",
+            "contiene entidades que tienen atributos diferentes.",
+            "se almacena comúnmente utilizando el enfoque de esquema al leer (schema‑on‑read). NO está organizado de una manera predefinida."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 302: A ______________ es un formato de archivo basado en filas en el que cada registro contiene un encabezado JSON y datos binarios.",
+        "type": "radio",
+        "options": [
+            "AVRO",
+            "ORC",
+            "Parquet",
+            "XML"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 301: Tienes una base de datos en el formato mostrado: de qué tipo de base de datos es este ejemplo:",
+        "type": "radio",
+        "options": [
+            "Familia de columnas",
+            "relacional",
+            "clave-valor",
+            "documento"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 300: Una base de datos _________ se utiliza para ofrecer datos estructurados en tablas.",
+        "type": "radio",
+        "options": [
+            "documento",
+            "clave-valor",
+            "no relacional",
+            "relacional"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 299: Tienes una base de datos Azure SQL que contiene tablas de clientes y pedidos. Necesitas crear una consulta que devuelva los pedidos realizados por cada cliente. ¿Qué dos instrucciones de Transact‑SQL deberías incluir en la consulta? Cada respuesta correcta presenta parte de la solución.",
+        "type": "checkbox",
+        "options": [
+            "INDEX",
+            "EXISTS",
+            "JOIN",
+            "ORDERBY",
+            "SELECT"
+        ],
+        "correct": [
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Pregunta 297: Tienes esta sentencia SQL: SELECT o.OrderNo, o.OrderDate, c.Address, c.City FROM Order AS o - JOIN Customer AS c - ON o.Customer = c.ID; ¿Cuál es la función de la cláusula ON?",
+        "type": "radio",
+        "options": [
+            "actualizar datos en la tabla Customer",
+            "hacer coincidir datos de la tabla Customer con datos de la tabla Order",
+            "definir un alias para la tabla Customer",
+            "actualizar datos en la tabla Order"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 296: ______________ puede utilizarse para simplificar el proceso de incrustar (embed) los resultados del análisis de datos en páginas web para usuarios externos.",
+        "type": "radio",
+        "options": [
+            "Azure Analysis Services",
+            "Azure Automation",
+            "Azure Data Lake Analytics",
+            "Microsoft Power BI"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 295: ¿Cuál es la responsabilidad de un administrador de bases de datos (DBA)?",
+        "type": "radio",
+        "options": [
+            "aplicar rutinas de limpieza de datos",
+            "crear visualizaciones de datos",
+            "administrar procesos de integración de datos",
+            "almacenar copias de seguridad de los datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 293: Apache Spark Structured Streaming se basa en un(a) ______ que se utiliza para encapsular una única tabla de datos.",
+        "type": "radio",
+        "options": [
+            "dataframe",
+            "delta lake",
+            "data lake",
+            "data warehouse"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 292: ¿Qué servicio está optimizado para escenarios de IoT que implican datos de series temporales en streaming?",
+        "type": "radio",
+        "options": [
+            "SQL Server en Máquinas Virtuales de Azure",
+            "Azure SQL Managed Instance",
+            "Azure SQL Database",
+            "Azure SQL Edge"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 291: ¿Qué puedes usar para crear canalizaciones (pipelines) de ingesta de datos?",
+        "type": "radio",
+        "options": [
+            "Azure HDInsight",
+            "Azure SQL Database",
+            "Azure Data Factory",
+            "Azure Cosmos DB"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 290: Tienes estos datos en formato tabular: ¿De qué tipo de datos es este ejemplo?",
+        "type": "radio",
+        "options": [
+            "datos no estructurados",
+            "datos semi-estructurados",
+            "documento",
+            "datos estructurados"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 289: Para agregar un nuevo atributo a una entidad en datos estructurados, necesitas… A . agregar una etiqueta a las entidades relevantes para las cuales tienes información.",
+        "type": "radio",
+        "options": [
+            "actualizar todos los registros en la tabla de la entidad para incluir la nueva columna.",
+            "actualizar solo los registros en la tabla de la entidad para los cuales tienes información."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 287: ¿Qué tres servicios son compatibles con Apache Spark? Cada respuesta correcta representa una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Azure Data Explorer",
+            "Azure Synapse Analytics",
+            "Azure Databricks",
+            "Azure Stream Analytics",
+            "Azure HDInsight"
+        ],
+        "correct": [
+            1,
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Pregunta 286: ¿Cuál es la latencia típica para operaciones de lectura sobre archivos multimedia almacenados en el nivel de acceso Cool de Azure Blob Storage?",
+        "type": "radio",
+        "options": [
+            "unos pocos milisegundos",
+            "unos pocos segundos",
+            "unos pocos minutos",
+            "unas pocas horas"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 285: ¿Cómo se almacenan los datos sin procesar en un data lakehouse?",
+        "type": "radio",
+        "options": [
+            "como tablas",
+            "como colas",
+            "como archivos",
+            "como discos"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 284: Un modelo de procesamiento analítico en línea (OLAP) almacena datos ______ que están optimizados para cargas de trabajo analíticas.",
+        "type": "radio",
+        "options": [
+            "agregados",
+            "normalizados",
+            "semiestructurados",
+            "no estructurados"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 283: Azure Data Explorer utiliza ______ para explorar, filtrar y agregar datos rápidamente.",
+        "type": "radio",
+        "options": [
+            "KQL (Kusto Query Language)",
+            "Python",
+            "Scala",
+            "SQL"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 280: ¿SELECT, INSERT y UPDATE son ejemplos de qué tipo de sentencias SQL?",
+        "type": "radio",
+        "options": [
+            "Data Definition Language (DDL)",
+            "Data Control Language (DCL)",
+            "Data Manipulation Language (DML)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 279: _____ es responsable de encontrar patrones ocultos en los datos y de crear informes gráficos que presenten la información de manera útil y atractiva.",
+        "type": "radio",
+        "options": [
+            "Un analista de datos",
+            "Un ingeniero de datos",
+            "Un administrador de bases de datos"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 278: Un documento JSON que contiene entidades de clientes con un número variable de propiedades es un ejemplo de datos __________________.",
+        "type": "radio",
+        "options": [
+            "relacionales",
+            "semiestructurados",
+            "estructurados",
+            "no estructurados"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 273: Tienes una aplicación bancaria que transfiere dinero hacia y desde cuentas ¿De qué tipo de solución es este un ejemplo?.",
+        "type": "radio",
+        "options": [
+            "procesamiento de transacciones en línea (OLTP)",
+            "procesamiento analítico en línea (OLAP)",
+            "extracción, transformación y carga (ETL)",
+            "un almacén de datos (data warehouse"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 272: ¿Cuál actividad es la más común en las cargas de trabajo transaccionales?",
+        "type": "radio",
+        "options": [
+            "Registrar pequeñas unidades de eventos de trabajo en tiempo real",
+            "Agregar grandes cantidades de datos",
+            "Producir informes complejos",
+            "Realizar exploración de datos en modo autoservicio"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 271: La rehidratación de blobs ocurre en Azure Blob Storage cuando un blob se mueve entre qué niveles de acceso?:",
+        "type": "radio",
+        "options": [
+            "De Hot a Cool",
+            "De Hot a Archive",
+            "De Cool a Archive",
+            "De Archive a Cool"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 270: Un banco necesita garantizar que una transacción que implica debitar fondos de una cuenta de origen y acreditar los mismos fondos en una cuenta de destino complete ambas acciones. Si alguna acción falla, la otra también debe fallar. ¿De qué semántica ACID es este un ejemplo?",
+        "type": "radio",
+        "options": [
+            "consistencia",
+            "durabilidad",
+            "atomicidad",
+            "aislamiento"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 268: _____________ son responsables de la disponibilidad, el rendimiento y la optimización de las bases de datos.",
+        "type": "radio",
+        "options": [
+            "Analistas de datos",
+            "Ingenieros de datos",
+            "Científicos de datos",
+            "Administradores de bases de datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 267: ¿Qué API de Azure Cosmos DB deberías usar para una base de datos de grafos?",
+        "type": "radio",
+        "options": [
+            "Azure Cosmos DB para Table",
+            "Azure Cosmos DB para Apache Cassandra",
+            "Azure Cosmos DB para NoSQL",
+            "Azure Cosmos DB para Apache Gremlin"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 265: El formato de archivo _____________ usa un esquema de documento jerárquico para definir entidades de datos que tienen múltiples atributos.",
+        "type": "radio",
+        "options": [
+            "CSV",
+            "JSON",
+            "ORC",
+            "TSV"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 264: El formato de archivo _____________ se utiliza para almacenar datos delimitados, separa los campos de datos usando comas y termina las filas usando un salto de línea (carriage return).",
+        "type": "radio",
+        "options": [
+            "CSV",
+            "JSON",
+            "ORC",
+            "TSV"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 262: El servicio ____________ está optimizado para soluciones de IoT.",
+        "type": "radio",
+        "options": [
+            "Azure SQL Database",
+            "Azure SQL Edge",
+            "Azure SQL Managed Instance",
+            "SQL Server en Máquinas Virtuales de Azure"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 261: ¿Qué lenguaje se utiliza para definir consultas en Azure Synapse Data Explorer?",
+        "type": "radio",
+        "options": [
+            "Bash",
+            "PowerShell",
+            "KQL",
+            "SQL"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 259: Un banco necesita garantizar que, después de que una transacción de transferencia entre cuentas se complete, los saldos actualizados persistan incluso si el sistema de base de datos que aloja la transacción se vuelve temporalmente no disponible. ¿De qué semántica ACID es este un ejemplo?",
+        "type": "radio",
+        "options": [
+            "durabilidad",
+            "aislamiento",
+            "atomicidad",
+            "consistencia"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 257: ¿Cuál es una diferencia entre los datos estructurados y los datos semiestructurados?",
+        "type": "radio",
+        "options": [
+            "Los datos estructurados tienen un esquema fijo y los datos semiestructurados tienen un esquema flexible.",
+            "Solo los datos estructurados admiten entidades.",
+            "Los datos estructurados tienen un esquema flexible y los datos semiestructurados tienen un esquema fijo.",
+            "Solo los datos estructurados admiten atributos."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 256: En un modelo de datos analítico, ¿qué tipo de tabla contiene entidades que se utilizan para agregar valores numéricos, donde cada entidad está representada por una fila con un valor de clave único?",
+        "type": "radio",
+        "options": [
+            "tabla puente (bridge)",
+            "tabla de dimensión (dimension)",
+            "tabla de hechos (fact)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 255: ¿Qué API de Azure Cosmos DB deberías usar para una base de datos de grafos?",
+        "type": "radio",
+        "options": [
+            "Tabla",
+            "Cassandra",
+            "NoSQL",
+            "Gremlin"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 253: Los sistemas de procesamiento analítico en línea (OLAP) son especialmente adecuados para cargas de trabajo analíticas porque los datos están ______________.",
+        "type": "radio",
+        "options": [
+            "limitados en tamaño",
+            "optimizados para transacciones",
+            "pre‑agregados",
+            "de solo lectura"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 252: ¿Qué tipo de recurso de Azure admite la configuración serverless de una base de datos Azure SQL?.",
+        "type": "radio",
+        "options": [
+            "SQL Server en Máquinas Virtuales de Azure",
+            "un grupo elástico (elastic pool) de Azure SQL Database",
+            "una base de datos única en Azure SQL Database",
+            "Azure SQL Managed Instance"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 251: Después de crear modelos de datos y reportes en Microsoft Power BI, puedes publicarlos en __________.",
+        "type": "radio",
+        "options": [
+            "Power BI Desktop",
+            "Power Query",
+            "la aplicación móvil de Power BI",
+            "el servicio de Power BI"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 250: ____________ proporciona una gama completa de funciones de modelado de datos y edición de informes de Power BI.",
+        "type": "radio",
+        "options": [
+            "Microsoft Power BI Desktop",
+            "El servicio de Microsoft Power BI",
+            "La aplicación móvil de Microsoft Power BI"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 248: La API de Azure Cosmos DB ______________ permite el uso de instrucciones SELECT para recuperar documentos desde Azure Cosmos DB.",
+        "type": "radio",
+        "options": [
+            "para NoSQL",
+            "para Apache Gremlin",
+            "para MongoDB",
+            "para Table"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 245: En un modelo analítico diseñado como un esquema en estrella, las entidades mediante las cuales agregas o segmentas las medidas se llaman _________.",
+        "type": "radio",
+        "options": [
+            "cubos",
+            "dimensiones",
+            "hechos",
+            "esquemas"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 244: Un proceso de extracción, carga y transformación (ELT) requiere…",
+        "type": "radio",
+        "options": [
+            "una canalización de datos que incluya un motor de transformación.",
+            "un motor de transformación independiente.",
+            "un almacén de datos de destino lo suficientemente potente como para transformar datos.",
+            "datos totalmente procesados antes de cargarse en el almacén de destino."
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 242: Esta oferta Azure SQL ofrece una compatibilidad casi del 100 % con instancias de Microsoft SQL Server locales, mientras proporciona actualizaciones automáticas. ¿Copias de seguridad y tareas de mantenimiento?.",
+        "type": "radio",
+        "options": [
+            "Azure SQL Managed Instance",
+            "SQL Server on Azure Virtual Machines",
+            "Azure SQL Database",
+            "Azure SQL Edge"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 241: Las bases de datos relacionales se usan comúnmente para almacenar y consultar…",
+        "type": "radio",
+        "options": [
+            "blobs",
+            "datos semiestructurados",
+            "datos estructurados",
+            "datos no estructurados"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 240: Tienes datos estructurados en formato tabular. ¿Qué representa una instancia individual de una entidad de datos?",
+        "type": "radio",
+        "options": [
+            "Una columna",
+            "una tabla",
+            "Una célula",
+            "una fila"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 239: En una base de datos de grafos, los bordes (edges) especifican relaciones entre…",
+        "type": "radio",
+        "options": [
+            "column families → familias de columnas",
+            "facts → hechos",
+            "vertexes → vértices",
+            "tables → tablas"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 238: ¿Un sistema de punto de venta al por menor (POS) es un ejemplo de qué tipo de solución.",
+        "type": "radio",
+        "options": [
+            "un almacén de datos",
+            "procesamiento analítico en línea (OLAP)",
+            "extraer, transformar y cargar (ETL)",
+            "procesamiento de transacciones en línea (OLTP)"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 235: En una base de datos totalmente desnormalizada, ¿cómo se leen y escriben los datos para una sola entidad?.",
+        "type": "radio",
+        "options": [
+            "Los datos se leen de una única tabla y se escriben en una sola tabla.",
+            "Los datos se leen de varias tablas y se escriben en una sola tabla.",
+            "Los datos se leen de una única tabla y se escriben en varias tablas.",
+            "Los datos se leen de múltiples tablas y se escriben en varias tablas."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 234: ¿Qué formato de archivo tiene nombres y tipos de datos definidos para cada columna y utiliza almacenamiento columnar comprimido?",
+        "type": "radio",
+        "options": [
+            "HTML",
+            "CSV",
+            "Apache Parquet",
+            "JSON"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 233: En Microsoft Power BI, puedes crear ______________ para hacer drill‑up o drill‑down rápidamente y encontrar valores agregados en distintos niveles de una dimensión.",
+        "type": "radio",
+        "options": [
+            "un panel (a dashboard)",
+            "una tabla de hechos (a fact table)",
+            "una clave única (a unique key)",
+            "una jerarquía de atributos (an attribute hierarchy)"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 232: _____________ se utilizan para comparar dos medidas numéricas e identificar una relación o correlación entre ellas.",
+        "type": "radio",
+        "options": [
+            "Gráficos de barras",
+            "Gráficos circulares",
+            "Gráficos de dispersión",
+            "Tablas"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 231: Los datos en un data warehouse pueden agregarse y cargarse en un modelo de procesamiento analítico en línea (OLAP), que también se conoce como un _____________.",
+        "type": "radio",
+        "options": [
+            "cubo",
+            "lago de datos",
+            "dimensión",
+            "medida"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 230: El motor de canalizaciones utilizado en Azure Data Factory también está disponible en…",
+        "type": "radio",
+        "options": [
+            "Azure Databricks",
+            "Azure HDInsight",
+            "Azure SQL Database",
+            "Azure Synapse Analytics"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 229: ¿De qué tarea es responsable un ingeniero de datos?.",
+        "type": "radio",
+        "options": [
+            "Explora datos para identificar tendencias.",
+            "Implementar políticas, herramientas y procesos para planes de respaldo y recuperación.",
+            "Diseñar y construir modelos analíticos.",
+            "Diseñar e implementar almacenes de datos para cargas de trabajo analíticas."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 226: Un banco tiene un sistema que gestiona las transacciones financieras. Cuando transfieres dinero entre cuentas. El sistema nunca debe recuperar un valor para la cuenta de origen que refleje el saldo previo a la transferencia y un valor para la cuenta de destino que refleje el saldo posterior a la transferencia. ¿De qué semántica ACID es este ejemplo?",
+        "type": "radio",
+        "options": [
+            "Atomicidad",
+            "Durabilidad",
+            "Consistencia",
+            "Aislamiento"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 225: _________________ permite que varias bases de datos de Azure SQL compartan recursos como memoria, espacio de almacenamiento y potencia de procesamiento.",
+        "type": "radio",
+        "options": [
+            "Un servidor Azure SQL",
+            "Un grupo elástico",
+            "Data Migration Assistant",
+            "Una red virtual"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 222: Necesitas almacenar datos de los registros de eventos que estén semi-estructurados y que se reciban a medida que ocurren los registros. ¿Qué deberías usar?",
+        "type": "radio",
+        "options": [
+            "Azure Table Storage",
+            "Azure Queue storage",
+            "Azure Files"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 221: __________________ es responsable de crear visuales y gráficos que ayudan a una empresa a tomar decisiones informadas.",
+        "type": "radio",
+        "options": [
+            "A data analyst → Un analista de datos",
+            "A data engineer → Un ingeniero de datos",
+            "A data scientist → Un científico de datos",
+            "A database administrator → Un administrador de bases de datos"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 220: En el almacenamiento de Azure Table, ¿cada fila de una tabla debe identificarse de forma única por qué dos componentes? Cada respuesta correcta presenta parte de la solución.",
+        "type": "checkbox",
+        "options": [
+            "Una clave de partición",
+            "Un rango",
+            "Una clave de fila",
+            "Una marca temporal"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 219: ¿Qué deberías usar para eliminar automáticamente los blobs de Azure Blob Storage?",
+        "type": "radio",
+        "options": [
+            "Almacenamiento de archivos",
+            "El feed de cambios",
+            "Eliminación suave",
+            "Una política de gestión del ciclo de vida"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 218: ¿Cuál es una característica de una base de datos no relacional?",
+        "type": "radio",
+        "options": [
+            "soporte completo para Transact-SQL",
+            "un esquema fijo",
+            "Entidades autodescriptivas"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 217: El procesamiento de flujo (stream processing) se utiliza para _______________ con latencia.",
+        "type": "radio",
+        "options": [
+            "analítica compleja con baja",
+            "analítica simple con alta",
+            "analítica simple con baja"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 216: La cláusula ____________________ puede utilizarse en sentencias del Lenguaje de Manipulación de Datos (DML) para especificar los criterios que las filas deben cumplir.",
+        "type": "radio",
+        "options": [
+            "ALTER",
+            "JOIN",
+            "SET",
+            "WHERE"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 215: ¿Cuál es una característica principal de una base de datos relacional?",
+        "type": "radio",
+        "options": [
+            "Una estructura de datos flexible",
+            "los datos se consultan y manipulan utilizando una variante del lenguaje SQL",
+            "Falta de dependencias entre tablas",
+            "una gran cantidad de datos duplicados"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 214: En una base de datos totalmente normalizada, ¿cómo se leen y escriben los datos para una sola entidad?.",
+        "type": "radio",
+        "options": [
+            "Los datos se leen de múltiples tablas y se escriben en varias tablas.",
+            "Los datos se leen de una única tabla y se escriben en una sola tabla.",
+            "Los datos se leen de una única tabla y se escriben en varias tablas.",
+            "Los datos se leen de varias tablas y se escriben en una sola tabla."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 213: Los archivos en formato XML son ejemplos de ____________.",
+        "type": "radio",
+        "options": [
+            "datos relacionados",
+            "datos semi-estructurados",
+            "datos no estructurados"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 211: ¿Qué se utiliza para definir una consulta en trabajos de procesamiento de flujos en Azure Stream Analytics?.",
+        "type": "radio",
+        "options": [
+            "YAML",
+            "KQL",
+            "SQL",
+            "XML"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 209: En Microsoft Power BI, un(a) __________ es una colección de visualizaciones que aparecen juntas en una o más páginas.",
+        "type": "radio",
+        "options": [
+            "dashboard → panel",
+            "dataset → conjunto de datos",
+            "report → informe",
+            "tile → mosaico"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 208: ___________ puede utilizarse como parte de una solución lift‑and‑shift para migrar una aplicación local a la nube con cambios mínimos.",
+        "type": "radio",
+        "options": [
+            "Un grupo elástico de Azure SQL Database (An Azure SQL Database elastic pool)",
+            "Una instancia de SQL Server en Máquinas Virtuales de Azure (An instance of SQL Server on Azure Virtual Machines)",
+            "Una base de datos única en Azure SQL Database (A single database in Azure SQL Database)"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 207: Las tablas de bases de datos de Microsoft SQL Server almacenan _____________.",
+        "type": "radio",
+        "options": [
+            "non‑relational data → datos no relacionales",
+            "relational data → datos relacionales",
+            "semi‑structured data → datos semiestructurados"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 206: ¿Qué se requiere para aprovisionar Azure Data Lake Storage en una cuenta de Azure Storage?.",
+        "type": "radio",
+        "options": [
+            "El versionado debe estar desactivado.",
+            "El espacio de nombres jerárquico debe ser deshabilitado.",
+            "La versión debe estar activada.",
+            "Se debe habilitar el espacio de nombres jerárquico."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 205: Hacer copias de seguridad y restaurar datos es responsabilidad de un ____________.",
+        "type": "radio",
+        "options": [
+            "data analyst → analista de datos",
+            "data engineer → ingeniero de datos",
+            "data scientist → científico de datos",
+            "database administrator → administrador de bases de datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 204: ______ es responsable de gestionar la seguridad de los datos en una base de datos.",
+        "type": "radio",
+        "options": [
+            "A data analyst → Un analista de datos",
+            "A data engineer → Un ingeniero de datos",
+            "A data scientist → Un científico de datos",
+            "A database administrator → Un administrador de bases de datos"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 203: Tienes los datos guardados en el siguiente formato. ¿Qué formato se utilizó?",
+        "type": "radio",
+        "options": [
+            "YAML",
+            "CSV",
+            "JSON",
+            "HTML"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 201: Una base de datos no relacional ______________.",
+        "type": "radio",
+        "options": [
+            "impone un esquema fijo a los datos",
+            "almacena entidades sin un valor de clave único",
+            "almacena datos en tablas relacionales",
+            "almacena datos sin un esquema fijo"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 200: Planeas desplegar una app. La aplicación requiere un servicio de datos no relacional que proporcione garantías de latencia inferiores a 10 ms para lecturas y escrituras. ¿Qué deberías incluir en la solución?",
+        "type": "radio",
+        "options": [
+            "Azure Blob storage",
+            "Azure Files",
+            "Azure Table Storage",
+            "Azure Cosmos DB"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 199: En un modelo analítico, cualquier punto donde las dimensiones se intersectan representa __________.",
+        "type": "radio",
+        "options": [
+            "un cubo",
+            "una dimensión agregada",
+            "una medida agregada"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 198: ________________ combina un data warehouse relacional basado en Microsoft SQL Server, escalable y de alto rendimiento, con la flexibilidad de un data lake y Apache Spark de código abierto.",
+        "type": "radio",
+        "options": [
+            "Azure Databricks",
+            "Azure HDInsight",
+            "Azure Stream Analytics",
+            "Azure Synapse Analytics"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 197: Los usuarios y seguidores de redes sociales en una base de datos de grafos son un ejemplo de _______________.",
+        "type": "radio",
+        "options": [
+            "semi‑structured data → datos semiestructurados",
+            "structured data → datos estructurados",
+            "unstructured data → datos no estructurados"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 196: ¿Qué servicio de almacenamiento de Azure implementa el modelo clave/valor?.",
+        "type": "radio",
+        "options": [
+            "Azure Queue",
+            "Azure Files",
+            "Azure Table",
+            "Azure Blob"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 194: ¿Qué propiedad de transacción de base de datos garantiza que las transacciones individuales se ejecuten solo una vez y que tengan éxito en su totalidad o se reviertan?",
+        "type": "radio",
+        "options": [
+            "atomicidad",
+            "durabilidad",
+            "aislamiento",
+            "consistencia"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 193: Azure Blob Storage page blobs están optimizados para ____________.",
+        "type": "radio",
+        "options": [
+            "operaciones de adición",
+            "operaciones de lectura y escritura aleatorias",
+            "almacenar datos clave‑valor",
+            "almacenar grandes objetos binarios que cambian con poca frecuencia"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 192: GRANT, REVOKE, and DENY are examples of which type of SQL statement?",
+        "type": "radio",
+        "options": [
+            "Data Definition language (DDL)",
+            "Data Control Language (DCL)",
+            "Data Manipulation Language (DML)"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 191: ¿Qué propiedad de transacción de base de datos garantiza que los cambios transaccionales en una base de datos se preserven durante reinicios inesperados del sistema operativo?",
+        "type": "radio",
+        "options": [
+            "Consistencia",
+            "Atomicidad",
+            "Durabilidad",
+            "Aislamiento"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 190: Tienes los datos guardados en el siguiente formato. ¿Qué formato se utilizó?",
+        "type": "radio",
+        "options": [
+            "JSON",
+            "YAML",
+            "HTML",
+            "XML"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 189: Tienes los datos guardados en el siguiente formato. ¿Qué formato se utilizó?",
+        "type": "radio",
+        "options": [
+            "XML",
+            "HTML",
+            "YAML",
+            "JSON"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 188: ¿Qué se puede usar con soporte nativo para notebooks para consultar y visualizar datos mediante una interfaz web?.",
+        "type": "radio",
+        "options": [
+            "Azure Databricks",
+            "pgAdmin",
+            "Microsoft Power BI"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 187: Una cuenta de Azure Storage debe tener ___________ habilitado para admitir Azure Data Lake Storage.",
+        "type": "radio",
+        "options": [
+            "Eliminación suave de blobs",
+            "Espacio de nombres jerárquico",
+            "Compartición de archivos grandes",
+            "Control de versiones"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 186: ¿Qué es una función de un almacén de datos moderno?",
+        "type": "radio",
+        "options": [
+            "Solo soporta procesamiento por lotes",
+            "Soporta procesamiento en tiempo real y por lotes",
+            "proporciona procesamiento analítico en línea integrado o nativo",
+            "Almacena solo datos en bruto"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 184: ¿Qué dos características distinguen Delta Lake de Azure Data Lake Storage? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Soporte para datos por lotes",
+            "Aplicación del esquema",
+            "soporte para un runtime de Apache Spark",
+            "Consistencia transaccional",
+            "Soporte para Datos en Streaming"
+        ],
+        "correct": [
+            1,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 182: Para crear un panel (dashboard), puedes usar _____________.",
+        "type": "radio",
+        "options": [
+            "solo la aplicación Microsoft Power BI Desktop",
+            "solo la aplicación móvil Microsoft Power BI",
+            "solo el servicio Microsoft Power BI",
+            "tanto la aplicación Microsoft Power BI Desktop como el servicio Power BI"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 181: Tienes una base de datos local de Microsoft SQL Server. Necesitas migrar la base de datos a la nube. La solución debe cumplir con los siguientes requisitos: Minimizar el esfuerzo de mantenimiento. Soporte para las funciones de Correo de Base de Datos y Corredor de Servicios. ¿Qué deberías incluir en la solución?",
+        "type": "radio",
+        "options": [
+            "Azure SQL Database single database",
+            "un pool elástico Azure SQL Database",
+            "Azure SQL Managed instance",
+            "SQL Server en máquinas virtuales Azure"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 180: ¿Qué función Azure Blob Storage te permite sincronizar una cuenta de Blob Storage con una caché externa?",
+        "type": "radio",
+        "options": [
+            "el nivel de acceso en caliente",
+            "cambiar la señal",
+            "Instantáneas",
+            "Versionado"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 179: Puedes consultar (hacer query) una base de datos de grafos en Azure Cosmos DB __________.",
+        "type": "radio",
+        "options": [
+            "como nodos y aristas utilizando el lenguaje Gremlin",
+            "como un almacén de filas particionado utilizando Cassandra Query Language (CQL)",
+            "como un almacén de filas particionado utilizando Language‑Integrated Query (LINQ)"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 178: Tienes las siguientes dos tablas de datos de clientes. ¿Qué tipo de datos contienen las tablas?",
+        "type": "radio",
+        "options": [
+            "Estructurado",
+            "No relacional",
+            "semiestructurado",
+            "no estructurado"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 176: Necesitas crear una visualización de los totales de ventas por trimestre como se muestra en el siguiente anexo. ¿Qué deberías crear en Power BI Desktop?",
+        "type": "radio",
+        "options": [
+            "Un mapa de cascadas",
+            "Una tabla de cinta",
+            "Un gráfico de barras",
+            "Un árbol de descomposición"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 173: Un gráfico de barras que muestre las ventas acumuladas de año por región es un ejemplo de qué tipo de analítica se realiza.",
+        "type": "radio",
+        "options": [
+            "Predictivo",
+            "Prescriptivo",
+            "descriptivo",
+            "Diagnóstico"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 171: Cargas de trabajo por lotes (Batch workloads) _________________.",
+        "type": "radio",
+        "options": [
+            "procesar datos en memoria, fila por fila.",
+            "recopilar y procesar datos como máximo una vez al día.",
+            "procesar datos a medida que llegan en tiempo casi real.",
+            "recopilar datos y luego procesarlos cuando se cumple una condición."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 170: ¿Qué escenario es un ejemplo de carga de trabajo en streaming?",
+        "type": "radio",
+        "options": [
+            "Enviar transacciones de más de un mes a un archivo",
+            "enviar transacciones diariamente desde dispositivos de punto de venta (POS)",
+            "Enviar datos de telemetría desde dispositivos de borde",
+            "Envío de metadatos de infraestructura en la nube cada 30 minutos"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 160: ¿Cuál es el propósito principal de un almacén de datos?",
+        "type": "radio",
+        "options": [
+            "para proporcionar respuestas a consultas complejas que dependen de datos de múltiples fuentes",
+            "proporcionar servicios de transformación entre almacenes de datos fuente y destino",
+            "proporcionar almacenamiento de solo lectura de datos históricos relacionales y no relacionales",
+            "proporcionar almacenamiento para aplicaciones transaccionales de línea de negocio (LOB)"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 159: ¿Cuáles son las tres características de una carga de trabajo de Procesamiento de Transacciones en Línea (OLTP)? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Datos desnormalizados",
+            "Escrituras intensas y lecturas moderadas",
+            "Escrituras ligeras y lecturas pesadas",
+            "Esquema definido en una base de datos",
+            "Esquema definido al leer datos no estructurados de una base de datos",
+            "Datos normalizados"
+        ],
+        "correct": [
+            1,
+            3,
+            5
+        ]
+    },
+    {
+        "q": "Pregunta 157: Necesitas usar Transact-SQL para consultar archivos en Azure Data Lake Storage Gen 2 desde un almacén de datos de Azure Synapse Analytics. ¿Qué deberías usar para consultar los archivos?",
+        "type": "radio",
+        "options": [
+            "Azure Functions",
+            "Servicios de Integración de Microsoft SQL Server (SSIS)",
+            "PolyBase",
+            "Azure Data Factory"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 156: ¿Cuáles son dos usos de la visualización de datos? Cada respuesta correcta presenta una solución completa. NOTA: Cada selección correcta vale un punto.",
+        "type": "checkbox",
+        "options": [
+            "Representar tendencias y patrones a lo largo del tiempo",
+            "Implementar aprendizaje automático para predecir valores futuros",
+            "Comunicar la importancia de los datos",
+            "Aplicar la lógica de negocio en todos los informes"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 155: Un elemento de Microsoft Power BI ____________ permite a los usuarios crear documentos altamente formateados, con diseño fijo, optimizados para impresión y archivo.",
+        "type": "radio",
+        "options": [
+            "panel (dashboard)",
+            "informe interactivo (interactive report)",
+            "informe paginado (paginated report)",
+            "suscripción (subscription)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 154: ¿Qué componente de Azure Data Factory proporciona el entorno de cómputo para actividades?.",
+        "type": "radio",
+        "options": [
+            "Paquetes SSIS",
+            "Un tiempo de ejecución de integración",
+            "Un flujo de control",
+            "Un oleoducto"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 149: Necesitas desarrollar una solución para proporcionar datos a los directivos. La solución debe proporcionar una interfaz gráfica interactiva, mostrar varios indicadores clave de rendimiento y apoyar la exploración de datos mediante el uso de drill down. ¿Qué deberías usar en Microsoft Power BI?.",
+        "type": "radio",
+        "options": [
+            "Una visión",
+            "un informe",
+            "Un flujo de datos",
+            "Microsoft Power Apps"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 148: En Azure Data Factory, puedes usar ________ para orquestar actividades de una canalización que dependen de la salida de otras actividades de la misma canalización.",
+        "type": "radio",
+        "options": [
+            "un control de flujo",
+            "un conjunto de datos",
+            "un servicio vinculado",
+            "un tiempo de ejecución de integración"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 147: ¿Qué dos actividades se pueden realizar completamente usando el servicio Microsoft Power BI sin depender de Power BI Desktop? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Creación de informes y paneles",
+            "Intercambio y distribución de informes",
+            "Modelado de datos",
+            "Adquisición y preparación de datos"
+        ],
+        "correct": [
+            0,
+            1
+        ]
+    },
+    {
+        "q": "Pregunta 152: ¿Qué tres objetos se pueden añadir a un panel de control de Microsoft Power BI? Cada respuesta correcta presenta una solución completa. NOTA: Cada selección correcta vale un punto.",
+        "type": "checkbox",
+        "options": [
+            "Una página de informe",
+            "una diapositiva de Microsoft PowerPoint",
+            "Una visualización a partir de un informe",
+            "Un flujo de datos",
+            "un cuadro de texto"
+        ],
+        "correct": [
+            0,
+            2,
+            4
+        ]
+    },
+    {
+        "q": "Pregunta 151: Tienes una aplicación de control de calidad que lee datos de un almacén de datos. ¿Qué tipo de procesamiento utiliza la solicitud?",
+        "type": "radio",
+        "options": [
+            "Procesamiento de Transacciones en Línea (OLTP)",
+            "Procesamiento por lotes",
+            "Procesamiento Analítico en Línea (OLAP)",
+            "Procesamiento de flujos"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 150: ¿Qué dos servicios de Azure se pueden usar para aprovisionar clústeres Apache Spark? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Azure Time Series Insights",
+            "Azure HDInsight",
+            "Azure Databricks",
+            "Azure Log Analytics"
+        ],
+        "correct": [
+            1,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 175: Necesitas realizar consultas híbridas de procesamiento transaccional y analítico (HTAP) contra fuentes de datos de Azure Cosmos DB utilizando Azure Synapse Analytics. ¿Qué deberías usar?",
+        "type": "radio",
+        "options": [
+            "Pipelines Synapse",
+            "un pool SQL de Synapse",
+            "Synapse Link",
+            "Synapse Studio"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 167: ¿Qué deberías usar para crear un informe paginado de Microsoft Power BI?",
+        "type": "radio",
+        "options": [
+            "Charticulator",
+            "Power BI Escritorio",
+            "el servicio Power BI",
+            "Power BI Report Builder"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 163: En una carga de trabajo de data warehousing, los datos ____________.",
+        "type": "radio",
+        "options": [
+            "de una única fuente se distribuyen a múltiples ubicaciones",
+            "de múltiples fuentes se combinan en una única ubicación",
+            "se agregan a una cola para que múltiples sistemas los procesen",
+            "se utilizan para entrenar modelos de aprendizaje automático"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 144: Tu empresa tiene una solución de informes que tiene informes paginados. Los informes consultan un modelo dimensional en un almacén de datos. ¿Qué tipo de procesamiento utiliza la solución de informes?",
+        "type": "radio",
+        "options": [
+            "Procesamiento de flujos",
+            "Procesamiento por lotes",
+            "Procesamiento Analítico en Línea (OLAP)",
+            "Procesamiento de Transacciones en Línea (OLTP)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 143: ¿Qué componente de Azure Data Factory inicia la ejecución de una canalización?",
+        "type": "radio",
+        "options": [
+            "Un flujo de control",
+            "un disparador (un trigger)",
+            "un parámetro",
+            "Una actividad"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 142: Tienes un pool SQL dedicado en Azure Synapse Analytics que solo se usa activamente cada noche durante ocho horas. Necesitas minimizar al máximo el coste del pool SQL dedicado durante los tiempos de inactividad. La solución debe garantizar que los datos permanezcan intactos. ¿Qué deberías hacer en el pool SQL dedicado?",
+        "type": "radio",
+        "options": [
+            "Reduce la escala de las unidades de almacenamiento de datos (DWUs).",
+            "Pon el pool en pausa.",
+            "Crea un punto de restauración definido por el usuario.",
+            "Elimina la piscina"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 141: Necesitas recopilar datos de telemetría en tiempo real de una aplicación móvil. ¿Qué tipo de carga de trabajo describe este escenario?",
+        "type": "radio",
+        "options": [
+            "Procesamiento de Transacciones en Línea (OLTP)",
+            "lote",
+            "Procesamiento masivamente paralelo (MPP)",
+            "Streaming"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 140: _______________ es una característica de Azure Synapse Analytics que recupera datos desde Azure Blob Storage utilizando consultas Transact‑SQL.",
+        "type": "radio",
+        "options": [
+            "Un espacio de nombres jerárquico",
+            "Azure Synapse Link",
+            "PolyBase",
+            "El Servicio de Movimiento de Datos (DMS)"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 139: ¿Cuál es una característica de los datos no relacionales?.",
+        "type": "radio",
+        "options": [
+            "sin índices",
+            "Entidades autodescriptivas",
+            "un esquema bien definido",
+            "No hay valores de clave únicos"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 137: ¿En qué dos niveles se puede establecer el rendimiento de una cuenta de base de datos de Azure Cosmos? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Base de datos",
+            "Ítem",
+            "contenedor",
+            "Partición"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 136: Cuando se usa la API Gremlin de Azure Cosmos DB, el tipo de recurso de contenedor se proyecta como un _________.",
+        "type": "radio",
+        "options": [
+            "graph (grafo)",
+            "table (tabla)",
+            "partition key (clave de partición)",
+            "document (documento)"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 134: Tu empresa está diseñando un almacén de datos para sensores de temperatura conectados a internet. Los datos recopilados se utilizarán para analizar las tendencias de temperatura. ¿Qué tipo de almacén de datos deberías usar?.",
+        "type": "radio",
+        "options": [
+            "relacional",
+            "Serie temporal",
+            "Grafo",
+            "columnar"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 133: Necesitas recomendar un almacén de datos no relacional optimizado para almacenar y recuperar archivos de texto, vídeos, flujos de audio e imágenes de disco virtual. El almacén de datos debe almacenar datos, algunos metadatos y un ID único para cada archivo. ¿Qué tipo de almacén de datos deberías recomendar?",
+        "type": "radio",
+        "options": [
+            "clave/valor",
+            "columnar",
+            "Objeto",
+            "documento"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 132: Tu empresa está diseñando una aplicación que escribirá un gran volumen de datos JSON y tendrá un esquema definido por la aplicación. ¿Qué tipo de almacén de datos deberías usar?",
+        "type": "radio",
+        "options": [
+            "columnar",
+            "clave/valor",
+            "documento",
+            "Grafo"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 130: Tienes una aplicación que funciona en Windows y requiere acceso a una unidad asignada. ¿Qué servicio de Azure deberías usar?",
+        "type": "radio",
+        "options": [
+            "Azure Files",
+            "Azure Blob storage",
+            "Azure Cosmos DB",
+            "Azure Table Storage"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 129: Tu empresa está diseñando una base de datos que contendrá datos de sesión para una página web. Los datos incluirán notificaciones, atributos de personalización y productos que se añaden a un carrito de la compra. ¿Qué tipo de almacén de datos proporcionará la menor latencia para recuperar los datos?",
+        "type": "radio",
+        "options": [
+            "clave/valor",
+            "Grafo",
+            "columnar",
+            "documento"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 128: Gestionas una aplicación que almacena datos en una carpeta compartida en un servidor Windows. Necesitas mover la carpeta compartida a Azure Storage. ¿Qué tipo de almacenamiento de Azure deberías usar?",
+        "type": "radio",
+        "options": [
+            "Cola",
+            "Blob",
+            "archivo",
+            "Tabla"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 127: Tu empresa necesita diseñar una base de datos que ilustre las relaciones entre los niveles de utilización de los dispositivos individuales de red a lo largo de una red local. ¿Qué tipo de almacén de datos deberías usar?",
+        "type": "radio",
+        "options": [
+            "Grafo",
+            "clave/valor",
+            "documento",
+            "columnar"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 126: Para configurar una cuenta de Azure Storage de modo que admita listas de control de acceso (ACLs) con permisos a nivel de objeto, debes _________.",
+        "type": "radio",
+        "options": [
+            "habilitar el espacio de nombres jerárquico",
+            "establecer el tipo de cuenta como BlobStorage",
+            "establecer el rendimiento como Premium",
+            "establecer la replicación como RA‑GRS"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 124: Necesitas recomendar un servicio de almacenamiento de datos que cumpla los siguientes requisitos: Acceso nativo a API SQL Índices configurables ¿Qué deberías recomendar?",
+        "type": "radio",
+        "options": [
+            "Azure Files",
+            "Azure Blob storage",
+            "Azure Table Storage",
+            "Azure Cosmos DB"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 123: Necesitas almacenar datos usando almacenamiento en Azure Table. ¿Qué deberías crear primero?",
+        "type": "radio",
+        "options": [
+            "una instancia de Azure Cosmos DB",
+            "una cuenta de almacenamiento",
+            "un contenedor de blob",
+            "una tabla"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 122: Al aprovisionar una instancia de Azure Cosmos DB, debes especificar qué tipo de API usarás.",
+        "type": "radio",
+        "options": [
+            "cuenta (account)",
+            "contenedor (container)",
+            "base de datos (database)",
+            "elemento (item)"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 119: Tu empresa necesita diseñar una base de datos que muestre cómo los cambios en el tráfico de red en una área de la red afectan al tráfico de red en otras áreas. ¿Qué tipo de almacén de datos deberías usar?",
+        "type": "radio",
+        "options": [
+            "Grafo",
+            "clave/valor",
+            "documento",
+            "columnar"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 118: ¿Cuál es una ventaja de la API de tablas de Azure Cosmos en comparación con el almacenamiento de Azure Table?",
+        "type": "radio",
+        "options": [
+            "proporciona resiliencia si una región de Azure falla",
+            "soporta la partición",
+            "proporciona una mayor capacidad de almacenamiento",
+            "soporta un modelo multi-maestro"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 117: Al aprovisionar una cuenta de Azure Cosmos DB, ¿qué función proporciona redundancia dentro de una región de Azure?",
+        "type": "radio",
+        "options": [
+            "Replicación multi-maestro",
+            "Zonas de disponibilidad",
+            "El fuerte nivel de consistencia",
+            "Conmutación por fallo automático"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 116: Puedes consultar una base de datos de grafos en Azure Cosmos DB…",
+        "type": "radio",
+        "options": [
+            "como un documento JSON usando un lenguaje similar a SQL.",
+            "como un almacén de filas particionado usando Cassandra Query Language (CQL).",
+            "como un almacén de filas particionado usando Language‑Integrated Query (LINQ).",
+            "como nodos y aristas usando el lenguaje Gremlin."
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 115: Para configurar una cuenta de Azure Storage para admitir tanto seguridad a nivel de carpeta como manipulación atómica de directorios, debes ______________",
+        "type": "radio",
+        "options": [
+            "habilitar el espacio de nombres jerárquico.",
+            "establecer el tipo de cuenta como BlobStorage.",
+            "establecer el rendimiento como Premium.",
+            "establecer la replicación en almacenamiento georredundante con acceso de lectura (RA‑GRS)."
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 113: ¿Qué tipo de almacén de datos no relacional soporta un esquema flexible, almacena los datos como archivos JSON y almacena todos los datos de una entidad en el mismo documento?",
+        "type": "radio",
+        "options": [
+            "documento",
+            "columnar",
+            "Grafo",
+            "Serie temporal"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 112: Necesitas almacenar datos en almacenamiento Azure Blob durante siete años para cumplir con los requisitos de cumplimiento de tu empresa. El tiempo de recuperación de los datos no es importante. La solución debe minimizar los costes de almacenamiento. ¿Qué nivel de almacenamiento deberías usar?",
+        "type": "radio",
+        "options": [
+            "Archivo",
+            "Caliente",
+            "Frío"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 111: ¿Qué solución de almacenamiento soporta el control de acceso basado en roles (RBAC) a nivel de archivo y carpeta?",
+        "type": "radio",
+        "options": [
+            "Azure Disk Storage",
+            "Azure Data Lake Storage",
+            "Azure Blob storage",
+            "Azure Queue storage"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 110: Tu empresa está diseñando un almacén de datos que contendrá datos de estudiantes. Los datos tienen el siguiente formato. ¿Qué tipo de almacén de datos deberías usar? A. Grafo",
+        "type": "radio",
+        "options": [
+            "clave/valor",
+            "Objeto",
+            "columnar"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 109: Tienes una cuenta de Azure Cosmos DB que utiliza la API Core (SQL). ¿Qué dos configuraciones puedes configurar a nivel de contenedor? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "El rendimiento",
+            "La región de Read",
+            "La clave de partición",
+            "la API"
+        ],
+        "correct": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "Pregunta 107: ¿Qué configuración solo se puede configurar durante la creación de una cuenta de base de datos de Azure Cosmos?",
+        "type": "radio",
+        "options": [
+            "Geo-redundancia",
+            "Escrituras multirregión",
+            "Tipo de cuenta de producción o no producción",
+            "API"
+        ],
+        "correct": 3
+    },
+    {
+        "q": "Pregunta 106: ¿Qué servicio de Azure ofrece la mayor compatibilidad para bases de datos migradas desde Microsoft SQL Server 2019 edición Enterprise?",
+        "type": "radio",
+        "options": [
+            "Azure SQL Database",
+            "Azure Database for MySQL",
+            "Azure SQL Managed Instance",
+            "un pool elástico Azure SQL Database"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 105: ___________ presenta contenido definido por una consulta.",
+        "type": "radio",
+        "options": [
+            "Un montón (heap)",
+            "Un procedimiento almacenado",
+            "Una vista",
+            "Un índice"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 104: En una base de datos relacional la ____________ identifica de manera única cada fila de una tabla.",
+        "type": "radio",
+        "options": [
+            "clave foránea",
+            "clave primaria",
+            "índice no agrupado",
+            "cláusula WHERE"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 103: ¿Datos estructurados donde cada fila representa una única entidad de datos y qué tipo de esquema se usa?.",
+        "type": "radio",
+        "options": [
+            "XML",
+            "tabular",
+            "Blob",
+            "JSON"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 102: ____________ ordena físicamente los datos en una tabla según los valores de una columna especificada.",
+        "type": "radio",
+        "options": [
+            "Una vista",
+            "Un índice agrupado",
+            "Un procedimiento almacenado",
+            "Un índice no agrupado"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 101: ____________ es una plataforma como servicio (PaaS) de base de datos relacional que usa procesamiento masivamente paralelo (MPP).",
+        "type": "radio",
+        "options": [
+            "Azure SQL Database",
+            "Azure Synapse Analytics",
+            "Azure Database for MariaDB",
+            "SQL Server en máquinas virtuales de Azure"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 87: Debes asegurarte de que los usuarios usen autenticación multifactor (MFA) al conectarse a una base de datos Azure SQL. ¿Qué tipo de autenticación deberías usar?",
+        "type": "radio",
+        "options": [
+            "Autenticación del principal de servicio",
+            "Azure Active Directory (Azure AD) autenticación",
+            "Autenticación SQL",
+            "Autenticación de certificados"
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 85: Un equipo de desarrolladores tiene ordenadores que ejecutan Windows 10 y Ubuntu Desktop. Los desarrolladores deben conectarse y consultar una base de datos Azure SQL desde cada uno de sus ordenadores. Los desarrolladores requieren funciones de asistencia de código como IntelliSense. ¿Qué deberían usar los desarrolladores?",
+        "type": "radio",
+        "options": [
+            "sqlcmd",
+            "Microsoft SQL Server Management Studio (SSMS)",
+            "Azure Data Studio",
+            "Azure Data Explorer"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 80: ¿Cuáles son los dos beneficios de las ofertas de bases de datos relacionales de plataforma como servicio (PaaS) en Azure, como Azure SQL Database? Cada respuesta correcta presenta una solución completa.",
+        "type": "checkbox",
+        "options": [
+            "Acceso a las últimas funciones",
+            "Control total sobre los procesos de copia de seguridad y restauración",
+            "Servicios de aprendizaje automático en base de datos",
+            "Reducción del esfuerzo administrativo para la gestión de la infraestructura del servidor"
+        ],
+        "correct": [
+            0,
+            3
+        ]
+    },
+    {
+        "q": "Pregunta 79: Estás desplegando una aplicación de software como servicio (SaaS) que requiere una base de datos relacional para el Procesamiento de Transacciones en Línea (OLTP). ¿Qué servicio de Azure deberías usar para soportar la aplicación?",
+        "type": "radio",
+        "options": [
+            "Azure Cosmos DB",
+            "Azure HDInsight",
+            "Azure SQL Database",
+            "Azure Synapse Analytics"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Pregunta 61: El flujo de trabajo para crear una solución de análisis en Microsoft Power BI comienza con ______.",
+        "type": "radio",
+        "options": [
+            "Power BI Desktop",
+            "la aplicación de Power BI para teléfono",
+            "el servicio Power BI"
+        ],
+        "correct": 0
+    },
+    {
+        "q": "Pregunta 53: Un almacén de datos de tipo clave/valor está optimizado para _____________.",
+        "type": "radio",
+        "options": [
+            "imponer restricciones.",
+            "búsquedas simples.",
+            "uniones de tablas."
+        ],
+        "correct": 1
+    },
+    {
+        "q": "Pregunta 52: _____________ admiten de forma nativa el análisis de relaciones entre entidades.",
+        "type": "radio",
+        "options": [
+            "Bases de datos de familia de columnas",
+            "Bases de datos de documentos",
+            "Bases de datos de grafos",
+            "Almacenes clave‑valor"
+        ],
+        "correct": 2
+    },
+    {
+        "q": "Indique si las siguientes declaraciones sobre normalización son correctas:",
+        "type": "matrix",
+        "subquestions": [
+            "La normalización implica eliminar relaciones entre tablas de una base de datos.",
+            "Normalizar una base de datos reduce la redundancia de datos.",
+            "La normalización mejora la integridad de los datos."
+        ],
+        "correct": [
+            false,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Indique si las siguientes afirmaciones son verdaderas (SI) o falsas (NO).",
+        "type": "matrix",
+        "subquestions": [
+            "El procesamiento por lotes (batch processing) puede generar datos en un almacén de archivos.",
+            "El procesamiento por lotes puede generar datos en una base de datos relacional.",
+            "El procesamiento por lotes puede generar datos en una base de datos NoSQL."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Las ofertas de bases de datos Plataforma como servicio (PaaS) en Azure requieren menos esfuerzo de configuración que las ofertas de bases de datos Infraestructura como servicio (IaaS):",
+            "Las ofertas de bases de datos Plataforma como servicio (PaaS) en Azure proporcionan a los usuarios finales la capacidad de controlar y actualizar la versión del sistema operativo:",
+            "Todas las ofertas de bases de datos relacionales y no relacionales Plataforma como servicio (PaaS) en Azure pueden pausarse para reducir costos:"
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Extract, transform, and load (ETL) puede reducir la transferencia de datos sensibles a los sistemas de destino.",
+            "Extract, load, and transform (ELT) transforma datos utilizando un recurso de cómputo independiente del sistema de origen y del sistema de destino.",
+            "Extract, load, and transform (ELT) minimiza el tiempo necesario para copiar grandes volúmenes de datos al sistema de destino."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Un trabajo que procesa datos de ventas una vez al día es un ejemplo de una carga de trabajo por lotes (batch workload).",
+            "Un trabajo que calcula un promedio móvil de lecturas de temperatura es un ejemplo de una carga de trabajo en streaming.",
+            "Un trabajo que calcula el ingreso promedio por producto del último mes es un ejemplo de una carga de trabajo en streaming."
+        ],
+        "correct": [
+            true,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Las tablas de bases de datos relacionales contienen columnas y filas",
+            "Los índices en una base de datos relacional describen los tipos de datos en una tabla.",
+            "Una vista de base de datos es una tabla virtual cuyo contenido se define mediante una consulta."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure SQL Database incluye un servicio de copias de seguridad administrado.",
+            "Azure SQL Database tiene alta disponibilidad integrada.",
+            "Azure SQL Database puede usar Azure Defender."
+        ],
+        "correct": [
+            true,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Puedes usar Azure Data Studio para consultar un clúster de macrodatos de Microsoft SQL Server (big data cluster).",
+            "Puedes usar Microsoft SQL Server Management Studio (SSMS) para consultar un almacén de datos de Azure Synapse Analytics.",
+            "Puedes usar MySQL Workbench para consultar bases de datos de Azure Database for MariaDB."
+        ],
+        "correct": [
+            true,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Las ofertas de bases de datos como plataforma (PaaS) en Azure proporcionan alta disponibilidad integrada.",
+            "Las ofertas de bases de datos como plataforma (PaaS) en Azure proporcionan opciones de escalado configurables.",
+            "Las ofertas de bases de datos como plataforma (PaaS) en Azure reducen la carga administrativa de gestionar el hardware."
+        ],
+        "correct": [
+            true,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Debes aplicar actualizaciones del sistema operativo a las bases de datos de Azure SQL regularmente.",
+            "Necesitas una suscripción de Microsoft 365 para crear una base de datos de Azure SQL.",
+            "Puedes usar licencias existentes de Microsoft SQL Server para reducir el costo de las bases de datos de Azure SQL."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Data Studio puede usarse para consultar una base de datos Azure SQL desde un dispositivo que ejecuta macOS.",
+            "Microsoft SQL Server Management Studio (SSMS) permite a los usuarios crear y usar cuadernos SQL (SQL notebooks).",
+            "Azure Data Studio puede usarse para restaurar una base de datos."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Statements:",
+        "type": "matrix",
+        "subquestions": [
+            "If you have a platform as service (PaaS) database in Azure, you are responsible for applying operating system updates.",
+            "If you have a platform as service (PaaS) database in Azure, backups are performed automatically.",
+            "If you have a platform as service (PaaS) database in Azure, you are responsible for installation of the database engine."
+        ],
+        "correct": [
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Declaraciones:",
+        "type": "matrix",
+        "subquestions": [
+            "Cada instancia administrada de Azure SQL admite varias bases de datos que pueden ser accesibles mediante consultas entre bases de datos.",
+            "Los grupos elásticos se utilizan para compartir recursos entre varias instancias de SQL Server en máquinas virtuales de Azure.",
+            "Azure SQL Database es completamente compatible tanto con instancias físicas locales como con instancias virtualizadas de Microsoft SQL Server."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Declaraciones:",
+        "type": "matrix",
+        "subquestions": [
+            "En las bases de datos no relacionales, los datos siempre se almacenan en tablas.",
+            "En las bases de datos no relacionales, los datos siempre se almacenan utilizando un esquema fijo.",
+            "En las bases de datos no relacionales, dos entidades en la misma colección pueden tener conjuntos de campos diferentes."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Statements:",
+        "type": "matrix",
+        "subquestions": [
+            "In normalizing a database increases the throughput of writing transactions.",
+            "Analytics systems are more normalized than transactional systems.",
+            "Normalizing a database results in queries that require more joins."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Declaraciones:",
+        "type": "matrix",
+        "subquestions": [
+            "La normalización de una base de datos aumenta el rendimiento de las transacciones de escritura.",
+            "Los sistemas analíticos están más normalizados que los sistemas transaccionales.",
+            "La normalización de una base de datos da como resultado consultas que requieren más uniones (joins)."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure SQL Database tiene todas las mismas características que SQL Server en Azure Virtual Machines.",
+            "En un modelo PaaS, antes de implementar una base de datos relacional, debes crear una máquina virtual y una red virtual.",
+            "En un modelo IaaS, antes de implementar una base de datos relacional, debes crear una máquina virtual y una red virtual."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "El procesamiento de flujo puede procesar todos los datos de un conjunto de datos a la vez.",
+            "El procesamiento por lotes ocurre de manera inmediata, con latencia de segundos o milisegundos.",
+            "El procesamiento de flujo se usa para funciones de respuesta simples, agregaciones o cálculos como promedios móviles."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Los ingenieros de datos identifican reglas de gobernanza de datos.",
+            "Los ingenieros de datos crean canalizaciones de ingesta de datos.",
+            "Los ingenieros de datos implementan procesos de copia de seguridad y recuperación para sistemas de bases de datos."
+        ],
+        "correct": [
+            true,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "En Azure Blob Storage, cada bloque en un block blob tiene un tamaño fijo.",
+            "En una cuenta de Azure Blob Storage, los blobs se almacenan en un contenedor.",
+            "En Azure Blob Storage sin espacio de nombres jerárquico, se puede asignar acceso a nivel de carpeta."
+        ],
+        "correct": [
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "La herramienta pgAdmin puede usarse para administrar Azure Database for PostgreSQL.",
+            "Azure Database for MariaDB ofrece restauración a un punto en el tiempo de hasta 365 días.",
+            "Azure Database for MySQL siempre requiere conexiones SSL."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "En una base de datos relacional, el esquema se define antes de que los datos se escriban en la tabla.",
+            "Los almacenes de datos clave‑valor están altamente optimizados para consultas complejas que contienen múltiples joins.",
+            "Una base de datos relacional se usa comúnmente para almacenar y consultar datos estructurados."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Los administradores de bases de datos aplican rutinas de limpieza de datos y convierten los datos en información útil.",
+            "Los ingenieros de datos administran bases de datos, almacenan copias de seguridad de los datos y restauran los datos en caso de un fallo.",
+            "Los analistas de datos crean visualizaciones y permiten que las empresas tomen decisiones basadas en datos."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Creas Azure File Storage dentro de una cuenta de almacenamiento.",
+            "El nivel Premium de Azure File Storage usa hardware basado en HDD en un centro de datos.",
+            "El nivel Standard de Azure File Storage usa SSD."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "El nivel de acceso Cool es el nivel predeterminado de una cuenta de Azure Storage.",
+            "Los append blobs están optimizados para operaciones de lectura y escritura aleatorias.",
+            "Recuperar datos desde el nivel de acceso Archive tarda horas en completarse."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "El procesamiento de transacciones en línea (OLTP) se basa en un sistema de base de datos donde el almacenamiento de datos está optimizado tanto para operaciones de lectura como de escritura.",
+            "El procesamiento analítico en línea (OLAP) se basa en un sistema de base de datos donde el almacenamiento de datos está optimizado tanto para operaciones de lectura como de escritura.",
+            "Los data warehouses están optimizados para operaciones de lectura."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Los datos almacenados en el nivel de acceso Hot de Azure Blob Storage se guardan en medios de alto rendimiento.",
+            "El nivel de acceso Cool en Azure Blob Storage incurre en costos de almacenamiento más altos en comparación con el nivel Hot.",
+            "El nivel de acceso Archive en Azure Blob Storage tiene la latencia más alta de los tres niveles disponibles."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Data Lake Storage puede utilizarse como un área de preparación (staging area) para datos ingeridos antes de convertirlos a un formato adecuado para análisis.",
+            "Azure Data Factory es un motor de análisis que utiliza una arquitectura de procesamiento masivamente paralelo (MPP).",
+            "Azure HDInsight permite crear modelos tabulares desde múltiples orígenes de datos para admitir consultas OLAP."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Enunciado:",
+        "type": "matrix",
+        "subquestions": [
+            "En una base de datos transaccional que garantiza atomicidad, todas las instrucciones de una transacción debe completarse correctamente o la transacción debe poder volver atrás",
+            "En una base de datos transaccional que garantiza la consistencia, todos los cambios de datos serán registrados y contabilizados.",
+            "En una base de datos transaccional que garantiza aislamiento, los procesos solo pueden ver datos en un estado consistente"
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "El procesamiento por lotes está optimizado para manejar grandes conjuntos de datos.",
+            "El procesamiento de flujo está optimizado para realizar análisis complejos de conjuntos de datos.",
+            "La latencia del procesamiento por lotes generalmente se mide en segundos o milisegundos."
+        ],
+        "correct": [
+            true,
+            false,
+            false
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "El procesamiento de flujo tiene acceso a los datos más recientes o a datos en una ventana deslizante.",
+            "El procesamiento por lotes debe ocurrir inmediatamente y con latencia de segundos o milisegundos.",
+            "El procesamiento de flujo se usa para funciones simples, agregaciones o cálculos como promedios móviles."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Procesar pagos de salario una vez al mes es batch.",
+            "Un aerogenerador enviando 50 lecturas/seg es streaming.",
+            "Un medidor eléctrico que envía una lectura al día es streaming."
+        ],
+        "correct": [
+            true,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Databricks es una plataforma analítica basada en Apache Spark.",
+            "Azure Analysis Services se utiliza para cargas de trabajo transaccionales.",
+            "Azure Data Factory orquesta flujos de trabajo de integración de datos."
+        ],
+        "correct": [
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Databricks es una plataforma analítica basada en Apache Spark.",
+            "Azure Analysis Services se utiliza para cargas de trabajo transaccionales.",
+            "Azure Data Factory orquesta flujos de trabajo de integración de datos."
+        ],
+        "correct": [
+            true,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Una canalización es una representación de una estructura de datos dentro de Azure Data Factory.",
+            "Las canalizaciones de Azure Data Factory pueden ejecutar otras canalizaciones.",
+            "Un paso de procesamiento dentro de una canalización de Azure Data Factory es una actividad."
+        ],
+        "correct": [
+            false,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Puedes copiar un panel entre áreas de trabajo de Microsoft Power BI.",
+            "Un panel de Microsoft Power BI solo puede mostrar visualizaciones de un único conjunto de datos.",
+            "Un panel de Microsoft Power BI puede mostrar visualizaciones desde un libro de Microsoft Excel."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Un panel de Microsoft Power BI está asociado a un único área de trabajo.",
+            "Un panel de Microsoft Power BI solo puede mostrar visualizaciones de un único conjunto de datos.",
+            "Un panel de Microsoft Power BI puede mostrar visualizaciones desde un libro de Microsoft Excel."
+        ],
+        "correct": [
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Table Storage admite múltiples réplicas de lectura.",
+            "Azure Table Storage admite múltiples regiones de escritura. NO",
+            "La API Table de Azure Cosmos DB admite múltiples réplicas de lectura.",
+            "La API Table de Azure Cosmos DB admite múltiples regiones de escritura."
+        ],
+        "correct": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Copiar datos a Azure Data Lake Storage desde otra región de Azure genera un costo adicional",
+            "Puedes usar blob, table y file storage en la misma cuenta de Azure Storage.",
+            "Implementas Azure Data Lake Storage creando una cuenta de Azure Storage."
+        ],
+        "correct": [
+            true,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "La API de Azure Cosmos DB se configura por separado para cada base de datos en una cuenta de Azure Cosmos DB.",
+            "Las claves de partición se usan en Azure Cosmos DB para optimizar las consultas.",
+            "Los elementos en la misma partición lógica pueden tener diferentes claves de partición."
+        ],
+        "correct": [
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Table Storage admite múltiples lecturas concurrentes en diferentes regiones.",
+            "Azure Table Storage admite múltiples escrituras concurrentes en diferentes regiones.",
+            "Azure Cosmos DB con API Table admite múltiples lecturas concurrentes en diferentes regiones.",
+            "Azure Cosmos DB con API Table admite múltiples escrituras concurrentes en diferentes regiones."
+        ],
+        "correct": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Afirmacion:",
+        "type": "matrix",
+        "subquestions": [
+            "Azure Databricks puede consumir datos desde Azure SQL Database.",
+            "Azure Databricks puede consumir datos desde Azure Event Hubs.",
+            "Azure Databricks puede consumir datos desde Azure Cosmos DB."
+        ],
+        "correct": [
+            true,
+            true,
+            true
+        ]
+    },
+    {
+        "q": "Declaracion:",
+        "type": "matrix",
+        "subquestions": [
+            "Si tienes una base de datos plataforma como servicio (PaaS) en Azure, eres responsable de aplicar las actualizaciones del sistema operativo.",
+            "Si tienes una base de datos plataforma como servicio (PaaS) en Azure, las copias de seguridad se realizan automáticamente.",
+            "Si tienes una base de datos plataforma como servicio (PaaS) en Azure, eres responsable de la instalación del motor de base de datos."
+        ],
+        "correct": [
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "q": "Relacione los roles con sus responsabilidades:",
+        "type": "match",
+        "left": [
+            "Analista de datos",
+            "Ingeniero de datos",
+            "Administrador de bases de datos"
+        ],
+        "right": [
+            "Implementar canalizaciones para transferir y transformar datos",
+            "Asignar permisos a los usuarios",
+            "Obtener significado creando visualizaciones"
+        ],
+        "correct": {
+            "0": 2,
+            "1": 0,
+            "2": 1
+        }
+    },
+    {
+        "q": "Relacione los tipos de análisis con su ejemplo:",
+        "type": "match",
+        "left": [
+            "Diagnóstico",
+            "Prescriptivo",
+            "Descriptivo"
+        ],
+        "right": [
+            "¿Por qué aumentaron las ventas?",
+            "¿Cómo asigno mi presupuesto?",
+            "¿Qué personas se mencionan?"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Identifique la estructura JSON:",
+        "type": "match",
+        "left": [
+            "Customer es:",
+            "Social media es:",
+            "Address es:"
+        ],
+        "right": [
+            "un objeto raíz",
+            "un array anidado",
+            "un objeto anidado"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Relacione los conceptos del modelo:",
+        "type": "match",
+        "left": [
+            "El modelo es:",
+            "Customer es una:"
+        ],
+        "right": [
+            "esquema en estrella",
+            "dimensión"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1
+        }
+    },
+    {
+        "q": "Relacione las etapas ETL:",
+        "type": "match",
+        "left": [
+            "Transformar:",
+            "Extraer:",
+            "Cargar:"
+        ],
+        "right": [
+            "Herramienta de integración en memoria",
+            "El sistema CRM",
+            "El almacén de datos"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Relacione el tipo de gráfico:",
+        "type": "match",
+        "left": [
+            "Treemap",
+            "Key influencer",
+            "Scatter"
+        ],
+        "right": [
+            "Rectángulos anidados",
+            "Factores que contribuyen a un resultado",
+            "Relación entre dos valores numéricos"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Relacione el dato con el almacenamiento:",
+        "type": "match",
+        "left": [
+            "Fichero de imágenes",
+            "Pares clave/valor",
+            "Relaciones entre empleados"
+        ],
+        "right": [
+            "Azure Blob storage",
+            "Azure Cosmos DB Gremlin API",
+            "Azure Table storage"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 2,
+            "2": 1
+        }
+    },
+    {
+        "q": "Relacione componentes de Data Factory:",
+        "type": "match",
+        "left": [
+            "Servicio vinculado",
+            "Conjunto de datos",
+            "Canal de datos"
+        ],
+        "right": [
+            "Conexión a recursos externos",
+            "Estructura de datos",
+            "Agrupación lógica de actividades"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Clasifique el procesamiento de datos:",
+        "type": "match",
+        "left": [
+            "Catálogo cada 12 horas",
+            "Compras online por segundo",
+            "Inventario cada 1M transacciones"
+        ],
+        "right": [
+            "Batch",
+            "Streaming"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 0
+        }
+    },
+    {
+        "q": "Relacione los componentes de la solución:",
+        "type": "match",
+        "left": [
+            "Herramienta independiente",
+            "Sistema CRM",
+            "Almacén de datos"
+        ],
+        "right": [
+            "Transformar",
+            "Extraer",
+            "Cargar"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Relacione el tipo de análisis:",
+        "type": "match",
+        "left": [
+            "¿Por qué aumentaron ventas?",
+            "Asignación de presupuesto",
+            "Detectar logotipos en PDF"
+        ],
+        "right": [
+            "Diagnóstico",
+            "Prescriptivo",
+            "Cognitivo"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Relacione objetos de base de datos:",
+        "type": "match",
+        "left": [
+            "Tabla",
+            "Vista",
+            "Índice"
+        ],
+        "right": [
+            "Almacena datos",
+            "Contenido definido por consulta",
+            "Mejora velocidad de recuperación"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Herramientas de SQL:",
+        "type": "match",
+        "left": [
+            "Azure Data Studio",
+            "SSDT",
+            "SSMS",
+            "VS Code"
+        ],
+        "right": [
+            "Editor ligero consultas",
+            "Herramienta desarrollo SSDT",
+            "Gestión gráfica SSMS",
+            "Editor código ligero"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3
+        }
+    },
+    {
+        "q": "Complete la consulta SQL:",
+        "type": "match",
+        "left": [
+            "SalesDate ORDER BY",
+            "SalesDate, AVG(SalesAmount)"
+        ],
+        "right": [
+            "SELECT",
+            "GROUP BY"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1
+        }
+    },
+    {
+        "q": "Diferencias ETL vs ELT:",
+        "type": "match",
+        "left": [
+            "ETL",
+            "ELT (Lake)",
+            "ELT (Volumen)"
+        ],
+        "right": [
+            "Optimizar privacidad",
+            "Soporte Azure Data Lake",
+            "Administrar grandes volúmenes"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Funciones relacionales:",
+        "type": "match",
+        "left": [
+            "Tablas",
+            "Índices",
+            "Vistas",
+            "Claves"
+        ],
+        "right": [
+            "Almacenar instancias",
+            "Velocidad búsqueda",
+            "Consultas predefinidas",
+            "Crear relaciones"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3
+        }
+    },
+    {
+        "q": "Relacione entorno de consulta:",
+        "type": "match",
+        "left": [
+            "Azure Data Studio",
+            "Editor de consultas",
+            "SSDT"
+        ],
+        "right": [
+            "Plataforma no Microsoft",
+            "Desde Azure Portal",
+            "Proyecto Visual Studio"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Comandos SQL:",
+        "type": "match",
+        "left": [
+            "Join",
+            "Where",
+            "SUM",
+            "COUNT"
+        ],
+        "right": [
+            "Combinar filas",
+            "Filtrar registros",
+            "Valor total",
+            "Número de filas"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3
+        }
+    },
+    {
+        "q": "Seguridad en Azure SQL:",
+        "type": "match",
+        "left": [
+            "Firewall",
+            "Cifrado",
+            "Autentificación"
+        ],
+        "right": [
+            "Impide acceso red",
+            "No texto plano",
+            "Azure AD"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Tipos de Azure SQL:",
+        "type": "match",
+        "left": [
+            "Single database",
+            "Managed instance",
+            "Elastic pool"
+        ],
+        "right": [
+            "Serverless",
+            "Compatibilidad on-premises",
+            "Bajo costo/mantenimiento"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Roles de datos (Repetición 2):",
+        "type": "match",
+        "left": [
+            "Analista",
+            "Ingeniero",
+            "Administrador"
+        ],
+        "right": [
+            "Visualizaciones",
+            "Canalizaciones",
+            "Permisos"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Tareas de roles:",
+        "type": "match",
+        "left": [
+            "Analista",
+            "Ingeniero",
+            "Administrador"
+        ],
+        "right": [
+            "Informes avanzados",
+            "Supervisar canalizaciones",
+            "Backup y recuperación"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Responsabilidad por rol:",
+        "type": "match",
+        "left": [
+            "Transferir datos",
+            "Base datos transaccional",
+            "Gráfico semanal"
+        ],
+        "right": [
+            "Ingeniero de datos",
+            "Administrador",
+            "Analista"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Modelos de servicio:",
+        "type": "match",
+        "left": [
+            "IaaS",
+            "PaaS",
+            "SaaS"
+        ],
+        "right": [
+            "SQL Server en VM",
+            "Azure SQL Database",
+            "Azure SQL Managed Instance"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "APIs de Cosmos DB:",
+        "type": "match",
+        "left": [
+            "Graph",
+            "JSON",
+            "Key/Value"
+        ],
+        "right": [
+            "Gremlin",
+            "NoSQL API",
+            "Table API"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Lenguajes por servicio:",
+        "type": "match",
+        "left": [
+            "Azure Data Explorer",
+            "Stream Analytics",
+            "Synapse Analytics"
+        ],
+        "right": [
+            "KQL",
+            "SQL",
+            "Python"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Almacenamiento y formato:",
+        "type": "match",
+        "left": [
+            "Blob Storage",
+            "Cosmos NoSQL",
+            "Data Factory"
+        ],
+        "right": [
+            "Archivos audio",
+            "Documentos JSON",
+            "Tabulares"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Conceptos de Analítica:",
+        "type": "match",
+        "left": [
+            "Copia OLTP a analítico",
+            "Valores numéricos",
+            "Optimizado lectura"
+        ],
+        "right": [
+            "ETL",
+            "Fact tables",
+            "Data warehouses"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Ingesta de datos:",
+        "type": "match",
+        "left": [
+            "Data ingestion",
+            "ELT",
+            "ETL"
+        ],
+        "right": [
+            "Origen a destino",
+            "Cargar y luego procesar",
+            "Procesar antes de cargar"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Propiedades ACID (Completo):",
+        "type": "match",
+        "left": [
+            "Atomicidad",
+            "Consistencia",
+            "Aislamiento",
+            "Durabilidad"
+        ],
+        "right": [
+            "Unidad única",
+            "Estado válido",
+            "No interferencia",
+            "Permanente"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3
+        }
+    },
+    {
+        "q": "Modelado relacional:",
+        "type": "match",
+        "left": [
+            "Columnas",
+            "Tablas",
+            "Enlace entidades"
+        ],
+        "right": [
+            "Atributos",
+            "Entidades",
+            "Claves externas"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Uso de Parquet:",
+        "type": "match",
+        "left": [
+            "Data Lake Storage",
+            "Azure SQL",
+            "Synapse"
+        ],
+        "right": [
+            "Almacenar Parquet",
+            "Persistir tabular",
+            "Salida formato Parquet"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Escenarios Batch vs Stream:",
+        "type": "match",
+        "left": [
+            "Tráfico año anterior",
+            "Clasificar imágenes mes pasado",
+            "Gente web real-time"
+        ],
+        "right": [
+            "Batch",
+            "Streaming"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+        }
+    },
+    {
+        "q": "Servicios No Relacionales:",
+        "type": "match",
+        "left": [
+            "JSON Query",
+            "SMB Protocol"
+        ],
+        "right": [
+            "Azure Cosmos DB",
+            "Azure Files"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1
+        }
+    },
+    {
+        "q": "Actividades Data Factory:",
+        "type": "match",
+        "left": [
+            "Control",
+            "Movimiento",
+            "Transformación"
+        ],
+        "right": [
+            "Búsqueda",
+            "Copiar",
+            "Flujo de datos"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Cosmos DB (Repetición 2):",
+        "type": "match",
+        "left": [
+            "Grafo",
+            "JSON",
+            "clave-valor"
+        ],
+        "right": [
+            "API Gremlin",
+            "API MongoDB",
+            "API Table"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Estructuras de datos:",
+        "type": "match",
+        "left": [
+            "Relaciones empleados",
+            "Imágenes médicas",
+            "Username/Idioma"
+        ],
+        "right": [
+            "Grafo",
+            "Objeto",
+            "Clave/valor"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Modelos Azure SQL (Repetición 2):",
+        "type": "match",
+        "left": [
+            "Elastic pool",
+            "Single database",
+            "Managed Instance"
+        ],
+        "right": [
+            "Compatibilidad local",
+            "Serverless",
+            "Bajo mantenimiento"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1,
+            "2": 2
+        }
+    },
+    {
+        "q": "Cláusulas SQL (Final):",
+        "type": "match",
+        "left": [
+            "SalesDate, AVG",
+            "SalesDate ORDER BY"
+        ],
+        "right": [
+            "SELECT",
+            "GROUP BY"
+        ],
+        "correct": {
+            "0": 0,
+            "1": 1
+        }
+    }
+]

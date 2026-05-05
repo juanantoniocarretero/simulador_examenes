@@ -50,19 +50,39 @@ async function updateTypeCounts() {
             all: total,
             radio: questions.filter(q => q.type === "radio").length,
             checkbox: questions.filter(q => q.type === "checkbox").length,
-            text: questions.filter(q => q.type === "text").length
+            text: questions.filter(q => q.type === "text").length,
+            matrix: questions.filter(q => q.type === "matrix").length,
+            match: questions.filter(q => q.type === "match").length // Nuevo conteo para emparejamientos[cite: 1, 2]
         };
 
+        // Actualización de textos en el <select>[cite: 1, 2]
         typeSelect.options[0].text = `Todas las preguntas (${counts.all} / ${total})`;
         typeSelect.options[1].text = `Selección Única (${counts.radio} / ${total})`;
         typeSelect.options[2].text = `Selección Múltiple (${counts.checkbox} / ${total})`;
         typeSelect.options[3].text = `Completar Texto (${counts.text} / ${total})`;
-
-        for (let i = 1; i < typeSelect.options.length; i++) {
-            const val = typeSelect.options[i].value;
-            typeSelect.options[i].disabled = (counts[val] === 0);
+        
+        // Matrices V/F (índice 4)
+        if (typeSelect.options[4]) {
+            typeSelect.options[4].text = `Matrices V/F (${counts.matrix} / ${total})`;
+            typeSelect.options[4].disabled = (counts.matrix === 0);
         }
 
+        // --- NUEVA OPCIÓN PARA EMPAREJAMIENTO (índice 5) ---
+        // Asegúrate de tener este <option value="match"> en tu index.html[cite: 2]
+        if (typeSelect.options[5]) {
+            typeSelect.options[5].text = `Emparejamiento (${counts.match} / ${total})`;
+            typeSelect.options[5].disabled = (counts.match === 0);
+        }
+
+        // Deshabilitar opciones que no tengan preguntas[cite: 2]
+        for (let i = 1; i < typeSelect.options.length; i++) {
+            const val = typeSelect.options[i].value;
+            if (counts[val] !== undefined) {
+                typeSelect.options[i].disabled = (counts[val] === 0);
+            }
+        }
+
+        // Si el tipo seleccionado actualmente quedó deshabilitado, volver a "Todas"[cite: 2]
         if (typeSelect.selectedOptions[0].disabled) {
             typeSelect.value = "all";
         }
@@ -212,19 +232,67 @@ function renderQuestion() {
     const container = document.getElementById("ans-container");
     container.innerHTML = "";
 
+    // Lógica según el tipo de pregunta
     if (item.type === "text") {
         const input = document.createElement("input");
         input.type = "text";
         input.id = "text-ans";
         input.className = "input-text-ans";
         input.autocomplete = "off";
-        input.placeholder = "Puedes dejarlo en blanco o escribir tu respuesta...";
+        input.placeholder = "Escribe tu respuesta...";
         container.appendChild(input);
-        
         setTimeout(() => input.focus(), 50);
-        
         input.onkeypress = (e) => { if(e.key === 'Enter') handleMainAction(); };
+
+    } else if (item.type === "matrix") {
+        const table = document.createElement("table");
+        table.className = "matrix-table";
+        item.subquestions.forEach((sub, idx) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${sub}</td>
+                <td class="matrix-cells">
+                    <label><input type="radio" name="matrix-${idx}" value="true"> V</label>
+                    <label><input type="radio" name="matrix-${idx}" value="false"> F</label>
+                </td>
+            `;
+            table.appendChild(row);
+        });
+        container.appendChild(table);
+
+    } else if (item.type === "match") {
+        const matchContainer = document.createElement("div");
+        matchContainer.className = "match-container";
+
+        item.left.forEach((text, idx) => {
+            const row = document.createElement("div");
+            row.className = "match-row";
+            
+            const leftCol = document.createElement("div");
+            leftCol.className = "match-left-text";
+            leftCol.innerText = text;
+            
+            const select = document.createElement("select");
+            select.id = `match-${idx}`;
+            select.className = "match-select";
+            
+            // Opción por defecto
+            let optionsHtml = `<option value="-1">Selecciona una relación...</option>`;
+            // Añadir las opciones de la derecha
+            item.right.forEach((rText, rIdx) => {
+                optionsHtml += `<option value="${rIdx}">${rText}</option>`;
+            });
+            
+            select.innerHTML = optionsHtml;
+            
+            row.appendChild(leftCol);
+            row.appendChild(select);
+            matchContainer.appendChild(row);
+        });
+        container.appendChild(matchContainer);
+
     } else {
+        // Tipos estándar: radio y checkbox
         item.options.forEach((opt, idx) => {
             const label = document.createElement("label");
             label.className = "btn";
@@ -263,23 +331,63 @@ function checkAnswer() {
 
     if (item.type === "text") {
         const inputEl = document.getElementById("text-ans");
-        if (!inputEl) return;
-
         const val = inputEl.value.trim();
         const solution = String(item.correct);
-        
-        // Comparamos: si está vacío, obviamente isCorrect será false (a menos que la solución sea vacía)
         isCorrect = val.toLowerCase() === solution.toLowerCase();
-        
-        userText = val === "" ? "(Vacío)" : val;
+        userText = val || "(Vacío)";
         correctText = solution;
-
         inputEl.disabled = true;
         inputEl.classList.add(isCorrect ? "correct-input" : "wrong-input");
 
+    } else if (item.type === "matrix") {
+        let matrixResults = [];
+        let allCorrect = true;
+        item.subquestions.forEach((_, idx) => {
+            const selected = document.querySelector(`input[name="matrix-${idx}"]:checked`);
+            const userVal = selected ? (selected.value === "true") : null;
+            if (userVal !== item.correct[idx]) allCorrect = false;
+            matrixResults.push(userVal === null ? "?" : (userVal ? "V" : "F"));
+            
+            document.getElementsByName(`matrix-${idx}`).forEach(i => i.disabled = true);
+        });
+        isCorrect = allCorrect;
+        userText = `Tus respuestas: [${matrixResults.join(", ")}]`;
+        correctText = `Correcto: [${item.correct.map(v => v ? "V" : "F").join(", ")}]`;
+
+    } else if (item.type === "match") {
+        let allCorrect = true;
+        let matchSummary = [];
+        let solutionsSummary = [];
+
+        item.left.forEach((leftLabel, idx) => {
+            const selectEl = document.getElementById(`match-${idx}`);
+            const userVal = parseInt(selectEl.value);
+            const correctVal = item.correct[idx];
+            const isRowOk = userVal === correctVal;
+
+            if (!isRowOk) {
+                allCorrect = false;
+                // --- MOSTRAR RESPUESTA CORRECTA VISUALMENTE ---
+                const correctHint = document.createElement("div");
+                correctHint.className = "correct-match-hint";
+                correctHint.innerText = `Correcto: ${item.right[correctVal]}`;
+                selectEl.parentNode.appendChild(correctHint);
+            }
+
+            selectEl.disabled = true;
+            selectEl.classList.add(isRowOk ? "correct-input" : "wrong-input");
+
+            const userChoiceText = userVal !== -1 ? item.right[userVal] : "(Sin unir)";
+            matchSummary.push(`${leftLabel} → ${userChoiceText}`);
+            solutionsSummary.push(`${leftLabel} → ${item.right[correctVal]}`);
+        });
+
+        isCorrect = allCorrect;
+        userText = "Tus uniones: " + matchSummary.join(" | ");
+        correctText = "Solución: " + solutionsSummary.join(" | ");
+
     } else {
         const sel = Array.from(document.querySelectorAll('input[name="ans"]:checked')).map(i => parseInt(i.value));
-        
         if (item.type === "radio") {
             isCorrect = sel[0] === item.correct;
             userText = sel.length > 0 ? item.options[sel[0]] : "(Sin selección)";
@@ -299,6 +407,7 @@ function checkAnswer() {
         });
     }
 
+    // Guardar resultado para el reporte detallado
     userAnswers.push({
         question: item.q,
         user: userText,
@@ -314,7 +423,7 @@ function checkAnswer() {
     } else {
         errors++;
         failedQuestions.push(item); 
-        feedback.innerText = `Incorrecto. Solución: ${correctText}`;
+        feedback.innerText = (item.type === "match") ? "Relación incorrecta." : `Error. ${correctText}`;
         feedback.style.color = "var(--error)";
     }
 
